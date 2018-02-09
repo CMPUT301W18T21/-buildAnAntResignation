@@ -2,3 +2,4 @@ Hello, I am Nik. Edit somethign to this file, and then commit it to the repo!
 Hey, I am JiaHong. I add my part to the repo!
 Hey, I am YanrenQu. I add my part to the repo!
 Hey, I am Tiannan. I add my part to the repo!
+Hi, I am Yuan . I add my part to the repo!
