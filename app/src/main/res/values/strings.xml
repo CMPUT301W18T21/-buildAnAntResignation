@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">1</string>
+    <string name="username">Username:</string>
+    <string name="title">Title:</string>
+    <string name="description">Description:</string>
+    <string name="request">Request</string>
+    <string name="myRequests">My Task Requests</string>
+    <string name="viewBidded">Bidded</string>
+    <string name="viewAssigned">Assigned</string>
 </resources>
