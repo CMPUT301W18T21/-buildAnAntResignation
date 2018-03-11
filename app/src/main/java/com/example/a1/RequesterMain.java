@@ -1,3 +1,13 @@
+/*
+ * ContactInfo
+ *
+ * CMPUT301W18T21
+ *
+ * March 10, 2018
+ *
+ * Copyright (c) CMPUT301W18T21
+ *
+ */
 package com.example.a1;
 
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +19,21 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Represents the requester main activity.
+ * A list of a user's task requests is displayed here.
+ * From here a user can initiate any task requests, view tasks that have been assigned to other users, and view bidded tasks.
+ */
 public class RequesterMain extends AppCompatActivity {
 
     private static ArrayList<String> tasksInfo = new ArrayList<>(0);
     private static ArrayAdapter<String> adapter;
 
-
+    /**
+     * A method that executes every time the activity is shown on screen.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +54,9 @@ public class RequesterMain extends AppCompatActivity {
 
     }
 
+    /**
+     * Adds the user's requested tasks to the list view.
+     */
     private void displayTasks(){
         ArrayList<Task> tasks = MainActivity.getCurrentUser().getRequestedTasks();
         for (Task task: tasks) {
@@ -45,12 +67,15 @@ public class RequesterMain extends AppCompatActivity {
     public void onViewAssignedClick(View view){
 
     }
+
     public void onViewBiddedClick(View view){
 
     }
+
     public void onRequestClick(View view){
 
     }
+
     public void onTaskClick(View view){
 
     }
