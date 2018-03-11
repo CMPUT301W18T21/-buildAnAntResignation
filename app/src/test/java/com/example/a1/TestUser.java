@@ -27,7 +27,7 @@ public class TestUser {
     @Test
     public void getUser(){
         User user = new User("","Alex","","","","");
-        assertTrue(user.getUser() == "Alex");
+        assertTrue(user.getUsername() == "Alex");
     }
 
     @Test
@@ -82,8 +82,8 @@ public class TestUser {
     @Test
     public void setImage(){
 
-        User user = new User("","","","","","");
-        assertTrue(true);
+        User user = new User("","","","","","img");
+        assertTrue(user.getImage() == "img");
 
     }
 
