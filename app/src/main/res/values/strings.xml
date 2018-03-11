@@ -4,7 +4,12 @@
     <string name="title">Title:</string>
     <string name="description">Description:</string>
     <string name="request">Request</string>
-    <string name="myRequests">My Task Requests</string>
+    <string name="myRequests">My Task Requests:</string>
+    <string name="myAssigned">My Assigned Tasks:</string>
     <string name="viewBidded">Bidded</string>
     <string name="viewAssigned">Assigned</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="phone">(000)-000-0000</string>
+    <string name="address">Address</string>
 </resources>
