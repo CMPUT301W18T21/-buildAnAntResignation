@@ -8,26 +8,28 @@ public class Task{
     private String title;
     private String username;
     private String description;
-    private String status;
-    private String address;
-    private ArrayList<Integer> bids=new ArrayList<Integer>();
-    private Integer lowestBid;
-    private ArrayList<String> photos;
-    private Integer Bids;
+    private Status status = Status.REQUESTED;;
+    private String location;
+    private ArrayList<Integer> bids = new ArrayList<>(0);
+    private int lowestBid;
+    private ArrayList<String> photos = new ArrayList<>(0);
 
+    public Task(String title, String username, String description){
+        this.title = title;
+        this.username = username;
+        this.description = description;
+    }
 
-    public  Task(String title,String username,String description,String address,String status,Integer lowestBid,Integer Bids){
-        this.title=title;
-        this.username=username;
-        this.description=description;
-        this.status=status;
-        this.address=address;
-        bids= new ArrayList<Integer>();
-        this.lowestBid=lowestBid;
-        photos=new ArrayList<String>();
-        this.Bids=Bids;
-
-
+    public  Task(String title, String username, String description, String location, Status status, int lowestBid, ArrayList<Integer> bids){
+        this.title = title;
+        this.username = username;
+        this.description = description;
+        this.status = status;
+        this.location = location;
+        bids = new ArrayList<Integer>();
+        this.lowestBid = lowestBid;
+        photos = new ArrayList<String>();
+        this.bids = bids;
     }
 
     public String getUsername() {
@@ -38,40 +40,35 @@ public class Task{
         return description;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public String getAddress() {
-        return address;
+    public String getLocation() {
+        return location;
     }
 
-    //Set Lowest Bid
     public void updateLowestBid(Integer lowestBid) {
         this.lowestBid = lowestBid;
     }
 
     public String getTitle(){
         return title;
-
     }
+
     public Integer getLowestBid(){
         return lowestBid;
-
     }
 
-    public void importPhoto(){
-        //
+    public void importPhoto(String photo){
+        photos.add(photo);
     }
 
     public ArrayList<String> getPhotos() {
         return photos;
     }
 
-
-    //getBids(int index)    need rewriting
-    public Integer getBids(){
-        return Bids;
-
+    public ArrayList<Integer> getBids(){
+        return bids;
     }
 }

@@ -15,7 +15,6 @@ public class ContactInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_info);
         setTitle("Contact Info");
-        //setUser(new User("Name01", "username01","Male","(555)-555-5555","123 Street Smalltown", "img"));
     }
 
     public void setUser(User user){
@@ -24,20 +23,22 @@ public class ContactInfo extends AppCompatActivity {
         ((EditText) findViewById(R.id.nameEditText)).setText(user.getName());
         ((EditText) findViewById(R.id.genderEditText)).setText(user.getGender());
         ((EditText) findViewById(R.id.phoneEditText)).setText(user.getPhone());
-        ((EditText) findViewById(R.id.addressEditText)).setText(user.getAddress());
+        ((EditText) findViewById(R.id.emailEditText)).setText(user.getEmail());
     }
 
-    public void onEditClick(View view){
-        if ( true /*user.getUsername() == Mainscreen.user.getUsername()*/){
+    public void onButtonClick(View view){
+        if ( user.getUsername() == MainActivity.getCurrentUser().getUsername()){
             user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
             user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
             user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-            user.setAddress(((TextView) findViewById(R.id.addressEditText)).getText().toString());
-            /*Mainscreen.user = user;*/
+            user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
+            MainActivity.getCurrentUser().setName(user.getName());
+            MainActivity.getCurrentUser().setGender(user.getGender());
+            MainActivity.getCurrentUser().setPhone(user.getPhone());
+            MainActivity.getCurrentUser().setEmail(user.getEmail());
         }
 
         //Might a new intent here.
         finish();
-
     }
 }
