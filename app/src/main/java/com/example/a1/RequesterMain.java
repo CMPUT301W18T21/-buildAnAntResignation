@@ -1,9 +1,12 @@
 package com.example.a1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -13,7 +16,8 @@ public class RequesterMain extends AppCompatActivity {
 
     private static ArrayList<String> tasksInfo = new ArrayList<>(0);
     private static ArrayAdapter<String> adapter;
-
+    Button BiddedButton;
+    ListView taskList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,8 @@ public class RequesterMain extends AppCompatActivity {
         MainActivity.getCurrentUser().requestTask(task);
 
         displayTasks();
+        setupListView();
+        setupBiddedButton();
 
     }
 
@@ -54,4 +60,39 @@ public class RequesterMain extends AppCompatActivity {
     public void onTaskClick(View view){
 
     }
+    private void setupBiddedButton() {
+        /** when add button is clicked jump to addsubscription View
+         */
+
+        BiddedButton = (Button) findViewById(R.id.viewBiddedButton);
+        BiddedButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
+                startActivityForResult(intent, 1);
+
+
+            }
+        });
+
+    }
+    private void setupListView() {
+        /** when add button is clicked jump to addsubscription View
+         */
+
+        taskList = (ListView) findViewById(R.id.listView);
+        taskList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                Intent intent = new Intent(view.getContext(),TaskDetails.class);
+
+                startActivityForResult(intent, 1);
+
+
+            }
+        });
+
+    }
+
 }
