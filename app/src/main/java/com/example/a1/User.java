@@ -31,20 +31,24 @@ public class User {
 
     }
 
-    public String getUser(){
-        return this.userName;
+    public String getUsername(){
+        return userName;
     }
 
     public String getGender() {
-        return  this.gender;
+        return  gender;
     }
 
     public String getPhone() {
-        return  this.phone;
+        return  phone;
     }
 
     public String getAddress(){
-        return  this.address;
+        return  address;
+    }
+
+    public String getImage(){
+        return image;
     }
 
     public void setName(String name){

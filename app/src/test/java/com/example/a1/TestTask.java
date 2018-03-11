@@ -9,54 +9,54 @@ import static org.junit.Assert.assertTrue;
 public class TestTask {
 
     @Test
-    public void TestGetTitle(){
+    public void testGetTitle(){
         Task task=new Task("title","","","","",1,0);
         assertTrue(task.getTitle()=="title");
     }
     @Test
 
-    public void TestGetUsername(){
+    public void testGetUsername(){
         Task task=new Task("","Username","","","",1,0);
         assertTrue(task.getUsername()=="Username");
     }
     @Test
-    public void TestGetAddress(){
+    public void testGetAddress(){
         Task task=new Task("","","","address","",1,0);
         assertTrue(task.getAddress()=="address");
     }
     @Test
-    public void TestGetDes(){
+    public void testGetDes(){
         Task task=new Task("","","des","","",1,0);
         assertTrue(task.getDescription()=="des");
     }
     @Test
-    public void TestGetSta(){
+    public void testGetSta(){
         Task task=new Task("","","","","sta",1,0);
         assertTrue(task.getStatus()=="sta");
     }
     @Test
-    public void TestLowestBid(){
+    public void testLowestBid(){
         Task task=new Task("","","","","",1,0);
         assertTrue(task.getLowestBid()==1);
     }
 
 
     @Test
-    public void TestUpdateLBid(){
+    public void testUpdateLBid(){
         Task task=new Task("","","","","",1,0);
         task.updateLowestBid(1);
         assertTrue(task.getLowestBid()==1);
     }
     @Test
-    public void TestImportPhoto(){
+    public void testImportPhoto(){
         assertTrue(Boolean.TRUE);
     }
     @Test
-    public void TestGetPhoto(){
+    public void testGetPhoto(){
         assertTrue(Boolean.TRUE);
     }
     @Test
-    public void TestgetBids(){
+    public void testgetBids(){
         Task task=new Task("","","","","",1,0);
         assertTrue(task.getBids()==0);
 
