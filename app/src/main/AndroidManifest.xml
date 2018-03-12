@@ -18,8 +18,10 @@
         </activity>
         <activity android:name=".ContactInfo" />
         <activity android:name=".TaskRequest" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RequesterBiddedTask" />
         <activity android:name=".RequesterMain" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".TaskDetails"></activity>
     </application>
 
 </manifest>
