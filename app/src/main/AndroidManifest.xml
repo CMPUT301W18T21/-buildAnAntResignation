@@ -19,7 +19,8 @@
         <activity android:name=".ContactInfo" />
         <activity android:name=".TaskRequest" />
         <activity android:name=".RequesterMain" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProviderMainPageView"></activity>
     </application>
 
 </manifest>
