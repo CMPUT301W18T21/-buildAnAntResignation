@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class RequesterTaskDetails extends AppCompatActivity {
+public class ProviderAssignedTasks extends AppCompatActivity {
     Button BackButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requester_task_details);
+        setContentView(R.layout.activity_provider_assigned_tasks);
         setTitle("Assigned Tasks");
         ((TextView) findViewById(R.id.username)).setText(MainActivity.getCurrentUser().getUsername());
         setupBackButton();
@@ -26,9 +26,8 @@ public class RequesterTaskDetails extends AppCompatActivity {
         BackButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(RequesterTaskDetails.this, RequesterMain.class);
+                Intent intent = new Intent(ProviderAssignedTasks.this, RequesterMain.class);
                 startActivityForResult(intent, 1);
-
 
             }
         });
