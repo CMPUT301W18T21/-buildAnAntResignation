@@ -16,4 +16,5 @@ public class TaskDetails extends AppCompatActivity {
         setContentView(R.layout.activity_task_details);
     }
 
+
 }
