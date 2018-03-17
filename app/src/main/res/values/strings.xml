@@ -12,4 +12,6 @@
     <string name="gender">Gender</string>
     <string name="phone">Phone Number</string>
     <string name="email">Email Address</string>
+    <string name="title_activity_provider_bid_task">provider_bid_task</string>
+    <string name="title_activity_provider_bid_task_screen">Provider_bid_task_screen</string>
 </resources>

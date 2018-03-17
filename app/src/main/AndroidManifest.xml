@@ -22,7 +22,7 @@
         <activity android:name=".TaskRequest" />
         <activity android:name=".RequesterMain" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ProviderMainPageView"></activity>
+        <activity android:name=".ProviderMainPageView" />
     </application>
 
 </manifest>

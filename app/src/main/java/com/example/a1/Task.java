@@ -27,7 +27,8 @@ public class Task{
     private String title;
     private String username;
     private String description;
-    private Status status = Status.REQUESTED;;
+    /**private Status status = Status.REQUESTED;; **/
+    private String status;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
@@ -55,7 +56,7 @@ public class Task{
      * @param status The task's status.
      * @param bids The taks's bids.
      */
-    public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
+    public  Task(String title, String username, String description, String location, String status, ArrayList<Integer> bids){
         this.title = title;
         this.username = username;
         this.description = description;
@@ -86,7 +87,7 @@ public class Task{
      * Gets the task's status.
      * @return The status of the task.
      */
-    public Status getStatus() {
+    public String getStatus() {
         return status;
     }
 
