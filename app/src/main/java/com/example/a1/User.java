@@ -135,7 +135,7 @@ public class User {
      * Gets a list of all requested tasks the user has.
      * @return All requested tasks.
      */
-    public ArrayList<Task> getRequestedTasks(){return  requestedTasks;}
+    public ArrayList<Task> getRequestedTasks(){return  this.requestedTasks;}
 
     /**
      * Gets a list of all assigned tasks the user has.
