@@ -31,7 +31,6 @@ public class RequesterMain extends AppCompatActivity {
 
     private static ArrayList<String> tasksInfo = new ArrayList<>(0);
     private static ArrayAdapter<String> adapter;
-tested
     Button BiddedButton;
     ListView taskList;
 
@@ -41,7 +40,7 @@ tested
      *
      * @param savedInstanceState The saved instance state.
      */
-YuanBranch
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +98,7 @@ YuanBranch
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
                 startActivityForResult(intent, 1);
+
 
 
             }

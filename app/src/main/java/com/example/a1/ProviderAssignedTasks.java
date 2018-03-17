@@ -26,7 +26,7 @@ import android.widget.TextView;
  * @see Task
  */
 public class ProviderAssignedTasks extends AppCompatActivity {
-tested
+
    Button BackButton;
 
 
@@ -35,7 +35,7 @@ tested
      *
      * @param savedInstanceState The saved instance state.
      */
-YuanBranch
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
