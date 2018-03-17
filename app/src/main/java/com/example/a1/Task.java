@@ -67,6 +67,19 @@ public class Task{
     }
 
     /**
+     * Returns the requested tasks of all users.
+     * @return A single list of all requested user tasks.
+     */
+    public static ArrayList<Task> getAllRequestedTasks(){
+        ArrayList<Task> requestedTasks = new ArrayList<>(0);
+        ArrayList<User> users = User.getAllUsers();
+        for (User user: users) {
+            requestedTasks.addAll(user.getRequestedTasks());
+        }
+        return requestedTasks;
+    }
+
+    /**
      * Gets the task-requester's username.
      * @return The username of the task-requester.
      */

@@ -15,6 +15,7 @@ import android.os.Bundle;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -53,6 +54,14 @@ public class User {
         this.phone = phone;
         this.email = email;
         this.image = image;
+    }
+
+    /**
+     * Returns all users in the program.
+     * * @return All users in the program.
+     */
+    public static ArrayList<User> getAllUsers(){
+        return new ArrayList<User>(users.values());
     }
 
     /**
