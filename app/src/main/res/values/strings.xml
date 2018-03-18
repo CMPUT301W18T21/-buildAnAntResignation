@@ -11,5 +11,6 @@
     <string name="name">Name</string>
     <string name="gender">Gender</string>
     <string name="phone">Phone Number</string>
+    <string name="viewStatus">Status</string>
     <string name="email">Email Address</string>
 </resources>
