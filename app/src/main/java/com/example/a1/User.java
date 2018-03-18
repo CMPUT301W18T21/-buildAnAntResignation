@@ -33,8 +33,19 @@ public class User {
     private String email;
     private String image;
 
+
+    /**
+     * the array of tasks that provider has requested
+     */
     private ArrayList<Task> requestedTasks = new ArrayList<>(0);
+    /**
+     * the array of tasks that are assigned
+     */
     private ArrayList<Task> assignedTasks = new ArrayList<>(0);
+    /**
+     * the array of tasks that provider has bidded
+     */
+    private ArrayList<Task> providedTasks = new ArrayList<>(0);
 
 
     /**
@@ -122,6 +133,19 @@ public class User {
     public Task getRequestedTask(int index){
         return requestedTasks.get(index);
     }
+
+    /**
+     * Gets the specified index of provider's provided tasks
+     * @param index the index of the task
+     * @return  the provider's task
+     */
+    public Task getProvidedTask(int index){return providedTasks.get(index);}
+
+    /**
+     * Gets a list of all provided tasks the user has provided.
+     * @return All provided tasks.
+     */
+    public ArrayList<Task> getProvidedTasks(){return  this.providedTasks;}
 
     /**
      * Gets the specified assigned task.
