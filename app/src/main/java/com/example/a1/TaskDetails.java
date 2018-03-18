@@ -10,11 +10,17 @@ import android.widget.ListView;
 
 public class TaskDetails extends AppCompatActivity {
 
+
+    private static int taskID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
     }
 
+    public static void setTask(int id){
+        taskID = id;
+    }
 
 }

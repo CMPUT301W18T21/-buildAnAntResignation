@@ -10,6 +10,7 @@
  */
 package com.example.a1;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class RequesterMain extends AppCompatActivity {
 
     private static ArrayList<String> tasksInfo = new ArrayList<>(0);
     private static ArrayAdapter<String> adapter;
-tested
+
     Button BiddedButton;
     ListView taskList;
 
@@ -41,7 +42,7 @@ tested
      *
      * @param savedInstanceState The saved instance state.
      */
-YuanBranch
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,13 +55,19 @@ YuanBranch
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
-        /* Remove Later*/
-        Task task = new Task("Task1", MainActivity.getCurrentUser().getUsername(),"Description of task");
-        MainActivity.getCurrentUser().requestTask(task);
-
         displayTasks();
         setupListView();
         setupBiddedButton();
+
+        listView.setOnItemClickListener(
+            new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                    Intent intent = new Intent(RequesterMain.this, TaskDetails.class);
+                    TaskDetails.setTask((int)id);
+                    startActivityForResult(intent, 1);
+                }
+            }
+        );
 
     }
 
@@ -86,9 +93,6 @@ YuanBranch
 
     }
 
-    public void onTaskClick(View view){
-
-    }
     private void setupBiddedButton() {
         /** when add button is clicked jump to addsubscription View
          */
