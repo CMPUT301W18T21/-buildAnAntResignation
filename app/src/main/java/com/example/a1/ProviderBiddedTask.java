@@ -18,32 +18,51 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
     private User user;
     Button BackButton;
-    ArrayList<String> BiddedTasks = new ArrayList<>();
+    /**
+     * @author Yuan
+     */
+
+    /**
+     * Initialize the ProviderBiddedTasks array to store the tasks that the user has bidded
+     * Initialize the ProviderBiddedtasksStatus array to store status of each task that the provider has bidded
+     * Initialize the LowestBids Array to store each task's lowest bid
+     *
+     */
+
+    ArrayList<String> ProviderBiddedTasks = new ArrayList<>();
+    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<>();
+    ArrayList<Integer>LowestBids=new ArrayList<>();
 
 
+
+    /**
+     * @author: Yuan
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requester_bidded_task);
-        setupBackButton();
-        getBiddedTasks();
-
-
-        ListView listView=(ListView)findViewById(R.id.viewBiddedTask);
-        RequesterBiddedTask.CustomAdapter customAdapter=new RequesterBiddedTask.CustomAdapter();
+        setContentView(R.layout.activity_provider_bidded_task);
+        ListView listView=(ListView)findViewById(R.id.Listview_BidList);
+        CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
+        setupBackButton();
+        getTasksAttri();
+
+
     }
 
 
     private void setupBackButton() {
-        /** when add button is clicked jump to addsubscription View
+        /** when back button is clicked jump back to provider main page
          */
 
         BackButton = (Button) findViewById(R.id.back);
         BackButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(RequesterBiddedTask.this, RequesterMain.class);
+                //need change , the second activity is not the right destination
+                Intent intent = new Intent(ProviderBiddedTask.this, RequesterMain.class);
                 startActivityForResult(intent, 1);
 
 
@@ -51,17 +70,30 @@ public class ProviderBiddedTask extends AppCompatActivity {
         });
 
     }
+    /**
+     * this method will create an array of staus of tasks that provider has bidded
+     * and an array of lowest bids of each task
+     */
 
-    public void getBiddedTasks(){
 
-        ArrayList<Task> AllTasks= MainActivity.getCurrentUser().getRequestedTasks();
+    private void getTasksAttri(){
+
+        ArrayList<Task> AllTasks= MainActivity.getCurrentUser().getProvidedTasks();
         for(Integer j=0;j<AllTasks.size();j++){
             Task task=MainActivity.getCurrentUser().getRequestedTask(j);
-            if (task.getStatus()==BIDDED){
-                BiddedTasks.add(task.getTitle());
-            }
+            /**
+             * the status here should be String since it will be set as the content of textView
+             */
+            String status=task.getStatus().toString();
+            ProviderBiddedTasksStatus.add(status);
+            LowestBids.add(task.getLowestBid());
+
         }
     }
+
+
+
+
 
 
     class CustomAdapter extends BaseAdapter {
@@ -77,11 +109,15 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            view = getLayoutInflater().inflate(R.layout.customlayout,null);
+            view = getLayoutInflater().inflate(R.layout.customlayout2,null);
             TextView textView_task=(TextView)view.findViewById(R.id.textView_task);
             TextView textView_username=(TextView)view.findViewById(R.id.textView_username);
+            TextView textView_lowestBid=(TextView)view.findViewById(R.id.textView_lowestBid);
+            TextView textView_status=(TextView)view.findViewById(R.id.textView_status);
             textView_username.setText(user.getName());
-            textView_task.setText(BiddedTasks.get(i));
+            textView_status.setText(ProviderBiddedTasksStatus.get(i));
+            textView_lowestBid.setText(LowestBids.get(i));
+            textView_task.setText(ProviderBiddedTasks.get(i));
 
             return null;
         }
@@ -89,7 +125,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
         @Override
 
         public int getCount(){
-            return BiddedTasks.size();
+            return ProviderBiddedTasks.size();
         }
 
     }

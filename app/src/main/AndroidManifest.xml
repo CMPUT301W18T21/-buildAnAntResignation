@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddPhoto">
+        <activity android:name=".ProviderBiddedTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +26,9 @@
         <activity android:name=".RequesterMain" />
         <activity android:name=".TaskDetails" />
         <activity android:name=".Bid" />
-        <activity android:name=".ProviderBiddedTask" />
-        <activity android:name=".TaskProvider" />
-        <activity android:name=".ProviderBiddedTasks"></activity>
+        <activity android:name=".AddPhoto" />
+        <activity android:name=".TaskProvider"></activity>
+
     </application>
 
 </manifest>
