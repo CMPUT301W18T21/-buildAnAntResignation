@@ -14,6 +14,10 @@ import java.util.ArrayList;
 
 import static com.example.a1.Status.BIDDED;
 
+/**
+ * @author Yuan 
+ */
+
 public class RequesterBiddedTask extends AppCompatActivity {
     private User user;
     Button BackButton;
