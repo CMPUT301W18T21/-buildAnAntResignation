@@ -36,6 +36,7 @@ public class User {
     private ArrayList<Task> requestedTasks = new ArrayList<>(0);
     private ArrayList<Task> assignedTasks = new ArrayList<>(0);
 
+
     /**
      * Constructs a user object.
      * @param name The user's regular name.

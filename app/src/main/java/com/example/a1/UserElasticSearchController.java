@@ -96,7 +96,6 @@ public class UserElasticSearchController {
         @Override
         protected User doInBackground(String... strings) {
             verifySettings();
-
             // input UserName
             String userName_IN = strings[0];
 

@@ -27,7 +27,8 @@
         <activity android:name=".TaskDetails" />
         <activity android:name=".Bid" />
         <activity android:name=".ProviderBiddedTask" />
-        <activity android:name=".TaskProvider"></activity>
+        <activity android:name=".TaskProvider" />
+        <activity android:name=".ProviderBiddedTasks"></activity>
     </application>
 
 </manifest>
