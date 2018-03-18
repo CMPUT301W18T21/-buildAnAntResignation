@@ -86,11 +86,13 @@ public class RequesterMain extends AppCompatActivity {
     }
 
     public void onViewBiddedClick(View view){
-
+        Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
+        startActivityForResult(intent, 1);
     }
 
     public void onRequestClick(View view){
-
+        Intent intent = new Intent(RequesterMain.this, TaskRequest.class);
+        startActivityForResult(intent, 1);
     }
 
     private void setupBiddedButton() {
