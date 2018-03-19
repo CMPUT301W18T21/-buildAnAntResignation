@@ -22,7 +22,13 @@ public class UserElasticSearchController {
     private static final String SEARCH_INDEX = "cmput301w18t21";
     private static final String SEARCH_TYPE = "userprofile";
 
-
+    /**
+     *  Add new user profile to online database
+     *
+     *  @params UserProfile: The UserProfile object of this user
+     *  @progress Void
+     *  @return Void
+     */
     public static class AddNewUserProfileTask extends AsyncTask<User, Void, Void> {
 
         @Override
@@ -55,7 +61,14 @@ public class UserElasticSearchController {
             return null;
         }
     }
-
+    /**
+     * Check if the username has already been registered
+     *
+     * @params String: The username of this user, id of the UserProfile doc in elasticsearch
+     * @progress Void
+     * @return Boolean: true: The input username has already exist in online database
+     *                  false: The input username does not exist
+     */
     public static class CheckUserProfileExistTask extends AsyncTask<String, Void, Boolean> {
 
         @Override
@@ -89,6 +102,13 @@ public class UserElasticSearchController {
         }
     }
 
+    /**
+     * Get UserProfile of the given user
+     *
+     * @params String: The username of this user, id of the UserProfile doc in elasticsearch
+     * @progress Void
+     * @return UserProfile: The UserProfile with the input username
+     */
 
 
     public static class GetUserProfileTask extends AsyncTask<String, Void, User> {
@@ -122,7 +142,13 @@ public class UserElasticSearchController {
     }
 
 
-
+    /**
+     * Update the UserProfile
+     *
+     * @params UserProfile: The UserProfile object of this user
+     * @progress Void
+     * @return Void
+     */
 
     public static class UpdateUserProfileTask extends AsyncTask<User, Void, Void> {
 
@@ -156,7 +182,10 @@ public class UserElasticSearchController {
         }
     }
 
-
+    /**
+     * this method is from lonelytwitter class
+     * Reference: git hub
+     */
 
     public static void verifySettings() {
         if (client == null) {
