@@ -9,8 +9,13 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Context;
 
 import java.util.ArrayList;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static com.example.a1.Status.BIDDED;
 
@@ -29,9 +34,15 @@ public class ProviderBiddedTask extends AppCompatActivity {
      *
      */
 
-    ArrayList<String> ProviderBiddedTasks = new ArrayList<>();
-    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<>();
-    ArrayList<Integer>LowestBids=new ArrayList<>();
+    ArrayList<String> ProviderBiddedTasks = new ArrayList<>(0);
+    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<>(0);
+    ArrayList<Integer>LowestBids=new ArrayList<>(0);
+    ArrayList<String>UserName=new ArrayList<>(0);
+
+
+
+
+
 
 
 
@@ -44,13 +55,32 @@ public class ProviderBiddedTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bidded_task);
         ListView listView=(ListView)findViewById(R.id.Listview_BidList);
+
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
+
+
+
+        //************//
+        ProviderBiddedTasksStatus.add("done");
+        ProviderBiddedTasksStatus.add("done");
+        ProviderBiddedTasksStatus.add("done");
+        LowestBids.add(111);
+        LowestBids.add(222);
+        LowestBids.add(333);
+        ProviderBiddedTasks.add("task1");
+        ProviderBiddedTasks.add("task2");
+        ProviderBiddedTasks.add("task3");
+
+
+
         setupBackButton();
         getTasksAttri();
 
 
+
     }
+
 
 
     private void setupBackButton() {
@@ -87,6 +117,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
             String status=task.getStatus().toString();
             ProviderBiddedTasksStatus.add(status);
             LowestBids.add(task.getLowestBid());
+            UserName.add(task.getUsername());
 
         }
     }
@@ -97,6 +128,14 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
 
     class CustomAdapter extends BaseAdapter {
+
+        @Override
+
+        public int getCount(){
+            return ProviderBiddedTasks.size();
+
+
+        }
         @Override
         public Object getItem(int i) {
             return null;
@@ -114,19 +153,20 @@ public class ProviderBiddedTask extends AppCompatActivity {
             TextView textView_username=(TextView)view.findViewById(R.id.textView_username);
             TextView textView_lowestBid=(TextView)view.findViewById(R.id.textView_lowestBid);
             TextView textView_status=(TextView)view.findViewById(R.id.textView_status);
-            textView_username.setText(user.getName());
+
+
+            //textView_username.setText(user.getName());
+            textView_username.setText(UserName.get(i));
             textView_status.setText(ProviderBiddedTasksStatus.get(i));
-            textView_lowestBid.setText(LowestBids.get(i));
+            textView_lowestBid.setText(LowestBids.get(i).toString());
             textView_task.setText(ProviderBiddedTasks.get(i));
 
-            return null;
+
+
+            return view;
         }
 
-        @Override
 
-        public int getCount(){
-            return ProviderBiddedTasks.size();
-        }
 
     }
 

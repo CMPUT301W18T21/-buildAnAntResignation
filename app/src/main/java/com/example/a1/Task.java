@@ -31,6 +31,7 @@ public class Task{
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
+    private ArrayList<String> Providers=new ArrayList<>(0);
 
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
@@ -44,6 +45,7 @@ public class Task{
         this.username = username;
         this.description = description;
     }
+
 
     /**
      * Constructs a Task object.
@@ -63,6 +65,7 @@ public class Task{
         this.location = location;
         bids = new ArrayList<Integer>();
         photos = new ArrayList<String>();
+        //*******
         this.bids = bids;
     }
 
@@ -75,9 +78,16 @@ public class Task{
     }
 
     /**
+     * @return An array of providers
+     */
+
+    public ArrayList<String> getProvidersName(){return Providers;}
+
+    /**
      * Gets the task's description.
      * @return The description of the task.
      */
+
     public String getDescription() {
         return description;
     }
@@ -140,5 +150,12 @@ public class Task{
      */
     public ArrayList<Integer> getBids(){
         return bids;
+    }
+
+    /**
+     * Add a bid to bids arrayList
+     */
+    public void addBid(Integer bid){
+        bids.add(bid);
     }
 }

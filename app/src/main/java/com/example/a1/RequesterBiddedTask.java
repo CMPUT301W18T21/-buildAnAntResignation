@@ -21,7 +21,7 @@ import static com.example.a1.Status.BIDDED;
 public class RequesterBiddedTask extends AppCompatActivity {
     private User user;
     Button BackButton;
-    ArrayList<String> BiddedTasks = new ArrayList<>();
+    ArrayList<String> BiddedTasks = new ArrayList<>(0);
 
 
     @Override
@@ -83,7 +83,7 @@ public class RequesterBiddedTask extends AppCompatActivity {
             view = getLayoutInflater().inflate(R.layout.customlayout,null);
             TextView textView_task=(TextView)view.findViewById(R.id.textView_task);
             TextView textView_username=(TextView)view.findViewById(R.id.textView_username);
-            textView_username.setText(user.getName());
+            //textView_username.setText(user.getName());
             textView_task.setText(BiddedTasks.get(i));
 
             return null;
