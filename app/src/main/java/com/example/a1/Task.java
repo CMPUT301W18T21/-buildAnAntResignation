@@ -158,4 +158,18 @@ public class Task{
     public void addBid(Integer bid){
         bids.add(bid);
     }
+
+    /**
+     * the following three methods change task's status
+     */
+    public void setBided(){
+        this.status = Status.BIDDED;
+    }
+    public void setAssigned(){
+        this.status = Status.ASSIGNED;
+    }
+
+    public  void setDone(){
+        this.status =  Status.DONE;
+    }
 }

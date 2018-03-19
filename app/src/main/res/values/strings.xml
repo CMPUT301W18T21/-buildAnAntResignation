@@ -13,4 +13,8 @@
     <string name="phone">Phone Number</string>
     <string name="viewStatus">Status</string>
     <string name="email">Email Address</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="assigned">Assigned</string>
+    <string name="done"> Done</string>
 </resources>
