@@ -32,6 +32,8 @@ public class Task{
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
 
+
+
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
      *
@@ -61,7 +63,7 @@ public class Task{
         this.description = description;
         this.status = status;
         this.location = location;
-        bids = new ArrayList<Integer>();
+        //bids = new ArrayList<Integer>();
         photos = new ArrayList<String>();
         this.bids = bids;
     }
@@ -153,5 +155,15 @@ public class Task{
      */
     public ArrayList<Integer> getBids(){
         return bids;
+    }
+    public void setBided(){
+        this.status = Status.BIDDED;
+    }
+    public void setAssigned(){
+        this.status = Status.ASSIGNED;
+    }
+
+    public  void setDone(){
+        this.status =  Status.DONE;
     }
 }

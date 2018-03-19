@@ -1,13 +1,8 @@
 package com.example.a1;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+/**
+ * Created by jackyliu on 2018-03-18.
+ */
 
-public class Bid extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bid);
-    }
+public class Bid {
 }

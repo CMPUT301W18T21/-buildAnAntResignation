@@ -16,8 +16,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
  * Represents a task request activity.
  * Here a user can request a task, once a title and description have been provided.
@@ -37,7 +35,7 @@ public class TaskRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_request);
         setTitle("Request Task");
-        ((TextView) findViewById(R.id.username)).setText(MainActivity.getCurrentUser().getUsername());
+        ((TextView) findViewById(R.id.name)).setText(MainActivity.getCurrentUser().getUsername());
     }
 
     /**

@@ -46,7 +46,7 @@ public class ContactInfo extends AppCompatActivity {
      */
     public void setUser(User user){
         this.user = user;
-        ((TextView) findViewById(R.id.username)).setText(user.getUsername());
+        ((TextView) findViewById(R.id.name)).setText(user.getUsername());
         ((EditText) findViewById(R.id.nameEditText)).setText(user.getName());
         ((EditText) findViewById(R.id.genderEditText)).setText(user.getGender());
         ((EditText) findViewById(R.id.phoneEditText)).setText(user.getPhone());
