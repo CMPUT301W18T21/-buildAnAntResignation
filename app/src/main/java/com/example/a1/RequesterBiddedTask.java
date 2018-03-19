@@ -86,7 +86,7 @@ public class RequesterBiddedTask extends AppCompatActivity {
             //textView_username.setText(user.getName());
             textView_task.setText(BiddedTasks.get(i));
 
-            return null;
+            return view;
         }
 
         @Override
