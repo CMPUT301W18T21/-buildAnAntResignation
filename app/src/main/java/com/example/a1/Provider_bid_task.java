@@ -24,6 +24,11 @@ public class Provider_bid_task extends AppCompatActivity {
     private static ArrayList<Integer> bids;
     /**private static ArrayList<String> bids = new ArrayList<>(0); **/
 
+    /**
+     * a method that execute every time the activity is shown.
+     * @param savedInstanceState
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +43,7 @@ public class Provider_bid_task extends AppCompatActivity {
         task = new Task("test task","username","test description","Location",Status.REQUESTED,bids);
 
         **/
-
+        task = MainActivity.getSelectedTask();
         setTask(task);
         bids =task.getBids();
 
@@ -50,6 +55,12 @@ public class Provider_bid_task extends AppCompatActivity {
 
     }
 
+    /**
+     * this onButtonCLick is to save the bid and check the input type.
+     * if it is not int type, it says sorry invalid unput.
+     * otherwise it passes to task.addBid
+     * @param view
+     */
     public void onButtonClick(View view){
         String num = ((EditText) findViewById(R.id.Bid_Value)).getText().toString();
         try{
@@ -72,13 +83,17 @@ public class Provider_bid_task extends AppCompatActivity {
     }
 
 
-
+    /**
+     * setTask is to set the selected task and display the information to the screen so that the user
+     * can see the information of the task they selected.
+     * @param task
+     */
 
 
     public void setTask(Task task){
         this.task = task;
         ((TextView) findViewById(R.id.TitleView)).setText(task.getTitle());
-        ((TextView) findViewById(R.id.StatusView)).setText(task.getStatus().toString());
+        //((TextView) findViewById(R.id.StatusView)).setText(task.getStatus().toString());
         //((TextView) findViewById(R.id.LowestbidView)).setText(task.getLowestBid());
         ((TextView) findViewById(R.id.DescriptionView)).setText(task.getDescription());
 

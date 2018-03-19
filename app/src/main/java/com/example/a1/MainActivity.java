@@ -26,6 +26,8 @@ public class MainActivity  extends AppCompatActivity {
 
     private static User user = new User("name","Us3rn4m3", "male","7","@","img");
 
+    private static Task task = new Task("none","none","none");
+
     /**
      * A method that executes every time the activity is shown on screen.
      *
@@ -45,4 +47,11 @@ public class MainActivity  extends AppCompatActivity {
         return user;
     }
 
+    public static Task getSelectedTask(){return task;}
+
+
 }
+
+
+
+
