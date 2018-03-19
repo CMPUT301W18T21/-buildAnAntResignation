@@ -30,7 +30,9 @@ public class MainActivity  extends AppCompatActivity {
     Button RequestTask;
     Button ProvideTask;
     private static User user = new User("name","Us3rn4m3", "male","7","@","img");
-
+    /**********/
+    private static Task task = new Task("none","none","none");
+    /***********/
     /**
      * A method that executes every time the activity is shown on screen.
      *
@@ -55,6 +57,10 @@ public class MainActivity  extends AppCompatActivity {
     public static User getCurrentUser(){
         return user;
     }
+
+    /************/
+    public static Task getSelectedTask(){return task;}
+    /************/
     private void setupViewProfileButton() {
         /** when add button is clicked jump back to requester's main page
          */

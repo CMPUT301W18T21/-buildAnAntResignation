@@ -80,9 +80,11 @@ public class ProviderMainPage extends AppCompatActivity {
     private ArrayList<ProviderAdaptInfo> boundinfo()
     {
         ArrayList<ProviderAdaptInfo> providerAdaptInfos = new ArrayList<ProviderAdaptInfo>();
+        // probablely need to import task class
+        ArrayList<Task> alltask = task.getAllRequestedTasks();
         ProviderAdaptInfo p;
-        for (int i = 0; i< name_test.length;i++){
-            p = new ProviderAdaptInfo(name_test[i],task_test[i],status_test[i],lowest_test[i]);
+        for (int i = 0; i< alltask.length;i++){
+            p = new ProviderAdaptInfo(alltask[i].getTitle(),alltask[i].getUsername(),alltask[i].getStatus(),alltask[i].getLowestBid());
             providerAdaptInfos.add(p);
         }
         return providerAdaptInfos;

@@ -1,6 +1,7 @@
 package com.example.a1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,9 +87,20 @@ public class pmpCustomAdapter extends BaseAdapter implements Filterable {
             @Override
             public void onItemClick(View v) {
                 Toast.makeText(c,providerinfos.get(pos).getTask(),Toast.LENGTH_SHORT).show();
+                MainActivity.getSelectedTask.setTitle(providerinfos.get(pos).getTask());
+                MainActivity.getSelectedTask.setUsername(providerinfos.get(pos).getName());
+                //MainActivity.getSelectedTask.setDescription(providerinfos.get(pos).get);
+                Intent myIntent = new Intent(ProviderMainPage.this,Provider_bid_task.class);
+                startActivity.(myIntent);
+
+
             }
         });
-
+/*
+MainActivity.getSelectedTask.setTitle();
+MainActivity.getSelectedTask.setUsername():
+MainActivity.getSelectedTask.setDescription();
+ */
         return convertView;
     }
 
