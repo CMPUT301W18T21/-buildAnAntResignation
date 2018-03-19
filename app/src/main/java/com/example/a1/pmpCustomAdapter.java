@@ -91,7 +91,7 @@ public class pmpCustomAdapter extends BaseAdapter implements Filterable {
                 MainActivity.getSelectedTask.setUsername(providerinfos.get(pos).getName());
                 //MainActivity.getSelectedTask.setDescription(providerinfos.get(pos).get);
                 Intent myIntent = new Intent(ProviderMainPage.this,Provider_bid_task.class);
-                startActivity.(myIntent);
+                //star.(myIntent);
 
 
             }
