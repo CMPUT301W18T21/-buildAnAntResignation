@@ -1,45 +1,41 @@
 package com.example.a1;
 
 /**
- * Created by k-h on 2018-03-11.
+ * Created by Yuan on 2018-03-16.
  */
-
 import android.os.AsyncTask;
 import android.util.Log;
 
 import com.searchly.jestdroid.DroidClientConfig;
 import com.searchly.jestdroid.JestClientFactory;
 import com.searchly.jestdroid.JestDroidClient;
-
 import java.io.IOException;
-
 import io.searchbox.client.JestResult;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Get;
 import io.searchbox.core.Index;
 
-public class TaskElasticSearchController {
+public class UserElasticSearchController {
+
     private static JestDroidClient client;
 
     private static final String SEARCH_INDEX = "cmput301w18t21";
-    private static final String SEARCH_TYPE = "taskname";
+    private static final String SEARCH_TYPE = "userprofile";
 
-    /** Add new task into the database
-     * @param TaskName:
-     */
-    public static class AddTask extends AsyncTask<TaskName, Void, Void> {
+
+    public static class AddNewUserProfileTask extends AsyncTask<User, Void, Void> {
 
         @Override
-        protected Void doInBackground(TaskName... taskName) {
+        protected Void doInBackground(User... users) {
             verifySettings();
 
-            TaskName taskName = taskName[0];
+            User userProfile = users[0];
 
-            // Set the unique ID for the document of this task to be the uniquetaskname of this task
-            String doc_ID = taskName.getTitle();
+            // Set the unique ID for the document of this userProfile to be the uniqueUsername of this user
+            String doc_ID = userProfile.getUsername();
 
-            // Add this new task to online database
-            Index index = new Index.Builder(taskName)
+            // Add this new user to online database
+            Index index = new Index.Builder(userProfile)
                     .index(SEARCH_INDEX)
                     .type(SEARCH_TYPE)
                     .id(doc_ID)
@@ -49,18 +45,18 @@ public class TaskElasticSearchController {
                 DocumentResult execute = client.execute(index);
 
                 if(execute.isSucceeded()){
-                    Log.d("addTask", "Add addTask Success");
+                    Log.d("addUser", "Add userProfile Success");
                 }
             }
             catch (Exception e) {
-                Log.i("Error", "The application failed to build");
+                Log.i("Error", "The application failed to build and send the tweets");
             }
 
             return null;
         }
     }
 
-    public static class CheckTaskExist extends AsyncTask<String, Void, Boolean> {
+    public static class CheckUserProfileExistTask extends AsyncTask<String, Void, Boolean> {
 
         @Override
         protected Boolean doInBackground(String... strings) {
@@ -95,12 +91,11 @@ public class TaskElasticSearchController {
 
 
 
-    public static class GetTask extends AsyncTask<String, Void, TaskName> {
+    public static class GetUserProfileTask extends AsyncTask<String, Void, User> {
 
         @Override
-        protected TaskName doInBackground(String... strings) {
+        protected User doInBackground(String... strings) {
             verifySettings();
-
             // input UserName
             String userName_IN = strings[0];
 
@@ -113,9 +108,9 @@ public class TaskElasticSearchController {
                 JestResult result = client.execute(get);
 
                 if (result.isSucceeded()) {
-                    TaskName taskName = result.getSourceAsObject(TaskName.class);
+                    User user = result.getSourceAsObject(User.class);
 
-                    return taskName;
+                    return user;
                 }
 
             } catch (IOException e) {
@@ -129,19 +124,19 @@ public class TaskElasticSearchController {
 
 
 
-    public static class UpdateTask extends AsyncTask<TaskName, Void, Void> {
+    public static class UpdateUserProfileTask extends AsyncTask<User, Void, Void> {
 
         @Override
-        protected Void doInBackground(TaskName... taskName) {
+        protected Void doInBackground(User... users) {
             verifySettings();
 
-            TaskName taskName = taskName[0];
+            User userProfile = users[0];
 
             // Update this userProfile to online database
-            Index index = new Index.Builder(taskName)
+            Index index = new Index.Builder(userProfile)
                     .index(SEARCH_INDEX)
                     .type(SEARCH_TYPE)
-                    .id(taskName.getTitle())
+                    .id(userProfile.getUsername())
                     .build();
 
             try {
@@ -175,10 +170,11 @@ public class TaskElasticSearchController {
     }
 
 
-    public static void syncOnlineWithOffline(TaskName offlineUserProfile) {
+    public static void syncOnlineWithOffline(User offlineUserProfile) {
         // Sync the User Profile from the offline file
-        TaskElasticSearchController.UpdateTask updateTask = new UpdateTask();
-        updateTask.execute(offlineUserProfile);
+        UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UpdateUserProfileTask();
+        //......offlineUserProfile
+        updateUserProfileTask.execute(offlineUserProfile);
     }
 
 

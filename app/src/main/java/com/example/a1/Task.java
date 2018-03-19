@@ -28,10 +28,12 @@ public class Task{
     private String username;
     private String description;
     /**private Status status = Status.REQUESTED;; **/
-    private String status;
+    private Status status;
     private String location;
-    private ArrayList<Integer> bids = new ArrayList<>(0);
+    private ArrayList<Integer> bids = new ArrayList<Integer>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
+
+
 
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
@@ -40,6 +42,8 @@ public class Task{
      * @param username The task-requester's username.
      * @param description The task's description.
      */
+
+
     public Task(String title, String username, String description){
         this.title = title;
         this.username = username;
@@ -56,7 +60,7 @@ public class Task{
      * @param status The task's status.
      * @param bids The taks's bids.
      */
-    public  Task(String title, String username, String description, String location, String status, ArrayList<Integer> bids){
+    public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
         this.username = username;
         this.description = description;
@@ -87,7 +91,7 @@ public class Task{
      * Gets the task's status.
      * @return The status of the task.
      */
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -142,4 +146,6 @@ public class Task{
     public ArrayList<Integer> getBids(){
         return bids;
     }
+
+
 }

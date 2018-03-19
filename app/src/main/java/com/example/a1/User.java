@@ -35,6 +35,9 @@ public class User {
 
     private ArrayList<Task> requestedTasks = new ArrayList<>(0);
     private ArrayList<Task> assignedTasks = new ArrayList<>(0);
+    private ArrayList<Task> BiddedTasks = new ArrayList<>(0);
+    private ArrayList<Integer> Bids = new ArrayList<>(0);
+
 
     /**
      * Constructs a user object.
@@ -131,11 +134,16 @@ public class User {
         return assignedTasks.get(index);
     }
 
+    public Task getBiddedTask(int index) {return BiddedTasks.get(index);}
+    public int getBids(int index){return Bids.get(index);}
+
     /**
      * Gets a list of all requested tasks the user has.
      * @return All requested tasks.
      */
     public ArrayList<Task> getRequestedTasks(){return  requestedTasks;}
+
+    public ArrayList<Task> getBiddedTasks(){return BiddedTasks;}
 
     /**
      * Gets a list of all assigned tasks the user has.
@@ -190,4 +198,13 @@ public class User {
     public void requestTask(Task task){
         requestedTasks.add(task);
     }
+
+    public void assignTask (Task task){assignedTasks.add(task);}
+
+
+    public void bidTask(Task task){BiddedTasks.add(task);}
+
+    public void bids(Integer Value){Bids.add(Value);}
+
+
 }
