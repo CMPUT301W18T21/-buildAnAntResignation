@@ -58,22 +58,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
-
-
-
-        //************//
-        ProviderBiddedTasksStatus.add("done");
-        ProviderBiddedTasksStatus.add("done");
-        ProviderBiddedTasksStatus.add("done");
-        LowestBids.add(111);
-        LowestBids.add(222);
-        LowestBids.add(333);
-        ProviderBiddedTasks.add("task1");
-        ProviderBiddedTasks.add("task2");
-        ProviderBiddedTasks.add("task3");
-
-
-
         setupBackButton();
         getTasksAttri();
 
