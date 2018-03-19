@@ -115,14 +115,6 @@
             tools:layout_editor_absoluteY="158dp" />
 
         <TextView
-            android:id="@+id/LowestbidView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Display Lowest Bid"
-            tools:layout_editor_absoluteX="107dp"
-            tools:layout_editor_absoluteY="158dp" />
-
-        <TextView
             android:id="@+id/textView5"
             android:layout_width="87dp"
             android:layout_height="wrap_content"
@@ -139,7 +131,7 @@
             tools:layout_editor_absoluteY="177dp" />
 
         <ListView
-            android:id="@+id/list_view"
+            android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="8dp"

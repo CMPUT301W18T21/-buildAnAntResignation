@@ -60,14 +60,14 @@ public class Task{
      * @param status The task's status.
      * @param bids The taks's bids.
      */
-    public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
+    public Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
         this.username = username;
         this.description = description;
         this.status = status;
         this.location = location;
-        bids = new ArrayList<Integer>();
-        photos = new ArrayList<String>();
+        bids = new ArrayList<Integer>(0);
+        photos = new ArrayList<String>(0);
         this.bids = bids;
     }
 
@@ -143,6 +143,9 @@ public class Task{
      * Gets all of the task's bids.
      * @return A list of the task's bids.
      */
+    public void addBid(Integer bid){bids.add(bid);}
+
+
     public ArrayList<Integer> getBids(){
         return bids;
     }

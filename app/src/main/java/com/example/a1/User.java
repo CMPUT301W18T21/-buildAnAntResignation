@@ -135,6 +135,7 @@ public class User {
     }
 
     public Task getBiddedTask(int index) {return BiddedTasks.get(index);}
+
     public int getBids(int index){return Bids.get(index);}
 
     /**
