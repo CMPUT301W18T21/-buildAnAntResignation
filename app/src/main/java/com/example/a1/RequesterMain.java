@@ -32,6 +32,7 @@ public class RequesterMain extends AppCompatActivity {
     private static ArrayAdapter<String> adapter;
     Button BiddedButton;
     ListView taskList;
+    Button AssignedButton;
 
 
     /**
@@ -56,9 +57,9 @@ public class RequesterMain extends AppCompatActivity {
 //        Task task = new Task("Task1", MainActivity.getCurrentUser().getUsername(),"Description of task");
 //        MainActivity.getCurrentUser().requestTask(task);
 //
-//        displayTasks();
-//        setupListView();
-//        setupBiddedButton();
+      //  displayTasks();
+        setupListView();
+        setupBiddedButton();
 
     }
 
@@ -96,6 +97,21 @@ public class RequesterMain extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
+                startActivityForResult(intent, 1);
+
+
+
+            }
+        });
+
+    }
+
+    private void setupAssignedButton(){
+        AssignedButton = (Button) findViewById(R.id.viewAssignedButton);
+        AssignedButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(RequesterMain.this, RequesterAssignedTasks.class);
                 startActivityForResult(intent, 1);
 
 

@@ -1,6 +1,7 @@
 package com.example.a1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -55,13 +56,16 @@ public class ProviderMainPage extends AppCompatActivity {
             }
         });
 
-
+/**
+ * miss the itemonlclicked
+ */
 
         myTask = (Button) findViewById(R.id.myTask);
         myTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent= new Intent(ProviderMainPage.this,ProviderBiddedTask.class);
+                startActivity(intent);
                 //show_content(showContent);
             }
         });
@@ -70,6 +74,8 @@ public class ProviderMainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 map_handler();
+
+
             }
         });
 

@@ -21,7 +21,7 @@ import android.widget.TextView;
  * Here a user can request a task, once a title and description have been provided.
  * @see Task
  */
-public class TaskRequest extends AppCompatActivity {
+/**public class TaskRequest extends AppCompatActivity {
 
     private Task task;
 
@@ -30,6 +30,7 @@ public class TaskRequest extends AppCompatActivity {
      *
      * @param savedInstanceState The saved instance state.
      */
+/**
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ public class TaskRequest extends AppCompatActivity {
      * Task title and description are saved and added to the user's tasks requests.
      * @param view The caller view.
      */
+/**
     public void onRequestClick(View view){
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
@@ -53,3 +55,4 @@ public class TaskRequest extends AppCompatActivity {
         }
     }
 }
+*/
