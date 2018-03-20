@@ -61,7 +61,7 @@ public class Task{
         this.description = description;
         this.status = status;
         this.location = location;
-        bids = new ArrayList<Integer>();
+        //bids = new ArrayList<Integer>();
         photos = new ArrayList<String>();
         //*******
         this.bids = bids;
