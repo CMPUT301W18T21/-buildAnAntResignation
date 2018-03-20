@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BidtheTask"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/Bid_Value"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="$"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BidtheTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="onButtonClick"
+        android:text="bid"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bid_Value"
+        app:layout_constraintStart_toEndOf="@+id/Bid_Value" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:text="Title:"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+        <TextView
+            android:id="@+id/TitleView"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="Display Title"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <TextView
+            android:id="@+id/StatusView"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:text="Display Status"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="139dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="Lowest Bid:"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="158dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <TextView
+            android:id="@+id/DescriptionView"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="Display Description"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="196dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

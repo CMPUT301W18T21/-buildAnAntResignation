@@ -10,8 +10,6 @@
  */
 package com.example.a1;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -31,6 +29,7 @@ public class Task{
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
+    private ArrayList<String> Providers=new ArrayList<>(0);
 
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
@@ -44,6 +43,7 @@ public class Task{
         this.username = username;
         this.description = description;
     }
+
 
     /**
      * Constructs a Task object.
@@ -63,20 +63,8 @@ public class Task{
         this.location = location;
         bids = new ArrayList<Integer>();
         photos = new ArrayList<String>();
+        //*******
         this.bids = bids;
-    }
-
-    /**
-     * Returns the requested tasks of all users.
-     * @return A single list of all requested user tasks.
-     */
-    public static ArrayList<Task> getAllRequestedTasks(){
-        ArrayList<Task> requestedTasks = new ArrayList<>(0);
-        ArrayList<User> users = User.getAllUsers();
-        for (User user: users) {
-            requestedTasks.addAll(user.getRequestedTasks());
-        }
-        return requestedTasks;
     }
 
     /**
@@ -88,9 +76,16 @@ public class Task{
     }
 
     /**
+     * @return An array of providers
+     */
+
+    public ArrayList<String> getProvidersName(){return Providers;}
+
+    /**
      * Gets the task's description.
      * @return The description of the task.
      */
+
     public String getDescription() {
         return description;
     }
@@ -153,5 +148,32 @@ public class Task{
      */
     public ArrayList<Integer> getBids(){
         return bids;
+    }
+
+    /**
+     * Add a bid to bids arrayList
+     */
+    public void addBid(Integer bid){
+        bids.add(bid);
+    }
+
+    /**
+     * the following three methods change task's status
+     */
+    public void setBided(){
+        this.status = Status.BIDDED;
+    }
+    public void setAssigned(){
+        this.status = Status.ASSIGNED;
+    }
+
+    /******* added by jiahong *****/
+    public void setTitle(String title){this.title = title;}
+    public void setUsername(String username){this.username = username;}
+    public void setDescription(String description){this.description = description;}
+    /******** added by jiahong ******/
+
+    public  void setDone(){
+        this.status =  Status.DONE;
     }
 }

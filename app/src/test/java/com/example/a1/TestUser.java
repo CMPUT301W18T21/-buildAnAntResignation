@@ -1,7 +1,12 @@
 package com.example.a1;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static com.example.a1.Status.BIDDED;
 import static org.junit.Assert.assertTrue;
+
 
 /**
  * Created by Alex on 2018-02-26.
@@ -10,6 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class TestUser {
 
     @Test
+    //
     public void getName(){
 
         User user = new User("laoxu","","","","","");
@@ -44,13 +50,31 @@ public class TestUser {
         User user = new User("", "", "", "7807801234", "", "");
         assertTrue(user.getPhone() == "7807801234");
     }
+    @Test
+    public void getEmail(){
+        User user = new User("", "", "", "", "345678@aaa", "");
+        assertTrue(user.getEmail()=="345678@aaa");
+    }
 
     @Test
-    public void getAddress() {
+    public void testRequestTask(){
+        /**
+         *         Initialize an array so that we can initialize a task. The we let the RequestedTask() to do what it should do.
+         *         (add a task named task1 into an array in User class)
+         *         then we check if the array actually contains the task1.
+         *
+         */
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task1 = new Task("", "", "", "", BIDDED, bids);
 
-        User user = new User("", "", "", "", "10712-45ave NW", "");
-        assertTrue(user.getAddress() == "10712-45ave NW");
+        User user=new User("", "", "", "", "", "");
+        user.requestTask(task1);
+        Task task2=user.getRequestedTask(0);
+        assertTrue(task2==task1);
     }
+
+
+
 
 
     @Test
@@ -71,21 +95,34 @@ public class TestUser {
 
     }
 
-    @Test
-    public void setAddress(){
+    /**
+     *     In order to set image, we let user choose poicture from gallery then compress the picture to string format
+     *  therefore our setImage() method takes image argument in string format
+     */
 
-        User user = new User("","","","","10712-45ave NW","");
-        user.setAddress("10000-45ave NW");
-        assertTrue(user.getAddress() == "10000-45ave NW");
-
-    }
     @Test
-    public void setImage(){
+    public void testGetImage(){
 
         User user = new User("","","","","","img");
+
         assertTrue(user.getImage() == "img");
 
     }
+
+    /**
+     * the image attribute in User class before set is "img", the image is supposed to be a different string like "IMG" if user
+     * change this image
+     */
+    @Test
+    public void testSetImae(){
+        User user = new User("","","","","","img");
+        user.setImage("IMG");
+        assertTrue(user.getImage()=="IMG");
+
+    }
+
+
+
 
 
 

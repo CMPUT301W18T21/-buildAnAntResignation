@@ -10,12 +10,7 @@
  */
 package com.example.a1;
 
-import android.media.Image;
-import android.os.Bundle;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -34,8 +29,26 @@ public class User {
     private String email;
     private String image;
 
-    private ArrayList<Task> requestedTasks = new ArrayList<>(0);
+    public User(){}
+
+
+    /**
+     * the array of tasks that provider has requested
+     */
+    private ArrayList<Task> requestedTasks;
+    /**
+     * the array of tasks that are assigned
+     */
     private ArrayList<Task> assignedTasks = new ArrayList<>(0);
+    /**
+     * the array of tasks that provider has bidded
+     */
+    private ArrayList<Task> providedTasks;
+
+    /************ added by jiahong *********/
+    private ArrayList<Task> BiddedTasks = new ArrayList<>(0);
+    private ArrayList<Integer> Bids = new ArrayList<>(0);
+
 
     /**
      * Constructs a user object.
@@ -54,14 +67,9 @@ public class User {
         this.phone = phone;
         this.email = email;
         this.image = image;
-    }
 
-    /**
-     * Returns all users in the program.
-     * * @return All users in the program.
-     */
-    public static ArrayList<User> getAllUsers(){
-        return new ArrayList<User>(users.values());
+        requestedTasks = new ArrayList<Task>();
+        providedTasks = new ArrayList<Task>();
     }
 
     /**
@@ -132,6 +140,19 @@ public class User {
     }
 
     /**
+     * Gets the specified index of provider's provided tasks
+     * @param index the index of the task
+     * @return  the provider's task
+     */
+    public Task getProvidedTask(int index){return providedTasks.get(index);}
+
+    /**
+     * Gets a list of all provided tasks the user has provided.
+     * @return All provided tasks.
+     */
+    public ArrayList<Task> getProvidedTasks(){return  this.providedTasks;}
+
+    /**
      * Gets the specified assigned task.
      * @param index The index of the task to be returned.
      * @return The assigned task at the given index.
@@ -144,7 +165,7 @@ public class User {
      * Gets a list of all requested tasks the user has.
      * @return All requested tasks.
      */
-    public ArrayList<Task> getRequestedTasks(){return  requestedTasks;}
+    public ArrayList<Task> getRequestedTasks(){return  this.requestedTasks;}
 
     /**
      * Gets a list of all assigned tasks the user has.
@@ -154,10 +175,10 @@ public class User {
 
     /**
      * Sets the user's regular name.
-     * @param name The name to be set.
+     * @param username The name to be set.
      */
-    public void setName(String name){
-        this.name = name;
+    public void setName(String username){
+        this.username = username;
     }
 
     /**
@@ -199,4 +220,12 @@ public class User {
     public void requestTask(Task task){
         requestedTasks.add(task);
     }
+
+    public void setRequestedTasks(ArrayList<Task> requestedTasks){this.requestedTasks = requestedTasks;}
+
+    public void setProvidedTasks(ArrayList<Task> providedTasks){this.providedTasks = providedTasks;}
+
+
+    public void bidTask(Task task){BiddedTasks.add(task);}
+    public void bids(Integer Value){Bids.add(Value);}
 }

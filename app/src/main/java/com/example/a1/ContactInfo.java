@@ -11,9 +11,8 @@
 
 package com.example.a1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -60,19 +59,19 @@ public class ContactInfo extends AppCompatActivity {
      *
      * @param view The caller view.
      */
-    public void onButtonClick(View view){
-        if ( user.getUsername() == MainActivity.getCurrentUser().getUsername()){
-            user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-            user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-            user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-            user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-            MainActivity.getCurrentUser().setName(user.getName());
-            MainActivity.getCurrentUser().setGender(user.getGender());
-            MainActivity.getCurrentUser().setPhone(user.getPhone());
-            MainActivity.getCurrentUser().setEmail(user.getEmail());
-        }
-
-        //Might a new intent here.
-        finish();
-    }
+//    public void onButtonClick(View view){
+//        if ( user.getUsername() == MainActivity.getCurrentUser().getUsername()){
+//            user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+//            user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+//            user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+//            user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
+//            MainActivity.getCurrentUser().setName(user.getName());
+//            MainActivity.getCurrentUser().setGender(user.getGender());
+//            MainActivity.getCurrentUser().setPhone(user.getPhone());
+//            MainActivity.getCurrentUser().setEmail(user.getEmail());
+//        }
+//
+//        //Might a new intent here.
+//        finish();
+//    }
 }

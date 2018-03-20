@@ -12,12 +12,11 @@
 package com.example.a1;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.ArrayList;
 
 /**
  * Represents the main activity (entry point) of the program.
@@ -29,7 +28,19 @@ public class MainActivity  extends AppCompatActivity {
     Button viewProfile;
     Button RequestTask;
     Button ProvideTask;
-    private static User user = new User("name","Us3rn4m3", "male","7","@","img");
+    private Intent intent;
+    private String username;
+    private static User user;
+    //private static User user = new User("name","Us3rn4m3", "male","7","@","img");
+
+    /********* add by jiahong ******/
+    private static Task task = new Task("none","none","none");
+    public static Task getSelectedTask(){return task;}
+    /********** done adding ***********/
+
+
+    public MainActivity() {
+    }
 
     /**
      * A method that executes every time the activity is shown on screen.
@@ -40,9 +51,51 @@ public class MainActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupViewProfileButton();
-        setupRequestTaskButton();
-        setupProvideTaskButton();
+        intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+        getUserProfileTask.execute(username);
+        try{
+            user = getUserProfileTask.get();
+        }catch(Exception e){
+            Log.i("user doesn't exist","user doesn't exist");
+        }
+
+        viewProfile = (Button) findViewById(R.id.viewProfileButton);
+        viewProfile.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+
+            }
+        });
+
+        RequestTask = (Button) findViewById(R.id.requestButton);
+        RequestTask.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RequesterBiddedTask.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+
+            }
+        });
+
+
+        ProvideTask = (Button) findViewById(R.id.provideButton);
+        ProvideTask.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProviderMainPage.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+
+            }
+        });
     }
 
     /**
@@ -52,50 +105,51 @@ public class MainActivity  extends AppCompatActivity {
     public static User getCurrentUser(){
         return user;
     }
-    private void setupViewProfileButton() {
-        /** when add button is clicked jump back to requester's main page
-         */
-
-        viewProfile = (Button) findViewById(R.id.viewProfileButton);
-        viewProfile.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
-                startActivityForResult(intent, 1);
-
-            }
-        });
-
-    }
-    private void setupRequestTaskButton() {
-        /** when add button is clicked jump back to requester's main page
-         */
-
-        RequestTask = (Button) findViewById(R.id.requestButton);
-        RequestTask.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
-                startActivityForResult(intent, 1);
-
-            }
-        });
-
-    }
-    private void setupProvideTaskButton() {
-        /** when add button is clicked jump back to requester's main page
-         */
-
-        ProvideTask = (Button) findViewById(R.id.provideButton);
-        ProvideTask.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
-                startActivityForResult(intent, 1);
-
-            }
-        });
-
-    }
+//    private void setupViewProfileButton() {
+//        /** when add button is clicked jump back to requester's main page
+//         */
+//
+//        viewProfile = (Button) findViewById(R.id.viewProfileButton);
+//        viewProfile.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
+//                intent.putExtra("username",username);
+//                startActivityForResult(intent, 1);
+//
+//            }
+//        });
+//
+//    }
+//    private void setupRequestTaskButton() {
+//        /** when add button is clicked jump back to requester's main page
+//         */
+//
+//        RequestTask = (Button) findViewById(R.id.requestButton);
+//        RequestTask.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
+//                startActivityForResult(intent, 1);
+//
+//            }
+//        });
+//
+//    }
+//    private void setupProvideTaskButton() {
+//        /** when add button is clicked jump back to requester's main page
+//         */
+//
+//        ProvideTask = (Button) findViewById(R.id.provideButton);
+//        ProvideTask.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, ContactInfo.class);
+//                startActivityForResult(intent, 1);
+//
+//            }
+//        });
+//
+//    }
 
 }

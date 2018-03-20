@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">1</string>
+    <string name="app_name">CMPUT301W18T21</string>
     <string name="username">Username</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
@@ -13,4 +13,15 @@
     <string name="phone">Phone Number</string>
     <string name="viewStatus">Status</string>
     <string name="email">Email Address</string>
+
+
+    <string name="Task_with_Status_assigned">My Task with Status: Assigned</string>
+    <string name="Back_button">Back</string>
+    <string name="Save_button">Save</string>
+    <string name="add_photo">Add photo</string>
+    <string name="add_location">Add Location</string>
+    <string name="assigned">assigned</string>
+    <string name="done">done</string>
+    <string name="accept">accept</string>
+    <string name="decline">decline</string>
 </resources>

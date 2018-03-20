@@ -1,7 +1,12 @@
 package com.example.a1;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static com.example.a1.Status.BIDDED;
 import static org.junit.Assert.assertTrue;
+
 /**
  * Created by Yuan on 2018-02-26.
  */
@@ -10,55 +15,84 @@ public class TestTask {
 
     @Test
     public void testGetTitle(){
-        Task task=new Task("title","","","","",1,0);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task=new Task("title","","","",BIDDED,bids);
         assertTrue(task.getTitle()=="title");
     }
     @Test
 
     public void testGetUsername(){
-        Task task=new Task("","Username","","","",1,0);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+
+        Task task=new Task("","Username","","",BIDDED,bids);
         assertTrue(task.getUsername()=="Username");
     }
-    @Test
-    public void testGetAddress(){
-        Task task=new Task("","","","address","",1,0);
-        assertTrue(task.getAddress()=="address");
-    }
+
     @Test
     public void testGetDes(){
-        Task task=new Task("","","des","","",1,0);
-        assertTrue(task.getDescription()=="des");
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task=new Task("","","description","",BIDDED,bids);
+        assertTrue(task.getDescription()=="description");
     }
     @Test
     public void testGetSta(){
-        Task task=new Task("","","","","sta",1,0);
-        assertTrue(task.getStatus()=="sta");
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task=new Task("","","description","",BIDDED,bids);
+        assertTrue(task.getStatus()==BIDDED);
     }
+
+    /**
+     * we create a bids array which contains 3 bids [1,2,3] , the method to be tested is supposed to return us
+     * a smallest bid
+     */
     @Test
     public void testLowestBid(){
-        Task task=new Task("","","","","",1,0);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task=new Task("","","description","",BIDDED,bids);
+        task.addBid(1);
+        task.addBid(2);
+        task.addBid(3);
         assertTrue(task.getLowestBid()==1);
     }
 
 
-    @Test
-    public void testUpdateLBid(){
-        Task task=new Task("","","","","",1,0);
-        task.updateLowestBid(1);
-        assertTrue(task.getLowestBid()==1);
-    }
+    /**
+     * the photo before importing to server will be compressed to string format , therefore we just need to
+     * add string to an array to store photos
+     */
     @Test
     public void testImportPhoto(){
-        assertTrue(Boolean.TRUE);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        ArrayList<String> test=new ArrayList<>(0);
+        test.add("photoString");
+        Task task=new Task("","","","",BIDDED,bids);
+        task.importPhoto("photoString");
+        assertTrue(task.getPhotos()==test);
+
     }
+
+    /**
+     *
+     */
     @Test
     public void testGetPhoto(){
-        assertTrue(Boolean.TRUE);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        ArrayList<String> test=new ArrayList<>(0);
+
+        test.add("photoString");
+        Task task=new Task("","","","",BIDDED,bids);
+        task.importPhoto("photoString");
+        assertTrue(task.getPhotos()==test);
     }
     @Test
     public void testgetBids(){
-        Task task=new Task("","","","","",1,0);
-        assertTrue(task.getBids()==0);
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        bids.add(1);
+        bids.add(2);
+        bids.add(3);
+
+        Task task=new Task("","","","",BIDDED,bids);
+        assertTrue(task.getBids()==bids);
 
     }
 
