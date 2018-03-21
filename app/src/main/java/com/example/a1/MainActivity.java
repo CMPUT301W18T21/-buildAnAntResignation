@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Represents the main activity (entry point) of the program.
@@ -54,7 +55,8 @@ public class MainActivity  extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         intent = new Intent();
         intent = getIntent();
-        username = intent.getStringExtra("username");
+        username = intent.getStringExtra("name");
+
 
         UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
         getUserProfileTask.execute(username);
@@ -79,7 +81,7 @@ public class MainActivity  extends AppCompatActivity {
         RequestTask.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RequesterBiddedTask.class);
+                Intent intent = new Intent(MainActivity.this, RequesterMain.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
 

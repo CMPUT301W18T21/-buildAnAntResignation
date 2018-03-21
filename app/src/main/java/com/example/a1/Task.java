@@ -25,7 +25,7 @@ public class Task{
     private String title;
     private String username;
     private String description;
-    private Status status = Status.REQUESTED;;
+    private Status status = Status.REQUESTED;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
@@ -123,7 +123,7 @@ public class Task{
      * @return The lowest bid of the task.
      */
     public int getLowestBid(){
-        return bids.get(Collections.min(bids));
+        return Collections.min(bids);
     }
 
     /**

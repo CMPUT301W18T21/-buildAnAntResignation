@@ -152,9 +152,9 @@ public class UserElasticSearchController {
                 DocumentResult execute = client.execute(index);
 
                 if (execute.isSucceeded()) {
-                    Log.d("update", "Update User Habits Success");
+                    Log.d("update", "Update User profile Success");
                 } else {
-                    Log.d("update", "Update User Habits Fail");
+                    Log.d("update", "Update User profile Fail");
                 }
 
             } catch (IOException e) {

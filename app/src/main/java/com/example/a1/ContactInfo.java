@@ -11,10 +11,15 @@
 
 package com.example.a1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Represents a contact-info-activity activity.
@@ -25,7 +30,15 @@ import android.widget.TextView;
  */
 public class ContactInfo extends AppCompatActivity {
 
-    private User user;
+    private static User user;
+    private String username;
+    Intent intent;
+    private String name;
+    private String phone;
+    private String email;
+    private String gender;
+    Button addButton;
+
 
     /**
      * A method that executes every time the activity is shown on screen.
@@ -37,16 +50,34 @@ public class ContactInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_info);
         setTitle("Contact Info");
+        intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+
+        getUserProfileTask.execute(username);
+        try {
+            user = getUserProfileTask.get();
+        } catch (Exception e) {
+            Log.i("user doesn't exist", "user doesn't exist");
+        }
+        Toast.makeText(getBaseContext(), "Can not find subscription with this name ." + username, Toast.LENGTH_LONG).show();
+        setUser(user);
+        setUpAddButton();
+
+
     }
 
     /**
      * Sets the user who's contact info will be displayed.
+     *
      * @param user The user who's contact info is to be displayed.
      */
-    public void setUser(User user){
+    public void setUser(User user) {
         this.user = user;
-        ((TextView) findViewById(R.id.username)).setText(user.getUsername());
-        ((EditText) findViewById(R.id.nameEditText)).setText(user.getName());
+
+        ((TextView) findViewById(R.id.username)).setText(username);
+        ((EditText) findViewById(R.id.nameEditText)).setText( username);
         ((EditText) findViewById(R.id.genderEditText)).setText(user.getGender());
         ((EditText) findViewById(R.id.phoneEditText)).setText(user.getPhone());
         ((EditText) findViewById(R.id.emailEditText)).setText(user.getEmail());
@@ -56,22 +87,35 @@ public class ContactInfo extends AppCompatActivity {
      * Finish viewing or editing a user profile.
      * If the user displayed matches the current user, any changes to the contact
      * information will be saved. Otherwise they are ignored.
-     *
-     * @param view The caller view.
      */
-//    public void onButtonClick(View view){
-//        if ( user.getUsername() == MainActivity.getCurrentUser().getUsername()){
-//            user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-//            user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-//            user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-//            user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-//            MainActivity.getCurrentUser().setName(user.getName());
-//            MainActivity.getCurrentUser().setGender(user.getGender());
-//            MainActivity.getCurrentUser().setPhone(user.getPhone());
-//            MainActivity.getCurrentUser().setEmail(user.getEmail());
-//        }
-//
-//        //Might a new intent here.
-//        finish();
-//    }
+    public void setUpAddButton() {
+        addButton = (Button) findViewById(R.id.button);
+
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                    user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+                    user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+                    user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+                    user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
+                    // user.setName(user.getName());
+                    //  user.setGender(user.getGender());
+                    // user.setPhone(user.getPhone());
+                    //  user.setEmail(user.getEmail());
+
+
+                    //Might a new intent here.
+                    username=((TextView) findViewById(R.id.nameEditText)).getText().toString();
+                    UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
+                    updateUserProfileTask.execute(user);
+                Intent intent = new Intent(ContactInfo.this, MainActivity.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+
+
+            }
+        });
+    }
 }

@@ -3,6 +3,7 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,8 +20,12 @@ import static com.example.a1.Status.ASSIGNED;
 public class RequesterAssignedTasks extends AppCompatActivity {
     private Button saveButton;
     private Button backButton;
+    Intent intent;
+    private static String username;
+    private static User user;
+    private Integer test;
 
-    private User user;
+
     /**Initialize the AssignedTasks array to store the tasks that the user has assigned
      *Initialize the TasksStatus array to store status of each task that the requster has assigned
      * Initialize the Accepted Array to store each task's accepted bid
@@ -28,7 +33,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
     ArrayList<String> AssignedTasks = new ArrayList<>(0);
     ArrayList<String> AssignedTasksStatus = new ArrayList<>(0);
-    ArrayList<Integer>AcceptedBids = new ArrayList<>(0);
+    ArrayList<String>AcceptedBids = new ArrayList<>(0);
     ArrayList<String>UserName =new ArrayList<>(0);
 
 
@@ -37,19 +42,41 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_assigned_tasks);
+        intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+        getUserProfileTask.execute(username);
+        try{
+            user = getUserProfileTask.get();
+        }catch(Exception e){
+            Log.i("user doesn't exist","user doesn't exist");
+        }
+        //the following five  lines are added to test
+        Task task1= new Task("title1","user1","des1");
+        user.getRequestedTasks().add(task1);
+
+        user.getRequestedTask(0).setAssigned();
+        user.getRequestedTask(0).addBid(1);
+
+        Toast.makeText(getBaseContext(),"test .",Toast.LENGTH_LONG).show();
+
+        //**********
+
         setupBackButton();
         setupSaveButton();
         getAssignedTasks();
 
-        ((TextView) findViewById(R.id.name)).setText(MainActivity.getCurrentUser().getUsername());
+        ((TextView) findViewById(R.id.name)).setText(username);
 
         ListView listView = (ListView) findViewById(R.id.ListView_Task);
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
 
-        //test: add data to Arraylist
+        //test: add data to Arraylist to test
 
-        AssignedTasksStatus.add("assigned");
+/*        AssignedTasksStatus.add("assigned");
         AssignedTasksStatus.add("assigned");
         AssignedTasksStatus.add("assigned");
         AcceptedBids.add(111);
@@ -63,7 +90,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         UserName.add("jie");
 
 
-        getAssignedTasks();
+      */  //getAssignedTasks();
 
 
         /**
@@ -92,6 +119,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
                 startActivity(intent);
 
 
+
             }
         });
     }
@@ -101,15 +129,15 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * get tasks with status is Assigned , get status of the task, and the Bib made by specific provider, and provider username.
      */
     public void getAssignedTasks(){
-        ArrayList<Task> AllTasks = MainActivity.getCurrentUser().getRequestedTasks();
+        ArrayList<Task> AllTasks = user.getRequestedTasks();
         for(Integer j=0;j<AllTasks.size();j++){
-            Task task = MainActivity.getCurrentUser().getRequestedTask(j);
+            Task task = user.getRequestedTask(j);
             if(task.getStatus() == ASSIGNED){
-                AssignedTasks.add(task.getTitle());
-                String status = task.getStatus().toString();
-                AssignedTasksStatus.add(status);
-                AcceptedBids.add(task.getLowestBid());  //this should get one bid of provider
-                UserName.add(task.getUsername()); //this should get providerusernam here.
+                AssignedTasks.add("Title:"+task.getTitle());
+                Status status = task.getStatus();
+                AssignedTasksStatus.add("Status:"+status.toString());
+                AcceptedBids.add("Accepted bid:"+task.getLowestBid());  //this should get one bid of provider
+                UserName.add("User name:"+username); //this should get providerusernam here.
             }
         }
     }
@@ -165,6 +193,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
@@ -179,6 +208,18 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+            }
+        });
+    }
+    private void setupPhotoButton(){
+        backButton = (Button) findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });

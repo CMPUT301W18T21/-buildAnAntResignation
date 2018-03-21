@@ -13,11 +13,14 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -33,6 +36,11 @@ public class RequesterMain extends AppCompatActivity {
     Button BiddedButton;
     ListView taskList;
     Button AssignedButton;
+    String username;
+    private static User user;
+    private Intent intent;
+    Button requestButton;
+
 
 
     /**
@@ -46,32 +54,49 @@ public class RequesterMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_main);
         setTitle("Requester Main Page");
-//
-//        ((TextView) findViewById(R.id.username)).setText(MainActivity.getCurrentUser().getUsername());
-//
-//        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tasksInfo);
-//        ListView listView = findViewById(R.id.listView);
-//        listView.setAdapter(adapter);
-//
-//        /* Remove Later*/
-//        Task task = new Task("Task1", MainActivity.getCurrentUser().getUsername(),"Description of task");
-//        MainActivity.getCurrentUser().requestTask(task);
-//
-      //  displayTasks();
+        intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+        getUserProfileTask.execute(username);
+        try{
+            user = getUserProfileTask.get();
+        }catch(Exception e){
+            Log.i("user doesn't exist","user doesn't exist");
+        }
+        Toast.makeText(getBaseContext(),"Can not find subscription with this name ."+username,Toast.LENGTH_LONG).show();
+
+
+
+
+        ((TextView) findViewById(R.id.username)).setText(username);
+
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tasksInfo);
+        ListView listView = findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+
+        /* Remove Later*/
+        Task task = new Task("Task1",username,"Description of task");
+        user.requestTask(task);
+
+        displayTasks();
         setupListView();
         setupBiddedButton();
+        setupRequestView();
+        setupAssignedButton();
 
     }
 
     /**
      * Adds the user's requested tasks to the list view.
      */
-//    private void displayTasks(){
-//        ArrayList<Task> tasks = MainActivity.getCurrentUser().getRequestedTasks();
-//        for (Task task: tasks) {
-//            tasksInfo.add(task.getTitle() + "\n" + task.getStatus());
-//        }
-//    }
+    private void displayTasks(){
+        ArrayList<Task> tasks =user.getRequestedTasks();
+        for (Task task: tasks) {
+            tasksInfo.add(task.getTitle() + "\n" + task.getStatus());
+        }
+    }
 
     public void onViewAssignedClick(View view){
 
@@ -89,15 +114,15 @@ public class RequesterMain extends AppCompatActivity {
 
     }
     private void setupBiddedButton() {
-        /** when add button is clicked jump to addsubscription View
-         */
+
 
         BiddedButton = (Button) findViewById(R.id.viewBiddedButton);
         BiddedButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
-                startActivityForResult(intent, 1);
+                intent.putExtra("username",username);
+                startActivity(intent);
 
 
 
@@ -112,8 +137,8 @@ public class RequesterMain extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterAssignedTasks.class);
-                startActivityForResult(intent, 1);
-
+                intent.putExtra("username",username);
+                startActivity(intent);
 
 
             }
@@ -138,5 +163,23 @@ public class RequesterMain extends AppCompatActivity {
         });
 
     }
+    private void setupRequestView() {
+        /** when add button is clicked jump to addsubscription View
+         */
+
+        requestButton = (Button) findViewById(R.id.requestButton);
+        requestButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(RequesterMain.this, TaskRequest.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+
+
+            }
+        });
+
+    }
+
 
 }
