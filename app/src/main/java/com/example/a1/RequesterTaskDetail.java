@@ -41,6 +41,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
         bids.add(8);
         task = new Task("hi","nihao","whatsup","location", Status.REQUESTED,bids);
 
+
         viewtitle =(TextView)findViewById(R.id.ViewTitle);
         viewstatus =(TextView)findViewById(R.id.ViewStatus);
         viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);

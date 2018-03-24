@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
@@ -33,6 +34,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_bidded_task.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_bidded_task.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -114,6 +119,7 @@
       <file leaf-file-name="RequesterAssignedTasks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="540">
               <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
               <folding>
@@ -129,6 +135,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-17">
               <caret line="78" column="29" lean-forward="false" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+=======
+            <state relative-caret-position="950">
+              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="49" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2343#2640#0" expanded="true" />
@@ -153,6 +163,7 @@
       <file leaf-file-name="ContactInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="452">
               <caret line="112" column="73" lean-forward="false" selection-start-line="112" selection-start-column="73" selection-end-line="112" selection-end-column="73" />
               <folding>
@@ -203,6 +214,10 @@
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+            <state relative-caret-position="238">
+              <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -1958,6 +1973,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java" />
+<<<<<<< Updated upstream
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterBiddedTask.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskRequest.java" />
+        <option value="$PROJECT_DIR$/local.properties" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskDetails.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -2222,7 +2246,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521639128180" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521925507308" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2270,7 +2298,11 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521639128180" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521925507308" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2453,7 +2485,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521639128183" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521925507308" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <list size="2">
@@ -2516,7 +2552,25 @@
       <option name="project" value="LOCAL" />
       <updated>1521505532375</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="4" />
+=======
+    <task id="LOCAL-00004" summary="Attempting to push everyones manually created version into the main branch.">
+      <created>1521920177066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521920177066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Now sending selected task to Requester Task Details screen.">
+      <created>1521925351661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521925351661</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="TestHistory">
@@ -2572,7 +2626,8 @@
     <MESSAGE value="Added a method for getting all requested tasks, and a method for getting all users." />
     <MESSAGE value="Added onitemclick listener in requester main list view." />
     <MESSAGE value="Attempting to push everyones manually created version into the main branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempting to push everyones manually created version into the main branch." />
+    <MESSAGE value="Now sending selected task to Requester Task Details screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now sending selected task to Requester Task Details screen." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3056,15 +3111,44 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-94">
           <caret line="155" column="24" lean-forward="false" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="979">
+          <caret line="93" column="58" lean-forward="true" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+>>>>>>> Stashed changes
+          <folding>
+            <element signature="e#2508#2970#0" expanded="true" />
+            <element signature="e#2969#2970#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
   </component>
 </project>

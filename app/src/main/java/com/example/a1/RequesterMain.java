@@ -86,6 +86,17 @@ public class RequesterMain extends AppCompatActivity {
         setupRequestView();
         setupAssignedButton();
 
+        listView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                        Intent intent = new Intent(RequesterMain.this, RequesterTaskDetails.class);
+                        Task task = user.getRequestedTask((int)id);
+                        intent.putExtra("task", task);
+                        startActivityForResult(intent, 1);
+                    }
+                }
+        );
+
     }
 
     /**
