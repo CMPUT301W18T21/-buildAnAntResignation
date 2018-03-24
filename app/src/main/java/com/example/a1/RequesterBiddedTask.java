@@ -54,7 +54,6 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
         user.getRequestedTask(1).setBided();
 
-        Toast.makeText(getBaseContext(),"Can not find subscription with this name ."+username,Toast.LENGTH_LONG).show();
 //****
         getBiddedTasks();
 
