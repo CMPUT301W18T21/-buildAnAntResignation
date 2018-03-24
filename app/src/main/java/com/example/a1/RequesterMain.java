@@ -65,7 +65,6 @@ public class RequesterMain extends AppCompatActivity {
         }catch(Exception e){
             Log.i("user doesn't exist","user doesn't exist");
         }
-        Toast.makeText(getBaseContext(),"Can not find subscription with this name ."+username,Toast.LENGTH_LONG).show();
 
 
 
