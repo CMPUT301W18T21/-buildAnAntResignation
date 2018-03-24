@@ -87,6 +87,7 @@ public class RequesterMain extends AppCompatActivity {
                         Intent intent = new Intent(RequesterMain.this, RequesterTaskDetail.class);
                         Task task = user.getRequestedTask((int)id);
                         RequesterTaskDetail.setTask(task);
+                        intent.putExtra("username",username);
                         startActivityForResult(intent, 1);
                     }
                 }

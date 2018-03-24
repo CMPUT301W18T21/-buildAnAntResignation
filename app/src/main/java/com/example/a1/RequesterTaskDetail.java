@@ -25,6 +25,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private  TextView viewdescription;
 
     private static Task task;
+    private static String username;
     private static ArrayAdapter<Integer> adapter;
     private static ArrayList<Integer> bids;
 
@@ -33,6 +34,8 @@ public class RequesterTaskDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_task_detail);
+        username = intent.getStringExtra("name");
+
         /* debugging */
 
         bids = new ArrayList<>(0);
@@ -40,6 +43,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
         bids.add(9);
         bids.add(8);
         task = new Task("hi","nihao","whatsup","location", Status.REQUESTED,bids);
+
 
 
         viewtitle =(TextView)findViewById(R.id.ViewTitle);
@@ -134,6 +138,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterTaskDetail.this,RequesterMain.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
