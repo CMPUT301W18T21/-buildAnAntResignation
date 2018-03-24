@@ -10,8 +10,10 @@
  */
 package com.example.a1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,7 +28,8 @@ import org.w3c.dom.Text;
 public class TaskRequest extends AppCompatActivity {
 
     private Task task;
-
+    private String username;
+    private User user;
     /**
      * A method that executes every time the activity is shown on screen.
      *
@@ -37,7 +40,18 @@ public class TaskRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_request);
         setTitle("Request Task");
-        ((TextView) findViewById(R.id.username)).setText(MainActivity.getCurrentUser().getUsername());
+        Intent intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+        getUserProfileTask.execute(username);
+        try{
+            user = getUserProfileTask.get();
+        }catch(Exception e){
+            Log.i("user doesn't exist","user doesn't exist");
+        }
+        ((TextView) findViewById(R.id.username)).setText(username);
     }
 
     /**
@@ -49,8 +63,10 @@ public class TaskRequest extends AppCompatActivity {
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
         if (title.length() <= 30 && description.length() <= 300) {
-            task = new Task(title, MainActivity.getCurrentUser().getUsername(), description);
-            MainActivity.getCurrentUser().requestTask(task);
+            task = new Task(title, user.getUsername(), description);
+            user.requestTask(task);
+            UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
+            updateUserProfileTask.execute(user);
             finish();
         }
     }

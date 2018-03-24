@@ -32,8 +32,6 @@ public class MainActivity  extends AppCompatActivity {
     private Intent intent;
     private String username;
     private static User user;
-    //private static User user = new User("name","Us3rn4m3", "male","7","@","img");
-    static User user1=new User("name", "String username", "String gender"," String phone"," String email", "String image");
 
     /********* add by jiahong ******/
     private static Task task = new Task("none","none","none");
@@ -100,15 +98,5 @@ public class MainActivity  extends AppCompatActivity {
             }
         });
     }
-
-    /**
-     * Gets the current user.
-     * @return The current user.
-     */
-
-    public static User getCurrentUser(){
-        return user1;
-    }
-
 
 }

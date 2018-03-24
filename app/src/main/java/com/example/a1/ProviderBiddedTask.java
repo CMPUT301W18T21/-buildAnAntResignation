@@ -85,9 +85,9 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
     private void getTasksAttri(){
 
-        ArrayList<Task> AllTasks= MainActivity.getCurrentUser().getProvidedTasks();
+        ArrayList<Task> AllTasks= user.getProvidedTasks();
         for(Integer j=0;j<AllTasks.size();j++){
-            Task task= MainActivity.getCurrentUser().getRequestedTask(j);
+            Task task= user.getRequestedTask(j);
             /**
              * the status here should be String since it will be set as the content of textView
              */

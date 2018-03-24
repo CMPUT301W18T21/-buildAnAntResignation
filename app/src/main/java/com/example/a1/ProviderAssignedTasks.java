@@ -14,6 +14,7 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,8 +28,9 @@ import android.widget.TextView;
  */
 public class ProviderAssignedTasks extends AppCompatActivity {
 
-   Button BackButton;
-
+    private Button BackButton;
+    private String username;
+    private User user;
 
     /**
      * A method that executes every time the activity is shown on screen.
@@ -41,7 +43,18 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_assigned_tasks);
         setTitle("Assigned Tasks");
-        ((TextView) findViewById(R.id.username)).setText(MainActivity.getCurrentUser().getUsername());
+        Intent intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+        getUserProfileTask.execute(username);
+        try{
+            user = getUserProfileTask.get();
+        }catch(Exception e){
+            Log.i("user doesn't exist","user doesn't exist");
+        }
+        ((TextView) findViewById(R.id.username)).setText(username);
         setupBackButton();
 
     }

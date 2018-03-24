@@ -66,9 +66,6 @@ public class RequesterMain extends AppCompatActivity {
             Log.i("user doesn't exist","user doesn't exist");
         }
 
-
-
-
         ((TextView) findViewById(R.id.username)).setText(username);
 
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tasksInfo);
@@ -107,21 +104,6 @@ public class RequesterMain extends AppCompatActivity {
         }
     }
 
-    public void onViewAssignedClick(View view){
-
-    }
-
-    public void onViewBiddedClick(View view){
-
-    }
-
-    public void onRequestClick(View view){
-
-    }
-
-    public void onTaskClick(View view){
-
-    }
     private void setupBiddedButton() {
 
 
@@ -132,9 +114,6 @@ public class RequesterMain extends AppCompatActivity {
                 Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
-
-
-
             }
         });
 
@@ -148,8 +127,6 @@ public class RequesterMain extends AppCompatActivity {
                 Intent intent = new Intent(RequesterMain.this, RequesterAssignedTasks.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
-
-
             }
         });
 

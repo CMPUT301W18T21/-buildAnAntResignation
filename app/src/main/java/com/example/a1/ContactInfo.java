@@ -95,20 +95,18 @@ public class ContactInfo extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                    user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-                    user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-                    user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-                    user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-                    // user.setName(user.getName());
-                    //  user.setGender(user.getGender());
-                    // user.setPhone(user.getPhone());
-                    //  user.setEmail(user.getEmail());
+                user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+                user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+                user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+                user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
 
+                //Might need a new intent here.
+                username=((TextView) findViewById(R.id.nameEditText)).getText().toString();
 
-                    //Might a new intent here.
-                    username=((TextView) findViewById(R.id.nameEditText)).getText().toString();
-                    UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-                    updateUserProfileTask.execute(user);
+                //Update to server
+                UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
+                updateUserProfileTask.execute(user);
+
                 Intent intent = new Intent(ContactInfo.this, MainActivity.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
