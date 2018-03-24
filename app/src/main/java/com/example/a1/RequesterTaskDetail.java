@@ -103,6 +103,15 @@ public class RequesterTaskDetail extends AppCompatActivity {
     }
 
     /**
+     * Sets the task who's info will be displayed
+     * @param task Task to be displayed.
+     */
+    public static void setTask(Task task){
+        RequesterTaskDetail.task = task;
+    }
+
+
+    /**
      * when save button is clicked jump from Requester's  Task Detail Screen to Requester Main Screen and saving  changes.
      */
     private void setupSaveButton(){

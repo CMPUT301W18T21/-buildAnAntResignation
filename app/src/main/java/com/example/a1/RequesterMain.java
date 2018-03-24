@@ -80,7 +80,6 @@ public class RequesterMain extends AppCompatActivity {
         user.requestTask(task);
 
         displayTasks();
-        setupListView();
         setupBiddedButton();
         setupRequestView();
         setupAssignedButton();
@@ -88,9 +87,9 @@ public class RequesterMain extends AppCompatActivity {
         listView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                        Intent intent = new Intent(RequesterMain.this, RequesterTaskDetails.class);
+                        Intent intent = new Intent(RequesterMain.this, RequesterTaskDetail.class);
                         Task task = user.getRequestedTask((int)id);
-                        intent.putExtra("task", task);
+                        RequesterTaskDetail.setTask(task);
                         startActivityForResult(intent, 1);
                     }
                 }
@@ -155,24 +154,7 @@ public class RequesterMain extends AppCompatActivity {
         });
 
     }
-    private void setupListView() {
-        /** when add button is clicked jump to addsubscription View
-         */
 
-        taskList = (ListView) findViewById(R.id.listView);
-        taskList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
-                Intent intent = new Intent(view.getContext(),TaskDetails.class);
-
-                startActivityForResult(intent, 1);
-
-
-            }
-        });
-
-    }
     private void setupRequestView() {
         /** when add button is clicked jump to addsubscription View
          */
