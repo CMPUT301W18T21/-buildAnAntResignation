@@ -43,7 +43,7 @@ public class Login extends AppCompatActivity {
                 }
                 if (isExist){
                     Intent intent = new Intent(com.example.a1.Login.this, MainActivity.class);
-                    intent.putExtra("name",userName);
+                    intent.putExtra("username",userName);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(),"login....",Toast.LENGTH_SHORT);
                 }else{

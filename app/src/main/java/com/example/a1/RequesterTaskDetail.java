@@ -34,7 +34,9 @@ public class RequesterTaskDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_task_detail);
-        username = intent.getStringExtra("name");
+        Intent intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
 
         /* debugging */
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * @author Liu
@@ -19,7 +20,7 @@ public class DialogChangeStatus extends AppCompatActivity {
 
         Button Done = (Button) findViewById(R.id.buttonDone);
         Button Assigned = (Button) findViewById(R.id.buttonAssigned);
-
+        Button Request = (Button) findViewById(R.id.buttonRequest);
 
         //when Done button is clicked , status of the task change to Done and jump back to RequesterAssignedTask
         Done.setOnClickListener(new View.OnClickListener() {
@@ -44,5 +45,18 @@ public class DialogChangeStatus extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        // when Request button is clicked, status of the task change to Request and jump back to RequesterAssignedTask
+        Request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //AssignedTasks.get(position).setRequest();
+                Intent intent = new Intent(DialogChangeStatus.this,RequesterAssignedTasks.class);
+
+                startActivity(intent);
+            }
+        });
+
     }
 }

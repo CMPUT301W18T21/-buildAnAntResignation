@@ -53,7 +53,7 @@ public class MainActivity  extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         intent = new Intent();
         intent = getIntent();
-        username = intent.getStringExtra("name");
+        username = intent.getStringExtra("username");
 
 
         UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
