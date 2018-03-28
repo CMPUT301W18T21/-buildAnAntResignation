@@ -74,23 +74,10 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
 
-        //test: add data to Arraylist to test
-
-/*        AssignedTasksStatus.add("assigned");
-        AssignedTasksStatus.add("assigned");
-        AssignedTasksStatus.add("assigned");
-        AcceptedBids.add(111);
-        AcceptedBids.add(222);
-        AcceptedBids.add(333);
-        AssignedTasks.add("task1");
-        AssignedTasks.add("task2");
-        AssignedTasks.add("task3");
-        UserName.add("hao");
-        UserName.add("liu");
-        UserName.add("jie");
 
 
-      */  //getAssignedTasks();
+
+        //getAssignedTasks();
 
 
         /**
@@ -213,6 +200,19 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
+
+
+
+
+
+    /**
+     * I do not know this method
+
     private void setupPhotoButton(){
         backButton = (Button) findViewById(R.id.back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -224,4 +224,5 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             }
         });
     }
+     */
 }

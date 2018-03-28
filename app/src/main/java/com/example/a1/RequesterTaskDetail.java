@@ -17,6 +17,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private Button backButton;
     private Button AddPhoto;
     private Button AddLocation;
+    private Button DeleteButton;
 
     private ListView listView;
     private TextView viewtitle;
@@ -106,6 +107,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
         setupAddPhotoButton();
         setupBackButton();
         setupSaveButton();
+        setupDeleteButton();
     }
 
     /**
@@ -158,6 +160,22 @@ public class RequesterTaskDetail extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+
+    public void delteButton(View view){
+
+    }
+
+    private  void setupDeleteButton(){
+        DeleteButton = (Button) findViewById(R.id.delete);
+        DeleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     /**
