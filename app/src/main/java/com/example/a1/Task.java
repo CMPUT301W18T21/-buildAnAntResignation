@@ -78,14 +78,12 @@ public class Task{
     /**
      * @return An array of providers
      */
-
     public ArrayList<String> getProvidersName(){return Providers;}
 
     /**
      * Gets the task's description.
      * @return The description of the task.
      */
-
     public String getDescription() {
         return description;
     }
@@ -167,11 +165,11 @@ public class Task{
         this.status = Status.ASSIGNED;
     }
 
-    /******* added by jiahong *****/
+
     public void setTitle(String title){this.title = title;}
     public void setUsername(String username){this.username = username;}
     public void setDescription(String description){this.description = description;}
-    /******** added by jiahong ******/
+
 
     public  void setDone(){
         this.status =  Status.DONE;

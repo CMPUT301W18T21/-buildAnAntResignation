@@ -73,6 +73,7 @@ public class RequesterMain extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         /* Remove Later*/
+        tasksInfo.clear();
         Task task = new Task("Task1",username,"Description of task");
         user.requestTask(task);
 
@@ -99,6 +100,7 @@ public class RequesterMain extends AppCompatActivity {
      * Adds the user's requested tasks to the list view.
      */
     private void displayTasks(){
+        tasksInfo.clear();
         ArrayList<Task> tasks =user.getRequestedTasks();
         for (Task task: tasks) {
             tasksInfo.add(task.getTitle() + "\n" + task.getStatus());

@@ -45,7 +45,6 @@ public class User {
      */
     private ArrayList<Task> providedTasks;
 
-    /************ added by jiahong *********/
     private ArrayList<Task> BiddedTasks = new ArrayList<>(0);
     private ArrayList<Integer> Bids = new ArrayList<>(0);
 
@@ -221,11 +220,44 @@ public class User {
         requestedTasks.add(task);
     }
 
+    /**
+     * Removes a task from the user's requested tasks.
+     * @param task The task to be deleted.
+     */
+    public void deleteTask(Task task){
+        requestedTasks.remove(task);
+    }
+
+    /**
+     * Replaces an existing requested task, with a new task.
+     * @param task The task to be edited.
+     * @param title The new title of the task.
+     * @param description The new description of the task.
+     */
+    public void editRequestedTask(Task task, String title, String description){
+        int index = requestedTasks.indexOf(task);
+        requestedTasks.get(index).setTitle(title);
+        requestedTasks.get(index).setDescription(description);
+    }
+
+    /**
+     * Sets an ArrayList of Tasks as the users requested tasks.
+     * @param requestedTasks The array list of tasks to be set.
+     */
     public void setRequestedTasks(ArrayList<Task> requestedTasks){this.requestedTasks = requestedTasks;}
 
+    /**
+     * Sets an ArrayList of Tasks as the users provided tasks.
+     * @param providedTasks The array list of tasks to be set.
+     */
     public void setProvidedTasks(ArrayList<Task> providedTasks){this.providedTasks = providedTasks;}
 
+    /**
+     * Adds a task to the user's bidded tasks.
+     * @param task The task to to bid on.
+     */
+    public void bidTask(Task task){ BiddedTasks.add(task); }
 
-    public void bidTask(Task task){BiddedTasks.add(task);}
-    public void bids(Integer Value){Bids.add(Value);}
+
+    public void bids(Integer Value){ Bids.add(Value); }
 }

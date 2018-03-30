@@ -103,9 +103,17 @@ public class ContactInfo extends AppCompatActivity {
                 //Might need a new intent here.
                 username=((TextView) findViewById(R.id.nameEditText)).getText().toString();
 
-                //Update to server
-                UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-                updateUserProfileTask.execute(user);
+                //get most recent user info.
+                UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+                getUserProfileTask.execute(username);
+                try{
+                    user = getUserProfileTask.get();
+                    //Update to server
+                    UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
+                    updateUserProfileTask.execute(user);
+                }catch(Exception e){
+                    Log.i("user doesn't exist","user doesn't exist");
+                }
 
                 Intent intent = new Intent(ContactInfo.this, MainActivity.class);
                 intent.putExtra("username",username);
