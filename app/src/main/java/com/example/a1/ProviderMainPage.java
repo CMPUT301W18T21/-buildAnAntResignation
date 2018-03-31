@@ -164,7 +164,7 @@ public class ProviderMainPage extends AppCompatActivity {
             holder.setItemClickListener(new pmpItemClickListener() {
                                             @Override
                                             public void onItemClick(View view) {
-                                                Intent intent = new Intent(ProviderMainPage.this, ProviderBiddedTask.class);
+                                                Intent intent = new Intent(ProviderMainPage.this, Provider_bid_task.class);
                                                 startActivity(intent);
                                                 Toast.makeText(c, providerinfos.get(pos).getTask(), Toast.LENGTH_SHORT).show();
 
