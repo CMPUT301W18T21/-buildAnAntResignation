@@ -66,7 +66,7 @@ public class UserElasticSearchController {
             verifySettings();
 
             // input UserName
-            User user = new User();
+            User user;
 
             // Check if UserProfile with id equals userName_IN exists
             Get get = new Get.Builder(SEARCH_INDEX, params[0])
@@ -85,20 +85,14 @@ public class UserElasticSearchController {
 //                    Log.d("checkUser", "Check userProfile UserName Unique Fail");
 //                    return false;
 //                }
-
+                if (user != null) return true;
             } catch (IOException e) {
                 e.printStackTrace();
                 Log.i("exception","nooooooo exception");
             }
-            if (user == null){
-                return false;
-            }
-
-            return true;
+            return false;
         }
     }
-
-
 
     public static class GetUserProfileTask extends AsyncTask<String, Void, User> {
 
@@ -129,9 +123,6 @@ public class UserElasticSearchController {
             return null;
         }
     }
-
-
-
 
     public static class UpdateUserProfileTask extends AsyncTask<User, Void, Void> {
 
@@ -165,8 +156,6 @@ public class UserElasticSearchController {
         }
     }
 
-
-
     public static void verifySettings() {
         if (client == null) {
             DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");
@@ -177,7 +166,6 @@ public class UserElasticSearchController {
             client = (JestDroidClient) factory.getObject();
         }
     }
-
 
     public static void syncOnlineWithOffline(User offlineUserProfile) {
         // Sync the User Profile from the offline file

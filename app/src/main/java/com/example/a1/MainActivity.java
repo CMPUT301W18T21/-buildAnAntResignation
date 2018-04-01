@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -56,7 +57,7 @@ public class MainActivity  extends AppCompatActivity {
         username = intent.getStringExtra("username");
         setTitle("Main Screen");
 
-
+        ((TextView) findViewById(R.id.username)).setText(username);
         UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
         getUserProfileTask.execute(username);
         try{
