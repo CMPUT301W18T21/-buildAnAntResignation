@@ -221,12 +221,27 @@ public class User {
     }
 
     /**
+     * Adds a task to the user's provided tasks.
+     * @param task The task to be provided.
+     */
+    public void provideTask(Task task){
+        providedTasks.add(task);
+    }
+
+
+    /**
      * Removes a task from the user's requested tasks.
      * @param task The task to be deleted.
      */
-    public void deleteTask(Task task){
+    public void deleteRequestedTask(Task task){
         requestedTasks.remove(task);
     }
+
+    /**
+     * Removes a task from the user's provided tasks.
+     * @param task The task to be deleted.
+     */
+    public void deleteProvidedTask(Task task){ providedTasks.remove(task); }
 
     /**
      * Replaces an existing requested task, with a new task.

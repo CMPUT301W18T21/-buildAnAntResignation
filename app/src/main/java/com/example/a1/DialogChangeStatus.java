@@ -13,7 +13,7 @@ import android.widget.Toast;
  */
 public class DialogChangeStatus extends AppCompatActivity {
 
-    public static Task task;
+    private static Task task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +29,28 @@ public class DialogChangeStatus extends AppCompatActivity {
         return task;
     }
 
-    public void onClickRequested(View view){
 
+    public void onClickRequested(View view){
+        if(task.getStatus() == Status.ASSIGNED){
+            task.setRequested();
+            RequesterAssignedTasks.UpdateTask();
+            finish();
+        }
     }
 
     public void onClickBidded(View view){
-
+        if(task.getStatus() == Status.ASSIGNED){
+            task.setBided();
+            RequesterAssignedTasks.UpdateTask();
+            finish();
+        }
     }
 
     public void onClickDone(View view){
-
+        if(task.getStatus() == Status.ASSIGNED){
+            RequesterAssignedTasks.UpdateTask();
+            task.setDone();
+            finish();
+        }
     }
 }

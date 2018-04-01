@@ -23,6 +23,9 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     Intent intent;
     private static String username;
     private static User user;
+    private static Task oldTask;
+    private static Task newTask;
+    private static int id;
     private Integer test;
 
 
@@ -31,10 +34,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * Initialize the Accepted Array to store each task's accepted bid
      */
 
-    ArrayList<String> AssignedTasks = new ArrayList<>(0);
-    ArrayList<String> AssignedTasksStatus = new ArrayList<>(0);
-    ArrayList<String>AcceptedBids = new ArrayList<>(0);
-    ArrayList<String>UserName =new ArrayList<>(0);
+    private static ArrayList<Task> AssignedTasks = new ArrayList<>(0);
+    private static ArrayList<String> AssignedTasksTitle = new ArrayList<>(0);
+    private static ArrayList<String> AssignedTasksStatus = new ArrayList<>(0);
+    private static ArrayList<String>AcceptedBids = new ArrayList<>(0);
+    private static ArrayList<String>UserName =new ArrayList<>(0);
 
 
 
@@ -54,15 +58,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             Log.i("user doesn't exist","user doesn't exist");
         }
         //the following five  lines are added to test
-        Task task1= new Task("title1","user1","des1");
-        user.getRequestedTasks().add(task1);
+        Task task= new Task("title1","user1","des1");
+        user.getRequestedTasks().add(task);
 
         user.getRequestedTask(0).setAssigned();
         user.getRequestedTask(0).addBid(1);
-
-        Toast.makeText(getBaseContext(),"test .",Toast.LENGTH_LONG).show();
-
-        //**********
 
         setupBackButton();
         setupSaveButton();
@@ -80,47 +80,99 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         //getAssignedTasks();
 
 
-        /**
-         mTaskList = new ArrayList<>();
-         Toast.makeText(getApplicationContext(),"111 =" ,Toast.LENGTH_SHORT).show();
-
-         //Init adapter
-         adapter = new RequesterAssignedListviewAdapter(getApplicationContext(),mTaskList);
-         listView.setAdapter(adapter);
-
-
-         Toast.makeText(getApplicationContext(),"222=" ,Toast.LENGTH_SHORT).show();
-         */
-
-
         //when item was click jump out a dialog that selec Done or Assigned
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long lid) {
+                id = (int)lid;
+                //old backup of the task
+                oldTask = AssignedTasks.get( id);
 
-                Toast.makeText(getApplicationContext(), "Cliacked task name =" + view.getTag(), Toast.LENGTH_SHORT).show();
                 //Call dialog to display detail
-
-                Intent intent = new Intent(getApplicationContext(),DialogChangeStatus.class);
-
+                DialogChangeStatus.setTask(AssignedTasks.get(id));
+                Intent intent = new Intent(getApplicationContext(), DialogChangeStatus.class);
                 startActivity(intent);
-
-
 
             }
         });
+    }
+
+    public static void UpdateTask(){
+        AssignedTasks.set(id, DialogChangeStatus.getTask());
+
+        newTask = AssignedTasks.get(id);
+        //updates the tasks to both task providers and requester
+
+        //update for requester
+
+        //get user form server
+        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
+
+        getUserProfileTask.execute(username);
+        try {
+            user = getUserProfileTask.get();
+            user.deleteRequestedTask(oldTask);
+            user.requestTask(newTask);
+
+        } catch (Exception e) {
+            Log.i("user doesn't exist", "User does not exist!");
+            // Add a notification
+        }
+
+
+        //update for provider
+
+        //find provider form task, remove this task from his provided tasks.
+        String providerName = newTask.getProviderName();
+        User provider;
+        if (newTask.getStatus() == Status.REQUESTED){
+
+            //get provider from server
+            getUserProfileTask.execute(providerName);
+            try {
+                provider = getUserProfileTask.get();
+                provider.deleteProvidedTask(oldTask);
+
+            } catch (Exception e) {
+                Log.i("user doesn't exist", "User does not exist!");
+                // Add a notification
+            }
+
+            //set provider to null
+        }else{
+            //get provider from server
+            getUserProfileTask.execute(providerName);
+            try {
+                provider = getUserProfileTask.get();
+                provider.deleteProvidedTask(oldTask);
+                provider.provideTask(newTask);
+
+            } catch (Exception e) {
+                Log.i("user doesn't exist", "User does not exist!");
+                // Add a notification
+            }
+        }
+
+        getAssignedTasks();
+
     }
 
 
     /**
      * get tasks with status is Assigned , get status of the task, and the Bib made by specific provider, and provider username.
      */
-    public void getAssignedTasks(){
-        ArrayList<Task> AllTasks = user.getRequestedTasks();
-        for(Integer j=0;j<AllTasks.size();j++){
+    public static void getAssignedTasks(){
+        ArrayList<Task> allTasks = user.getRequestedTasks();
+        AssignedTasks.clear();
+        AssignedTasksTitle.clear();
+        AssignedTasksStatus.clear();
+        AcceptedBids.clear();
+        UserName.clear();
+        for(Integer j = 0;j < allTasks.size(); j++){
             Task task = user.getRequestedTask(j);
             if(task.getStatus() == ASSIGNED){
-                AssignedTasks.add("Title:"+task.getTitle());
+                AssignedTasks.add(task);
+                AssignedTasksTitle.add("Title:"+task.getTitle());
                 Status status = task.getStatus();
                 AssignedTasksStatus.add("Status:"+status.toString());
                 AcceptedBids.add("Accepted bid:"+task.getLowestBid());  //this should get one bid of provider
@@ -151,7 +203,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
 
             //set text to textview
-            textView_task.setText(AssignedTasks.get(i));
+            textView_task.setText(AssignedTasksTitle.get(i));
             textView_username.setText(UserName.get(i));
             textView_status.setText(AssignedTasksStatus.get(i));
             textView_acceptBid.setText(AcceptedBids.get(i).toString());
@@ -167,9 +219,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         }
 
     }
-
-
-
 
     /**
      * when save button is clicked jump from Requester's Assigned Task Screen to Requester Main Screen and saving changes.
@@ -201,28 +250,4 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         });
     }
 
-
-
-
-
-
-
-
-
-
-    /**
-     * I do not know this method
-
-    private void setupPhotoButton(){
-        backButton = (Button) findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-            }
-        });
-    }
-     */
 }

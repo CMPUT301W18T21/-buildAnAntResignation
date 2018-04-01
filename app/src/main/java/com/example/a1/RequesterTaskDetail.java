@@ -155,7 +155,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
         User user;
         try{
             user = getUserProfileTask.get();
-            user.deleteTask(task);
+            user.deleteRequestedTask(task);
 
             /**
                 Now how do I delete it from the other users' provided tasks ?

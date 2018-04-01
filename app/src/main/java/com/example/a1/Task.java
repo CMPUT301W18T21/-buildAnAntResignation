@@ -30,7 +30,6 @@ public class Task{
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
-    private ArrayList<String> Providers=new ArrayList<>(0);
 
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
@@ -80,10 +79,7 @@ public class Task{
      * @return The username of the task-provider.
      */
     public String getProviderName(){return providerName; }
-    /**
-     * @return An array of providers
-     */
-    public ArrayList<String> getProvidersName(){return Providers;}
+
 
     /**
      * Gets the task's description.
@@ -169,7 +165,7 @@ public class Task{
     public void setAssigned(){
         this.status = Status.ASSIGNED;
     }
-
+    public void setRequested(){this.status = Status.REQUESTED;}
 
     public void setTitle(String title){this.title = title;}
     public void setRequesterName(String username){this.reuqesterName = username;}
