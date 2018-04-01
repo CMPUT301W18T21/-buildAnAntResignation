@@ -11,9 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/a1/TestTask.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/a1/TestTask.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -66,17 +66,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Task.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="175" column="62" lean-forward="false" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
+            <state relative-caret-position="885">
+              <caret line="166" column="14" lean-forward="false" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
               <folding>
                 <element signature="docComment;method#Task#0;class#Task#0" expanded="false" />
                 <element signature="docComment;method#Task#1;class#Task#0" expanded="false" />
                 <element signature="docComment;method#getRequesterName#0;class#Task#0" expanded="false" />
                 <element signature="docComment;method#getProviderName#0;class#Task#0" expanded="false" />
                 <element signature="docComment;method#getProvidersName#0;class#Task#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequesterAssignedTasks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_dialog_change_status.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1330">
+              <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+              <folding>
+                <marker date="1522622931516" expanded="true" signature="1691:2330" ph="..." />
+                <marker date="1522622931516" expanded="false" signature="2046:2060" ph="&quot;done&quot;" />
+                <marker date="1522622931516" expanded="true" signature="2344:2704" ph="..." />
+                <marker date="1522622931516" expanded="false" signature="2571:2590" ph="&quot;View User Profile&quot;" />
+                <marker date="1522622931516" expanded="true" signature="2720:3079" ph="..." />
+                <marker date="1522622931516" expanded="false" signature="2950:2973" ph="&quot;Change Task Status:&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogChangeStatus.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding>
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2118,7 +2163,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" />
@@ -2129,13 +2173,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_photo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_bid.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_select_bid.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_assigned_tasks.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_bid_task.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_bidded_task.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_task_request.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_main_page.xml" />
@@ -2147,6 +2189,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java" />
       </list>
     </option>
   </component>
@@ -2197,7 +2242,7 @@
               <item name="-buildAnAntResignation" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -2216,7 +2261,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="SearchEverywhereHistoryKey" value="and&#9;FILE&#9;file:///Users/Alex/Desktop/course/cmput/cmput301/-buildAnAntResignation/app/src/main/AndroidManifest.xml" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1522622299190" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1522622931636" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2630,7 +2675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522621855928</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added provider name to Tasks.">
+      <created>1522622319216</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1522622319216</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2774,7 +2826,8 @@
     <MESSAGE value="Tasks can now be edited and partially deleted. Edited some UI in Requester Task Detail." />
     <MESSAGE value="Polished some of the UI." />
     <MESSAGE value="Fixed bug that allowed logging in with any account." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug that allowed logging in with any account." />
+    <MESSAGE value="Added provider name to Tasks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added provider name to Tasks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2791,7 +2844,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Bid.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/test.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java" />
@@ -2840,15 +2892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="103" column="85" lean-forward="false" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2960,14 +3003,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_provider_assigned_tasks.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
@@ -3005,20 +3040,6 @@
             <element signature="e#2133#2149#0" expanded="false" />
             <element signature="e#2673#2688#0" expanded="false" />
             <element signature="e#3720#3735#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-          <folding>
-            <element signature="e#1309#1327#0" expanded="false" />
-            <element signature="e#1929#1943#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3071,17 +3092,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_provider_main_page.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_requester_assigned_tasks.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3194,16 +3204,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_requester_assigned_tasks.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="175" column="62" lean-forward="false" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
+        <state relative-caret-position="885">
+          <caret line="166" column="14" lean-forward="false" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
           <folding>
             <element signature="docComment;method#Task#0;class#Task#0" expanded="false" />
             <element signature="docComment;method#Task#1;class#Task#0" expanded="false" />
             <element signature="docComment;method#getRequesterName#0;class#Task#0" expanded="false" />
             <element signature="docComment;method#getProviderName#0;class#Task#0" expanded="false" />
             <element signature="docComment;method#getProvidersName#0;class#Task#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+          <folding>
+            <marker date="1522622931516" expanded="true" signature="1691:2330" ph="..." />
+            <marker date="1522622931516" expanded="false" signature="2046:2060" ph="&quot;done&quot;" />
+            <marker date="1522622931516" expanded="true" signature="2344:2704" ph="..." />
+            <marker date="1522622931516" expanded="false" signature="2571:2590" ph="&quot;View User Profile&quot;" />
+            <marker date="1522622931516" expanded="true" signature="2720:3079" ph="..." />
+            <marker date="1522622931516" expanded="false" signature="2950:2973" ph="&quot;Change Task Status:&quot;" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
           </folding>
         </state>
       </provider>
