@@ -115,9 +115,10 @@ public class ContactInfo extends AppCompatActivity {
                     Log.i("user doesn't exist","user doesn't exist");
                 }
 
-                Intent intent = new Intent(ContactInfo.this, MainActivity.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
+                finish();
+                //Intent intent = new Intent(ContactInfo.this, MainActivity.class);
+                //intent.putExtra("username",username);
+                //startActivity(intent);
 
 
             }
