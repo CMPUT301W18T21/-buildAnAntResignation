@@ -23,7 +23,8 @@ import java.util.Collections;
  */
 public class Task{
     private String title;
-    private String username;
+    private String reuqesterName;
+    private String providerName;
     private String description;
     private Status status = Status.REQUESTED;
     private String location;
@@ -40,7 +41,7 @@ public class Task{
      */
     public Task(String title, String username, String description){
         this.title = title;
-        this.username = username;
+        this.reuqesterName = username;
         this.description = description;
     }
 
@@ -57,7 +58,7 @@ public class Task{
      */
     public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
-        this.username = username;
+        this.reuqesterName = username;
         this.description = description;
         this.status = status;
         this.location = location;
@@ -71,10 +72,14 @@ public class Task{
      * Gets the task-requester's username.
      * @return The username of the task-requester.
      */
-    public String getUsername() {
-        return username;
+    public String getRequesterName() {
+        return reuqesterName;
     }
-
+    /**
+     * Gets the task-provider's username.
+     * @return The username of the task-provider.
+     */
+    public String getProviderName(){return providerName; }
     /**
      * @return An array of providers
      */
@@ -167,7 +172,8 @@ public class Task{
 
 
     public void setTitle(String title){this.title = title;}
-    public void setUsername(String username){this.username = username;}
+    public void setRequesterName(String username){this.reuqesterName = username;}
+    public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
 
 
