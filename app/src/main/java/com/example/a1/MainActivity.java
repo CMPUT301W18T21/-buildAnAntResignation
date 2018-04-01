@@ -54,6 +54,7 @@ public class MainActivity  extends AppCompatActivity {
         intent = new Intent();
         intent = getIntent();
         username = intent.getStringExtra("username");
+        setTitle("Main Screen");
 
 
         UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
