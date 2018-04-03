@@ -94,7 +94,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
             String status=task.getStatus().toString();
             ProviderBiddedTasksStatus.add(status);
             LowestBids.add(task.getLowestBid());
-            UserName.add(task.getUsername());
+            UserName.add(task.getRequesterName());
 
         }
     }

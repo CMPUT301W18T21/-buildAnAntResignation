@@ -23,13 +23,13 @@ import java.util.Collections;
  */
 public class Task{
     private String title;
-    private String username;
+    private String reuqesterName;
+    private String providerName;
     private String description;
     private Status status = Status.REQUESTED;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
-    private ArrayList<String> Providers=new ArrayList<>(0);
 
     /**
      * Constructs a Task object with status REQUESTED, no bids, and no photographs.
@@ -40,7 +40,7 @@ public class Task{
      */
     public Task(String title, String username, String description){
         this.title = title;
-        this.username = username;
+        this.reuqesterName = username;
         this.description = description;
     }
 
@@ -57,7 +57,7 @@ public class Task{
      */
     public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
-        this.username = username;
+        this.reuqesterName = username;
         this.description = description;
         this.status = status;
         this.location = location;
@@ -71,14 +71,15 @@ public class Task{
      * Gets the task-requester's username.
      * @return The username of the task-requester.
      */
-    public String getUsername() {
-        return username;
+    public String getRequesterName() {
+        return reuqesterName;
     }
-
     /**
-     * @return An array of providers
+     * Gets the task-provider's username.
+     * @return The username of the task-provider.
      */
-    public ArrayList<String> getProvidersName(){return Providers;}
+    public String getProviderName(){return providerName; }
+
 
     /**
      * Gets the task's description.
@@ -164,10 +165,11 @@ public class Task{
     public void setAssigned(){
         this.status = Status.ASSIGNED;
     }
-
+    public void setRequested(){this.status = Status.REQUESTED;}
 
     public void setTitle(String title){this.title = title;}
-    public void setUsername(String username){this.username = username;}
+    public void setRequesterName(String username){this.reuqesterName = username;}
+    public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
 
 

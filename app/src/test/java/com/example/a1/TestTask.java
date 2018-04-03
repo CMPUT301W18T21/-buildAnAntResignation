@@ -25,7 +25,7 @@ public class TestTask {
         ArrayList<Integer> bids=new ArrayList<>(0);
 
         Task task=new Task("","Username","","",BIDDED,bids);
-        assertTrue(task.getUsername()=="Username");
+        assertTrue(task.getRequesterName()=="Username");
     }
 
     @Test

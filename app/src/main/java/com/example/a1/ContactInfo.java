@@ -58,8 +58,10 @@ public class ContactInfo extends AppCompatActivity {
         getUserProfileTask.execute(username);
         try {
             user = getUserProfileTask.get();
+            user.getEmail(); // jsut for debuging
         } catch (Exception e) {
-            Log.i("user doesn't exist", "user doesn't exist");
+            Log.i("user doesn't exist", "User does not exist!");
+            finish();
         }
         setUser(user);
         setUpAddButton();
@@ -115,9 +117,10 @@ public class ContactInfo extends AppCompatActivity {
                     Log.i("user doesn't exist","user doesn't exist");
                 }
 
-                Intent intent = new Intent(ContactInfo.this, MainActivity.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
+                finish();
+                //Intent intent = new Intent(ContactInfo.this, MainActivity.class);
+                //intent.putExtra("username",username);
+                //startActivity(intent);
 
 
             }

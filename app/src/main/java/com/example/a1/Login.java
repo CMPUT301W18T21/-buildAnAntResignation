@@ -15,7 +15,7 @@ public class Login extends AppCompatActivity {
     private Button Login;
     private Button Signup;
     private String userName;
-    private Boolean isExist;
+    private Boolean isExist = false;
 
 
     @Override
@@ -47,7 +47,8 @@ public class Login extends AppCompatActivity {
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(),"login....",Toast.LENGTH_SHORT);
                 }else{
-                    Toast.makeText(getApplicationContext(),"unidentified user name",Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplicationContext(),"Unidentified username.",Toast.LENGTH_SHORT).show();
+                    Log.i("print something","Username not found.");
                 }
 
             }

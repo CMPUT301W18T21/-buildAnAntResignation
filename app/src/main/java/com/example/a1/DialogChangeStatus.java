@@ -13,50 +13,44 @@ import android.widget.Toast;
  */
 public class DialogChangeStatus extends AppCompatActivity {
 
+    private static Task task;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_change_status);
+    }
 
-        Button Done = (Button) findViewById(R.id.buttonDone);
-        Button Assigned = (Button) findViewById(R.id.buttonAssigned);
-        Button Request = (Button) findViewById(R.id.buttonRequest);
+    public static void setTask(Task task){
+        DialogChangeStatus.task = task;
+    }
 
-        //when Done button is clicked , status of the task change to Done and jump back to RequesterAssignedTask
-        Done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //AssignedTasks.get(position).setDone();
-                Intent intent = new Intent(DialogChangeStatus.this,RequesterAssignedTasks.class);
-
-                startActivity(intent);
-
-            }
-        });
+    public static Task getTask(){
+        return task;
+    }
 
 
-        //when Assigned button is clicked , status of the task change to Assigned and jump back to RequesterAssignedTask
-        Assigned.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //AssignedTasks.get(position).setAssigned();
-                Intent intent = new Intent(DialogChangeStatus.this,RequesterAssignedTasks.class);
+    public void onClickRequested(View view){
+        if(task.getStatus() == Status.ASSIGNED){
+            task.setRequested();
+            RequesterAssignedTasks.UpdateTask();
+            finish();
+        }
+    }
 
-                startActivity(intent);
-            }
-        });
+    public void onClickBidded(View view){
+        if(task.getStatus() == Status.ASSIGNED){
+            task.setBided();
+            RequesterAssignedTasks.UpdateTask();
+            finish();
+        }
+    }
 
-
-        // when Request button is clicked, status of the task change to Request and jump back to RequesterAssignedTask
-        Request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //AssignedTasks.get(position).setRequest();
-                Intent intent = new Intent(DialogChangeStatus.this,RequesterAssignedTasks.class);
-
-                startActivity(intent);
-            }
-        });
-
+    public void onClickDone(View view){
+        if(task.getStatus() == Status.ASSIGNED){
+            RequesterAssignedTasks.UpdateTask();
+            task.setDone();
+            finish();
+        }
     }
 }

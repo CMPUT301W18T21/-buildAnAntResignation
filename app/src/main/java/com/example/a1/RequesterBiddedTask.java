@@ -37,6 +37,8 @@ public class RequesterBiddedTask extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
+        setTitle("Bidded Tasks");
+
         UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
         getUserProfileTask.execute(username);
         try{
@@ -62,28 +64,8 @@ public class RequesterBiddedTask extends AppCompatActivity {
         textView.setText(username);
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
-        setupBackButton();
     }
 
-
-    private void setupBackButton() {
-        /** when add button is clicked jump to requester's main page
-         */
-
-        BackButton = (Button) findViewById(R.id.back);
-        BackButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(RequesterBiddedTask.this,
-                        Login.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-
-
-            }
-        });
-
-    }
 
     public void getBiddedTasks(){
 

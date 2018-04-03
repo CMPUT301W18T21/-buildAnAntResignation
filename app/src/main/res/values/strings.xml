@@ -14,13 +14,15 @@
     <string name="viewStatus">Status</string>
     <string name="email">Email Address</string>
 
+    <string name="change_status">Change Task Status:</string>
+    <string name="view_user">View User Profile</string>
 
     <string name="Task_with_Status_assigned">My Task with Status: Assigned</string>
     <string name="Back_button">Back</string>
     <string name="Save_button">Save</string>
     <string name="add_photo">Add photo</string>
     <string name="add_location">Location</string>
-    <string name="assigned">assigned</string>
+    <string name="bidded">Bidded</string>
     <string name="done">done</string>
     <string name="accept">accept</string>
     <string name="decline">decline</string>
