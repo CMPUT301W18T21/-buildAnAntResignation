@@ -1,10 +1,12 @@
 package com.example.a1;
 
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+
 import java.util.ArrayList;
 
 public class ProviderMainPage extends AppCompatActivity {
@@ -25,8 +30,12 @@ public class ProviderMainPage extends AppCompatActivity {
     private Button myTask;
     private Button viewOnMap;
 
+    /*********** added by JiaHong **********/
+    private static final String TAG = "MainActivity";
 
+    private static final int ERROR_DIALOG_REQUEST = 9001;
 
+    /*********** added by JiaHong **********/
 
     String[] name_test = {"apple", "alpha", "bad", "battle", "cover"};
     String [] task_test = {"task1","task2","task3","task4","task5"};
@@ -86,8 +95,45 @@ public class ProviderMainPage extends AppCompatActivity {
             }
         });
 
-
+        /******************************************* added by JiaHong *************************************************************/
+        if(isServicesOK()){
+            init();
+        }
     }
+
+    private void init(){
+        Button btnMap = (Button) findViewById(R.id.viewOnMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProviderMainPage.this, ShowWithin5kmMapActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public boolean isServicesOK(){
+        Log.d(TAG, "isServicesOK: checking google services version");
+
+        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(ProviderMainPage.this);
+
+        if(available == ConnectionResult.SUCCESS){
+            //everything is fine and the user can make map requests
+            Log.d(TAG, "isServicesOK: Google Play Services is working");
+            return true;
+        }
+        else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
+            //an error occured but we can resolve it
+            Log.d(TAG, "isServicesOK: an error occured but we can fix it");
+            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(ProviderMainPage.this, available, ERROR_DIALOG_REQUEST);
+            dialog.show();
+        }else{
+            Toast.makeText(this, "You can't make map requests", Toast.LENGTH_SHORT).show();
+        }
+        return false;
+    }
+        /******************************************* added by JiaHong *************************************************************/
+
 
     private ArrayList<ProviderAdaptInfo> boundinfo()
     {
