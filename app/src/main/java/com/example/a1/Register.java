@@ -53,7 +53,7 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "user already exist", Toast.LENGTH_SHORT).show();
                 }else{
                     user = new User();
-                    user.setName(username);
+                    user.setUsername(username);
                     user.setEmail(useremail);
                     user.setPhone(userphone);
                     requested_tasks = new ArrayList<Task>(0);
