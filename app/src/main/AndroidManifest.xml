@@ -47,7 +47,6 @@
         <activity android:name=".RequesterAssignedTasks" />
         <activity android:name=".ShowWithin5km"/>
         <activity android:name=".ShowWithin5kmMapActivity"/>
-        <activity android:name=".ProviderMainPage"/>
         <activity android:name=".Provider_bid_task"/>
         <activity android:name=".DialogChangeStatus"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>

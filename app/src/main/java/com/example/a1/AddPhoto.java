@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class AddPhoto extends AppCompatActivity {
-    ImageView imageToUpload,downloadedImage;
-    Button BrowseButton,AddButton,BackButton;
+    ImageView imageToUpload;
+    Button AddButton;
     EditText imageName;
     private static Integer RESULT_LOAD_IMAGE=1;
     @Override
@@ -21,14 +21,13 @@ public class AddPhoto extends AppCompatActivity {
         setContentView(R.layout.activity_add_photo);
         imageToUpload = (ImageView)findViewById(R.id.imageView);
         AddButton = (Button)findViewById(R.id.viewAdd);
-        BrowseButton=(Button)findViewById(R.id.viewBrowse);
-        BackButton=(Button)findViewById(R.id.viewBack);
+
         imageName = (EditText)findViewById(R.id.viewInputText);
-        setupBrowseButton();
+        setupSelectImage();
 
     }
 
-    private void setupBrowseButton() {
+    private void setupSelectImage() {
 
         imageToUpload = (ImageView)findViewById(R.id.imageView);
         imageToUpload.setOnClickListener(new View.OnClickListener() {
