@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Represents a contact-info-activity activity.
@@ -97,7 +96,7 @@ public class ContactInfo extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+                user.setUsername(((TextView) findViewById(R.id.nameEditText)).getText().toString());
                 user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
                 user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
                 user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());

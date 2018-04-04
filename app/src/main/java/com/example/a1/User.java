@@ -11,7 +11,6 @@
 package com.example.a1;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 /**
  * Represents a user.
@@ -20,16 +19,12 @@ import java.util.Map;
  */
 public class User {
 
-    private static Map<String, User> users;
-
     private String name;
     private String username;
     private String gender;
     private String phone;
     private String email;
     private String image;
-
-    public User(){}
 
 
     /**
@@ -45,9 +40,12 @@ public class User {
      */
     private ArrayList<Task> providedTasks;
 
-    private ArrayList<Task> BiddedTasks = new ArrayList<>(0);
-    private ArrayList<Integer> Bids = new ArrayList<>(0);
+    private ArrayList<Task> biddedTasks = new ArrayList<>(0);
 
+    /**
+     * Constructs a user object.
+     */
+    public User(){}
 
     /**
      * Constructs a user object.
@@ -72,13 +70,53 @@ public class User {
     }
 
     /**
-     * Gets a user with the matching username.
-     * @param username The username of the user to be returned.
-     * @return The user object with the matching username.
+     * Constructs a user object.
+     * @param name The user's regular name.
+     * @param username The user's unique username.
+     * @param gender The user's gender.
+     * @param phone The user's phone number.
+     * @param email The user's email address.
+     * @param image The user's profile picture.
+     * @param requestedTasks The user's requested tasks.
+     * @param providedTasks The user's provided tasks.
      */
-    public static User getUser(String username){
-        return users.get(username);
+    public User(String name, String username, String gender, String phone, String email, String image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks){
+        this.name = name;
+        if (username.length() <= 8) this.username = username;
+        else this.username = username.subSequence(0,8).toString();
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.image = image;
+        this.requestedTasks = requestedTasks;
+        this.providedTasks = providedTasks;
     }
+
+    /**
+     * Constructs a user object.
+     * @param name The user's regular name.
+     * @param username The user's unique username.
+     * @param gender The user's gender.
+     * @param phone The user's phone number.
+     * @param email The user's email address.
+     * @param image The user's profile picture.
+     * @param requestedTasks The user's requested tasks.
+     * @param providedTasks The user's provided tasks.
+     * @param biddedTasks The user's takss on which
+     */
+    public User(String name, String username, String gender, String phone, String email, String image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks, ArrayList<Task> biddedTasks){
+        this.name = name;
+        if (username.length() <= 8) this.username = username;
+        else this.username = username.subSequence(0,8).toString();
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.image = image;
+        this.requestedTasks = requestedTasks;
+        this.providedTasks = providedTasks;
+        this.biddedTasks = biddedTasks;
+    }
+
 
     /**
      * Gets the regular name of the user.
@@ -86,7 +124,6 @@ public class User {
      */
     public String getName() {
         return this.name;
-
     }
 
     /**
@@ -139,6 +176,13 @@ public class User {
     }
 
     /**
+     * Gets a list of all requested tasks the user has.
+     * @return All requested tasks.
+     */
+    public ArrayList<Task> getRequestedTasks(){return  this.requestedTasks;}
+
+
+    /**
      * Gets the specified index of provider's provided tasks
      * @param index the index of the task
      * @return  the provider's task
@@ -161,24 +205,27 @@ public class User {
     }
 
     /**
-     * Gets a list of all requested tasks the user has.
-     * @return All requested tasks.
-     */
-    public ArrayList<Task> getRequestedTasks(){return  this.requestedTasks;}
-
-    /**
      * Gets a list of all assigned tasks the user has.
      * @return All assigned tasks.
      */
     public ArrayList<Task> getAssignedTasks(){return assignedTasks;}
 
     /**
-     * Sets the user's regular name.
+     * Sets the user's username.
      * @param username The name to be set.
      */
-    public void setName(String username){
+    public void setUsername(String username){
         this.username = username;
     }
+
+    /**
+     * Sets the user's regular name.
+     * @param name The name to be set.
+     */
+    public void setName(String name){
+        this.name = name;
+    }
+
 
     /**
      * Sets the user's gender.
@@ -271,8 +318,14 @@ public class User {
      * Adds a task to the user's bidded tasks.
      * @param task The task to to bid on.
      */
-    public void bidTask(Task task){ BiddedTasks.add(task); }
+    public void bidTask(Task task){
+        biddedTasks.add(task);
+    }
 
-
-    public void bids(Integer Value){ Bids.add(Value); }
+    /**
+     * Returns a list of all tasks that the user has bidded on.
+     */
+    public ArrayList<Task> getBiddedTasks(){
+        return biddedTasks;
+    }
 }

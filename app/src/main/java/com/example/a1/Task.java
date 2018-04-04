@@ -15,7 +15,7 @@ import java.util.Collections;
 
 /**
  * A representation of a task.
- * A tasks consists of a title, requester's username, description, status, and bids.
+ * A tasks consists of a title, requester's username, description, status, and bid.
  * A tasks can also have photographs and a location added to it.
  *
  * @see User
@@ -27,12 +27,15 @@ public class Task{
     private String providerName;
     private String description;
     private Status status = Status.REQUESTED;
+    private Float latitude;
+    private Float longitude;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
+    private ArrayList<String> bidders = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
 
     /**
-     * Constructs a Task object with status REQUESTED, no bids, and no photographs.
+     * Constructs a Task object with status REQUESTED, no bid, and no photographs.
      *
      * @param title The task's title.
      * @param requesterName The task-requester's username.
@@ -53,7 +56,7 @@ public class Task{
      * @param description The task's description.
      * @param location The task's geolocation.
      * @param status The task's status.
-     * @param bids The taks's bids.
+     * @param bids The taks's bid.
      */
     public  Task(String title, String requesterName, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
@@ -74,7 +77,7 @@ public class Task{
      * @param description The task's description.
      * @param location The task's geolocation.
      * @param status The task's status.
-     * @param bids The taks's bids.
+     * @param bids The taks's bid.
      */
     public  Task(String title, String requesterName, String providerName, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
@@ -163,18 +166,22 @@ public class Task{
     }
 
     /**
-     * Gets all of the task's bids.
-     * @return A list of the task's bids.
+     * Gets all of the task's bid.
+     * @return A list of the task's bid.
      */
     public ArrayList<Integer> getBids(){
         return bids;
     }
 
     /**
-     * Add a bid to bids arrayList
+     * Add a bid to bid arrayList
      */
     public void addBid(Integer bid){
         bids.add(bid);
+    }
+
+    public void addBidder(String username){
+        bidders.add(username);
     }
 
     /**

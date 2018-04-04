@@ -132,7 +132,7 @@ public class TestTask {
     }
 
     /**
-     * we create a bids array which contains 3 bids [1,2,3] , the method to be tested is supposed to return us
+     * we create a bid array which contains 3 bid [1,2,3] , the method to be tested is supposed to return us
      * a smallest bid
      */
     @Test
