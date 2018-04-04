@@ -10,7 +10,6 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -52,9 +51,9 @@ public class RequesterBiddedTask extends AppCompatActivity {
         Task task2= new Task("title2","user1","des2");
         user.getRequestedTasks().add(task2);
 
-        user.getRequestedTask(0).setBided();
+        user.getRequestedTask(0).setBidded();
 
-        user.getRequestedTask(1).setBided();
+        user.getRequestedTask(1).setBidded();
 
 //****
         getBiddedTasks();

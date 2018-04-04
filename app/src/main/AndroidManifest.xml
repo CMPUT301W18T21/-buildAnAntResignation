@@ -38,6 +38,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RequesterBiddedTask" />
         <activity android:name=".RequesterMain" />
+        <activity android:name=".ProviderMainPage"/>
         <activity android:name=".Bid" />
         <activity android:name=".AddPhoto" />
         <activity android:name=".TaskProvider" />
