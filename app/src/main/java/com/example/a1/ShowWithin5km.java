@@ -38,7 +38,7 @@ public class ShowWithin5km extends AppCompatActivity  {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ShowWithin5km.class);
+                Intent intent = new Intent(ShowWithin5km.this, ShowWithin5kmMapActivity.class);
                 startActivity(intent);
             }
         });

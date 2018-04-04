@@ -59,7 +59,7 @@ import java.util.List;
 import java.util.Map;
 
 //there are a few bugs here
-
+import com.example.a1.Model.PlaceInfo;
 
 public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.OnConnectionFailedListener{
@@ -103,7 +103,8 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
     //widgets
     private AutoCompleteTextView mSearchText;
-    private ImageView mGps, mInfo, mPlacePicker;
+    private ImageView mGps;
+    //private ImageView mInfo, mPlacePicker;
 
 
     //vars
@@ -121,8 +122,8 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         setContentView(R.layout.activity_map);
         mSearchText = (AutoCompleteTextView) findViewById(R.id.input_search);
         mGps = (ImageView) findViewById(R.id.ic_gps);
-        mInfo = (ImageView) findViewById(R.id.place_info);
-        mPlacePicker = (ImageView) findViewById(R.id.place_picker);
+        //mInfo = (ImageView) findViewById(R.id.place_info);
+        //mPlacePicker = (ImageView) findViewById(R.id.place_picker);
 
         getLocationPermission();
 
@@ -169,7 +170,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
             }
         });
 
-        mInfo.setOnClickListener(new View.OnClickListener() {
+     /*   mInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked place info");
@@ -193,14 +194,14 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
 
                 try {
-                    startActivityForResult(builder.build(MapActivity.this), PLACE_PICKER_REQUEST);
+                    startActivityForResult(builder.build(ShowWithin5kmMapActivity.this), PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException e) {
                     Log.e(TAG, "onClick: GooglePlayServicesRepairableException: " + e.getMessage() );
                 } catch (GooglePlayServicesNotAvailableException e) {
                     Log.e(TAG, "onClick: GooglePlayServicesNotAvailableException: " + e.getMessage() );
                 }
             }
-        });
+        }); */
 
         hideSoftKeyboard();
     }
@@ -222,7 +223,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
         String searchString = mSearchText.getText().toString();
 
-        Geocoder geocoder = new Geocoder(MapActivity.this);
+        Geocoder geocoder = new Geocoder(ShowWithin5kmMapActivity.this);
         List<Address> list = new ArrayList<>();
         try{
             list = geocoder.getFromLocationName(searchString, 1);
@@ -263,7 +264,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
                         }else{
                             Log.d(TAG, "onComplete: current location is null");
-                            Toast.makeText(MapActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ShowWithin5kmMapActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -279,7 +280,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
         mMap.clear();
 
-        mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapActivity.this));
+        mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(ShowWithin5kmMapActivity.this));
 
         if(placeInfo != null){
             try{
@@ -322,7 +323,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         Log.d(TAG, "initMap: initializing map");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
-        mapFragment.getMapAsync(MapActivity.this);
+        mapFragment.getMapAsync(ShowWithin5kmMapActivity.this);
     }
 
     private void getLocationPermission(){
@@ -376,9 +377,6 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-    /*
-        --------------------------- google places API autocomplete suggestions -----------------
-     */
 
     private AdapterView.OnItemClickListener mAutocompleteClickListener = new AdapterView.OnItemClickListener() {
         @Override
