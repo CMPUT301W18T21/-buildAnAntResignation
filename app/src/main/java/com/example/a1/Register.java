@@ -17,12 +17,10 @@ public class Register extends AppCompatActivity {
     private EditText input_phone;
     private Button save_bt;
     private String username;
-    private String useremail;
-    private String userphone;
+    private String email;
+    private String phone;
     private Boolean is_exist;
     private User user;
-    private ArrayList<Task> requested_tasks;
-    private ArrayList<Task> provided_tasks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,35 +36,27 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 username = input_name.getText().toString();
-                useremail = input_email.getText().toString();
-                userphone = input_phone.getText().toString();
+                email = input_email.getText().toString();
+                phone = input_phone.getText().toString();
 
                 UserElasticSearchController.CheckUserProfileExistTask checkUserProfileExistTask = new UserElasticSearchController.CheckUserProfileExistTask();
                 checkUserProfileExistTask.execute(username);
                 try {
                     is_exist = checkUserProfileExistTask.get();
-                    Log.i("existed user","the user already exist");
+                    Log.i("existed user","The user already exist!");
                 }catch (Exception e){
-                    Log.i("print something","hhhhhhhh");
+                    Log.i("print something","An exception occurred.");
                 }
                 if (is_exist){
-                    Toast.makeText(Register.this, "user already exist", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "The user already exist!", Toast.LENGTH_SHORT).show();
                 }else{
                     user = new User();
                     user.setUsername(username);
-                    user.setEmail(useremail);
-                    user.setPhone(userphone);
-                    requested_tasks = new ArrayList<Task>(0);
-                    provided_tasks = new ArrayList<Task>(0);
-                    user.setProvidedTasks(provided_tasks);
-                    user.setRequestedTasks(requested_tasks);
-
+                    user.setEmail(email);
+                    user.setPhone(phone);
 
                     UserElasticSearchController.AddNewUserProfileTask addNewUserProfileTask = new UserElasticSearchController.AddNewUserProfileTask();
                     addNewUserProfileTask.execute(user);
-
-//                    Intent intent = new Intent(Register.this,Login.class);
-//                    startActivity(intent);
                     finish();
                 }
             }

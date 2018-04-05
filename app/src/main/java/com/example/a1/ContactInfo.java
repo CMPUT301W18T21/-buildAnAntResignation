@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Represents a contact-info-activity activity.
@@ -30,15 +29,8 @@ import android.widget.Toast;
  */
 public class ContactInfo extends AppCompatActivity {
 
-    private static User user;
+    private User user;
     private String username;
-    Intent intent;
-    private String name;
-    private String phone;
-    private String email;
-    private String gender;
-    Button addButton;
-
 
     /**
      * A method that executes every time the activity is shown on screen.
@@ -50,22 +42,14 @@ public class ContactInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_info);
         setTitle("Contact Info");
-        intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
 
-        getUserProfileTask.execute(username);
-        try {
-            user = getUserProfileTask.get();
-            user.getEmail(); // jsut for debuging
-        } catch (Exception e) {
-            Log.i("user doesn't exist", "User does not exist!");
-            finish();
-        }
+
+        //Gets the user from the server
+        user = Server.UserController.get(username);
+
         setUser(user);
-        setUpAddButton();
-
 
     }
 
@@ -89,52 +73,18 @@ public class ContactInfo extends AppCompatActivity {
      * If the user displayed matches the current user, any changes to the contact
      * information will be saved. Otherwise they are ignored.
      */
-    public void setUpAddButton() {
-        addButton = (Button) findViewById(R.id.button);
+    public void onButtonClick(View view){
 
+        user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+        user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+        user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+        user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
 
-        addButton.setOnClickListener(new View.OnClickListener() {
+        //Uploads the edited user to the server
+        Server.UserController.edit(user);
 
-            public void onClick(View v) {
-
-                //Might need a new intent here.
-
-
-                //get most recent user info.
-                UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-                getUserProfileTask.execute(username);
-                try{
-                    user = getUserProfileTask.get();
-                    //Update to server
-
-                }catch(Exception e){
-                    Log.i("user doesn't exist","user doesn't exist");
-                }
-
-                UserElasticSearchController.DeleteUser deleteWholeUser = new UserElasticSearchController.DeleteUser();
-                deleteWholeUser.execute(user);
-                user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-                user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-                user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-                user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-                try {
-                    UserElasticSearchController.AddNewUserProfileTask addNewUserProfileTask1 = new UserElasticSearchController.AddNewUserProfileTask();
-                    addNewUserProfileTask1.execute(user);
-                }catch (Exception e){
-                    Log.i("add error","fail to add user");
-                }
-
-                finish();
-
-//                UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-//                updateUserProfileTask.execute(user);
-
-                //Intent intent = new Intent(ContactInfo.this, MainActivity.class);
-                //intent.putExtra("username",username);
-                //startActivity(intent);
-
-
-            }
-        });
+        finish();
     }
+
+
 }
