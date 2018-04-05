@@ -14,6 +14,7 @@ import com.searchly.jestdroid.JestDroidClient;
 import java.io.IOException;
 
 import io.searchbox.client.JestResult;
+import io.searchbox.core.Delete;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Get;
 import io.searchbox.core.Index;
@@ -166,6 +167,37 @@ public class UserElasticSearchController {
             client = (JestDroidClient) factory.getObject();
         }
     }
+
+    public static class DeleteUser extends AsyncTask<User,Void,Void> {
+
+        @Override
+        protected Void doInBackground(User... users) {
+            verifySettings();
+            for(User user: users){
+                Delete delete =new Delete.Builder(user.getUsername())
+                        .index(SEARCH_INDEX)
+                        .type(SEARCH_TYPE)
+                        .build();
+
+
+                try {
+                    DocumentResult execute = client.execute(delete);
+
+                    if (execute.isSucceeded()) {
+                        Log.d("Delete successfully", "Deleted you selected user");
+                    } else {
+                        Log.d("Error", "Delete error");
+                    }
+
+                } catch (IOException e) {
+                    Log.i("Error","Failed to build");
+                }
+            }
+            return null;
+        }
+
+    }
+
 
     public static void syncOnlineWithOffline(User offlineUserProfile) {
         // Sync the User Profile from the offline file
