@@ -85,15 +85,9 @@ public class ProviderMainPage extends AppCompatActivity {
                 //show_content(showContent);
             }
         });
-        viewOnMap = (Button) findViewById(R.id.viewOnMap);
-        viewOnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                map_handler();
 
 
-            }
-        });
+
 
         /******************************************* added by JiaHong *************************************************************/
         if(isServicesOK()){
