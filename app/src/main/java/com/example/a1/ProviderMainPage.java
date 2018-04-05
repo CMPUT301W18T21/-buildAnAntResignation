@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ListView;
@@ -29,6 +30,9 @@ public class ProviderMainPage extends AppCompatActivity {
     private SearchView keyWords;
     private Button myTask;
     private Button viewOnMap;
+    private Button searchButton;
+    private EditText searchBox;
+    private String keyword;
 
     /*********** added by JiaHong **********/
     private static final String TAG = "MainActivity";
@@ -86,6 +90,21 @@ public class ProviderMainPage extends AppCompatActivity {
             }
         });
 
+
+        searchButton = (Button) findViewById(R.id.SearchButton);
+        searchBox = (EditText) findViewById(R.id.SearchBox);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                keyword = searchBox.getText().toString();
+                String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":"+keyword+",\"opeartor\":\"and\"}}}}}";
+                UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
+                queryTaskName.execute(keyword);
+
+
+            }
+        });
 
 
 
