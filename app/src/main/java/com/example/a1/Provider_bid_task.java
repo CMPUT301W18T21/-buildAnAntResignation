@@ -1,7 +1,9 @@
 package com.example.a1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -14,10 +16,10 @@ import java.util.ArrayList;
 public class Provider_bid_task extends AppCompatActivity {
 
     private static Task task;
-    private User user;
+    private String username;
     private static ArrayAdapter<Integer> adapter;
     private static ArrayList<Integer> bids;
-    /**private static ArrayList<String> bids = new ArrayList<>(0); **/
+    /**private static ArrayList<String> bid = new ArrayList<>(0); **/
 
     /**
      * a method that execute every time the activity is shown.
@@ -29,6 +31,8 @@ public class Provider_bid_task extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bid_task);
         setTitle("Provider Bid Task");
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
 
         //  Intent intent =getIntent();
         //  String curTitle= intent.getStringExtra(ProviderMainPage.Title);
@@ -45,11 +49,11 @@ public class Provider_bid_task extends AppCompatActivity {
 
 
         /** debugging
-         bids = new ArrayList<>(0);
-         bids.add(10);
-         bids.add(20);
-         bids.add(9);
-         task = new Task("test task","username","test description","Location",Status.REQUESTED,bids);
+         bid = new ArrayList<>(0);
+         bid.add(10);
+         bid.add(20);
+         bid.add(9);
+         task = new Task("test task","username","test description","Location",Status.REQUESTED,bid);
 
          **/
 
@@ -76,10 +80,19 @@ public class Provider_bid_task extends AppCompatActivity {
         String num = ((EditText) findViewById(R.id.Bid_Value)).getText().toString();
         try{
             int Value = Integer.parseInt(num);
-            user.bidTask(task);
-            user.bids(Value);
-            task.addBid(Value);
+            UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
 
+            getUserProfileTask.execute(username);
+            User user;
+            try {
+                user = getUserProfileTask.get();
+                user.bidTask(task);
+                task.addBid(Value);
+                task.addBidder(username);
+            } catch (Exception e) {
+                Log.i("user doesn't exist", "User does not exist!");
+                finish();
+            }
 
         }
         catch(NumberFormatException e){

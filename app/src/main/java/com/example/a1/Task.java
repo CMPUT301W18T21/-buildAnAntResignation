@@ -15,7 +15,7 @@ import java.util.Collections;
 
 /**
  * A representation of a task.
- * A tasks consists of a title, requester's username, description, status, and bids.
+ * A tasks consists of a title, requester's username, description, status, and bid.
  * A tasks can also have photographs and a location added to it.
  *
  * @see User
@@ -23,24 +23,27 @@ import java.util.Collections;
  */
 public class Task{
     private String title;
-    private String reuqesterName;
+    private String requesterName;
     private String providerName;
     private String description;
     private Status status = Status.REQUESTED;
+    private Float latitude;
+    private Float longitude;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
+    private ArrayList<String> bidders = new ArrayList<>(0);
     private ArrayList<String> photos = new ArrayList<>(0);
 
     /**
-     * Constructs a Task object with status REQUESTED, no bids, and no photographs.
+     * Constructs a Task object with status REQUESTED, no bid, and no photographs.
      *
      * @param title The task's title.
-     * @param username The task-requester's username.
+     * @param requesterName The task-requester's username.
      * @param description The task's description.
      */
-    public Task(String title, String username, String description){
+    public Task(String title, String requesterName, String description){
         this.title = title;
-        this.reuqesterName = username;
+        this.requesterName = requesterName;
         this.description = description;
     }
 
@@ -49,21 +52,40 @@ public class Task{
      * Constructs a Task object.
      *
      * @param title The task's title.
-     * @param username The task-requester's username.
+     * @param requesterName The task-requester's username.
      * @param description The task's description.
      * @param location The task's geolocation.
      * @param status The task's status.
-     * @param bids The taks's bids.
+     * @param bids The taks's bid.
      */
-    public  Task(String title, String username, String description, String location, Status status, ArrayList<Integer> bids){
+    public  Task(String title, String requesterName, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
-        this.reuqesterName = username;
+        this.requesterName = requesterName;
         this.description = description;
         this.status = status;
         this.location = location;
-        bids = new ArrayList<Integer>();
-        photos = new ArrayList<String>();
-        //*******
+        this.bids = bids;
+    }
+
+
+    /**
+     * Constructs a Task object.
+     *
+     * @param title The task's title.
+     * @param requesterName The task-requester's username.
+     * @param providerName THe task-provider's username.
+     * @param description The task's description.
+     * @param location The task's geolocation.
+     * @param status The task's status.
+     * @param bids The taks's bid.
+     */
+    public  Task(String title, String requesterName, String providerName, String description, String location, Status status, ArrayList<Integer> bids){
+        this.title = title;
+        this.requesterName = requesterName;
+        this.providerName = providerName;
+        this.description = description;
+        this.status = status;
+        this.location = location;
         this.bids = bids;
     }
 
@@ -72,7 +94,7 @@ public class Task{
      * @return The username of the task-requester.
      */
     public String getRequesterName() {
-        return reuqesterName;
+        return requesterName;
     }
     /**
      * Gets the task-provider's username.
@@ -131,6 +153,7 @@ public class Task{
      */
     public void importPhoto(String photo){
         photos.add(photo);
+        int a = 0;
     }
 
     /**
@@ -138,42 +161,48 @@ public class Task{
      * @return A list of the task's photo's addresses.
      */
     public ArrayList<String> getPhotos() {
+        int a = 0;
         return photos;
     }
 
     /**
-     * Gets all of the task's bids.
-     * @return A list of the task's bids.
+     * Gets all of the task's bid.
+     * @return A list of the task's bid.
      */
     public ArrayList<Integer> getBids(){
         return bids;
     }
 
     /**
-     * Add a bid to bids arrayList
+     * Add a bid to bid arrayList
      */
     public void addBid(Integer bid){
         bids.add(bid);
     }
 
+    public void addBidder(String username){
+        bidders.add(username);
+    }
+
     /**
      * the following three methods change task's status
      */
-    public void setBided(){
+    public void setBidded(){
         this.status = Status.BIDDED;
     }
     public void setAssigned(){
         this.status = Status.ASSIGNED;
     }
     public void setRequested(){this.status = Status.REQUESTED;}
+    public void setDone(){
+        this.status =  Status.DONE;
+    }
 
     public void setTitle(String title){this.title = title;}
-    public void setRequesterName(String username){this.reuqesterName = username;}
+    public void setRequesterName(String username){this.requesterName = username;}
     public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
 
 
-    public  void setDone(){
-        this.status =  Status.DONE;
-    }
+
 }

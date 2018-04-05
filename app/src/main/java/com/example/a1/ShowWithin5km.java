@@ -26,7 +26,7 @@ public class ShowWithin5km extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_provider_main_page);
+        //setContentView(R.layout.activity_provider_main_page);
 
         if(isServicesOK()){
             init();

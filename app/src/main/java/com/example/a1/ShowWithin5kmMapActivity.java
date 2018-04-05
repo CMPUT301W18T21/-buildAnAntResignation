@@ -377,6 +377,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
+    /*
+        --------------------------- google places API autocomplete suggestions -----------------
+     */
 
     private AdapterView.OnItemClickListener mAutocompleteClickListener = new AdapterView.OnItemClickListener() {
         @Override

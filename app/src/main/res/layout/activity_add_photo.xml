@@ -20,18 +20,6 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
-        android:id="@+id/viewBrowse"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="browse"
-        app:layout_constraintEnd_toStartOf="@+id/viewBack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewAdd" />
-
-    <Button
         android:id="@+id/viewAdd"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
@@ -40,15 +28,6 @@
         android:text="add"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/viewBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="back"
-        app:layout_constraintBaseline_toBaselineOf="@+id/viewBrowse"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/viewInputText"
