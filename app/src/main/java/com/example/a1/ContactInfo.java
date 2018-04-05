@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Represents a contact-info-activity activity.
@@ -77,7 +78,7 @@ public class ContactInfo extends AppCompatActivity {
         this.user = user;
 
         ((TextView) findViewById(R.id.username)).setText(username);
-        ((EditText) findViewById(R.id.nameEditText)).setText( username);
+        ((EditText) findViewById(R.id.nameEditText)).setText(user.getName());
         ((EditText) findViewById(R.id.genderEditText)).setText(user.getGender());
         ((EditText) findViewById(R.id.phoneEditText)).setText(user.getPhone());
         ((EditText) findViewById(R.id.emailEditText)).setText(user.getEmail());
@@ -96,13 +97,8 @@ public class ContactInfo extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                user.setUsername(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-                user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-                user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-                user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-
                 //Might need a new intent here.
-                username=((TextView) findViewById(R.id.nameEditText)).getText().toString();
+
 
                 //get most recent user info.
                 UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
@@ -110,13 +106,29 @@ public class ContactInfo extends AppCompatActivity {
                 try{
                     user = getUserProfileTask.get();
                     //Update to server
-                    UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-                    updateUserProfileTask.execute(user);
+
                 }catch(Exception e){
                     Log.i("user doesn't exist","user doesn't exist");
                 }
 
+                UserElasticSearchController.DeleteUser deleteWholeUser = new UserElasticSearchController.DeleteUser();
+                deleteWholeUser.execute(user);
+                user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+                user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+                user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+                user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
+                try {
+                    UserElasticSearchController.AddNewUserProfileTask addNewUserProfileTask1 = new UserElasticSearchController.AddNewUserProfileTask();
+                    addNewUserProfileTask1.execute(user);
+                }catch (Exception e){
+                    Log.i("add error","fail to add user");
+                }
+
                 finish();
+
+//                UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
+//                updateUserProfileTask.execute(user);
+
                 //Intent intent = new Intent(ContactInfo.this, MainActivity.class);
                 //intent.putExtra("username",username);
                 //startActivity(intent);
