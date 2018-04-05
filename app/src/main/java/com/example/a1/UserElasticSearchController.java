@@ -125,6 +125,8 @@ public class UserElasticSearchController {
         }
     }
 
+
+    //REMOVE THIS IT IS NO LONGER NEEDED!
     public static class UpdateUserProfileTask extends AsyncTask<User, Void, Void> {
 
         @Override
@@ -168,7 +170,7 @@ public class UserElasticSearchController {
         }
     }
 
-    public static class DeleteUser extends AsyncTask<User,Void,Void> {
+    public static class DeleteUserTask extends AsyncTask<User,Void,Void> {
 
         @Override
         protected Void doInBackground(User... users) {

@@ -64,9 +64,6 @@ public class User {
         this.phone = phone;
         this.email = email;
         this.image = image;
-
-        requestedTasks = new ArrayList<Task>();
-        providedTasks = new ArrayList<Task>();
     }
 
     /**

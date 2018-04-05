@@ -41,7 +41,6 @@
         <activity android:name=".ProviderMainPage"/>
         <activity android:name=".Bid" />
         <activity android:name=".AddPhoto" />
-        <activity android:name=".TaskProvider" />
         <activity android:name=".RequesterTaskDetail" />
         <activity android:name=".Register" />
         <activity android:name=".RequesterAssignedTasks" />
