@@ -140,31 +140,19 @@
       <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+            <state relative-caret-position="660">
+              <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
               <folding>
-                <element signature="e#2790#2791#0" expanded="true" />
-                <element signature="e#2826#2827#0" expanded="true" />
-                <element signature="e#3128#3129#0" expanded="true" />
-                <element signature="e#3162#3163#0" expanded="true" />
-                <element signature="e#3281#3282#0" expanded="true" />
-                <element signature="e#3310#3311#0" expanded="true" />
-                <element signature="e#3446#3447#0" expanded="true" />
-                <element signature="e#3477#3478#0" expanded="true" />
-                <element signature="e#3592#3593#0" expanded="true" />
-                <element signature="e#3620#3621#0" expanded="true" />
-                <element signature="e#3958#3959#0" expanded="true" />
-                <element signature="e#4002#4003#0" expanded="true" />
-                <element signature="e#4537#4538#0" expanded="true" />
-                <element signature="e#4564#4565#0" expanded="true" />
-                <element signature="e#4653#4654#0" expanded="true" />
-                <element signature="e#4682#4683#0" expanded="true" />
-                <element signature="e#4784#4785#0" expanded="true" />
-                <element signature="e#4827#4828#0" expanded="true" />
-                <element signature="e#4858#4859#0" expanded="true" />
-                <element signature="e#4903#4904#0" expanded="true" />
-                <element signature="e#4994#4995#0" expanded="true" />
-                <element signature="e#5036#5037#0" expanded="true" />
+                <element signature="e#5228#5229#0" expanded="true" />
+                <marker date="1522886307221" expanded="true" signature="186:303" ph="/**...*/" />
+                <marker date="1522886307221" expanded="true" signature="4869:4875" ph=" }" />
+                <marker date="1522886307221" expanded="true" signature="4881:4948" ph="/**...*/" />
+                <marker date="1522886307221" expanded="true" signature="4976:4986" ph=" { " />
+                <marker date="1522886307221" expanded="true" signature="5014:5020" ph=" }" />
+                <marker date="1522886307221" expanded="true" signature="5050:5060" ph=" { " />
+                <marker date="1522886307221" expanded="true" signature="5090:5096" ph=" }" />
+                <marker date="1522886307221" expanded="true" signature="5127:5160" ph="{...}" />
+                <marker date="1522886307221" expanded="true" signature="5186:5196" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -196,10 +184,9 @@
       <file leaf-file-name="AddPhoto.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddPhoto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="60">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1021#1309#0" expanded="true" />
                 <element signature="e#1308#1309#0" expanded="true" />
               </folding>
@@ -2815,7 +2802,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886292088" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886450323" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2862,7 +2849,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886292088" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886450323" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3044,7 +3031,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886292088" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522886450324" />
       </method>
     </configuration>
     <list size="3">
@@ -3133,7 +3120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522879259027</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="merge ShowWithin5km with ProviderMainPage">
+      <created>1522886298349</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1522886298349</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3167,9 +3161,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55649036" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03125" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.067307696" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.067307696" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -3591,31 +3585,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+        <state relative-caret-position="660">
+          <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
           <folding>
-            <element signature="e#2790#2791#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#3162#3163#0" expanded="true" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3477#3478#0" expanded="true" />
-            <element signature="e#3592#3593#0" expanded="true" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
-            <element signature="e#4002#4003#0" expanded="true" />
-            <element signature="e#4537#4538#0" expanded="true" />
-            <element signature="e#4564#4565#0" expanded="true" />
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="e#4682#4683#0" expanded="true" />
-            <element signature="e#4784#4785#0" expanded="true" />
-            <element signature="e#4827#4828#0" expanded="true" />
-            <element signature="e#4858#4859#0" expanded="true" />
-            <element signature="e#4903#4904#0" expanded="true" />
-            <element signature="e#4994#4995#0" expanded="true" />
-            <element signature="e#5036#5037#0" expanded="true" />
+            <element signature="e#5228#5229#0" expanded="true" />
+            <marker date="1522886307221" expanded="true" signature="186:303" ph="/**...*/" />
+            <marker date="1522886307221" expanded="true" signature="4869:4875" ph=" }" />
+            <marker date="1522886307221" expanded="true" signature="4881:4948" ph="/**...*/" />
+            <marker date="1522886307221" expanded="true" signature="4976:4986" ph=" { " />
+            <marker date="1522886307221" expanded="true" signature="5014:5020" ph=" }" />
+            <marker date="1522886307221" expanded="true" signature="5050:5060" ph=" { " />
+            <marker date="1522886307221" expanded="true" signature="5090:5096" ph=" }" />
+            <marker date="1522886307221" expanded="true" signature="5127:5160" ph="{...}" />
+            <marker date="1522886307221" expanded="true" signature="5186:5196" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -3652,10 +3634,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddPhoto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1021#1309#0" expanded="true" />
             <element signature="e#1308#1309#0" expanded="true" />
           </folding>
