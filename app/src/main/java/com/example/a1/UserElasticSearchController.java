@@ -12,12 +12,16 @@ import com.searchly.jestdroid.JestClientFactory;
 import com.searchly.jestdroid.JestDroidClient;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import io.searchbox.client.JestResult;
 import io.searchbox.core.Delete;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Get;
 import io.searchbox.core.Index;
+import io.searchbox.core.Search;
+import io.searchbox.core.SearchResult;
 
 public class UserElasticSearchController {
 
@@ -198,6 +202,34 @@ public class UserElasticSearchController {
             return null;
         }
 
+    }
+    public static class queryTask extends AsyncTask<String,Void,ArrayList<User>> {
+
+        @Override
+        protected ArrayList<User> doInBackground(String... strings) {
+            verifySettings();
+            ArrayList<User> selecteduser = new ArrayList<>();
+
+            String query = "";
+            Search search = new Search.Builder(strings[0])
+                    .addIndex(SEARCH_INDEX)
+                    .addType(SEARCH_TYPE)
+                    .build();
+            try{
+                SearchResult result = client.execute(search);
+                if (result.isSucceeded()) {
+                    List<User> foundUser = (List<User>) result.getSourceAsObject(User.class);
+                    selecteduser.addAll(foundUser);
+                } else {
+                    Log.i("Error","The search query failed to find any Tasks that matched");
+                }
+            } catch (IOException e) {
+                Log.i("Error","Someting wrong");
+            }
+
+
+            return selecteduser;
+        }
     }
 
 
