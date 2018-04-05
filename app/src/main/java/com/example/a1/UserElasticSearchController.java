@@ -206,19 +206,19 @@ public class UserElasticSearchController {
     public static class queryTask extends AsyncTask<String,Void,ArrayList<User>> {
 
         @Override
-        protected ArrayList<User> doInBackground(String... strings) {
+        protected ArrayList<User> doInBackground(String... search_parameter) {
             verifySettings();
-            ArrayList<User> selecteduser = new ArrayList<>();
+            ArrayList<User> selecteduser = new ArrayList<User>();
 
             String query = "";
-            Search search = new Search.Builder(strings[0])
+            Search search = new Search.Builder(search_parameter[0])
                     .addIndex(SEARCH_INDEX)
                     .addType(SEARCH_TYPE)
                     .build();
             try{
                 SearchResult result = client.execute(search);
                 if (result.isSucceeded()) {
-                    List<User> foundUser = (List<User>) result.getSourceAsObject(User.class);
+                    List<User> foundUser =  result.getSourceAsObjectList(User.class);
                     selecteduser.addAll(foundUser);
                 } else {
                     Log.i("Error","The search query failed to find any Tasks that matched");

@@ -23,6 +23,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class ProviderMainPage extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class ProviderMainPage extends AppCompatActivity {
     private Button searchButton;
     private EditText searchBox;
     private String keyword;
+    private ArrayList users;
 
     /*********** added by JiaHong **********/
     private static final String TAG = "MainActivity";
@@ -90,6 +92,20 @@ public class ProviderMainPage extends AppCompatActivity {
             }
         });
 
+        //example of query the taskname  on ES server
+
+        //{
+//        "query":{
+//        "match":{
+//        "requestedTasks":{
+//        "title":{
+//        "query":keyword that u want to search,
+//        "opeartor":"and"
+//        }
+//        }
+//        }
+//        }
+//        }
 
         searchButton = (Button) findViewById(R.id.SearchButton);
         searchBox = (EditText) findViewById(R.id.SearchBox);
@@ -98,9 +114,17 @@ public class ProviderMainPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 keyword = searchBox.getText().toString();
-                String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":"+keyword+",\"opeartor\":\"and\"}}}}}";
+                String search_query = ""; //"{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}"
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
-                queryTaskName.execute(keyword);
+                queryTaskName.execute(search_query);
+
+                try {
+                    users = queryTaskName.get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                Log.d("print users", users.toString());
 
 
             }
