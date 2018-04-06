@@ -169,11 +169,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             Task task = user.getRequestedTask(j);
             if(task.getStatus() == ASSIGNED){
                 AssignedTasks.add(task);
-                AssignedTasksTitle.add("Title:"+task.getTitle());
+                AssignedTasksTitle.add("Title: "+task.getTitle());
                 Status status = task.getStatus();
-                AssignedTasksStatus.add("Status:"+status.toString());
-                AcceptedBids.add("Accepted bid:"+task.getLowestBid());  //this should get one bid of provider
-                UserName.add("User name:"+username); //this should get providerusernam here.
+                AssignedTasksStatus.add("Status: "+status.toString());
+                AcceptedBids.add("Accepted bid: "+task.getLowestBid());  //this should get one bid of provider
+                UserName.add("User name: "+ task.getProviderName()); //this should get providerusernam here.
             }
         }
     }

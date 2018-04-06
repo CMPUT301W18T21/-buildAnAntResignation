@@ -38,13 +38,8 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
         setTitle("Bidded Tasks");
 
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
-        }
+        user = Server.UserController.get(username);
+
         //the following six lines are added to test
         Task task1= new Task("title1","user1","des1");
         user.getRequestedTasks().add(task1);
@@ -55,7 +50,6 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
         user.getRequestedTask(1).setBidded();
 
-//****
         getBiddedTasks();
 
         ListView listView=(ListView)findViewById(R.id.viewBiddedTask);
@@ -68,7 +62,7 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
     public void getBiddedTasks(){
 
-        ArrayList<Task> AllTasks= user.getRequestedTasks();
+        ArrayList<Task> AllTasks = user.getRequestedTasks();
         for(Integer j=0;j<AllTasks.size();j++){
             Task task= user.getRequestedTask(j);
             if (task.getStatus()==BIDDED){

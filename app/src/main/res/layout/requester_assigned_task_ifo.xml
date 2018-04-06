@@ -14,28 +14,28 @@
         android:id="@+id/View_Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task:"
+        android:text="Task: "
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/View_User_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Name:"
+        android:text="Username: "
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/View_Status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Status:"
+        android:text="Status: "
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/View_Bid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Accept Bid:"
+        android:text="Accepted Bid: "
         android:textSize="20dp" />
 
 </LinearLayout>
