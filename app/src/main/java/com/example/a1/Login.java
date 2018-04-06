@@ -14,7 +14,7 @@ public class Login extends AppCompatActivity {
     private EditText input_name;
     private Button Login;
     private Button Signup;
-    private String userName;
+    private String username;
     private Boolean isExist = false;
 
 
@@ -30,25 +30,18 @@ public class Login extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userName = input_name.getText().toString();
+                username = input_name.getText().toString();
 
-                UserElasticSearchController.CheckUserProfileExistTask checkUserProfileExistTask = new UserElasticSearchController.CheckUserProfileExistTask();
-                checkUserProfileExistTask.execute(userName);
-                try {
-                    isExist = checkUserProfileExistTask.get();
-                    Log.i("existed user","the user already exist");
-                    Log.d("print isExist",isExist.toString());
-                }catch (Exception e){
-                    Log.i("print something","hhhhhhhh");
+                User user = Server.UserController.get(username);
+
+                if(username.equals("") || username.equals(null)) {
+                    Toast.makeText(Login.this, "Please enter a valid username!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                if (isExist){
-                    Intent intent = new Intent(com.example.a1.Login.this, MainActivity.class);
-                    intent.putExtra("username",userName);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(),"login....",Toast.LENGTH_SHORT);
-                }else{
-                    Toast.makeText(getApplicationContext(),"Unidentified username.",Toast.LENGTH_SHORT).show();
-                    Log.i("print something","Username not found.");
+
+                if (user == null){
+                    Toast.makeText(Login.this, "User not found!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
             }
