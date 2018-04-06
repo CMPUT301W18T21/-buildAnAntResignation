@@ -16,6 +16,7 @@ public class DialogChangeStatus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_change_status);
+        setTitle("Assigned Task Options");
     }
 
     public static void setTask(Task task){

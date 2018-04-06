@@ -15,7 +15,7 @@
     <string name="email">Email Address</string>
 
     <string name="change_status">Change Task Status:</string>
-    <string name="view_user">View User Profile</string>
+    <string name="view_user">View Provider Profile</string>
 
     <string name="Task_with_Status_assigned">My Task with Status: Assigned</string>
     <string name="Back_button">Back</string>
