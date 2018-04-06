@@ -48,6 +48,7 @@
         <activity android:name=".Provider_bid_task"/>
         <activity android:name=".DialogChangeStatus"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
+        <activity android:name=".AddLocation"/>
         <activity android:name=".DialogSelectBid"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"></activity>
     </application>
