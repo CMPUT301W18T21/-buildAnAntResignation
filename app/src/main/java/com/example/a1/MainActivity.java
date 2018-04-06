@@ -58,13 +58,13 @@ public class MainActivity  extends AppCompatActivity {
         setTitle("Main Screen");
 
         ((TextView) findViewById(R.id.username)).setText(username);
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
+
+        user = Server.UserController.get(username);
+        if (user == null){
+            Toast.makeText(MainActivity.this, "User not found!", Toast.LENGTH_SHORT).show();
+            finish();
         }
+
 
         viewProfile = (Button) findViewById(R.id.viewProfileButton);
         viewProfile.setOnClickListener(new View.OnClickListener() {

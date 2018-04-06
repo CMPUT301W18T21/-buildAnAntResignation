@@ -44,13 +44,17 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+
             }
         });
 
         Signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(com.example.a1.Login.this,Register.class);
+                Intent intent = new Intent(Login.this,Register.class);
                 startActivity(intent);
 
             }

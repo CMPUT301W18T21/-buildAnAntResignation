@@ -80,19 +80,16 @@ public class Provider_bid_task extends AppCompatActivity {
         String num = ((EditText) findViewById(R.id.Bid_Value)).getText().toString();
         try{
             int Value = Integer.parseInt(num);
-            UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
 
-            getUserProfileTask.execute(username);
-            User user;
-            try {
-                user = getUserProfileTask.get();
-                user.bidTask(task);
-                task.addBid(Value);
-                task.addBidder(username);
-            } catch (Exception e) {
-                Log.i("user doesn't exist", "User does not exist!");
-                finish();
+            User user = Server.UserController.get(username);
+            if (user == null){
+                Toast.makeText(Provider_bid_task.this, "User not found!", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            user.bidTask(task);
+            task.addBid(Value);
+            task.addBidder(username);
 
         }
         catch(NumberFormatException e){

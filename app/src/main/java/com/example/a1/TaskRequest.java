@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -44,13 +45,12 @@ public class TaskRequest extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
+        user = Server.UserController.get(username);
+        if (user == null){
+            Toast.makeText(TaskRequest.this, "User not found!", Toast.LENGTH_SHORT).show();
+            finish();
         }
+
         ((TextView) findViewById(R.id.username)).setText(username);
     }
 
@@ -65,8 +65,7 @@ public class TaskRequest extends AppCompatActivity {
         if (title.length() <= 30 && description.length() <= 300) {
             task = new Task(title, user.getUsername(), description);
             user.requestTask(task);
-            UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-            updateUserProfileTask.execute(user);
+            Server.UserController.edit(user);
             finish();
         }
     }
