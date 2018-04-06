@@ -114,7 +114,9 @@ public class ProviderMainPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 keyword = searchBox.getText().toString();
-                String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}";
+                String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}";
+ //             String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}";
+
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
 
