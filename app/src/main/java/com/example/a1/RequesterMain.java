@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,12 +58,11 @@ public class RequesterMain extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
+
+        user = Server.UserController.get(username);
+        if (user == null){
+            Toast.makeText(RequesterMain.this, "User not found!", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
         ((TextView) findViewById(R.id.username)).setText(username);

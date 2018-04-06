@@ -152,18 +152,27 @@ public class Server {
             provider.deleteProvidedTask(oldTask);
             requester.deleteRequestedTask(oldTask);
 
-            provider.provideTask(newTask);
             requester.requestTask(newTask);
+            if(newTask.getStatus() == Status.ASSIGNED)
+                provider.provideTask(newTask);
 
             UserController.edit(provider);
             UserController.edit(requester);
         }
 
         /**
-         * Returns a list of all requested tasks.
+         * Deletes a task
          */
-        public static void getAll(){
+        public static void delete(Task task){
+            User provider = UserController.get(task.getProviderName());
+            User requester = UserController.get(task.getRequesterName());
 
+
+            provider.deleteProvidedTask(task);
+            requester.deleteRequestedTask(task);
+
+            UserController.edit(provider);
+            UserController.edit(requester);
         }
 
 

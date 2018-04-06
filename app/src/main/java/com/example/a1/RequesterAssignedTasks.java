@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -48,13 +49,12 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
+        user = Server.UserController.get(username);
+        if (user == null){
+            Toast.makeText(RequesterAssignedTasks.this, "User not found!", Toast.LENGTH_SHORT).show();
+            finish();
         }
+
         //the following five  lines are added to test
         Task task= new Task("title1","user1","des1");
         user.getRequestedTasks().add(task);
@@ -96,60 +96,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
     public static void UpdateTask(){
         AssignedTasks.set(id, DialogChangeStatus.getTask());
-
         newTask = AssignedTasks.get(id);
-        //updates the tasks to both task providers and requester
-
-        //update for requester
-
-        //get user form server
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-
-        getUserProfileTask.execute(username);
-        try {
-            user = getUserProfileTask.get();
-            user.deleteRequestedTask(oldTask);
-            user.requestTask(newTask);
-
-        } catch (Exception e) {
-            Log.i("user doesn't exist", "User does not exist!");
-            // Add a notification
-        }
-
-
-        //update for provider
-
-        //find provider form task, remove this task from his provided tasks.
-        String providerName = newTask.getProviderName();
-        User provider;
-        if (newTask.getStatus() == Status.REQUESTED){
-
-            //get provider from server
-            getUserProfileTask.execute(providerName);
-            try {
-                provider = getUserProfileTask.get();
-                provider.deleteProvidedTask(oldTask);
-
-            } catch (Exception e) {
-                Log.i("user doesn't exist", "User does not exist!");
-                // Add a notification
-            }
-
-            //set provider to null
-        }else{
-            //get provider from server
-            getUserProfileTask.execute(providerName);
-            try {
-                provider = getUserProfileTask.get();
-                provider.deleteProvidedTask(oldTask);
-                provider.provideTask(newTask);
-
-            } catch (Exception e) {
-                Log.i("user doesn't exist", "User does not exist!");
-                // Add a notification
-            }
-        }
-
         getAssignedTasks();
 
     }

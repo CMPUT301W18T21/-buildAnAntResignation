@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Represents a view-provider's-assigned-task activity.
@@ -47,13 +48,12 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        try{
-            user = getUserProfileTask.get();
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
+        user = Server.UserController.get(username);
+        if (user == null){
+            Toast.makeText(ProviderAssignedTasks.this, "User not found!", Toast.LENGTH_SHORT).show();
+            finish();
         }
+
         ((TextView) findViewById(R.id.username)).setText(username);
         setupBackButton();
 

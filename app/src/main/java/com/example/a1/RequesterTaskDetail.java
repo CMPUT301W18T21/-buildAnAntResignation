@@ -116,29 +116,8 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * @param view The caller view.
      */
     public void onDeleteClick(View view){
-        //get most recent user info.
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        User user;
-        try{
-            user = getUserProfileTask.get();
-            user.deleteRequestedTask(task);
 
-            /**
-                Now how do I delete it from the other users' provided tasks ?
-                    - when viewing provided tasks, check if the tasks's username still requests the task?
-                        - if not, delete
-                        - if yes, keep
-            **/
-
-            //Update to server
-            UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-            updateUserProfileTask.execute(user);
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
-        }
-
-
+        Server.TaskController.delete(task);
         finish();
     }
 
@@ -146,29 +125,20 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * When save button is clicked, save the changes to the task and goes back to Requester Main Screen.
      */
     public void onSaveClick(View view){
-        // allows only the editing of requested tasks.
-        if (task.getStatus() != Status.REQUESTED) return;
 
-        //get most recent user info.
-        UserElasticSearchController.GetUserProfileTask getUserProfileTask = new UserElasticSearchController.GetUserProfileTask();
-        getUserProfileTask.execute(username);
-        User user;
-        try{
-            user = getUserProfileTask.get();
-            String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
-            String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();;
-            user.editRequestedTask(task, title, description);
+        String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
+        String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
 
-            //Update to server
-            UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UserElasticSearchController.UpdateUserProfileTask();
-            updateUserProfileTask.execute(user);
-        }catch(Exception e){
-            Log.i("user doesn't exist","user doesn't exist");
-        }
+        Task newTask = task;
+        newTask.setTitle(title);
+        newTask.setDescription(description);
+
+        Server.TaskController.edit(task,newTask);
 
         Intent intent = new Intent(RequesterTaskDetail.this,RequesterMain.class);
         intent.putExtra("username",username);
         startActivity(intent);
+        finish();
     }
 
     /**
