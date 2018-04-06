@@ -22,10 +22,10 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private Button DeleteButton;
 
     private ListView listView;
-    private TextView viewtitle;
+    private EditText viewtitle;
     private TextView viewstatus;
     private TextView viewlowsetbid;
-    private  TextView viewdescription;
+    private  EditText viewdescription;
 
     private static Task task;
     private static String username;
@@ -51,10 +51,10 @@ public class RequesterTaskDetail extends AppCompatActivity {
 
 
 
-        viewtitle =(TextView)findViewById(R.id.ViewTitle);
+        viewtitle =(EditText)findViewById(R.id.ViewTitle);
         viewstatus =(TextView)findViewById(R.id.ViewStatus);
         viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
-        viewdescription =(TextView) findViewById(R.id.Viewdescription) ;
+        viewdescription =(EditText) findViewById(R.id.Viewdescription) ;
         listView =(ListView)findViewById(R.id.bidlist);
 
         //put Bids in bidlist
@@ -65,27 +65,11 @@ public class RequesterTaskDetail extends AppCompatActivity {
 
 
         //set text for textview
+        ((TextView)(findViewById(R.id.name))).setText(username);
         viewtitle.setText(task.getTitle());
-        viewstatus.setText(String.valueOf(task.getStatus()));
-        //viewlowsetbid.setText(task.getLowestBid().toString());/**lowestbid did not work*/
+        viewstatus.setText("Status: " + String.valueOf(task.getStatus()));
+        viewlowsetbid.setText("Lowest bid: $" + String.valueOf(task.getLowestBid()));
         viewdescription.setText(task.getDescription());
-
-
-        //        Elastic.GetallTaskByUsername alltask= new Elastic.GetallTaskByUsername();
-        //        alltask.excute(key);
-        //        try{
-        //            taskArrayList=alltask.get();
-        //            Log.e("Task","get");}
-        //        catch (Exception e){
-        //            Log.e("Task","not get");
-        //
-        //
-        //        }
-        //        ArrayAdapter<Task> adapter=new ArrayAdapter<Task>(RequesterTaskDetail.this,R.layout.support_simple_spinner_dropdown_item,taskArrayList);
-        //        listView.setAdapter(adapter);
-        //        datachanged:
-        //        adapter.notifyDataSetChanged();
-        //        listView.setAdapter(adapter);
 
 
         //when item was click jump out a dialog that accept and decline
@@ -102,7 +86,6 @@ public class RequesterTaskDetail extends AppCompatActivity {
         });
         setupAddLocationButton();
         setupAddPhotoButton();
-        setupBackButton();
     }
 
     /**
@@ -113,22 +96,6 @@ public class RequesterTaskDetail extends AppCompatActivity {
         RequesterTaskDetail.task = task;
     }
 
-
-
-    /**
-     * when back button is clicked jump from Requester's  Task Detail Screen to Requester Main Screen without saving any changes.
-     */
-    private void setupBackButton(){
-        backButton = (Button) findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RequesterTaskDetail.this,RequesterMain.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-            }
-        });
-    }
 
     /**
      * when Addphoto buton is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
@@ -171,10 +138,8 @@ public class RequesterTaskDetail extends AppCompatActivity {
             Log.i("user doesn't exist","user doesn't exist");
         }
 
-        Intent intent = new Intent(RequesterTaskDetail.this,RequesterMain.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
 
+        finish();
     }
 
     /**
@@ -207,7 +172,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
     }
 
     /**
-     * when AddLocation buton is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
+     * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
      */
     private void setupAddLocationButton(){
         AddLocation = (Button) findViewById(R.id.AddLocation_B);

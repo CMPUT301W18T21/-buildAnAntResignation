@@ -38,26 +38,28 @@ public class Register extends AppCompatActivity {
                 username = input_name.getText().toString();
                 email = input_email.getText().toString();
                 phone = input_phone.getText().toString();
+                String gender = ((EditText)findViewById(R.id.gender)).getText().toString();
+                String name = ((EditText)findViewById(R.id.name)).getText().toString();
 
-                UserElasticSearchController.CheckUserProfileExistTask checkUserProfileExistTask = new UserElasticSearchController.CheckUserProfileExistTask();
-                checkUserProfileExistTask.execute(username);
-                try {
-                    is_exist = checkUserProfileExistTask.get();
-                    Log.i("existed user","The user already exist!");
-                }catch (Exception e){
-                    Log.i("print something","An exception occurred.");
-                }
-                if (is_exist){
-                    Toast.makeText(Register.this, "The user already exist!", Toast.LENGTH_SHORT).show();
-                }else{
+
+                if(!Server.UserController.check(username)){
+
+                    if(username.equals("") || username.equals(null)) {
+                        Toast.makeText(Register.this, "Please enter a valid username!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     user = new User();
                     user.setUsername(username);
                     user.setEmail(email);
+                    user.setGender(gender);
                     user.setPhone(phone);
+                    user.setName(name);
 
-                    UserElasticSearchController.AddNewUserProfileTask addNewUserProfileTask = new UserElasticSearchController.AddNewUserProfileTask();
-                    addNewUserProfileTask.execute(user);
+                    Server.UserController.add(user);
                     finish();
+                }else{
+                    Toast.makeText(Register.this, "Username already exists!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

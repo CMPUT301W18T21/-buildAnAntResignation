@@ -203,6 +203,7 @@ public class UserElasticSearchController {
         }
 
     }
+
     public static class queryTask extends AsyncTask<String,Void,ArrayList<User>> {
 
         @Override
@@ -224,7 +225,7 @@ public class UserElasticSearchController {
                     Log.i("Error","The search query failed to find any Tasks that matched");
                 }
             } catch (Exception e) {
-                Log.i("Error","Someting wrong");
+                Log.i("Error","Something wrong");
             }
 
 

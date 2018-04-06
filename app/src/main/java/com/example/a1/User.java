@@ -30,7 +30,7 @@ public class User {
     /**
      * the array of tasks that provider has requested
      */
-    private ArrayList<Task> requestedTasks;
+    private ArrayList<Task> requestedTasks = new ArrayList<>(0);
     /**
      * the array of tasks that are assigned
      */

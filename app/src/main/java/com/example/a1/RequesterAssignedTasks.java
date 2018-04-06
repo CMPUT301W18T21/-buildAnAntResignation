@@ -25,7 +25,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     private static Task oldTask;
     private static Task newTask;
     private static int id;
-    private Integer test;
 
 
     /**Initialize the AssignedTasks array to store the tasks that the user has assigned
@@ -63,7 +62,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         user.getRequestedTask(0).setAssigned();
         user.getRequestedTask(0).addBid(1);
 
-        setupBackButton();
         setupSaveButton();
         getAssignedTasks();
 
@@ -234,19 +232,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         });
     }
 
-    /**
-     * when back button is clicked jump from Requester's Assigned Task Screen to Requester Main Screen without saving any changes.
-     */
-    private void setupBackButton(){
-        backButton = (Button) findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 }

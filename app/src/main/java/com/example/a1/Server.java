@@ -37,7 +37,7 @@ public class Server {
      * Represents the User controller.
      * It handles interaction of User instances
      * with the Elasticsearch server.
-     * @see com.example.a1.User
+     * @see User
      */
     public static class UserController{
 
@@ -135,7 +135,7 @@ public class Server {
      * Represents the Task controller.
      * It handles interaction of Task instances
      * with the Elasticsearch server.
-     * @see com.example.a1.Task
+     * @see Task
      */
     public static class TaskController{
 
