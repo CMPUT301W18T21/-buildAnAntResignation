@@ -34,7 +34,7 @@ public class RequesterMain extends AppCompatActivity {
     private static ArrayList<String> tasksInfo = new ArrayList<>(0);
     private static ArrayAdapter<String> adapter;
     Button BiddedButton;
-    ListView taskList;
+    private static ListView taskList;
     Button AssignedButton;
     String username;
     private static User user;
@@ -71,10 +71,7 @@ public class RequesterMain extends AppCompatActivity {
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
-        /* Remove Later*/
         tasksInfo.clear();
-        Task task = new Task("Task1",username,"Description of task");
-        user.requestTask(task);
 
         displayTasks();
         setupBiddedButton();
@@ -98,9 +95,11 @@ public class RequesterMain extends AppCompatActivity {
     /**
      * Adds the user's requested tasks to the list view.
      */
-    private void displayTasks(){
+    public static void displayTasks(){
+        user = Server.UserController.get(user.getUsername());
+        if (user == null) return;
         tasksInfo.clear();
-        ArrayList<Task> tasks =user.getRequestedTasks();
+        ArrayList<Task> tasks = user.getRequestedTasks();
         for (Task task: tasks) {
             tasksInfo.add(task.getTitle() + "\n" + task.getStatus());
         }
@@ -145,8 +144,7 @@ public class RequesterMain extends AppCompatActivity {
                 Intent intent = new Intent(RequesterMain.this, TaskRequest.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
-
-
+                finish();
             }
         });
 

@@ -41,8 +41,7 @@ public class TaskRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_request);
         setTitle("Request Task");
-        Intent intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
         user = Server.UserController.get(username);
@@ -62,11 +61,12 @@ public class TaskRequest extends AppCompatActivity {
     public void onRequestClick(View view){
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
-        if (title.length() <= 30 && description.length() <= 300) {
-            task = new Task(title, user.getUsername(), description);
-            user.requestTask(task);
-            Server.UserController.edit(user);
-            finish();
-        }
+        task = new Task(title, user.getUsername(), description);
+        user.requestTask(task);
+        Server.UserController.edit(user);
+        Intent intent = new Intent(TaskRequest.this, RequesterMain.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+        finish();
     }
 }
