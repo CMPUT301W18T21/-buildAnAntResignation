@@ -72,10 +72,10 @@ public class ProviderMainPage extends AppCompatActivity {
         showContent = (ListView) findViewById(R.id.listView);
         keyWords = (SearchView) findViewById(R.id.searchView);
 
-        name_test.add("testname");
-        task_test.add("testtask");
-        status_test.add("teststatus");
-        lowest_test.add(1);
+       // name_test.add("testname");
+       // task_test.add("testtask");
+       // status_test.add("teststatus");
+       // lowest_test.add(1);
 
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
         showContent.setAdapter(customAdapter);
@@ -117,11 +117,9 @@ public class ProviderMainPage extends AppCompatActivity {
         //{
 //        "query":{
 //        "match":{
-//        "requestedTasks":{
-//        "title":{
+//        "requestedTasks.title":{
 //        "query":keyword that u want to search,
 //        "opeartor":"and"
-//        }
 //        }
 //        }
 //        }
@@ -134,9 +132,13 @@ public class ProviderMainPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 keyword = searchBox.getText().toString();
- //               String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}";
+                name_test.clear();
+                task_test.clear();
+                lowest_test.clear();
+                status_test.clear();
+                String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
  //             String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}";
-                String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\"want\",\"operator\":\"and\"}}}}";
+   //             String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\"want\",\"operator\":\"and\"}}}}";
 
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
@@ -155,7 +157,7 @@ public class ProviderMainPage extends AppCompatActivity {
 
                     for (Task eachTask: eachRequestedTask){
                         String requestedTaskTitle = eachTask.getTitle();
-                        if (requestedTaskTitle.contains(keyword)) {
+                        if (titleCheck(keyword,requestedTaskTitle)) {
                             name_test.add(taskuser.getName());
                             task_test.add(requestedTaskTitle);
                             status_test.add(eachTask.getStatus().toString());
@@ -167,6 +169,7 @@ public class ProviderMainPage extends AppCompatActivity {
 
 
                 }
+                Log.i("query",search_query.toString());
                 Log.i("name",name_test.toString());
                 Log.i("title",task_test.toString());
                 Log.i("status",status_test.toString());
@@ -183,6 +186,20 @@ public class ProviderMainPage extends AppCompatActivity {
         /******************************************* added by JiaHong *************************************************************/
         if(isServicesOK()){
             init();
+        }
+    }
+
+    private boolean titleCheck(String keyword,String title){
+        Boolean find = true;
+        if (keyword == null){
+            return find;
+        } else {
+            String[] splited = keyword.split("\\s+");
+            for(int i = 0;i<splited.length;i++){
+                Boolean singleFind = title.contains(splited[i]);
+                find = find & singleFind;
+            }
+            return find;
         }
     }
 
@@ -224,11 +241,17 @@ public class ProviderMainPage extends AppCompatActivity {
     {
         ArrayList<ProviderAdaptInfo> providerAdaptInfos = new ArrayList<ProviderAdaptInfo>();
         ProviderAdaptInfo p;
-        for (int i = 0; i< name_test.size();i++){
-            p = new ProviderAdaptInfo(name_test.get(i), task_test.get(i), status_test.get(i), lowest_test.get(i));
-            providerAdaptInfos.add(p);
+        if (name_test.size()>0){
+            for (int i = 0; i< name_test.size();i++){
+                p = new ProviderAdaptInfo(name_test.get(i), task_test.get(i), status_test.get(i), lowest_test.get(i));
+                providerAdaptInfos.add(p);
+            }
+            return providerAdaptInfos;
+        } else {
+
+            return providerAdaptInfos;
         }
-        return providerAdaptInfos;
+
     }
 
 
