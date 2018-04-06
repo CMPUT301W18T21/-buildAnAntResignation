@@ -43,23 +43,11 @@ public class ProviderMainPage extends AppCompatActivity {
 
     /*********** added by JiaHong **********/
 
-   // String[] name_test = {};
-   // String [] task_test = {};
-   // String [] status_test = {};
-   // int [] lowest_test = {};
-    //private ArrayList<String> name_test;
-    //private ArrayList<String> task_test;
-    //private ArrayList<String> status_test;
-    //private ArrayList<Integer> lowest_test;
+
     ArrayList<String> name_test = new ArrayList<String>();
     ArrayList<String> task_test = new ArrayList<String>();
     ArrayList<String> status_test = new ArrayList<String>();
     ArrayList<Integer> lowest_test = new ArrayList<Integer>();
-
-
-
-
-
 
 
     //ArrayAdapter<String> adapter;
@@ -72,13 +60,10 @@ public class ProviderMainPage extends AppCompatActivity {
         showContent = (ListView) findViewById(R.id.listView);
         keyWords = (SearchView) findViewById(R.id.searchView);
 
-       // name_test.add("testname");
-       // task_test.add("testtask");
-       // status_test.add("teststatus");
-       // lowest_test.add(1);
 
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
         showContent.setAdapter(customAdapter);
+
 
 
         keyWords.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -137,8 +122,6 @@ public class ProviderMainPage extends AppCompatActivity {
                 lowest_test.clear();
                 status_test.clear();
                 String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
- //             String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}";
-   //             String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\"want\",\"operator\":\"and\"}}}}";
 
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
@@ -157,7 +140,7 @@ public class ProviderMainPage extends AppCompatActivity {
 
                     for (Task eachTask: eachRequestedTask){
                         String requestedTaskTitle = eachTask.getTitle();
-                        if (titleCheck(keyword,requestedTaskTitle)) {
+                        if (conditionCheck(keyword,requestedTaskTitle,eachTask.getStatus().toString())) {
                             name_test.add(taskuser.getName());
                             task_test.add(requestedTaskTitle);
                             status_test.add(eachTask.getStatus().toString());
@@ -177,7 +160,6 @@ public class ProviderMainPage extends AppCompatActivity {
 
 
 
-
             }
         });
 
@@ -189,19 +171,7 @@ public class ProviderMainPage extends AppCompatActivity {
         }
     }
 
-    private boolean titleCheck(String keyword,String title){
-        Boolean find = true;
-        if (keyword == null){
-            return find;
-        } else {
-            String[] splited = keyword.split("\\s+");
-            for(int i = 0;i<splited.length;i++){
-                Boolean singleFind = title.contains(splited[i]);
-                find = find & singleFind;
-            }
-            return find;
-        }
-    }
+
 
     private void init(){
         Button btnMap = (Button) findViewById(R.id.viewOnMap);
@@ -255,12 +225,27 @@ public class ProviderMainPage extends AppCompatActivity {
     }
 
 
+    private boolean conditionCheck(String keyword,String title,String status){
+        Boolean find = true;
+        if (keyword == null){
+            return false;
+        } else {
+            String[] splited = keyword.split("\\s+");
+            for(int i = 0;i<splited.length;i++){
+                Boolean singleFind = title.contains(splited[i]);
+                find = find & singleFind;
+            }
+        }
+        Boolean statusBool = status.contains("REQUESTED") | status.contains("BIDDED");
 
-    public void map_handler() {
+        find = find & statusBool;
 
-        /* this part should handle google map api connection */
-
+        return find;
     }
+
+
+
+
     class CustomAdapter extends BaseAdapter implements Filterable {
 
         Context c;
