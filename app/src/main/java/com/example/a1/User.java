@@ -99,7 +99,7 @@ public class User {
      * @param image The user's profile picture.
      * @param requestedTasks The user's requested tasks.
      * @param providedTasks The user's provided tasks.
-     * @param biddedTasks The user's takss on which
+     * @param biddedTasks The user's tasks on which he bid.
      */
     public User(String name, String username, String gender, String phone, String email, String image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks, ArrayList<Task> biddedTasks){
         this.name = name;
@@ -272,20 +272,59 @@ public class User {
         providedTasks.add(task);
     }
 
+    /**
+     * Checks if a user has a matching name in his requested tasks.
+     * @param title
+     * @return True if match found, false if not.
+     */
+    public Boolean checkRequestedTitle(String title){
+        for (Task task: requestedTasks) {
+            if( task.getTitle().equals(title))
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * Checks if a user has a matching name in his provided tasks.
+     * @param title
+     * @return True if match found, false if not.
+     */
+    public Boolean checkProvidedTitle(String title){
+        for (Task task: providedTasks) {
+            if( task.getTitle().equals(title))
+                return true;
+        }
+        return false;
+    }
+
 
     /**
      * Removes a task from the user's requested tasks.
      * @param task The task to be deleted.
      */
     public void deleteRequestedTask(Task task){
-        requestedTasks.remove(task);
+        for (int i = 0; i < requestedTasks.size(); i++) {
+            if (requestedTasks.get(i).getTitle().equals(task.getTitle())) {
+                requestedTasks.remove(i);
+                break;
+            }
+        }
+
     }
 
     /**
      * Removes a task from the user's provided tasks.
      * @param task The task to be deleted.
      */
-    public void deleteProvidedTask(Task task){ providedTasks.remove(task); }
+    public void deleteProvidedTask(Task task){
+        for (int i = 0; i < providedTasks.size(); i++) {
+            if( providedTasks.get(i).getTitle().equals(task.getTitle())) {
+                providedTasks.remove(i);
+                break;
+            }
+        }
+    }
 
     /**
      * Replaces an existing requested task, with a new task.

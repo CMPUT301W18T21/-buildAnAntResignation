@@ -3,7 +3,6 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,24 +41,15 @@ public class RequesterTaskDetail extends AppCompatActivity {
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        /* debugging */
 
-        bids = new ArrayList<>(0);
-        bids.add(5);
-        bids.add(9);
-        bids.add(8);
-        task = new Task("hi","nihao","whatsup","location", Status.REQUESTED,bids);
-
-
-
-        viewtitle =(EditText)findViewById(R.id.ViewTitle);
+        viewtitle =(EditText)findViewById(R.id.titleEditText);
         viewstatus =(TextView)findViewById(R.id.ViewStatus);
         viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
-        viewdescription =(EditText) findViewById(R.id.Viewdescription) ;
+        viewdescription =(EditText) findViewById(R.id.descriptionEditText) ;
         listView =(ListView)findViewById(R.id.bidlist);
 
         //put Bids in bidlist
-        adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_list_item_1,bids);
+        adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_list_item_1, task.getBids());
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
@@ -68,7 +59,10 @@ public class RequesterTaskDetail extends AppCompatActivity {
         ((TextView)(findViewById(R.id.name))).setText(username);
         viewtitle.setText(task.getTitle());
         viewstatus.setText("Status: " + String.valueOf(task.getStatus()));
-        viewlowsetbid.setText("Lowest bid: $" + String.valueOf(task.getLowestBid()));
+        if(task.getLowestBid() == -1)
+            viewlowsetbid.setText("Lowest bid: None");
+        else
+            viewlowsetbid.setText("Lowest bid: $" + String.valueOf(task.getLowestBid()));
         viewdescription.setText(task.getDescription());
 
 
@@ -118,26 +112,31 @@ public class RequesterTaskDetail extends AppCompatActivity {
     public void onDeleteClick(View view){
 
         Server.TaskController.delete(task);
+        RequesterMain.displayTasks();
         finish();
     }
 
     /**
      * When save button is clicked, save the changes to the task and goes back to Requester Main Screen.
+     * @param view The caller view.
      */
     public void onSaveClick(View view){
 
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
+        Task newTask;
+        try{
+            newTask = (Task) task.clone();
+        }catch (CloneNotSupportedException  e){
+            Toast.makeText(RequesterTaskDetail.this, "User not found!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        Task newTask = task;
         newTask.setTitle(title);
         newTask.setDescription(description);
-
         Server.TaskController.edit(task,newTask);
 
-        Intent intent = new Intent(RequesterTaskDetail.this,RequesterMain.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
+        RequesterMain.displayTasks();
         finish();
     }
 

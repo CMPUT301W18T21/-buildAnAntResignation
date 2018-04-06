@@ -14,6 +14,8 @@ package com.example.a1;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import java.security.Provider;
+
 /**
  * Represents a controller for interacting with the Elasticsearch server.
  * It acts a kind of front end for the UserElasticSearchController, allowing
@@ -145,34 +147,41 @@ public class Server {
          * @param newTask The new edited task to be uploaded to the server.
          */
         public static void edit(Task oldTask, Task newTask){
-            User provider = UserController.get(oldTask.getProviderName());
+
             User requester = UserController.get(oldTask.getRequesterName());
-
-
-            provider.deleteProvidedTask(oldTask);
             requester.deleteRequestedTask(oldTask);
-
             requester.requestTask(newTask);
-            if(newTask.getStatus() == Status.ASSIGNED)
-                provider.provideTask(newTask);
-
-            UserController.edit(provider);
             UserController.edit(requester);
+
+            String providerName = oldTask.getProviderName();
+
+            if(providerName != null) {
+                User provider = UserController.get(providerName);
+                provider.deleteProvidedTask(oldTask);
+                if(newTask.getStatus() == Status.ASSIGNED)
+                    provider.provideTask(newTask);
+                UserController.edit(provider);
+            }
+
         }
 
         /**
          * Deletes a task
          */
         public static void delete(Task task){
-            User provider = UserController.get(task.getProviderName());
+
             User requester = UserController.get(task.getRequesterName());
-
-
-            provider.deleteProvidedTask(task);
             requester.deleteRequestedTask(task);
-
-            UserController.edit(provider);
             UserController.edit(requester);
+
+            String providerName = task.getProviderName();
+
+            if(providerName != null) {
+                User provider = UserController.get(providerName);
+                provider.deleteProvidedTask(task);
+                UserController.edit(provider);
+            }
+
         }
 
 

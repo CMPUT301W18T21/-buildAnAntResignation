@@ -88,7 +88,7 @@
         android:layout_marginTop="8dp"
         android:text="Status"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Viewdescription" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
 
     <TextView
         android:id="@+id/ViewLowsetBid"
@@ -100,7 +100,7 @@
         app:layout_constraintStart_toEndOf="@+id/ViewStatus" />
 
     <EditText
-        android:id="@+id/ViewTitle"
+        android:id="@+id/titleEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -115,7 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/userimage" />
 
     <EditText
-        android:id="@+id/Viewdescription"
+        android:id="@+id/descriptionEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -126,7 +126,7 @@
         android:textAppearance="@android:style/TextAppearance.Material.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/ViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
 
     <Button
         android:id="@+id/delete"
@@ -145,7 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/title"
-        app:layout_constraintBaseline_toBaselineOf="@+id/ViewTitle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/titleEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/description"
-        app:layout_constraintBaseline_toBaselineOf="@+id/Viewdescription"
+        app:layout_constraintBaseline_toBaselineOf="@+id/descriptionEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

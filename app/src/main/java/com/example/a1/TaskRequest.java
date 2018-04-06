@@ -60,13 +60,17 @@ public class TaskRequest extends AppCompatActivity {
      */
     public void onRequestClick(View view){
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
+        if(user.checkRequestedTitle(title)) {
+            Toast.makeText(TaskRequest.this, "You already have a task with this title.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
         task = new Task(title, user.getUsername(), description);
         user.requestTask(task);
         Server.UserController.edit(user);
         Intent intent = new Intent(TaskRequest.this, RequesterMain.class);
         intent.putExtra("username",username);
+        RequesterMain.displayTasks();
         startActivity(intent);
-        finish();
     }
 }

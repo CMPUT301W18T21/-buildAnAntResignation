@@ -21,7 +21,7 @@ import java.util.Collections;
  * @see User
  * @see Status
  */
-public class Task{
+public class Task implements Cloneable{
     private String title;
     private String requesterName;
     private String providerName;
@@ -56,7 +56,7 @@ public class Task{
      * @param description The task's description.
      * @param location The task's geolocation.
      * @param status The task's status.
-     * @param bids The taks's bid.
+     * @param bids The task's bid.
      */
     public  Task(String title, String requesterName, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
@@ -77,7 +77,7 @@ public class Task{
      * @param description The task's description.
      * @param location The task's geolocation.
      * @param status The task's status.
-     * @param bids The taks's bid.
+     * @param bids The task's bid.
      */
     public  Task(String title, String requesterName, String providerName, String description, String location, Status status, ArrayList<Integer> bids){
         this.title = title;
@@ -141,9 +141,10 @@ public class Task{
      * Source from user Marimuthu Madasamy: https://stackoverflow.com/questions/15995458/how-to-find-the-minimum-value-in-an-arraylist-along-with-the-index-number-jav#15995501
      * March 11, 2018
      *
-     * @return The lowest bid of the task.
+     * @return The lowest bid of the task. Returns -1 if task has no bids.
      */
     public int getLowestBid(){
+        if(bids.size() == 0) return -1;
         return Collections.min(bids);
     }
 
@@ -203,6 +204,31 @@ public class Task{
     public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
 
+    public float getLongitude(){
+        return longitude;
+    }
 
+    public void setLongitude(float longitude){
+        this.longitude = longitude;
+    }
+
+    public float getLatitude(){
+        return latitude;
+    }
+
+    public void setLatitude(float latitude){
+        this.latitude = longitude;
+    }
+
+    /**
+     *
+     * Source: User Bhasker Tiwari from https://stackoverflow.com/questions/869033/how-do-i-copy-an-object-in-java#869078
+     *          April 6th, 2018
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
 }

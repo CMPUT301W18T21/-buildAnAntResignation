@@ -31,10 +31,10 @@ import java.util.ArrayList;
  */
 public class RequesterMain extends AppCompatActivity {
 
-    private static ArrayList<String> tasksInfo = new ArrayList<>(0);
-    private static ArrayAdapter<String> adapter;
+    static private ArrayList<String> tasksInfo = new ArrayList<>(0);
+    static private ArrayAdapter<String> adapter;
     Button BiddedButton;
-    private static ListView taskList;
+    static private ListView taskList;
     Button AssignedButton;
     String username;
     private static User user;
@@ -144,7 +144,6 @@ public class RequesterMain extends AppCompatActivity {
                 Intent intent = new Intent(RequesterMain.this, TaskRequest.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
-                finish();
             }
         });
 
