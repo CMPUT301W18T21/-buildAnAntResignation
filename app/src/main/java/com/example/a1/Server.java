@@ -12,6 +12,7 @@
 package com.example.a1;
 
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 /**
  * Represents a controller for interacting with the Elasticsearch server.
@@ -101,6 +102,7 @@ public class Server {
             getUserTask.execute(username);
             try {
                 user = getUserTask.get();
+                Log.i("test",user.toString());
             } catch (Exception e) {
                 user = null;
             }

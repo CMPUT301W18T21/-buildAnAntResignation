@@ -223,7 +223,7 @@ public class UserElasticSearchController {
                 } else {
                     Log.i("Error","The search query failed to find any Tasks that matched");
                 }
-            } catch (IOException e) {
+            } catch (Exception e) {
                 Log.i("Error","Someting wrong");
             }
 

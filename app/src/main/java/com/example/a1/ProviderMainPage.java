@@ -34,7 +34,7 @@ public class ProviderMainPage extends AppCompatActivity {
     private Button searchButton;
     private EditText searchBox;
     private String keyword;
-    private ArrayList users;
+    private ArrayList<User> users;
 
     /*********** added by JiaHong **********/
     private static final String TAG = "MainActivity";
@@ -114,7 +114,7 @@ public class ProviderMainPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 keyword = searchBox.getText().toString();
-                String search_query = ""; //"{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}"
+                String search_query = "{\"query\":{\"match\":{\"requestedTasks\":{\"title\":{\"query\":\""+keyword+"\",\"opeartor\":\""+"and"+"\"}}}}}";
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
 
@@ -124,7 +124,12 @@ public class ProviderMainPage extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                Log.d("print users", users.toString());
+                Log.i("print users", users.toString());
+
+                for (User taskuser : users){
+                    Log.i("print each",taskuser.toString());
+
+                }
 
 
             }
