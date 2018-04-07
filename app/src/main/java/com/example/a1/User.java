@@ -12,6 +12,7 @@ package com.example.a1;
 
 import android.net.Uri;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  * A user has a unique username, a regular name, a gender, phone number, email, and a user image.
  * A collection of all users is kept here.
  */
-public class User {
+public class User implements Serializable {
 
     private static String currentUser;
 

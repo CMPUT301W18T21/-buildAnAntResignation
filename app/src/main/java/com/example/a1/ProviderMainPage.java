@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
@@ -48,6 +49,7 @@ public class ProviderMainPage extends AppCompatActivity {
     ArrayList<String> task_test = new ArrayList<String>();
     ArrayList<String> status_test = new ArrayList<String>();
     ArrayList<Integer> lowest_test = new ArrayList<Integer>();
+    ArrayList<User> matchUsers = new ArrayList<User>();
 
 
     //ArrayAdapter<String> adapter;
@@ -121,6 +123,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 task_test.clear();
                 lowest_test.clear();
                 status_test.clear();
+                matchUsers.clear();
                 String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
                 //String search_query = "{\"query\": { \"match\":{\"_type\":\"user\" }}}";
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
@@ -135,6 +138,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 Log.i("print query", search_query);
                 Log.i("printUser",users.toString());
 
+
                 for (User taskuser : users){
 
                     ArrayList<Task> eachRequestedTask = taskuser.getRequestedTasks();
@@ -145,7 +149,8 @@ public class ProviderMainPage extends AppCompatActivity {
                             name_test.add(taskuser.getName());
                             task_test.add(requestedTaskTitle);
                             status_test.add(eachTask.getStatus().toString());
-                            lowest_test.add(1);
+                            lowest_test.add(eachTask.getLowestBid());
+                            matchUsers.add(taskuser);
 
                         }
 
@@ -311,8 +316,13 @@ public class ProviderMainPage extends AppCompatActivity {
                                             @Override
                                             public void onItemClick(View view) {
                                                 Intent intent = new Intent(ProviderMainPage.this, Provider_bid_task.class);
+                                                Bundle taskPack = new Bundle();
+                                                taskPack.putString("taskName",providerinfos.get(pos).getTask());
+                                                taskPack.putSerializable("selectedUser",matchUsers.get(pos));
+                                                intent.putExtra("taskBundle", taskPack);
                                                 startActivity(intent);
                                                 Toast.makeText(c, providerinfos.get(pos).getTask(), Toast.LENGTH_SHORT).show();
+
 
 
 
