@@ -122,7 +122,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 lowest_test.clear();
                 status_test.clear();
                 String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
-
+                //String search_query = "{\"query\": { \"match\":{\"_type\":\"user\" }}}";
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
 
@@ -133,6 +133,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 }
 
                 Log.i("print query", search_query);
+                Log.i("printUser",users.toString());
 
                 for (User taskuser : users){
 
