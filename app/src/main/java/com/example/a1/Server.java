@@ -226,6 +226,35 @@ public class Server {
             return tasks;
         }
 
+        /**
+         * Gets a task from a user.
+         * @param provider The task provider to which the task belongs to.
+         * @param taskName The name of the provided task to be returned.
+         * @return The named task belonging to the provider. If no such task exists, returns null.
+         */
+        public static Task getProvided(User provider, String taskName){
+            ArrayList<Task> tasks = provider.getProvidedTasks();
+            for (Task task: tasks) {
+                if(task.getTitle().equals(taskName))
+                    return task;
+            }
+            return null;
+        }
+
+        /**
+         * Gets a task from a user.
+         * @param requester The task requester to which the task belongs to.
+         * @param taskName The name of the requester task to be returned.
+         * @return The named task belonging to the requester. If no such task exists, returns null.
+         */
+        public static Task getRequested(User requester, String taskName){
+            ArrayList<Task> tasks = requester.getRequestedTasks();
+            for (Task task: tasks) {
+                if(task.getTitle().equals(taskName))
+                    return task;
+            }
+            return null;
+        }
     }
 
 }

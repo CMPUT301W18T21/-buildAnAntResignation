@@ -73,6 +73,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * get tasks with status is Assigned , get status of the task, and the Bib made by specific provider, and provider username.
      */
     public static void getAssignedTasks(){
+
         ArrayList<Task> allTasks = user.getRequestedTasks();
         assignedTasks.clear();
         assignedTasksTitle.clear();
