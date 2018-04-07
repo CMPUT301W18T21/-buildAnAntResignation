@@ -82,14 +82,6 @@ public class UserElasticSearchController {
                 JestResult result = client.execute(get);
                 user = result.getSourceAsObject(User.class);
                 Log.i("check if exist","check user profile exist");
-
-//                if (result.isSucceeded()) {
-//                    Log.d("checkUser", "Check userProfile UserName Unique Success");
-//                    return true;
-//                } else {
-//                    Log.d("checkUser", "Check userProfile UserName Unique Fail");
-//                    return false;
-//                }
                 if (user != null) return true;
             } catch (IOException e) {
                 e.printStackTrace();
@@ -129,39 +121,6 @@ public class UserElasticSearchController {
         }
     }
 
-
-    //REMOVE THIS IT IS NO LONGER NEEDED!
-    public static class UpdateUserProfileTask extends AsyncTask<User, Void, Void> {
-
-        @Override
-        protected Void doInBackground(User... users) {
-            verifySettings();
-
-            User userProfile = users[0];
-
-            // Update this userProfile to online database
-            Index index = new Index.Builder(userProfile)
-                    .index(SEARCH_INDEX)
-                    .type(SEARCH_TYPE)
-                    .id(userProfile.getUsername())
-                    .build();
-
-            try {
-                DocumentResult execute = client.execute(index);
-
-                if (execute.isSucceeded()) {
-                    Log.d("update", "Update User profile Success");
-                } else {
-                    Log.d("update", "Update User profile Fail");
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-    }
 
     public static void verifySettings() {
         if (client == null) {
@@ -232,14 +191,5 @@ public class UserElasticSearchController {
             return selecteduser;
         }
     }
-
-
-    public static void syncOnlineWithOffline(User offlineUserProfile) {
-        // Sync the User Profile from the offline file
-        UserElasticSearchController.UpdateUserProfileTask updateUserProfileTask = new UpdateUserProfileTask();
-        //......offlineUserProfile
-        updateUserProfileTask.execute(offlineUserProfile);
-    }
-
 
 }

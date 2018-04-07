@@ -11,26 +11,20 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
-    private EditText input_name;
-    private Button Login;
-    private Button Signup;
     private String username;
-    private Boolean isExist = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        input_name = (EditText)findViewById(R.id.inputname);
-        Login = (Button)findViewById(R.id.login);
-        Signup = (Button)findViewById(R.id.signup);
+        Button login = (Button)findViewById(R.id.login);
+        Button signup = (Button)findViewById(R.id.signup);
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                username = input_name.getText().toString();
+                username = ((EditText)findViewById(R.id.inputname)).getText().toString();
 
                 User user = Server.UserController.get(username);
 
@@ -46,12 +40,13 @@ public class Login extends AppCompatActivity {
 
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 intent.putExtra("username", username);
+                User.setCurrentUser(username);
                 startActivity(intent);
 
             }
         });
 
-        Signup.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this,Register.class);

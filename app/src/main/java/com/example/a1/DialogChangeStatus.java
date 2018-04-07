@@ -1,5 +1,6 @@
 package com.example.a1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -50,5 +51,11 @@ public class DialogChangeStatus extends AppCompatActivity {
             task.setDone();
             finish();
         }
+    }
+
+    public void onClickProviderProfile(View view){
+        Intent intent = new Intent(DialogChangeStatus.this, ContactInfo.class);
+        intent.putExtra("username",task.getProviderName());
+        startActivity(intent);
     }
 }

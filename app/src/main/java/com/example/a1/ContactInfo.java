@@ -73,20 +73,22 @@ public class ContactInfo extends AppCompatActivity {
     }
 
     /**
-     * Save edited cahnges to a user profile.
+     * Save edited changes to a user profile, if the viewed user is the logged in user.
+     * Else, simply closes the form.
      *
      * @param view The caller view.
      */
     public void onButtonClick(View view){
+        //checks if viewed user matches logged in user.
+        if (username.equals(User.getCurrentUser())) {
+            user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+            user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
+            user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
+            user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
 
-        user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
-        user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
-        user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
-        user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());
-
-        //Uploads the edited user to the server
-        Server.UserController.edit(user);
-
+            //Uploads the edited user to the server
+            Server.UserController.edit(user);
+        }
         finish();
     }
 
@@ -95,9 +97,11 @@ public class ContactInfo extends AppCompatActivity {
      * @param view The caller view.
      */
     public void onPictureClick(View view){
-
-        Intent galleryIntent = new Intent (Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(galleryIntent,RESULT_LOAD_IMAGE);
+        //checks if viewed user matches logged in user.
+        if (username.equals(User.getCurrentUser())) {
+            Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+        }
 
     }
 

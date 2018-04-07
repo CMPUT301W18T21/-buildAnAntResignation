@@ -21,6 +21,8 @@ import java.util.ArrayList;
  */
 public class User {
 
+    private static String currentUser;
+
     private String name;
     private String username;
     private String gender;
@@ -116,6 +118,25 @@ public class User {
         this.biddedTasks = biddedTasks;
     }
 
+    /**
+     * Keeps track of the logged in user's username. This is used to distinguish
+     * the logged in user from other users in the contact info screen.
+     * @param username The logged in user's username
+     * @see ContactInfo
+     */
+    public static void setCurrentUser(String username){
+        currentUser = username;
+    }
+
+    /**
+     * Keeps track of the logged in user's username. This is used to distinguish
+     * the logged in user from other users in the contact info screen.
+     * @return The username of the logged in user.
+     * @see ContactInfo
+     */
+    public static String getCurrentUser(){
+        return currentUser;
+    }
 
     /**
      * Gets the regular name of the user.
@@ -275,6 +296,7 @@ public class User {
         try {
             newTask = (Task) task.clone();
             newTask.setAssigned();
+            newTask.setProviderName(username);
             providedTasks.add(task);
             Server.UserController.edit(this);
             Server.TaskController.edit(task,newTask);

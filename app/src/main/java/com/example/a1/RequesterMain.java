@@ -33,13 +33,9 @@ public class RequesterMain extends AppCompatActivity {
 
     static private ArrayList<String> tasksInfo = new ArrayList<>(0);
     static private ArrayAdapter<String> adapter;
-    Button BiddedButton;
-    static private ListView taskList;
-    Button AssignedButton;
     String username;
     private static User user;
     private Intent intent;
-    Button requestButton;
 
 
 
@@ -106,10 +102,7 @@ public class RequesterMain extends AppCompatActivity {
     }
 
     private void setupBiddedButton() {
-
-
-        BiddedButton = (Button) findViewById(R.id.viewBiddedButton);
-        BiddedButton.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.viewBiddedButton)).setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterBiddedTask.class);
@@ -121,25 +114,23 @@ public class RequesterMain extends AppCompatActivity {
     }
 
     private void setupAssignedButton(){
-        AssignedButton = (Button) findViewById(R.id.viewAssignedButton);
-        AssignedButton.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.viewAssignedButton)).setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, RequesterAssignedTasks.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
-                finish();
             }
         });
 
     }
 
-    private void setupRequestView() {
-        /** when add button is clicked jump to addsubscription View
-         */
 
-        requestButton = (Button) findViewById(R.id.requestButton);
-        requestButton.setOnClickListener(new View.OnClickListener() {
+    /**
+     * When request button is clicked jump to request view
+     */
+    private void setupRequestView() {
+        ((Button) findViewById(R.id.requestButton)).setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterMain.this, TaskRequest.class);

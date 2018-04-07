@@ -11,10 +11,12 @@
 
 package com.example.a1;
 
+import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 import java.security.Provider;
+import java.util.ArrayList;
 
 /**
  * Represents a controller for interacting with the Elasticsearch server.
@@ -130,6 +132,7 @@ public class Server {
             if(exists == null) exists = false;
             return exists;
         }
+
 
     }
 
