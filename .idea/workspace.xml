@@ -11,141 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____Users_Alex_Desktop__buildAnAntResignation_app_src_include_jest_droid_2_0_1_SNAPSHOT_jar_unspecified_jar.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_mediarouter_v7_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_mediarouter_v7_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_palette_v7_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_palette_v7_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_license_11_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -322,8 +194,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="255" column="24" lean-forward="true" selection-start-line="255" selection-start-column="24" selection-end-line="255" selection-end-column="24" />
+            <state relative-caret-position="1162">
+              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
               <folding>
                 <element signature="class#UserController#0;class#Server#0" expanded="false" />
                 <element signature="method#add#0;class#UserController#0;class#Server#0" expanded="false" />
@@ -341,6 +213,14 @@
                 <element signature="method#delete#0;class#TaskController#0;class#Server#0" expanded="false" />
                 <element signature="docComment;method#getAll#0;class#TaskController#0;class#Server#0" expanded="false" />
                 <element signature="method#getAll#0;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="docComment;method#getProvided#0;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="method#getProvided#0;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="docComment;method#getProvided#1;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="method#getProvided#1;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="docComment;method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="docComment;method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
+                <element signature="method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -404,6 +284,10 @@
               <caret line="128" column="31" lean-forward="false" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4157#4158#0" expanded="true" />
+                <element signature="e#4195#4196#0" expanded="true" />
+                <element signature="e#4482#4483#0" expanded="true" />
+                <element signature="e#4516#4517#0" expanded="true" />
                 <marker date="1523085344145" expanded="false" signature="604:669" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="739:794" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="863:925" ph="/**...*/" />
@@ -414,84 +298,37 @@
                 <marker date="1523085344145" expanded="false" signature="2398:2764" ph="{...}" />
                 <marker date="1523085344145" expanded="false" signature="2770:3260" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="3450:3856" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="3862:4102" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="4157:4167" ph=" { " />
-                <marker date="1523085344145" expanded="true" signature="4190:4196" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="4202:4440" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="4482:4492" ph=" { " />
-                <marker date="1523085344145" expanded="true" signature="4511:4517" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="4523:4616" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="4644:4655" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="4672:4678" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="4684:4769" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="4801:4811" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="4827:4833" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="4839:4920" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="4950:4961" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="4976:4982" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="4988:5081" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="5110:5121" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="5135:5141" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="5147:5234" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="5263:5273" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="5286:5292" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="5298:5411" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="5437:5447" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="5460:5466" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="5472:5637" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="5681:5691" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="5724:5730" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="5736:5839" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="5886:5916" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="5923:6073" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="6116:6150" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="6156:6266" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="6312:6341" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="6347:6510" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="6553:6563" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="6595:6601" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="6607:6708" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="6754:6777" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="6783:6870" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="6915:6925" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="6950:6956" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="6962:7049" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7086:7096" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="7113:7119" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="7126:7211" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7252:7262" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="7283:7289" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="7295:7391" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7430:7440" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="7459:7465" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="7471:7553" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7592:7602" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="7621:7627" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="7633:7738" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7803:7809" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="7815:7921" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="7960:7970" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="7995:8001" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="8007:8111" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="8150:8533" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="8539:8688" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="8741:8898" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="8904:9052" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="9104:9260" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="9267:9376" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="9423:9654" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="9660:9768" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="9814:10041" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="10047:10267" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="10346:10517" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="10523:10662" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="10728:10767" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="10773:10910" ph="/**...*/" />
-                <marker date="1523085344145" expanded="true" signature="10974:11011" ph="{...}" />
-                <marker date="1523085344145" expanded="true" signature="11017:11117" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="11152:11162" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="11184:11190" ph=" }" />
-                <marker date="1523085344145" expanded="true" signature="11196:11271" ph="/**...*/" />
                 <marker date="1523085344145" expanded="false" signature="11315:11325" ph=" { " />
                 <marker date="1523085344145" expanded="false" signature="11344:11350" ph=" }" />
               </folding>
@@ -3101,7 +2938,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523085878783" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078451" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3149,7 +2986,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523085878783" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078451" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3332,7 +3169,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523085878784" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078452" />
       </method>
     </configuration>
     <list size="6">
@@ -3574,7 +3411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523072819344</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added a methods to the Server class to get ptovided/requested tasks by providing the user and the task name.">
+      <created>1523085950161</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1523085950161</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3722,7 +3566,8 @@
     <MESSAGE value="Can view provider profile from Requester Assigned Tasks." />
     <MESSAGE value="Fixed issue with all users being possibly deleted in code. Made sure accounts can't have blank names. Began working on retrieving all users from system." />
     <MESSAGE value="Added a method for getting all tasks. Might not working properly though, however this is an issue with the get all users method (if there even is an issue)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a method for getting all tasks. Might not working properly though, however this is an issue with the get all users method (if there even is an issue)." />
+    <MESSAGE value="Added a methods to the Server class to get ptovided/requested tasks by providing the user and the task name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a methods to the Server class to get ptovided/requested tasks by providing the user and the task name." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4130,106 +3975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="128" column="31" lean-forward="false" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1523085344145" expanded="false" signature="604:669" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="739:794" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="863:925" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="1037:1081" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="1107:1425" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="1525:1801" ph="{...}" />
-            <marker date="1523085344145" expanded="false" signature="1807:2237" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="2398:2764" ph="{...}" />
-            <marker date="1523085344145" expanded="false" signature="2770:3260" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="3450:3856" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="3862:4102" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="4157:4167" ph=" { " />
-            <marker date="1523085344145" expanded="true" signature="4190:4196" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="4202:4440" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="4482:4492" ph=" { " />
-            <marker date="1523085344145" expanded="true" signature="4511:4517" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="4523:4616" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="4644:4655" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="4672:4678" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="4684:4769" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="4801:4811" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="4827:4833" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="4839:4920" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="4950:4961" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="4976:4982" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="4988:5081" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="5110:5121" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="5135:5141" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="5147:5234" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="5263:5273" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="5286:5292" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="5298:5411" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="5437:5447" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="5460:5466" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="5472:5637" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="5681:5691" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="5724:5730" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="5736:5839" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="5886:5916" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="5923:6073" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="6116:6150" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="6156:6266" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="6312:6341" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="6347:6510" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="6553:6563" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="6595:6601" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="6607:6708" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="6754:6777" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="6783:6870" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="6915:6925" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="6950:6956" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="6962:7049" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7086:7096" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="7113:7119" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="7126:7211" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7252:7262" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="7283:7289" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="7295:7391" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7430:7440" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="7459:7465" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="7471:7553" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7592:7602" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="7621:7627" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="7633:7738" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7803:7809" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="7815:7921" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="7960:7970" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="7995:8001" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="8007:8111" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="8150:8533" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="8539:8688" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="8741:8898" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="8904:9052" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="9104:9260" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="9267:9376" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="9423:9654" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="9660:9768" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="9814:10041" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="10047:10267" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="10346:10517" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="10523:10662" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="10728:10767" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="10773:10910" ph="/**...*/" />
-            <marker date="1523085344145" expanded="true" signature="10974:11011" ph="{...}" />
-            <marker date="1523085344145" expanded="true" signature="11017:11117" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="11152:11162" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="11184:11190" ph=" }" />
-            <marker date="1523085344145" expanded="true" signature="11196:11271" ph="/**...*/" />
-            <marker date="1523085344145" expanded="false" signature="11315:11325" ph=" { " />
-            <marker date="1523085344145" expanded="false" signature="11344:11350" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="683">
@@ -4267,6 +4012,16 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="class#CustomAdapter#0;class#RequesterAssignedTasks#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -4296,20 +4051,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        <state relative-caret-position="572">
+          <caret line="128" column="31" lean-forward="false" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
           <folding>
-            <element signature="class#CustomAdapter#0;class#RequesterAssignedTasks#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4157#4158#0" expanded="true" />
+            <element signature="e#4195#4196#0" expanded="true" />
+            <element signature="e#4482#4483#0" expanded="true" />
+            <element signature="e#4516#4517#0" expanded="true" />
+            <marker date="1523085344145" expanded="false" signature="604:669" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="739:794" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="863:925" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="1037:1081" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="1107:1425" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="1525:1801" ph="{...}" />
+            <marker date="1523085344145" expanded="false" signature="1807:2237" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="2398:2764" ph="{...}" />
+            <marker date="1523085344145" expanded="false" signature="2770:3260" ph="/**...*/" />
+            <marker date="1523085344145" expanded="false" signature="3450:3856" ph="{...}" />
+            <marker date="1523085344145" expanded="false" signature="4644:4655" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="4672:4678" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="4801:4811" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="4827:4833" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="4950:4961" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="4976:4982" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="5110:5121" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="5135:5141" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="5263:5273" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="5286:5292" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="5437:5447" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="5460:5466" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="5681:5691" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="5724:5730" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="6553:6563" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="6595:6601" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="6915:6925" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="6950:6956" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7086:7096" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="7113:7119" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7252:7262" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="7283:7289" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7430:7440" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="7459:7465" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7592:7602" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="7621:7627" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7803:7809" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="7960:7970" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="7995:8001" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="11152:11162" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="11184:11190" ph=" }" />
+            <marker date="1523085344145" expanded="false" signature="11315:11325" ph=" { " />
+            <marker date="1523085344145" expanded="false" signature="11344:11350" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="255" column="24" lean-forward="true" selection-start-line="255" selection-start-column="24" selection-end-line="255" selection-end-column="24" />
+        <state relative-caret-position="1162">
+          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
           <folding>
             <element signature="class#UserController#0;class#Server#0" expanded="false" />
             <element signature="method#add#0;class#UserController#0;class#Server#0" expanded="false" />
@@ -4327,6 +4129,14 @@
             <element signature="method#delete#0;class#TaskController#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#getAll#0;class#TaskController#0;class#Server#0" expanded="false" />
             <element signature="method#getAll#0;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#getProvided#0;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="method#getProvided#0;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#getProvided#1;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="method#getProvided#1;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
+            <element signature="method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>

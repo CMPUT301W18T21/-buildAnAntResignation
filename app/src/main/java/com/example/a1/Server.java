@@ -243,6 +243,17 @@ public class Server {
 
         /**
          * Gets a task from a user.
+         * @param providerName The task provider's username to which the task belongs to.
+         * @param taskName The name of the provided task to be returned.
+         * @return The named task belonging to the provider. If no such task exists, returns null.
+         */
+        public static Task getProvided(String providerName, String taskName){
+            User provider = UserController.get(providerName);
+            return getProvided(provider, taskName);
+        }
+
+        /**
+         * Gets a task from a user.
          * @param requester The task requester to which the task belongs to.
          * @param taskName The name of the requester task to be returned.
          * @return The named task belonging to the requester. If no such task exists, returns null.
@@ -254,6 +265,17 @@ public class Server {
                     return task;
             }
             return null;
+        }
+
+        /**
+         * Gets a task from a user.
+         * @param requesterName The task requester to which the task belongs to.
+         * @param taskName The name of the requester task to be returned.
+         * @return The named task belonging to the requester. If no such task exists, returns null.
+         */
+        public static Task getRequested(String requesterName, String taskName){
+            User requester = UserController.get(requesterName);
+            return getProvided(requester, taskName);
         }
     }
 
