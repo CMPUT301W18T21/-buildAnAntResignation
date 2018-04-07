@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * A user has a unique username, a regular name, a gender, phone number, email, and a user image.
  * A collection of all users is kept here.
  */
-public class User implements Serializable {
+public class User {
 
     private static String currentUser;
 

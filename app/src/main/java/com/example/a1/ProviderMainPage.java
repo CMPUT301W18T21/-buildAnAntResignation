@@ -60,7 +60,6 @@ public class ProviderMainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_main_page);
         showContent = (ListView) findViewById(R.id.listView);
-        keyWords = (SearchView) findViewById(R.id.searchView);
 
 
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
@@ -318,7 +317,7 @@ public class ProviderMainPage extends AppCompatActivity {
                                                 Intent intent = new Intent(ProviderMainPage.this, Provider_bid_task.class);
                                                 Bundle taskPack = new Bundle();
                                                 taskPack.putString("taskName",providerinfos.get(pos).getTask());
-                                                taskPack.putSerializable("selectedUser",matchUsers.get(pos));
+                                                taskPack.putString("userName",matchUsers.get(pos).getUsername());
                                                 intent.putExtra("taskBundle", taskPack);
                                                 startActivity(intent);
                                                 Toast.makeText(c, providerinfos.get(pos).getTask(), Toast.LENGTH_SHORT).show();
