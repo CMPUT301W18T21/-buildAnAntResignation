@@ -18,7 +18,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private Button saveButton;
     private Button backButton;
     private Button AddPhoto;
-    private Button AddLocation;
+    private Button AddLocationButton;
     private Button DeleteButton;
 
     private ListView listView;
@@ -141,15 +141,24 @@ public class RequesterTaskDetail extends AppCompatActivity {
     }
 
     /**
-     * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
+     * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddLocation screen.
      */
     private void setupAddLocationButton(){
-        AddLocation = (Button) findViewById(R.id.AddLocation_B);
-        AddLocation.setOnClickListener(new View.OnClickListener() {
+        AddLocationButton = (Button) findViewById(R.id.AddLocation_B);
+        AddLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
-                //startActivity(intent);
+                if(task.getLocation()!= null){
+                    Toast.makeText(RequesterTaskDetail.this, "The location of the task is already added.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else{
+                Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
+
+                AddLocation.setTask(task);
+                intent.putExtra("username",username);
+                startActivityForResult(intent, 1);
+                    }
             }
         });
     }

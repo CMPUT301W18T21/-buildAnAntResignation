@@ -1,6 +1,7 @@
 package com.example.a1;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,11 +27,16 @@ public class AddLocation extends AppCompatActivity{
     Button btnShowCoord;
     EditText edtAddress;
     TextView txtCoord;
+    private static Task task;
+    private static String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = new Intent();
+        intent = getIntent();
+        username = intent.getStringExtra("username");
 
         btnShowCoord = (Button)findViewById(R.id.btnShowCoordinates);
         edtAddress = (EditText)findViewById(R.id.edtAddress);
@@ -43,6 +50,11 @@ public class AddLocation extends AppCompatActivity{
         });
 
     }
+
+    public static void setTask(Task task){
+        AddLocation.task = task;
+    }
+
 
     private class GetCoordinates extends AsyncTask<String,Void,String> {
         ProgressDialog dialog = new ProgressDialog(AddLocation.this);
@@ -85,6 +97,22 @@ public class AddLocation extends AppCompatActivity{
                         .getJSONObject("location").get("lng").toString();
 
                 txtCoord.setText(String.format("Coordinates : %s / %s ",lat,lng));
+                /***********************************/
+                Task newTask;
+                try{
+                    newTask = (Task) task.clone();
+                }catch (CloneNotSupportedException  e){
+                    Toast.makeText(AddLocation.this, "User not found!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                float latitude = Float.parseFloat(lat);
+                float longitude = Float.parseFloat(lng);
+                newTask.setLatitude(latitude);
+                newTask.setLongitude(longitude);
+                Server.TaskController.edit(task,newTask);
+                /**********************************/
+
 
                 if(dialog.isShowing())
                     dialog.dismiss();
