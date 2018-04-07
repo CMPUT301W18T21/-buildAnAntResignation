@@ -23,7 +23,6 @@ public class Login extends AppCompatActivity {
         Button login = (Button)findViewById(R.id.login);
         Button signup = (Button)findViewById(R.id.signup);
 
-        Server.UserController.delete(new User());
         ArrayList<User> users = Server.UserController.getAll();
         int  a =0;
 

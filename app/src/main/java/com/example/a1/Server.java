@@ -211,6 +211,20 @@ public class Server {
 
         }
 
+        /**
+         * Gets all requested tasks in the system.
+         * @return An arraylist of all tasks.
+         */
+        public static ArrayList<Task> getAll(){
+            ArrayList<User> users = UserController.getAll();
+            ArrayList<Task> tasks = new ArrayList<>(0);
+
+            for(User user: users){
+                tasks.addAll(user.getRequestedTasks());
+            }
+
+            return tasks;
+        }
 
     }
 
