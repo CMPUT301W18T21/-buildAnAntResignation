@@ -275,7 +275,7 @@ public class Server {
          */
         public static Task getRequested(String requesterName, String taskName){
             User requester = UserController.get(requesterName);
-            return getProvided(requester, taskName);
+            return getRequested(requester, taskName);
         }
     }
 

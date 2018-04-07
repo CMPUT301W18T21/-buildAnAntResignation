@@ -11,11 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java" />
     </list>
@@ -194,8 +189,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1162">
-              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+            <state relative-caret-position="1267">
+              <caret line="277" column="53" lean-forward="true" selection-start-line="277" selection-start-column="53" selection-end-line="277" selection-end-column="53" />
               <folding>
                 <element signature="class#UserController#0;class#Server#0" expanded="false" />
                 <element signature="method#add#0;class#UserController#0;class#Server#0" expanded="false" />
@@ -220,7 +215,6 @@
                 <element signature="docComment;method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
                 <element signature="method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
                 <element signature="docComment;method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
-                <element signature="method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -230,7 +224,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="650">
-              <caret line="321" column="70" lean-forward="true" selection-start-line="321" selection-start-column="70" selection-end-line="321" selection-end-column="70" />
+              <caret line="321" column="70" lean-forward="false" selection-start-line="321" selection-start-column="70" selection-end-line="321" selection-end-column="70" />
               <folding>
                 <element signature="e#1355#1363#0" expanded="true" />
                 <element signature="e#1414#1422#0" expanded="true" />
@@ -2938,7 +2932,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086247326" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2986,7 +2980,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086247326" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3169,7 +3163,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086078452" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523086247326" />
       </method>
     </configuration>
     <list size="6">
@@ -3418,7 +3412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523085950161</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Username and taskname can now also be used to find a task on the server.">
+      <created>1523086116208</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1523086116208</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3542,7 +3543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a method for getting all requested tasks, and a method for getting all users." />
     <MESSAGE value="Added onitemclick listener in requester main list view." />
     <MESSAGE value="Attempting to push everyones manually created version into the main branch." />
     <MESSAGE value="Minor fixes" />
@@ -3567,7 +3567,8 @@
     <MESSAGE value="Fixed issue with all users being possibly deleted in code. Made sure accounts can't have blank names. Began working on retrieving all users from system." />
     <MESSAGE value="Added a method for getting all tasks. Might not working properly though, however this is an issue with the get all users method (if there even is an issue)." />
     <MESSAGE value="Added a methods to the Server class to get ptovided/requested tasks by providing the user and the task name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a methods to the Server class to get ptovided/requested tasks by providing the user and the task name." />
+    <MESSAGE value="Username and taskname can now also be used to find a task on the server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Username and taskname can now also be used to find a task on the server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3814,12 +3815,8 @@
         <state relative-caret-position="553">
           <caret line="111" column="41" lean-forward="false" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
           <folding>
-            <element signature="e#2392#2780#0" expanded="false" />
-            <element signature="e#2779#2780#0" expanded="false" />
-            <element signature="e#3305#3561#0" expanded="false" />
-            <element signature="e#3560#3561#0" expanded="false" />
-            <element signature="e#4950#5197#0" expanded="false" />
-            <element signature="e#5196#5197#0" expanded="false" />
+            <element signature="e#4971#5596#0" expanded="false" />
+            <element signature="e#5595#5596#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4025,7 +4022,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
-          <caret line="321" column="70" lean-forward="true" selection-start-line="321" selection-start-column="70" selection-end-line="321" selection-end-column="70" />
+          <caret line="321" column="70" lean-forward="false" selection-start-line="321" selection-start-column="70" selection-end-line="321" selection-end-column="70" />
           <folding>
             <element signature="e#1355#1363#0" expanded="true" />
             <element signature="e#1414#1422#0" expanded="true" />
@@ -4110,8 +4107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+        <state relative-caret-position="1267">
+          <caret line="277" column="53" lean-forward="true" selection-start-line="277" selection-start-column="53" selection-end-line="277" selection-end-column="53" />
           <folding>
             <element signature="class#UserController#0;class#Server#0" expanded="false" />
             <element signature="method#add#0;class#UserController#0;class#Server#0" expanded="false" />
@@ -4136,7 +4133,6 @@
             <element signature="docComment;method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
             <element signature="method#getRequested#0;class#TaskController#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
-            <element signature="method#getRequested#1;class#TaskController#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
