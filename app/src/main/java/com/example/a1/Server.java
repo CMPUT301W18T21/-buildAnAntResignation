@@ -66,6 +66,11 @@ public class Server {
         * @param user The user to be deleted.
         */
         public static void delete(User user){
+
+            if(user.getUsername() == null)
+                return;
+            //if "new User()" is passed in, it will delete ALL USERS!
+
             deleteUserTask = new UserElasticSearchController.DeleteUserTask();
             deleteUserTask.execute(user);
         }
@@ -113,6 +118,25 @@ public class Server {
 
             return user;
 
+        }
+
+
+        /**
+         * Gets all users in the program.
+         * @return An array list of all users registered in the program.
+         */
+        public static ArrayList<User> getAll(){
+            ArrayList<User> users = new ArrayList<>(0);
+            String search_query = "{\"query\": { \"match\":{\"_type\":\"user\" }}}";
+            UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
+            queryTaskName.execute(search_query);
+
+            try {
+                users = queryTaskName.get();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return users;
         }
 
         /**

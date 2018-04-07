@@ -54,6 +54,7 @@ public class Register extends AppCompatActivity {
                     user.setEmail(email);
                     user.setGender(gender);
                     user.setPhone(phone);
+                    if(name == null || name == "") name = username;
                     user.setName(name);
 
                     Server.UserController.add(user);

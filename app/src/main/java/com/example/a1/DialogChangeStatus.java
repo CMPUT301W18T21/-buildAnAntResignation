@@ -24,33 +24,26 @@ public class DialogChangeStatus extends AppCompatActivity {
         DialogChangeStatus.task = task;
     }
 
-    public static Task getTask(){
-        return task;
-    }
-
-
     public void onClickRequested(View view){
-        if(task.getStatus() == Status.ASSIGNED){
-            task.setRequested();
-            RequesterAssignedTasks.UpdateTask();
-            finish();
-        }
+        task.setRequested();
+        Server.TaskController.edit(task,task);
+        RequesterAssignedTasks.getAssignedTasks();
+        finish();
+
     }
 
     public void onClickBidded(View view){
-        if(task.getStatus() == Status.ASSIGNED){
-            task.setBidded();
-            RequesterAssignedTasks.UpdateTask();
-            finish();
-        }
+        task.setBidded();
+        Server.TaskController.edit(task,task);
+        RequesterAssignedTasks.getAssignedTasks();
+        finish();
     }
 
     public void onClickDone(View view){
-        if(task.getStatus() == Status.ASSIGNED){
-            RequesterAssignedTasks.UpdateTask();
-            task.setDone();
-            finish();
-        }
+        task.setDone();
+        Server.TaskController.edit(task,task);
+        RequesterAssignedTasks.getAssignedTasks();
+        finish();
     }
 
     public void onClickProviderProfile(View view){

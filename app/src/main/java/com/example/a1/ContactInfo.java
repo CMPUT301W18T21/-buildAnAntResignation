@@ -81,7 +81,9 @@ public class ContactInfo extends AppCompatActivity {
     public void onButtonClick(View view){
         //checks if viewed user matches logged in user.
         if (username.equals(User.getCurrentUser())) {
-            user.setName(((TextView) findViewById(R.id.nameEditText)).getText().toString());
+            String name = ((TextView) findViewById(R.id.nameEditText)).getText().toString();
+            if (name.equals("")) name = username;
+            user.setName(name);
             user.setGender(((TextView) findViewById(R.id.genderEditText)).getText().toString());
             user.setPhone(((TextView) findViewById(R.id.phoneEditText)).getText().toString());
             user.setEmail(((TextView) findViewById(R.id.emailEditText)).getText().toString());

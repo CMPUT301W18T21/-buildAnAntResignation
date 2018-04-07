@@ -3,19 +3,15 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import static com.example.a1.Status.ASSIGNED;
 
 public class RequesterAssignedTasks extends AppCompatActivity {
 
@@ -25,17 +21,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     private static Task newTask;
     private static int id;
 
-
-    /**Initialize the AssignedTasks array to store the tasks that the user has assigned
-     *Initialize the TasksStatus array to store status of each task that the requester has assigned
-     * Initialize the Accepted Array to store each task's accepted bid
-     */
-
-    private static ArrayList<Task> AssignedTasks = new ArrayList<>(0);
-    private static ArrayList<String> AssignedTasksTitle = new ArrayList<>(0);
-    private static ArrayList<String> AssignedTasksStatus = new ArrayList<>(0);
-    private static ArrayList<String>AcceptedBids = new ArrayList<>(0);
-    private static ArrayList<String>UserName =new ArrayList<>(0);
+    private static ArrayList<Task> assignedTasks = new ArrayList<>(0);
+    private static ArrayList<String> assignedTasksTitle = new ArrayList<>(0);
+    private static ArrayList<String> assignedTasksStatus = new ArrayList<>(0);
+    private static ArrayList<String> acceptedBids = new ArrayList<>(0);
+    private static ArrayList<String> usernames =new ArrayList<>(0);
 
 
 
@@ -67,21 +57,15 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, final int position, long lid) {
                 id = (int)lid;
                 //old backup of the task
-                oldTask = AssignedTasks.get(id);
+                oldTask = assignedTasks.get(id);
 
                 //Call dialog to display detail
-                DialogChangeStatus.setTask(AssignedTasks.get(id));
+                DialogChangeStatus.setTask(assignedTasks.get(id));
                 Intent intent = new Intent(getApplicationContext(), DialogChangeStatus.class);
                 startActivity(intent);
 
             }
         });
-    }
-
-    public static void UpdateTask(){
-        AssignedTasks.set(id, DialogChangeStatus.getTask());
-        newTask = AssignedTasks.get(id);
-        getAssignedTasks();
     }
 
 
@@ -90,19 +74,18 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      */
     public static void getAssignedTasks(){
         ArrayList<Task> allTasks = user.getRequestedTasks();
-        AssignedTasks.clear();
-        AssignedTasksTitle.clear();
-        AssignedTasksStatus.clear();
-        AcceptedBids.clear();
-        UserName.clear();
+        assignedTasks.clear();
+        assignedTasksTitle.clear();
+        assignedTasksStatus.clear();
+        acceptedBids.clear();
+        usernames.clear();
         for (Task task : allTasks){
             if(task.getStatus() == Status.ASSIGNED){
-                AssignedTasks.add(task);
-                AssignedTasksTitle.add("Title: "+task.getTitle());
-                Status status = task.getStatus();
-                AssignedTasksStatus.add("Status: "+status.toString());
-                AcceptedBids.add("Accepted bid: "+task.getLowestBid());  //this should get one bid of provider
-                UserName.add("User name: "+ task.getProviderName()); //this should get providerusernam here.
+                assignedTasks.add(task);
+                assignedTasksTitle.add("Title: "+task.getTitle());
+                assignedTasksStatus.add("Status: "+task.getStatus().toString());
+                acceptedBids.add("Accepted bid: "+task.getLowestBid());
+                usernames.add("User name: "+ task.getProviderName());
             }
         }
     }
@@ -123,10 +106,10 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.requester_assigned_task_ifo,null);
             //set text to textview
-            ((TextView)view.findViewById(R.id.View_Task)).setText(AssignedTasksTitle.get(i));
-            ((TextView)view.findViewById(R.id.View_User_Name)).setText(UserName.get(i));
-            ((TextView)view.findViewById(R.id.View_Status)).setText(AssignedTasksStatus.get(i));
-            ((TextView)view.findViewById(R.id.View_Bid)).setText(AcceptedBids.get(i).toString());
+            ((TextView)view.findViewById(R.id.View_Task)).setText(assignedTasksTitle.get(i));
+            ((TextView)view.findViewById(R.id.View_User_Name)).setText(usernames.get(i));
+            ((TextView)view.findViewById(R.id.View_Status)).setText(assignedTasksStatus.get(i));
+            ((TextView)view.findViewById(R.id.View_Bid)).setText(acceptedBids.get(i).toString());
 
             return view;
         }
@@ -134,7 +117,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         @Override
 
         public int getCount(){
-            return AssignedTasks.size();
+            return assignedTasks.size();
         }
 
     }
