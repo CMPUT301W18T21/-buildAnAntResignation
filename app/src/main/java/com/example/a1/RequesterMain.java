@@ -101,7 +101,7 @@ public class RequesterMain extends AppCompatActivity {
         tasksInfo.clear();
         ArrayList<Task> tasks = user.getRequestedTasks();
         for (Task task: tasks) {
-            tasksInfo.add(task.getTitle() + "\n" + task.getStatus());
+            tasksInfo.add("Task: " + task.getTitle() + "\nStatus: " + task.getStatus());
         }
     }
 
@@ -128,6 +128,7 @@ public class RequesterMain extends AppCompatActivity {
                 Intent intent = new Intent(RequesterMain.this, RequesterAssignedTasks.class);
                 intent.putExtra("username",username);
                 startActivity(intent);
+                finish();
             }
         });
 

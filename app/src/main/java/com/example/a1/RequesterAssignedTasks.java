@@ -18,9 +18,7 @@ import java.util.ArrayList;
 import static com.example.a1.Status.ASSIGNED;
 
 public class RequesterAssignedTasks extends AppCompatActivity {
-    private Button saveButton;
-    private Button backButton;
-    Intent intent;
+
     private static String username;
     private static User user;
     private static Task oldTask;
@@ -29,7 +27,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
 
     /**Initialize the AssignedTasks array to store the tasks that the user has assigned
-     *Initialize the TasksStatus array to store status of each task that the requster has assigned
+     *Initialize the TasksStatus array to store status of each task that the requester has assigned
      * Initialize the Accepted Array to store each task's accepted bid
      */
 
@@ -45,8 +43,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_assigned_tasks);
-        intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
         user = Server.UserController.get(username);
@@ -55,14 +52,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             finish();
         }
 
-        //the following five  lines are added to test
-        Task task= new Task("title1","user1","des1");
-        user.getRequestedTasks().add(task);
-
-        user.getRequestedTask(0).setAssigned();
-        user.getRequestedTask(0).addBid(1);
-
-        setupSaveButton();
         getAssignedTasks();
 
         ((TextView) findViewById(R.id.name)).setText(username);
@@ -72,18 +61,13 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         listView.setAdapter(customAdapter);
 
 
-
-
-        //getAssignedTasks();
-
-
-        //when item was click jump out a dialog that selec Done or Assigned
+        //when item was click jump out a dialog that select Done or Assigned
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long lid) {
                 id = (int)lid;
                 //old backup of the task
-                oldTask = AssignedTasks.get( id);
+                oldTask = AssignedTasks.get(id);
 
                 //Call dialog to display detail
                 DialogChangeStatus.setTask(AssignedTasks.get(id));
@@ -98,7 +82,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         AssignedTasks.set(id, DialogChangeStatus.getTask());
         newTask = AssignedTasks.get(id);
         getAssignedTasks();
-
     }
 
 
@@ -112,9 +95,8 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         AssignedTasksStatus.clear();
         AcceptedBids.clear();
         UserName.clear();
-        for(Integer j = 0;j < allTasks.size(); j++){
-            Task task = user.getRequestedTask(j);
-            if(task.getStatus() == ASSIGNED){
+        for (Task task : allTasks){
+            if(task.getStatus() == Status.ASSIGNED){
                 AssignedTasks.add(task);
                 AssignedTasksTitle.add("Title: "+task.getTitle());
                 Status status = task.getStatus();
@@ -140,18 +122,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.requester_assigned_task_ifo,null);
-            TextView textView_task=(TextView)view.findViewById(R.id.View_Task);
-            TextView textView_username=(TextView)view.findViewById(R.id.View_User_Name);
-            TextView textView_status=(TextView)view.findViewById(R.id.View_Status) ;
-            TextView textView_acceptBid=(TextView)view.findViewById(R.id.View_Bid) ;
-
-
             //set text to textview
-            textView_task.setText(AssignedTasksTitle.get(i));
-            textView_username.setText(UserName.get(i));
-            textView_status.setText(AssignedTasksStatus.get(i));
-            textView_acceptBid.setText(AcceptedBids.get(i).toString());
-
+            ((TextView)view.findViewById(R.id.View_Task)).setText(AssignedTasksTitle.get(i));
+            ((TextView)view.findViewById(R.id.View_User_Name)).setText(UserName.get(i));
+            ((TextView)view.findViewById(R.id.View_Status)).setText(AssignedTasksStatus.get(i));
+            ((TextView)view.findViewById(R.id.View_Bid)).setText(AcceptedBids.get(i).toString());
 
             return view;
         }
@@ -166,17 +141,13 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
     /**
      * when save button is clicked jump from Requester's Assigned Task Screen to Requester Main Screen and saving changes.
+     * @param view The caller view.
      */
-    private void setupSaveButton(){
-        saveButton = (Button) findViewById(R.id.save_button);
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
-                intent.putExtra("username",username);
-                startActivity(intent);
-            }
-        });
+    public void onSaveClick(View view){
+        Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
+        finish();
     }
 
 

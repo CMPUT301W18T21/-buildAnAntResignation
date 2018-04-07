@@ -154,7 +154,6 @@ public class Task implements Cloneable{
      */
     public void importPhoto(String photo){
         photos.add(photo);
-        int a = 0;
     }
 
     /**
@@ -162,7 +161,6 @@ public class Task implements Cloneable{
      * @return A list of the task's photo's addresses.
      */
     public ArrayList<String> getPhotos() {
-        int a = 0;
         return photos;
     }
 

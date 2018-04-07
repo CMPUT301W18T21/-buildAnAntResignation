@@ -72,5 +72,6 @@ public class TaskRequest extends AppCompatActivity {
         intent.putExtra("username",username);
         RequesterMain.displayTasks();
         startActivity(intent);
+        finish();
     }
 }
