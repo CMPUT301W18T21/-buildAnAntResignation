@@ -149,7 +149,7 @@ public class ProviderMainPage extends AppCompatActivity {
                     for (Task eachTask: eachRequestedTask){
                         String requestedTaskTitle = eachTask.getTitle();
                         if (conditionCheck(keyword,requestedTaskTitle,eachTask.getStatus().toString())) {
-                            name_test.add(taskuser.getName());
+                            name_test.add(taskuser.getUsername());
                             task_test.add(requestedTaskTitle);
                             status_test.add(eachTask.getStatus().toString());
                             if(eachTask.getLowestBid() == -1){
