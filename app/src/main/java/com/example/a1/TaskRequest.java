@@ -68,10 +68,9 @@ public class TaskRequest extends AppCompatActivity {
         task = new Task(title, user.getUsername(), description);
         user.requestTask(task);
         Server.UserController.edit(user);
-        Intent intent = new Intent(TaskRequest.this, RequesterMain.class);
-        intent.putExtra("username",username);
+
+        // STOP CHANGING THIS!!!! IT WORKS! STOP!   -Nik
         RequesterMain.displayTasks();
-        startActivity(intent);
         finish();
     }
 }
