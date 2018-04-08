@@ -33,9 +33,8 @@ public class RequesterMain extends AppCompatActivity {
 
     static private ArrayList<String> tasksInfo = new ArrayList<>(0);
     static private ArrayAdapter<String> adapter;
-    String username;
+    private String username;
     private static User user;
-    private Intent intent;
 
 
 
@@ -50,8 +49,7 @@ public class RequesterMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_main);
         setTitle("Requester Main Page");
-        intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
 
@@ -124,7 +122,6 @@ public class RequesterMain extends AppCompatActivity {
         });
 
     }
-
 
     /**
      * When request button is clicked jump to request view

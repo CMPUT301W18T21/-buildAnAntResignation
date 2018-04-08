@@ -12,14 +12,6 @@ import java.util.ArrayList;
 
 public class Register extends AppCompatActivity {
 
-    private EditText input_name;
-    private EditText input_email;
-    private EditText input_phone;
-    private Button save_bt;
-    private String username;
-    private String email;
-    private String phone;
-    private Boolean is_exist;
     private User user;
 
     @Override
@@ -27,17 +19,12 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        input_name = (EditText)findViewById(R.id.userName);
-        input_email= (EditText)findViewById(R.id.Email);
-        input_phone = (EditText)findViewById(R.id.Phone);
-        save_bt = (Button)findViewById(R.id.save);
-
-        save_bt.setOnClickListener(new View.OnClickListener() {
+        ((Button)findViewById(R.id.save)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                username = input_name.getText().toString();
-                email = input_email.getText().toString();
-                phone = input_phone.getText().toString();
+                String username = ((EditText)findViewById(R.id.userName)).getText().toString();
+                String email = (((EditText)findViewById(R.id.Email))).getText().toString();
+                String phone = ((EditText)findViewById(R.id.Phone)).getText().toString();
                 String gender = ((EditText)findViewById(R.id.gender)).getText().toString();
                 String name = ((EditText)findViewById(R.id.name)).getText().toString();
 

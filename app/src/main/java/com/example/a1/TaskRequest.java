@@ -69,7 +69,6 @@ public class TaskRequest extends AppCompatActivity {
         user.requestTask(task);
         Server.UserController.edit(user);
 
-        // STOP CHANGING THIS!!!! IT WORKS! STOP!   -Nik
         RequesterMain.displayTasks();
         finish();
     }

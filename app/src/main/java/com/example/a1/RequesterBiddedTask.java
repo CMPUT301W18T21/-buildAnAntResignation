@@ -21,19 +21,16 @@ import static com.example.a1.Status.BIDDED;
 
 public class RequesterBiddedTask extends AppCompatActivity {
 
-    Button BackButton;
-    ArrayList<String> BiddedTasks = new ArrayList<>(0);
-    private static User user;
+    private ArrayList<String> BiddedTasks = new ArrayList<>(0);
+    private User user;
     private String username;
-    Intent intent;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_bidded_task);
-        intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
         setTitle("Bidded Tasks");

@@ -17,16 +17,12 @@ public class RequesterAssignedTasks extends AppCompatActivity {
 
     private static String username;
     private static User user;
-    private static Task oldTask;
-    private static Task newTask;
-    private static int id;
 
     private static ArrayList<Task> assignedTasks = new ArrayList<>(0);
     private static ArrayList<String> assignedTasksTitle = new ArrayList<>(0);
     private static ArrayList<String> assignedTasksStatus = new ArrayList<>(0);
     private static ArrayList<String> acceptedBids = new ArrayList<>(0);
     private static ArrayList<String> usernames =new ArrayList<>(0);
-
 
 
     @Override
@@ -55,12 +51,9 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long lid) {
-                id = (int)lid;
-                //old backup of the task
-                oldTask = assignedTasks.get(id);
 
                 //Call dialog to display detail
-                DialogChangeStatus.setTask(assignedTasks.get(id));
+                DialogChangeStatus.setTask(assignedTasks.get((int)lid));
                 Intent intent = new Intent(getApplicationContext(), DialogChangeStatus.class);
                 startActivity(intent);
 
@@ -128,9 +121,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * @param view The caller view.
      */
     public void onSaveClick(View view){
-        //Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
-        //intent.putExtra("username",username);
-        //startActivity(intent);
         finish();
     }
 

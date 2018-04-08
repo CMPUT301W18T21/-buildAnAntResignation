@@ -27,10 +27,7 @@ import android.widget.Toast;
  * @see User
  */
 public class MainActivity  extends AppCompatActivity {
-    Button viewProfile;
-    Button RequestTask;
-    Button ProvideTask;
-    private Intent intent;
+
     private String username;
     private static User user;
 
@@ -52,8 +49,7 @@ public class MainActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
         setTitle("Main Screen");
 
@@ -66,7 +62,7 @@ public class MainActivity  extends AppCompatActivity {
         }
 
 
-        viewProfile = (Button) findViewById(R.id.viewProfileButton);
+        Button viewProfile = (Button) findViewById(R.id.viewProfileButton);
         viewProfile.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -77,8 +73,8 @@ public class MainActivity  extends AppCompatActivity {
             }
         });
 
-        RequestTask = (Button) findViewById(R.id.requestButton);
-        RequestTask.setOnClickListener(new View.OnClickListener() {
+        Button requestTask = (Button) findViewById(R.id.requestButton);
+        requestTask.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RequesterMain.class);
@@ -89,8 +85,8 @@ public class MainActivity  extends AppCompatActivity {
         });
 
 
-        ProvideTask = (Button) findViewById(R.id.provideButton);
-        ProvideTask.setOnClickListener(new View.OnClickListener() {
+        Button provideTask = (Button) findViewById(R.id.provideButton);
+        provideTask.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ProviderMainPage.class);

@@ -15,38 +15,25 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class RequesterTaskDetail extends AppCompatActivity {
-    private Button saveButton;
-    private Button backButton;
-    private Button AddPhoto;
-    private Button AddLocationButton;
-    private Button DeleteButton;
-
-    private ListView listView;
-    private EditText viewtitle;
-    private TextView viewstatus;
-    private TextView viewlowsetbid;
-    private  EditText viewdescription;
 
     private static Task task;
     private static String username;
     private static ArrayAdapter<Integer> adapter;
-    private static ArrayList<Integer> bids;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requester_task_detail);
-        Intent intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
 
-        viewtitle =(EditText)findViewById(R.id.titleEditText);
-        viewstatus =(TextView)findViewById(R.id.ViewStatus);
-        viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
-        viewdescription =(EditText) findViewById(R.id.descriptionEditText) ;
-        listView =(ListView)findViewById(R.id.bidlist);
+        EditText viewtitle =(EditText)findViewById(R.id.titleEditText);
+        TextView viewstatus =(TextView)findViewById(R.id.ViewStatus);
+        TextView viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
+        EditText viewdescription =(EditText) findViewById(R.id.descriptionEditText) ;
+        ListView listView =(ListView)findViewById(R.id.bidlist);
 
         //put Bids in bidlist
         adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_list_item_1, task.getBids());
@@ -90,13 +77,11 @@ public class RequesterTaskDetail extends AppCompatActivity {
         RequesterTaskDetail.task = task;
     }
 
-
     /**
      * when Addphoto buton is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
      */
     private void setupAddPhotoButton(){
-        AddPhoto = (Button) findViewById(R.id.AddPhoto_B);
-        AddPhoto.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.AddPhoto_B)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterTaskDetail.this, com.example.a1.AddPhoto.class);
@@ -144,8 +129,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddLocation screen.
      */
     private void setupAddLocationButton(){
-        AddLocationButton = (Button) findViewById(R.id.AddLocation_B);
-        AddLocationButton.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.AddLocation_B)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(task.getLocation()!= null){
@@ -162,9 +146,5 @@ public class RequesterTaskDetail extends AppCompatActivity {
             }
         });
     }
-
-
-
-
 
 }
