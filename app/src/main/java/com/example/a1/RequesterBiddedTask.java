@@ -3,11 +3,10 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,7 +20,7 @@ import static com.example.a1.Status.BIDDED;
 
 public class RequesterBiddedTask extends AppCompatActivity {
 
-    private ArrayList<String> BiddedTasks = new ArrayList<>(0);
+    private ArrayList<Task> biddedTasks = new ArrayList<>(0);
     private User user;
     private String username;
 
@@ -38,24 +37,21 @@ public class RequesterBiddedTask extends AppCompatActivity {
         user = Server.UserController.get(username);
 
         getBiddedTasks();
-
-        ListView listView=(ListView)findViewById(R.id.viewBiddedTask);
         TextView textView=(TextView)findViewById(R.id.username);
         textView.setText(username);
+        ListView listView = (ListView)findViewById(R.id.viewBiddedTask);
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
     }
 
 
     public void getBiddedTasks(){
-
-        ArrayList<Task> AllTasks = user.getRequestedTasks();
-        for(Integer j=0;j<AllTasks.size();j++){
-            Task task= user.getRequestedTask(j);
-            if (task.getStatus()==BIDDED){
-                BiddedTasks.add(task.getTitle());
-            }
+        biddedTasks = new ArrayList<>(0);
+        ArrayList<Task> allTasks = user.getRequestedTasks();
+        for(Task task : allTasks){
+            if (task.getStatus() == BIDDED) biddedTasks.add(task);
         }
+
     }
 
 
@@ -73,18 +69,16 @@ public class RequesterBiddedTask extends AppCompatActivity {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.customlayout,null);
-            TextView textView_task=(TextView)view.findViewById(R.id.textView_task);
-            TextView textView_username=(TextView)view.findViewById(R.id.textView_username);
-            textView_username.setText(username);
-            textView_task.setText(BiddedTasks.get(i));
 
+            ((TextView)view.findViewById(R.id.textView_task)).setText(biddedTasks.get(i).getTitle());
+            ((TextView)view.findViewById(R.id.textView_bids)).setText(Integer.toString(biddedTasks.get(i).getBids().size()));
             return view;
         }
 
         @Override
 
         public int getCount(){
-            return BiddedTasks.size();
+            return biddedTasks.size();
         }
 
     }

@@ -91,7 +91,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     }
 
     public void onRefreshClick(View view){
-        this.getAssignedTasks();
+        getAssignedTasks();
     }
 
 
