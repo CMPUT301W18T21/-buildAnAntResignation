@@ -36,14 +36,11 @@ public class User {
      * the array of tasks that provider has requested
      */
     private ArrayList<Task> requestedTasks = new ArrayList<>(0);
-    /**
-     * the array of tasks that are assigned
-     */
-    private ArrayList<Task> assignedTasks = new ArrayList<>(0);
+
     /**
      * the array of tasks that provider has bidded
      */
-    private ArrayList<Task> providedTasks;
+    private ArrayList<Task> providedTasks = new ArrayList<>(0);;
 
     private ArrayList<Task> biddedTasks = new ArrayList<>(0);
 
@@ -217,21 +214,6 @@ public class User {
     public ArrayList<Task> getProvidedTasks(){return  this.providedTasks;}
 
     /**
-     * Gets the specified assigned task.
-     * @param index The index of the task to be returned.
-     * @return The assigned task at the given index.
-     */
-    public Task getAssignedTask(int index){
-        return assignedTasks.get(index);
-    }
-
-    /**
-     * Gets a list of all assigned tasks the user has.
-     * @return All assigned tasks.
-     */
-    public ArrayList<Task> getAssignedTasks(){return assignedTasks;}
-
-    /**
      * Sets the user's username.
      * @param username The name to be set.
      */
@@ -289,21 +271,26 @@ public class User {
     }
 
     /**
-     * Adds a task to the user's provided tasks.
+     * Adds a task to the user's provided tasks and updates to the server.
      * @param task The task to be provided.
      */
     public void provideTask(Task task){
-        Task newTask;
-        try {
-            newTask = (Task) task.clone();
-            newTask.setAssigned();
-            newTask.setProviderName(username);
-            providedTasks.add(task);
-            Server.UserController.edit(this);
-            Server.TaskController.edit(task,newTask);
-        } catch (CloneNotSupportedException e){
-            return;
-        }
+        task.setProviderName(username);
+        task.setAssigned();
+        providedTasks.add(task);
+        Server.UserController.edit(this);
+        Server.TaskController.edit(task, task);
+    }
+
+    /**
+     * Adds a task to the user's provided tasks without updating to the server.
+     * This method is ONLY to be used in the Server.TaskController class.
+     * @see com.example.a1.Server.TaskController
+     * @param task The task to be provided.
+     */
+    public void provideTaskNoUpdate(Task task){
+        task.setProviderName(username);
+        providedTasks.add(task);
     }
 
     /**

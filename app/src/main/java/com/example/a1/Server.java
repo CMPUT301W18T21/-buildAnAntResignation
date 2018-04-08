@@ -185,8 +185,9 @@ public class Server {
             if(providerName != null) {
                 User provider = UserController.get(providerName);
                 provider.deleteProvidedTask(oldTask);
+
                 if(newTask.getStatus() == Status.ASSIGNED)
-                    provider.provideTask(newTask);
+                    provider.provideTaskNoUpdate(newTask);
                 UserController.edit(provider);
             }
 

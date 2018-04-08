@@ -37,6 +37,10 @@ public class MainActivity  extends AppCompatActivity {
     /********** done adding ***********/
 
 
+
+
+
+
     public MainActivity() {
     }
 
@@ -60,6 +64,10 @@ public class MainActivity  extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "User not found!", Toast.LENGTH_SHORT).show();
             finish();
         }
+
+        //Server.UserController.delete("nik1");
+        //Task task1 = Server.TaskController.getRequested("1","DO NOT DELETE");
+        //user.provideTask(task1);
 
 
         Button viewProfile = (Button) findViewById(R.id.viewProfileButton);

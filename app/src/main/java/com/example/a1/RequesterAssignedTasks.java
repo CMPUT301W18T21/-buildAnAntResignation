@@ -66,8 +66,7 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * get tasks with status is Assigned , get status of the task, and the Bib made by specific provider, and provider username.
      */
     public static void getAssignedTasks(){
-
-        ArrayList<Task> allTasks = user.getRequestedTasks();
+        ArrayList<Task> allTasks = user.getProvidedTasks();
         assignedTasks.clear();
         assignedTasksTitle.clear();
         assignedTasksStatus.clear();
@@ -78,8 +77,8 @@ public class RequesterAssignedTasks extends AppCompatActivity {
                 assignedTasks.add(task);
                 assignedTasksTitle.add("Title: "+task.getTitle());
                 assignedTasksStatus.add("Status: "+task.getStatus().toString());
-                acceptedBids.add("Accepted bid: "+task.getLowestBid());
-                usernames.add("User name: "+ task.getProviderName());
+                acceptedBids.add("Accepted bid: $"+task.getLowestBid());
+                usernames.add("Username: "+ task.getProviderName());
             }
         }
     }
@@ -115,15 +114,6 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         }
 
     }
-
-    /**
-     * when save button is clicked jump from Requester's Assigned Task Screen to Requester Main Screen and saving changes.
-     * @param view The caller view.
-     */
-    public void onSaveClick(View view){
-        finish();
-    }
-
 
 
 }
