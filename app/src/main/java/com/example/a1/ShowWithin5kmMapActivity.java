@@ -68,6 +68,8 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
     private double lat;
     private double lng;
     private double RValue = 6371.009;
+    private double CurrentLat;
+    private double Currentlng;
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
@@ -81,14 +83,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         mMap = googleMap;
 
 
-        tasks = Server.TaskController.getAll();
 
-        for(int i = 0; i < tasks.size();i++){
-            lat = tasks.get(i).getLatitude();
-            lng = tasks.get(i).getLongitude();
-            //double temp1 =
 
-        }
+
 
         if (mLocationPermissionsGranted) {
             getDeviceLocation();
@@ -102,6 +99,24 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
             init();
+        }
+        tasks = Server.TaskController.getAll();
+
+        for(int i = 0; i < tasks.size();i++) {
+            lat = tasks.get(i).getLatitude();
+            lng = tasks.get(i).getLongitude();
+            double temp1 = lat - CurrentLat;
+            temp1 = temp1 * Math.PI / 180;
+            temp1 = temp1 * temp1;
+            double temp2 = Math.cos((lat + CurrentLat)/2) * (lng - Currentlng) * Math.PI/180;
+            temp2 = temp2 * temp2;
+            double distance = RValue * Math.sqrt(temp1 + temp2);
+            if (distance <= 5){
+                LatLng Tasklocation = new LatLng(lat,lng);
+                googleMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(Tasklocation));
+            }
+
         }
     }
 
@@ -276,6 +291,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,
                                     "My Location");
+                            CurrentLat = currentLocation.getLatitude();
+                            Currentlng = currentLocation.getLongitude();
+
 
                         }else{
                             Log.d(TAG, "onComplete: current location is null");

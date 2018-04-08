@@ -50,7 +50,13 @@
         <activity android:name=".ProviderAssignedTasks"/>
         <activity android:name=".DialogChangeStatus"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
-        <activity android:name=".AddLocation"/>
+        <activity android:name=".AddLocation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".DialogSelectBid"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"></activity>
     </application>

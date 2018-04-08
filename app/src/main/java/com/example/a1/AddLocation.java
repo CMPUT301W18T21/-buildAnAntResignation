@@ -27,14 +27,16 @@ public class AddLocation extends AppCompatActivity{
     Button btnShowCoord;
     EditText edtAddress;
     TextView txtCoord;
+
+
     private static Task task;
     private static String username;
-    private String address;
+    //private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_location);
         Intent intent = new Intent();
         intent = getIntent();
         username = intent.getStringExtra("username");
@@ -72,7 +74,7 @@ public class AddLocation extends AppCompatActivity{
         protected String doInBackground(String... strings) {
             String response;
             try{
-                address = strings[0];
+                String address = strings[0];
                 HttpDataHandler http = new HttpDataHandler();
                 String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s",address);
                 response = http.getHTTPData(url);
@@ -109,7 +111,7 @@ public class AddLocation extends AppCompatActivity{
 
                 double latitude = Double.parseDouble(lat);
                 double longitude = Double.parseDouble(lng);
-                newTask.setLocation(address);
+                //newTask.setLocation(address);
                 newTask.setLatitude(latitude);
                 newTask.setLongitude(longitude);
                 Server.TaskController.edit(task,newTask);
