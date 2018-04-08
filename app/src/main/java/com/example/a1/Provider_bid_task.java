@@ -32,8 +32,8 @@ public class Provider_bid_task extends AppCompatActivity {
     private Button Map;
     private String taskname;
     private String username;
+    private String currentUser;
     /**private static ArrayList<String> bid = new ArrayList<>(0); **/
-    public Bundle getBundle = null;
     /**
      * a method that execute every time the activity is shown.
      * @param savedInstanceState
@@ -45,12 +45,33 @@ public class Provider_bid_task extends AppCompatActivity {
         setContentView(R.layout.activity_provider_bid_task);
         setTitle("Provider Bid Task");
 
-        getBundle = this.getIntent().getExtras();
-        taskname = getBundle.getString("taskName");
-        username = getBundle.getString("userName");
-        Intent intent = getIntent();
 
-        task = Server.TaskController.getProvided(taskname,username);
+        Intent intent = getIntent();
+//        Bundle getBundle = intent.getExtras();
+//        taskname = getBundle.getString("taskName");
+//        username = getBundle.getString("userName");
+        taskname = intent.getStringExtra("taskname");
+        username = intent.getStringExtra("username");
+        currentUser = intent.getStringExtra("currentuser");
+
+
+//        Log.d("requester name",username);
+//        Log.d("requested task name",taskname);
+//        Log.d("currentUser",currentUser);
+
+        User requesterUwantToBid = Server.UserController.get(username);  // the user that we want to bid
+        User user = Server.UserController.get(currentUser);   //login user himself
+
+        ArrayList<Task> taskList = requesterUwantToBid.getRequestedTasks();
+        for (Task eachTask: taskList){
+            if (eachTask.getTitle().equals(taskname)){
+                task = eachTask;
+                Log.i("show me the name:",taskname);
+            }
+        }
+
+        Log.i("give me task name ",task.getTitle());
+
 
         viewtitle =(TextView)findViewById(R.id.ViewTitle);
         viewdescription = (TextView)findViewById(R.id.textView5);
@@ -66,7 +87,11 @@ public class Provider_bid_task extends AppCompatActivity {
 
         viewtitle.setText(task.getTitle());
         viewdescription.setText(task.getDescription());
-        viewlowestbid.setText(task.getLowestBid());
+        if (task.getLowestBid() == -1){
+            viewlowestbid.setText("No bid");
+        } else {
+            viewlowestbid.setText(task.getLowestBid());
+        }
         viewstatus.setText(task.getStatus().toString());
 
 
@@ -83,14 +108,18 @@ public class Provider_bid_task extends AppCompatActivity {
          **/
 
 
+//check
+        if (task.getBids()==null){
 
-        bids =task.getBids();
+            Log.i("NO bid found","No bid found");
+            finish();
+        } else {
+            bids = task.getBids();
+            ListView listView = findViewById(R.id.BidList);
+            adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, bids);
 
-
-        ListView listView = findViewById(R.id.BidList);
-        adapter = new ArrayAdapter<Integer> (this,android.R.layout.simple_list_item_1,bids);
-
-        listView.setAdapter(adapter);
+            listView.setAdapter(adapter);
+        }
 
     }
 

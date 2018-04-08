@@ -31,6 +31,7 @@ public class ProviderMainPage extends AppCompatActivity {
     private Button searchButton;
     private EditText searchBox;
     private String keyword;
+    private String currentUser;
     private ArrayList<User> users;
 
     /*********** added by JiaHong **********/
@@ -56,6 +57,7 @@ public class ProviderMainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_main_page);
         Intent intent = getIntent();
+        currentUser = intent.getStringExtra("username");
         final String username = intent.getStringExtra("username");
 
         showContent = (ListView) findViewById(R.id.p_assigned_list);
@@ -323,10 +325,13 @@ public class ProviderMainPage extends AppCompatActivity {
                                             @Override
                                             public void onItemClick(View view) {
                                                 Intent intent = new Intent(ProviderMainPage.this, Provider_bid_task.class);
-                                                Bundle taskPack = new Bundle();
-                                                taskPack.putString("taskName",providerinfos.get(pos).getTask());
-                                                taskPack.putString("userName",matchUsers.get(pos).getUsername());
-                                                intent.putExtra("taskBundle", taskPack);
+                                             //   Bundle taskPack = new Bundle();
+                                               // taskPack.putString("taskName",providerinfos.get(pos).getTask());
+                                               // taskPack.putString("userName",matchUsers.get(pos).getUsername());
+                                               // intent.putExtra("taskBundle", taskPack);
+                                                intent.putExtra("taskname",providerinfos.get(pos).getTask());
+                                                intent.putExtra("username",matchUsers.get(pos).getUsername());
+                                                intent.putExtra("currentuser",currentUser);
                                                 startActivity(intent);
 
 
