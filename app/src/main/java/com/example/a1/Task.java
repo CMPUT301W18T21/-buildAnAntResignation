@@ -22,6 +22,7 @@ import java.util.Collections;
  * @see Status
  */
 public class Task implements Cloneable{
+
     private String title;
     private String requesterName;
     private String providerName;

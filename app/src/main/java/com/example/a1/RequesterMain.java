@@ -85,10 +85,11 @@ public class RequesterMain extends AppCompatActivity {
 
     }
 
+
     /**
      * Adds the user's requested tasks to the list view.
      */
-    public static void displayTasks(){
+    public void displayTasks(){
         user = Server.UserController.get(user.getUsername());
         if (user == null) return;
         tasksInfo.clear();
@@ -137,5 +138,12 @@ public class RequesterMain extends AppCompatActivity {
 
     }
 
+
+    public void onRefreshClick(View view){
+        displayTasks();
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tasksInfo);
+        ListView listView = findViewById(R.id.p_assigned_list);
+        listView.setAdapter(adapter);
+    }
 
 }

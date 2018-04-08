@@ -67,6 +67,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
         setupBackButton();
 
 
+
     }
 
 

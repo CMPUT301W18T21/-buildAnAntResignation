@@ -44,6 +44,9 @@ public class MainActivity  extends AppCompatActivity {
     public MainActivity() {
     }
 
+
+
+
     /**
      * A method that executes every time the activity is shown on screen.
      *
@@ -65,10 +68,16 @@ public class MainActivity  extends AppCompatActivity {
             finish();
         }
 
+        /* YOU CAN REMOVE BEFORE HANDING IN, OR IF YOU ASK ME - Nik
         //Server.UserController.delete("nik1");
-        //Task task1 = Server.TaskController.getRequested("1","DO NOT DELETE");
-        //user.provideTask(task1);
+        Task task0 = Server.TaskController.getRequested("1","DO NOT DELETE");
+        Task task1 = Server.TaskController.getRequested("1","DO NOT DELETE");
+        task1.addBid(10);
+        task1.addBidder("1");
 
+        Server.TaskController.edit(task0,task1);
+        user.provideTask(task1);
+        //*/
 
         Button viewProfile = (Button) findViewById(R.id.viewProfileButton);
         viewProfile.setOnClickListener(new View.OnClickListener() {
