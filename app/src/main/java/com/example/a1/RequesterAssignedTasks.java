@@ -65,8 +65,11 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     /**
      * get tasks with status is Assigned , get status of the task, and the Bib made by specific provider, and provider username.
      */
-    public static void getAssignedTasks(){
-        ArrayList<Task> allTasks = user.getProvidedTasks();
+    public void getAssignedTasks(){
+        ArrayList<Task> allTasks = user.getRequestedTasks();
+
+
+
         assignedTasks.clear();
         assignedTasksTitle.clear();
         assignedTasksStatus.clear();
@@ -81,6 +84,14 @@ public class RequesterAssignedTasks extends AppCompatActivity {
                 usernames.add("Username: "+ task.getProviderName());
             }
         }
+
+        ListView listView = (ListView) findViewById(R.id.ListView_Task);
+        CustomAdapter customAdapter = new CustomAdapter();
+        listView.setAdapter(customAdapter);
+    }
+
+    public void onRefreshClick(View view){
+        this.getAssignedTasks();
     }
 
 

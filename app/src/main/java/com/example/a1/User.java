@@ -40,7 +40,7 @@ public class User {
     /**
      * the array of tasks that provider has bidded
      */
-    private ArrayList<Task> providedTasks = new ArrayList<>(0);;
+    private ArrayList<Task> providedTasks = new ArrayList<>(0);
 
     private ArrayList<Task> biddedTasks = new ArrayList<>(0);
 

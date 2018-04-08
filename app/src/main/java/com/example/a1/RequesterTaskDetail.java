@@ -20,7 +20,6 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private static String username;
     private static ArrayAdapter<Integer> adapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,9 +94,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * @param view The caller view.
      */
     public void onDeleteClick(View view){
-
         Server.TaskController.delete(task);
-        RequesterMain.displayTasks();
         finish();
     }
 
@@ -120,8 +117,6 @@ public class RequesterTaskDetail extends AppCompatActivity {
         newTask.setTitle(title);
         newTask.setDescription(description);
         Server.TaskController.edit(task,newTask);
-
-        RequesterMain.displayTasks();
         finish();
     }
 

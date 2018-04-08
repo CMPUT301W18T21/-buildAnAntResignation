@@ -18,6 +18,7 @@ public class DialogChangeStatus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_change_status);
         setTitle("Assigned Task Options");
+        setResult(RESULT_OK);
     }
 
     public static void setTask(Task task){
@@ -27,7 +28,6 @@ public class DialogChangeStatus extends AppCompatActivity {
     public void onClickRequested(View view){
         task.setRequested();
         Server.TaskController.edit(task,task);
-        RequesterAssignedTasks.getAssignedTasks();
         finish();
 
     }
@@ -35,14 +35,12 @@ public class DialogChangeStatus extends AppCompatActivity {
     public void onClickBidded(View view){
         task.setBidded();
         Server.TaskController.edit(task,task);
-        RequesterAssignedTasks.getAssignedTasks();
         finish();
     }
 
     public void onClickDone(View view){
         task.setDone();
         Server.TaskController.edit(task,task);
-        RequesterAssignedTasks.getAssignedTasks();
         finish();
     }
 

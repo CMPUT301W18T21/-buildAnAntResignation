@@ -69,7 +69,6 @@ public class TaskRequest extends AppCompatActivity {
         user.requestTask(task);
         Server.UserController.edit(user);
 
-        RequesterMain.displayTasks();
         finish();
     }
 }
