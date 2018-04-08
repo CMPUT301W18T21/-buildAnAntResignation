@@ -3,13 +3,18 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.apache.commons.lang3.ObjectUtils;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ProviderBiddedTask extends AppCompatActivity {
@@ -27,13 +32,10 @@ public class ProviderBiddedTask extends AppCompatActivity {
      *
      */
 
-    ArrayList<String> ProviderBiddedTasks = new ArrayList<>(0);
-    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<>(0);
-    ArrayList<Integer>LowestBids=new ArrayList<>(0);
-    ArrayList<String>UserName=new ArrayList<>(0);
-
-
-
+    ArrayList<String> ProviderBiddedTasks = new ArrayList<String>(0);
+    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<String>(0);
+    ArrayList<Integer>LowestBids=new ArrayList<Integer>(0);
+    ArrayList<String>UserName=new ArrayList<String>(0);
 
 
 
@@ -45,6 +47,12 @@ public class ProviderBiddedTask extends AppCompatActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        UserName.add("alex");
+//        ProviderBiddedTasks.add("want");
+//        ProviderBiddedTasksStatus.add("bidded");
+//        LowestBids.add(1);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bidded_task);
         ListView listView=(ListView)findViewById(R.id.Listview_BidList);
@@ -52,8 +60,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
         setupBackButton();
-        getTasksAttri();
-
 
 
     }
@@ -69,7 +75,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
             public void onClick(View v) {
                 //need change , the second activity is not the right destination
-                Intent intent = new Intent(ProviderBiddedTask.this, RequesterMain.class);
+                Intent intent = new Intent(ProviderBiddedTask.this, ProviderMainPage.class);
                 startActivityForResult(intent, 1);
 
 
@@ -85,20 +91,34 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
     private void getTasksAttri(){
 
-        ArrayList<Task> AllTasks= user.getProvidedTasks();
-        for(Integer j=0;j<AllTasks.size();j++){
-            Task task= user.getRequestedTask(j);
-            /**
-             * the status here should be String since it will be set as the content of textView
-             */
-            String status=task.getStatus().toString();
-            ProviderBiddedTasksStatus.add(status);
-            LowestBids.add(task.getLowestBid());
-            UserName.add(task.getRequesterName());
+        String username = User.getCurrentUser();
+        user = Server.UserController.get(username);
 
+        ArrayList<Task> AllTasks = new ArrayList<Task>();
+
+        Log.i("PRINT USERJJAHDKJAS",user.toString());
+
+
+        if (user.getBiddedTasks() == null) {
+
+            Toast.makeText(this,"No bidded task exist",Toast.LENGTH_SHORT).show();
+            Log.i("Not running","hsjahkjda");
+
+        } else {
+
+            AllTasks = user.getBiddedTasks();
+            for (Task singleTask : AllTasks) {
+                /**
+                 * the status here should be String since it will be set as the content of textView
+                 */
+                ProviderBiddedTasks.add(singleTask.getTitle().toString());
+                UserName.add(singleTask.getRequesterName().toString());
+                ProviderBiddedTasksStatus.add(singleTask.getStatus().toString());
+                LowestBids.add(singleTask.getLowestBid());
+
+            }
         }
     }
-
 
 
 
@@ -110,8 +130,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         public int getCount(){
             return ProviderBiddedTasks.size();
-
-
         }
         @Override
         public Object getItem(int i) {
@@ -125,12 +143,12 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
+            getTasksAttri();
             view = getLayoutInflater().inflate(R.layout.customlayout2,null);
             TextView textView_task=(TextView)view.findViewById(R.id.textView_task);
             TextView textView_username=(TextView)view.findViewById(R.id.textView_username);
             TextView textView_lowestBid=(TextView)view.findViewById(R.id.textView_lowestBid);
             TextView textView_status=(TextView)view.findViewById(R.id.textView_status);
-
 
             //textView_username.setText(user.getName());
             textView_username.setText(UserName.get(i));
