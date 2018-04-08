@@ -7,7 +7,7 @@
     tools:context="com.example.a1.ProviderMainPage">
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/p_assigned_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"

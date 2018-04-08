@@ -13,8 +13,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -22,9 +20,7 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 public class ProviderMainPage extends AppCompatActivity {
 
@@ -59,7 +55,10 @@ public class ProviderMainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_main_page);
-        showContent = (ListView) findViewById(R.id.listView);
+        Intent intent = getIntent();
+        final String username = intent.getStringExtra("username");
+
+        showContent = (ListView) findViewById(R.id.p_assigned_list);
 
 
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
@@ -93,6 +92,7 @@ public class ProviderMainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(ProviderMainPage.this,ProviderBiddedTask.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
                 //show_content(showContent);
             }

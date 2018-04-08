@@ -20,7 +20,8 @@ import java.util.ArrayList;
 public class ProviderBiddedTask extends AppCompatActivity {
 
     private User user;
-    Button BackButton;
+    private Button viewAssigned;
+    private String username;
     /**
      * @author Yuan
      */
@@ -55,8 +56,12 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bidded_task);
+        Intent intent = getIntent();
+        setTitle("My Bidded Task");
+        username = intent.getStringExtra("username");
+        Log.i("want see the username",username);
         ListView listView=(ListView)findViewById(R.id.Listview_BidList);
-
+        getTasksAttri(username);
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
         setupBackButton();
@@ -70,12 +75,13 @@ public class ProviderBiddedTask extends AppCompatActivity {
         /** when back button is clicked jump back to provider main page
          */
 
-        BackButton = (Button) findViewById(R.id.back);
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        viewAssigned = (Button) findViewById(R.id.back);
+        viewAssigned.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 //need change , the second activity is not the right destination
-                Intent intent = new Intent(ProviderBiddedTask.this, ProviderMainPage.class);
+                Intent intent = new Intent(ProviderBiddedTask.this, ProviderAssignedTasks.class);
+                intent.putExtra("username",username);
                 startActivityForResult(intent, 1);
 
 
@@ -89,23 +95,19 @@ public class ProviderBiddedTask extends AppCompatActivity {
      */
 
 
-    private void getTasksAttri(){
+    private void getTasksAttri(String username){
 
-        String username = User.getCurrentUser();
         user = Server.UserController.get(username);
 
         ArrayList<Task> AllTasks = new ArrayList<Task>();
 
-        Log.i("PRINT USERJJAHDKJAS",user.toString());
+        Log.i("PRINT USERJJAHDKJAS",user.getUsername().toString());
 
 
         if (user.getBiddedTasks() == null) {
-
             Toast.makeText(this,"No bidded task exist",Toast.LENGTH_SHORT).show();
-            Log.i("Not running","hsjahkjda");
-
+            finish();
         } else {
-
             AllTasks = user.getBiddedTasks();
             for (Task singleTask : AllTasks) {
                 /**
@@ -143,7 +145,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            getTasksAttri();
             view = getLayoutInflater().inflate(R.layout.customlayout2,null);
             TextView textView_task=(TextView)view.findViewById(R.id.textView_task);
             TextView textView_username=(TextView)view.findViewById(R.id.textView_username);

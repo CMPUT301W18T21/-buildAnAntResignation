@@ -98,7 +98,7 @@ public class MainActivity  extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ProviderMainPage.class);
-                //intent.putExtra("username",username);
+                intent.putExtra("username",username);
                 startActivity(intent);
 
             }

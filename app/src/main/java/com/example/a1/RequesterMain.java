@@ -13,7 +13,6 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -62,7 +61,7 @@ public class RequesterMain extends AppCompatActivity {
         ((TextView) findViewById(R.id.username)).setText(username);
 
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tasksInfo);
-        ListView listView = findViewById(R.id.listView);
+        ListView listView = findViewById(R.id.p_assigned_list);
         listView.setAdapter(adapter);
 
         tasksInfo.clear();
