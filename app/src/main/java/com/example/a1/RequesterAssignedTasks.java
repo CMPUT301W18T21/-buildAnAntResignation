@@ -128,9 +128,9 @@ public class RequesterAssignedTasks extends AppCompatActivity {
      * @param view The caller view.
      */
     public void onSaveClick(View view){
-        Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
-        intent.putExtra("username",username);
-        startActivity(intent);
+        //Intent intent = new Intent(RequesterAssignedTasks.this,RequesterMain.class);
+        //intent.putExtra("username",username);
+        //startActivity(intent);
         finish();
     }
 

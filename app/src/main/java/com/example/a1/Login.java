@@ -23,9 +23,6 @@ public class Login extends AppCompatActivity {
         Button login = (Button)findViewById(R.id.login);
         Button signup = (Button)findViewById(R.id.signup);
 
-        ArrayList<User> users = Server.UserController.getAll();
-        int  a =0;
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

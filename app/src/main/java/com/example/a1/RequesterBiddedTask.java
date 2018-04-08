@@ -40,16 +40,6 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
         user = Server.UserController.get(username);
 
-        //the following six lines are added to test
-        Task task1= new Task("title1","user1","des1");
-        user.getRequestedTasks().add(task1);
-        Task task2= new Task("title2","user1","des2");
-        user.getRequestedTasks().add(task2);
-
-        user.getRequestedTask(0).setBidded();
-
-        user.getRequestedTask(1).setBidded();
-
         getBiddedTasks();
 
         ListView listView=(ListView)findViewById(R.id.viewBiddedTask);

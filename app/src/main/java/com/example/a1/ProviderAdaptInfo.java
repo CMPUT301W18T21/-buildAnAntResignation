@@ -10,9 +10,9 @@ public class ProviderAdaptInfo  {
     private  String name;
     private  String task;
     private  String status;
-    private  Integer lowestbid;
+    private  String lowestbid;
 
-    public ProviderAdaptInfo(String name, String task, String status, Integer lowestbid) {
+    public ProviderAdaptInfo(String name, String task, String status, String lowestbid) {
         this.name = name;
         this.task = task;
         this.status = status;
@@ -31,7 +31,7 @@ public class ProviderAdaptInfo  {
         return status;
     }
 
-    public Integer getLowestbid() {
+    public String getLowestbid() {
         return lowestbid;
     }
 
@@ -47,7 +47,7 @@ public class ProviderAdaptInfo  {
         this.status = status;
     }
 
-    public void setLowestbid(Integer lowestbid) {
+    public void setLowestbid(String lowestbid) {
         this.lowestbid = lowestbid;
     }
 }

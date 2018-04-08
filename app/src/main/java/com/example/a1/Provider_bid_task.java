@@ -47,17 +47,6 @@ public class Provider_bid_task extends AppCompatActivity {
 
 
 
-
-        /** debugging
-         bid = new ArrayList<>(0);
-         bid.add(10);
-         bid.add(20);
-         bid.add(9);
-         task = new Task("test task","username","test description","Location",Status.REQUESTED,bid);
-
-         **/
-
-
         task = MainActivity.getSelectedTask();
         setTask(task);
         bids =task.getBids();

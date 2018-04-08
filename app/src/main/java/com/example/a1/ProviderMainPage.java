@@ -45,11 +45,11 @@ public class ProviderMainPage extends AppCompatActivity {
     /*********** added by JiaHong **********/
 
 
-    ArrayList<String> name_test = new ArrayList<String>();
-    ArrayList<String> task_test = new ArrayList<String>();
-    ArrayList<String> status_test = new ArrayList<String>();
-    ArrayList<Integer> lowest_test = new ArrayList<Integer>();
-    ArrayList<User> matchUsers = new ArrayList<User>();
+    ArrayList<String> name_test = new ArrayList<>();
+    ArrayList<String> task_test = new ArrayList<>();
+    ArrayList<String> status_test = new ArrayList<>();
+    ArrayList<String> lowest_test = new ArrayList<>();
+    ArrayList<User> matchUsers = new ArrayList<>();
 
 
     //ArrayAdapter<String> adapter;
@@ -124,7 +124,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 status_test.clear();
                 matchUsers.clear();
                 String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
-                //String search_query = "{\"query\": { \"match\":{\"_type\":\"user\" }}}";
+
                 UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
                 queryTaskName.execute(search_query);
 
@@ -140,6 +140,10 @@ public class ProviderMainPage extends AppCompatActivity {
 
                 for (User taskuser : users){
 
+                    //we dont want our own tasks to appear here.
+                    if(taskuser.getUsername().equals(User.getCurrentUser()))
+                        continue;
+
                     ArrayList<Task> eachRequestedTask = taskuser.getRequestedTasks();
 
                     for (Task eachTask: eachRequestedTask){
@@ -148,7 +152,11 @@ public class ProviderMainPage extends AppCompatActivity {
                             name_test.add(taskuser.getName());
                             task_test.add(requestedTaskTitle);
                             status_test.add(eachTask.getStatus().toString());
-                            lowest_test.add(eachTask.getLowestBid());
+                            if(eachTask.getLowestBid() == -1){
+                                lowest_test.add("None");
+                            }else{
+                                lowest_test.add(Integer.toString(eachTask.getLowestBid()));
+                            }
                             matchUsers.add(taskuser);
 
                         }
@@ -247,7 +255,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 find = find & singleFind;
             }
         }
-        Boolean statusBool = status.contains("REQUESTED") | status.contains("BIDDED");
+        Boolean statusBool = status.contains("REQUESTED") || status.contains("BIDDED");
 
         find = find & statusBool;
 
@@ -320,8 +328,6 @@ public class ProviderMainPage extends AppCompatActivity {
                                                 taskPack.putString("userName",matchUsers.get(pos).getUsername());
                                                 intent.putExtra("taskBundle", taskPack);
                                                 startActivity(intent);
-                                                Toast.makeText(c, providerinfos.get(pos).getTask(), Toast.LENGTH_SHORT).show();
-
 
 
 
