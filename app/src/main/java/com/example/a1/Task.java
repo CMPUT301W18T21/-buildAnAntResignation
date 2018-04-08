@@ -27,8 +27,8 @@ public class Task implements Cloneable{
     private String providerName;
     private String description;
     private Status status = Status.REQUESTED;
-    private Float latitude;
-    private Float longitude;
+    private Double latitude;
+    private Double longitude;
     private String location;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> bidders = new ArrayList<>(0);
@@ -202,20 +202,22 @@ public class Task implements Cloneable{
     public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
 
-    public float getLongitude(){
+    public void setLocation(String location){this.location = location;}
+
+    public Double getLongitude(){
         return longitude;
     }
 
-    public void setLongitude(float longitude){
+    public void setLongitude(Double longitude){
         this.longitude = longitude;
     }
 
-    public float getLatitude(){
+    public Double getLatitude(){
         return latitude;
     }
 
-    public void setLatitude(float latitude){
-        this.latitude = longitude;
+    public void setLatitude(Double latitude){
+        this.latitude = latitude;
     }
 
     /**

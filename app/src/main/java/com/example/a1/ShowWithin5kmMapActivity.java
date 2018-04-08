@@ -64,6 +64,11 @@ import com.example.a1.Model.PlaceInfo;
 public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.OnConnectionFailedListener{
 
+    private ArrayList<com.example.a1.Task> tasks;
+    private double lat;
+    private double lng;
+    private double RValue = 6371.009;
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
@@ -74,6 +79,16 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
+
+
+        tasks = Server.TaskController.getAll();
+
+        for(int i = 0; i < tasks.size();i++){
+            lat = tasks.get(i).getLatitude();
+            lng = tasks.get(i).getLongitude();
+            //double temp1 =
+
+        }
 
         if (mLocationPermissionsGranted) {
             getDeviceLocation();

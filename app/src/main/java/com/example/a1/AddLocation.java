@@ -29,6 +29,7 @@ public class AddLocation extends AppCompatActivity{
     TextView txtCoord;
     private static Task task;
     private static String username;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class AddLocation extends AppCompatActivity{
         protected String doInBackground(String... strings) {
             String response;
             try{
-                String address = strings[0];
+                address = strings[0];
                 HttpDataHandler http = new HttpDataHandler();
                 String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s",address);
                 response = http.getHTTPData(url);
@@ -106,8 +107,9 @@ public class AddLocation extends AppCompatActivity{
                     return;
                 }
 
-                float latitude = Float.parseFloat(lat);
-                float longitude = Float.parseFloat(lng);
+                double latitude = Double.parseDouble(lat);
+                double longitude = Double.parseDouble(lng);
+                newTask.setLocation(address);
                 newTask.setLatitude(latitude);
                 newTask.setLongitude(longitude);
                 Server.TaskController.edit(task,newTask);
