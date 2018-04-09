@@ -6,11 +6,13 @@ package com.example.a1;
 
 import android.*;
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -62,7 +64,7 @@ import java.util.Map;
 import com.example.a1.Model.PlaceInfo;
 
 public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMapReadyCallback,
-        GoogleApiClient.OnConnectionFailedListener{
+        GoogleApiClient.OnConnectionFailedListener {
 
     private ArrayList<com.example.a1.Task> tasks;
     private double lat;
@@ -81,15 +83,15 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
-
-
+        Log.i("premission is granted", Boolean.toString(mLocationPermissionsGranted));
 
 
 
 
         if (mLocationPermissionsGranted) {
-            getDeviceLocation();
+            Log.d("mapReady if loop pass","gggg");
 
+            getDeviceLocation();
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -100,29 +102,38 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
             init();
         }
+        //getDeviceLatandLng();
+
         tasks = Server.TaskController.getAll();
 
-        for(int i = 0; i < tasks.size();i++) {
+        for (int i = 0; i < tasks.size(); i++) {
 
-            Log.i("Now testing","seeeeeeeeeeeeeee");
+            Log.i("Now testing", "seeeeeeeeeeeeeee");
 
-            if(tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null){
-                Log.i("This is my lat",tasks.get(i).getLatitude().toString());
-                Log.i("This is my lon",tasks.get(i).getLongitude().toString());
+            if (tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null) {
+                Log.i("This is my lat", tasks.get(i).getLatitude().toString());
+                Log.i("This is my lon", tasks.get(i).getLongitude().toString());
 
                 lat = tasks.get(i).getLatitude();
                 lng = tasks.get(i).getLongitude();
-                double temp1 = lat - CurrentLat;
-                temp1 = temp1 * Math.PI / 180;
-                temp1 = temp1 * temp1;
-                double temp2 = Math.cos((lat + CurrentLat)/2) * (lng - Currentlng) * Math.PI/180;
-                temp2 = temp2 * temp2;
-                double distance = RValue * Math.sqrt(temp1 + temp2);
-                if (distance <= 5){
-                    LatLng Tasklocation = new LatLng(lat,lng);
+                Location crnLocation = new Location("");
+                crnLocation.setLatitude(CurrentLat);
+                crnLocation.setLongitude(Currentlng);
+                Location newLocation = new Location("");
+                newLocation.setLatitude(lat);
+                newLocation.setLongitude(lng);
+                double distance = crnLocation.distanceTo(newLocation);
+                Log.i("the current lat is", Double.toString(CurrentLat));
+                Log.i("the current lng is", Double.toString(Currentlng));
+                Log.i("first distance is", Double.toString(distance));
+                distance = distance / 1000;
+                Log.i("The Distance is", Double.toString(distance));
+                //distance = 4;
+                if (distance <= 5) {
+                    LatLng Tasklocation = new LatLng(lat, lng);
                     googleMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(Tasklocation));
-            }
+                }
             }
 
         }
@@ -146,7 +157,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
 
     //vars
-    private Boolean mLocationPermissionsGranted = false;
+    private Boolean mLocationPermissionsGranted = true;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private PlaceAutocompleteAdapter mPlaceAutocompleteAdapter;
@@ -167,7 +178,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
     }
 
-    private void init(){
+    private void init() {
         Log.d(TAG, "init: initializing");
 
         mGoogleApiClient = new GoogleApiClient
@@ -187,10 +198,10 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_SEARCH
+                if (actionId == EditorInfo.IME_ACTION_SEARCH
                         || actionId == EditorInfo.IME_ACTION_DONE
                         || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER){
+                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
 
                     //execute our method for searching
                     geoLocate();
@@ -256,20 +267,20 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         }
     }
 
-    private void geoLocate(){
+    private void geoLocate() {
         Log.d(TAG, "geoLocate: geolocating");
 
         String searchString = mSearchText.getText().toString();
 
         Geocoder geocoder = new Geocoder(ShowWithin5kmMapActivity.this);
         List<Address> list = new ArrayList<>();
-        try{
+        try {
             list = geocoder.getFromLocationName(searchString, 1);
-        }catch (IOException e){
-            Log.e(TAG, "geoLocate: IOException: " + e.getMessage() );
+        } catch (IOException e) {
+            Log.e(TAG, "geoLocate: IOException: " + e.getMessage());
         }
 
-        if(list.size() > 0){
+        if (list.size() > 0) {
             Address address = list.get(0);
 
             Log.d(TAG, "geoLocate: found a location: " + address.toString());
@@ -280,6 +291,45 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         }
     }
 
+//    private void getDeviceLatandLng() {
+//        if (mLocationPermissionsGranted) {
+//
+//            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//                // TODO: Consider calling
+//                //    ActivityCompat#requestPermissions
+//                // here to request the missing permissions, and then overriding
+//                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//                //                                          int[] grantResults)
+//                // to handle the case where the user grants the permission. See the documentation
+//                // for ActivityCompat#requestPermissions for more details.
+//                return;
+//            }
+//            Task<Location> location = mFusedLocationProviderClient.getLastLocation();
+//            location.addOnCompleteListener(this,new OnCompleteListener<Location>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Location> task) {
+//                    if(task.isSuccessful()){
+//                        Log.d(TAG, "onComplete: found location!");
+//                        Location currentLocation = task.getResult();
+//
+//                        moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
+//                                DEFAULT_ZOOM,
+//                                "My Location");
+//                        CurrentLat = currentLocation.getLatitude();
+//                        Currentlng = currentLocation.getLongitude();
+//                        Log.i("the detDevice lat is",Double.toString(CurrentLat));
+//                        Log.i("the detDevice lng is",Double.toString(Currentlng));
+//
+//
+//                    }else{
+//                        Log.d(TAG, "onComplete: current location is null");
+//                        Toast.makeText(ShowWithin5kmMapActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+//        }
+//
+//    }
     private void getDeviceLocation(){
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
 
@@ -287,6 +337,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
         try{
             if(mLocationPermissionsGranted){
+                Log.d("if loop passed","");
 
                 Task<Location> location = mFusedLocationProviderClient.getLastLocation();
                 location.addOnCompleteListener(this,new OnCompleteListener<Location>() {
@@ -301,6 +352,41 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
                                     "My Location");
                             CurrentLat = currentLocation.getLatitude();
                             Currentlng = currentLocation.getLongitude();
+                            Log.d("the detDevice lat is",Double.toString(CurrentLat));
+                            Log.d("the detDevice lng is",Double.toString(Currentlng));
+                            tasks = Server.TaskController.getAll();
+
+                            for (int i = 0; i < tasks.size(); i++) {
+
+                                Log.i("Now testing", "seeeeeeeeeeeeeee");
+
+                                if (tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null) {
+                                    Log.i("This is my lat", tasks.get(i).getLatitude().toString());
+                                    Log.i("This is my lon", tasks.get(i).getLongitude().toString());
+
+                                    lat = tasks.get(i).getLatitude();
+                                    lng = tasks.get(i).getLongitude();
+                                    Location crnLocation = new Location("");
+                                    crnLocation.setLatitude(CurrentLat);
+                                    crnLocation.setLongitude(Currentlng);
+                                    Location newLocation = new Location("");
+                                    newLocation.setLatitude(lat);
+                                    newLocation.setLongitude(lng);
+                                    double distance = crnLocation.distanceTo(newLocation);
+                                    Log.i("the current lat is", Double.toString(CurrentLat));
+                                    Log.i("the current lng is", Double.toString(Currentlng));
+                                    Log.i("first distance is", Double.toString(distance));
+                                    distance = distance / 1000;
+                                    Log.i("The Distance is", Double.toString(distance));
+                                    //distance = 4;
+                                    if (distance <= 5) {
+                                        LatLng Tasklocation = new LatLng(lat, lng);
+                                        mMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
+
+                                    }
+                                }
+
+                            }
 
 
                         }else{
