@@ -108,6 +108,10 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * A custome adapter for displaying task information.
+     */
     class CustomAdapter extends BaseAdapter {
 
         @Override

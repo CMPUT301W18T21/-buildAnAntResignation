@@ -25,6 +25,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * An activity that displays the user the task they have bidded on.
+ */
 public class ProviderBiddedTask extends AppCompatActivity {
 
     private User user;
@@ -35,11 +38,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
     private ArrayList<Integer> lowestBids =new ArrayList<Integer>(0);
     private ArrayList<String> usernames =new ArrayList<String>(0);
 
-
-    /**
-     * @author: Yuan
-     *
-     */
 
     /**
      * this method set the contentview to a screen which shows all the bidded tasks bidded by the current provider
@@ -69,10 +67,11 @@ public class ProviderBiddedTask extends AppCompatActivity {
 
     }
 
-
+    /**
+     * When back button is clicked jump back to provider main page
+     */
     private void setupBackButton() {
-        /** when back button is clicked jump back to provider main page
-         */
+
 
         Button viewAssigned = (Button) findViewById(R.id.back);
         viewAssigned.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +119,9 @@ public class ProviderBiddedTask extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * A custom display adapter for showing task information.
+     */
     class CustomAdapter extends BaseAdapter {
 
         @Override

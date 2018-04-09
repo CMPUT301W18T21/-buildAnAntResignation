@@ -32,21 +32,21 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import java.util.ArrayList;
 
 
-
+/**
+ * This activity branches out into all other Provider use cases.
+ * From here one can search and bid on tasks, as well as view their assigned tasks.
+ * The map view is also accessible from here.
+ */
 public class ProviderMainPage extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
+
+    private static final int ERROR_DIALOG_REQUEST = 9001;
 
     private EditText searchBox;
     private String keyword;
     private String currentUser;
     private ArrayList<User> users;
-
-    /*********** added by JiaHong **********/
-    private static final String TAG = "MainActivity";
-
-    private static final int ERROR_DIALOG_REQUEST = 9001;
-
-    /*********** added by JiaHong **********/
-
 
     private ArrayList<String> name_test = new ArrayList<>();
     private ArrayList<String> task_test = new ArrayList<>();
@@ -57,12 +57,12 @@ public class ProviderMainPage extends AppCompatActivity {
 
     //ArrayAdapter<String> adapter;
 
+
     /**
      * a method that execute every time the activity is shown.
      *
      * @param savedInstanceState
      */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -246,11 +246,10 @@ public class ProviderMainPage extends AppCompatActivity {
         }
         return false;
     }
-        /******************************************* added by JiaHong *************************************************************/
 
     /**
      * this method is to store the information of each task.
-     * @return
+     * @return An array of ProviderAdaptInfo, which is used to dispaly the tasks in the list view.
      */
     private ArrayList<ProviderAdaptInfo> boundinfo()
     {
@@ -295,8 +294,9 @@ public class ProviderMainPage extends AppCompatActivity {
     }
 
 
-
-
+    /**
+     * A custom adapter for viewing Task information.
+     */
     class CustomAdapter extends BaseAdapter   { //implements Filterable
 
         Context c;

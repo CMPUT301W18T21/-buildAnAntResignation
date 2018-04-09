@@ -23,6 +23,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * An activity which displays the user which of their requested tasks have status ASSIGNED.
+ */
 public class RequesterAssignedTasks extends AppCompatActivity {
 
     private static String username;
@@ -112,7 +115,9 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         getAssignedTasks();
     }
 
-
+    /**
+     * A custom display adapter for viewing task information.
+     */
     class CustomAdapter extends BaseAdapter{
         @Override
         public Object getItem(int i) {
