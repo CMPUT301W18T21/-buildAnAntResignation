@@ -25,6 +25,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * An activity which shows the details of a previously selected task.
+ */
 public class RequesterTaskDetail extends AppCompatActivity {
 
     private Task task;

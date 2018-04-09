@@ -11,6 +11,7 @@
 package com.example.a1;
 
 /**
+ * A map view activity that shows all tasks within 5km.
  * Created by k-h on 2018-04-03.
  */
 

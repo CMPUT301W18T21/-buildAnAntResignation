@@ -33,6 +33,13 @@ import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 
+/**
+ * A class that contains other nested static classes that allow us to connect to the
+ * ElasticSearch server. Nothing here is to be directly accessed in code.
+ * An easier to use Server wrapper exists that handles connection to the server in a
+ * more friendly to use way.
+ * @see Server
+ */
 public class UserElasticSearchController {
 
     private static JestDroidClient client;
@@ -40,6 +47,9 @@ public class UserElasticSearchController {
     private static final String SEARCH_INDEX = "cmput301w18t21";
     private static final String SEARCH_TYPE = "user";
 
+    /**
+     * Verifies connection settings
+     */
     public static void verifySettings() {
         if (client == null) {
             DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");
@@ -52,7 +62,7 @@ public class UserElasticSearchController {
     }
 
     /**
-     * this method is to add a new user profile to the server.
+     * this class adds a new user profile to the server.
      */
     public static class AddNewUserProfileTask extends AsyncTask<User, Void, Void> {
 
@@ -88,7 +98,7 @@ public class UserElasticSearchController {
     }
 
     /**
-     * this method is to check fi the selected user is exist in the server.
+     * this class to check fi the selected user is exist in the server.
      */
     public static class CheckUserProfileExistTask extends AsyncTask<String, Void, Boolean> {
 
@@ -118,7 +128,7 @@ public class UserElasticSearchController {
     }
 
     /**
-     * this method is to get all the information of this user.
+     * this class to get all the information of this user.
      */
     public static class GetUserProfileTask extends AsyncTask<String, Void, User> {
 
@@ -151,9 +161,8 @@ public class UserElasticSearchController {
     }
 
     /**
-     * this method is to delete the selectd user profile.
+     * this class to delete the selectd user profile.
      */
-
     public static class DeleteUserTask extends AsyncTask<User,Void,Void> {
 
         @Override
@@ -184,6 +193,9 @@ public class UserElasticSearchController {
 
     }
 
+    /**
+     * This class searches for Tasks matching a search parameter.
+     */
     public static class QueryTask extends AsyncTask<String,Void,ArrayList<User>> {
 
         @Override

@@ -26,9 +26,8 @@ import java.util.ArrayList;
 import static com.example.a1.Status.BIDDED;
 
 /**
- * @author Yuan
+ * An activity that shows whihc of the users task have bids.
  */
-
 public class RequesterBiddedTask extends AppCompatActivity {
 
     private ArrayList<Task> biddedTasks = new ArrayList<>(0);
@@ -36,6 +35,11 @@ public class RequesterBiddedTask extends AppCompatActivity {
     private String username;
 
 
+
+    /**
+     * This method runs on the activity creation.
+     * It sets up some of the UI elements.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +59,10 @@ public class RequesterBiddedTask extends AppCompatActivity {
         listView.setAdapter(customAdapter);
     }
 
-
+    /**
+     * Updates the array list (that the list view adapter uses)
+     * to have all the bidded tasks of the user.
+     */
     public void getBiddedTasks(){
         biddedTasks = new ArrayList<>(0);
         ArrayList<Task> allTasks = user.getRequestedTasks();
@@ -65,7 +72,9 @@ public class RequesterBiddedTask extends AppCompatActivity {
 
     }
 
-
+    /**
+     * A custom display adapter for displaying task information.
+     */
     class CustomAdapter extends BaseAdapter{
         @Override
         public Object getItem(int i) {

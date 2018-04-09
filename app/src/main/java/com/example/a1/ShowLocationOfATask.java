@@ -27,9 +27,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 
 /**
+ * An activity that shows the location of a given task.
  * Created by k-h on 2018-04-07.
  */
-
 public class ShowLocationOfATask extends AppCompatActivity implements OnMapReadyCallback{
 
     private static Task task;
