@@ -9,9 +9,6 @@ import static com.example.a1.Status.BIDDED;
 import static com.example.a1.Status.REQUESTED;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Yuan on 2018-02-26.
- */
 
 public class TestTask {
 
@@ -139,9 +136,7 @@ public class TestTask {
         task.setLongitude(12345.45);
         assertTrue(task.getLongitude() == 12345.45);
     }
-    /**
-        NEED GET LOCATION TEST!
-    */
+
 
     @Test
     public void testGetBids(){
@@ -182,11 +177,12 @@ public class TestTask {
         assertTrue(task.getLowestBid()==1);
 
         //We do the same test in a different array order
-//        bids =new ArrayList<>(0);
-//        task.addBid(3);
-//        task.addBid(1);
-//        task.addBid(2);
-//        assertTrue(task.getLowestBid()==1);
+        bids = new ArrayList<>(0);
+        task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        task.addBid(3);
+        task.addBid(1);
+        task.addBid(2);
+        assertTrue(task.getLowestBid()==1);
     }
 
 
@@ -205,19 +201,14 @@ public class TestTask {
 
     }
 
-    /**
-     *
-     */
-//    @Test
-//    public void testGetPhoto(){
-//        ArrayList<Integer> bids=new ArrayList<>(0);
-//        ArrayList<String> test=new ArrayList<>(0);
-//
-//        test.add("photoString");
-//        Task task=new Task("","","","",BIDDED,bids);
-//        task.importPhoto("photoString");
-//        assertTrue(task.getPhotos().equals(test));
-//    }
+    @Test
+    public void testGetPhoto(){
+        ArrayList<Integer> bids=new ArrayList<>(0);
+
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        task.setPhoto("photoString");
+        assertTrue(task.getPhoto().equals("photoString"));
+    }
 
 
 

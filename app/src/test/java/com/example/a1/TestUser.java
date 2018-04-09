@@ -86,11 +86,9 @@ public class TestUser {
 
     @Test
     public void testGetImage(){
-
-
         assertTrue(user.getImage() == "img");
-
     }
+
 
     /**
      * the image attribute in User class before set is "img", the image is supposed to be a different string like "IMG" if user
@@ -241,16 +239,19 @@ public class TestUser {
         assertTrue(user.getProvidedTasks().equals(providedtasks));
     }
 
-//    @Test
-//    public void testProvideTask(){
-//        ArrayList<Integer> bids=new ArrayList<>(0);
-//        Task task1 = new Task("", "", "", "", BIDDED, bids);
-//
-//        User user=new User("", "", "", "", "", "");
-//        user.provideTask(task1);
-//        Task task2 = user.getProvidedTasks().get(0);
-//        assertTrue(task2 == task1);
-//    }
+    /*@Test
+    Cannot test, as  program cant connect to server in testing state.
+    User.provideTask connects to the server.
+
+    public void testProvideTask(){
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+
+        User user=new User("", "", "", "", "", "");
+        user.provideTask(task1);
+        Task task2 = user.getProvidedTasks().get(0);
+        assertTrue(task2 == task1);
+    }*/
 
     @Test
     public void testGetProvidedTask(){
@@ -320,14 +321,14 @@ public class TestUser {
         assertTrue(user.getBiddedTasks().equals(biddedtasks));
     }
 
-//    @Test
-//    public void testBidTask(){
-//        ArrayList<Integer> bids=new ArrayList<>(0);
-//        Task task = new Task("", "", "", "", BIDDED, bids);
-//        User user=new User("", "", "", "", "", "");
-//        user.bidTask(task);
-//        Task task2 = user.getBiddedTasks().get(0);
-//        assertTrue(task2.equals(task));
-//    }
+    @Test
+    public void testBidTask(){
+        ArrayList<Integer> bids=new ArrayList<>(0);
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        User user=new User("", "", "", "", "", "");
+        user.bidTask(task);
+        Task task2 = user.getBiddedTasks().get(0);
+        assertTrue(task2.equals(task));
+    }
 
 }
