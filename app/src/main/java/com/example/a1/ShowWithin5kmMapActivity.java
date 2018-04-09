@@ -103,18 +103,20 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         tasks = Server.TaskController.getAll();
 
         for(int i = 0; i < tasks.size();i++) {
-            lat = tasks.get(i).getLatitude();
-            lng = tasks.get(i).getLongitude();
-            double temp1 = lat - CurrentLat;
-            temp1 = temp1 * Math.PI / 180;
-            temp1 = temp1 * temp1;
-            double temp2 = Math.cos((lat + CurrentLat)/2) * (lng - Currentlng) * Math.PI/180;
-            temp2 = temp2 * temp2;
-            double distance = RValue * Math.sqrt(temp1 + temp2);
-            if (distance <= 5){
-                LatLng Tasklocation = new LatLng(lat,lng);
-                googleMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
-                googleMap.moveCamera(CameraUpdateFactory.newLatLng(Tasklocation));
+            if(tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null){
+                lat = tasks.get(i).getLatitude();
+                lng = tasks.get(i).getLongitude();
+                double temp1 = lat - CurrentLat;
+                temp1 = temp1 * Math.PI / 180;
+                temp1 = temp1 * temp1;
+                double temp2 = Math.cos((lat + CurrentLat)/2) * (lng - Currentlng) * Math.PI/180;
+                temp2 = temp2 * temp2;
+                double distance = RValue * Math.sqrt(temp1 + temp2);
+                if (distance <= 5){
+                    LatLng Tasklocation = new LatLng(lat,lng);
+                    googleMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(Tasklocation));
+            }
             }
 
         }
@@ -280,13 +282,13 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         try{
             if(mLocationPermissionsGranted){
 
-                final Task location = mFusedLocationProviderClient.getLastLocation();
-                location.addOnCompleteListener(new OnCompleteListener() {
+                Task<Location> location = mFusedLocationProviderClient.getLastLocation();
+                location.addOnCompleteListener(this,new OnCompleteListener<Location>() {
                     @Override
-                    public void onComplete(@NonNull Task task) {
+                    public void onComplete(@NonNull Task<Location> task) {
                         if(task.isSuccessful()){
                             Log.d(TAG, "onComplete: found location!");
-                            Location currentLocation = (Location) task.getResult();
+                            Location currentLocation = task.getResult();
 
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,
