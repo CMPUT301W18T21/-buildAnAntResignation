@@ -60,12 +60,12 @@ public class TestLogin extends  ActivityInstrumentationTestCase2<Login>{
         solo.assertCurrentActivity("Wrong Activity", RequesterMain.class);
 
 
+        }
 
 
-
-
-    }
-
+     /**
+     * test signup
+     */
 
 
 
