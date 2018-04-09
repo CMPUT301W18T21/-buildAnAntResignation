@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,6 @@ public class DialogSelectBid extends AppCompatActivity {
     private String username;
     private Integer BidderPosition;
     private Integer taskIndex;
-
 
  //   private ArrayList<String> testcase = new ArrayList<String>();
 
@@ -47,7 +47,7 @@ public class DialogSelectBid extends AppCompatActivity {
         Log.d("test taskIndex",taskIndex.toString());
 
 
-        Button accept = (Button)findViewById(R.id.buttonAccept);
+        final Button accept = (Button)findViewById(R.id.buttonAccept);
         Button decline = (Button)findViewById(R.id.buttonDecline);
 
 
@@ -56,7 +56,9 @@ public class DialogSelectBid extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DialogSelectBid.this,RequesterTaskDetail.class);
-
+                AcceptHandler();
+                intent.putExtra("username",username);
+                intent.putExtra("taskIndex",taskIndex);
                 startActivity(intent);
 
             }
@@ -83,7 +85,71 @@ public class DialogSelectBid extends AppCompatActivity {
 
         User loginUser = Server.UserController.get(username);
         Task acceptedTask = loginUser.getRequestedTask(taskIndex);
+        String taskTitle = acceptedTask.getTitle();
         ArrayList<String> lostBidders = acceptedTask.getBidders();
+        String winner = lostBidders.get(BidderPosition);
+        int ix = Integer.parseInt(BidderPosition.toString());
+        lostBidders.remove(ix);
+
+        //Then remove Bidded task from each lost Bidder
+        for (String loser:lostBidders){
+            User lostUser = Server.UserController.get(loser);
+            ArrayList<Task> loserBiddedTasks  = lostUser.getBiddedTasks();
+            int index = 0;
+            int marker = 0;
+            for (Task eachBiddedTask : loserBiddedTasks){
+                if (eachBiddedTask.getTitle().equals(taskTitle) && eachBiddedTask.getRequesterName().equals(username)){
+                    //we found the task which should be removed
+                    marker = index;
+                }
+                index++;
+            }
+            //delete lost bidded task
+            lostUser.getBiddedTasks().remove(marker);
+            Server.UserController.edit(lostUser);
+
+        }
+
+        //then we update the winner who win the bid
+        User winnerUer = Server.UserController.get(winner);
+        ArrayList<Task> winnerBiddedTasks = winnerUer.getBiddedTasks();
+
+        int index = 0;
+        int marker = 0;
+        Task winnerTask = null;
+        // find the accepted task
+        for (Task eachT : winnerBiddedTasks){
+
+            if (eachT.getTitle().equals(taskTitle) && eachT.getRequesterName().equals(username)){
+                winnerTask = eachT;
+                marker = index;
+            }
+            index++;
+        }
+        winnerTask.getBids().clear();
+        winnerTask.getBidders().clear();
+        winnerTask.setAssigned();
+        winnerUer.getBiddedTasks().remove(marker);
+        //now move task to providedTask
+        if (winnerUer.getProvidedTasks() != null) {
+            ArrayList<Task> tempL = winnerUer.getProvidedTasks();
+            tempL.add(winnerTask);
+            winnerUer.setProvidedTasks(tempL);
+        } else {
+            ArrayList<Task> newL = new ArrayList<Task>();
+            newL.add(winnerTask);
+            winnerUer.setProvidedTasks(newL);
+        }
+        //now update winner
+        Server.UserController.edit(winnerUer);
+
+        //finally we change status of requester and clear bidder and bids
+        loginUser.getRequestedTask(taskIndex).getBidders().clear();
+        loginUser.getRequestedTask(taskIndex).getBids().clear();
+        loginUser.getRequestedTask(taskIndex).setAssigned();
+        Server.UserController.edit(loginUser);
+
+
 
     }
 
