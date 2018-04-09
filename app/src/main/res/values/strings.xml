@@ -20,7 +20,7 @@
     <string name="Task_with_Status_assigned">My Task with Status: Assigned</string>
     <string name="Back_button">Back</string>
     <string name="Save_button">Save</string>
-    <string name="add_photo">Add photo</string>
+    <string name="add_photo">   Photo</string>
     <string name="add_location">Location</string>
     <string name="bidded">Bidded</string>
     <string name="done">done</string>

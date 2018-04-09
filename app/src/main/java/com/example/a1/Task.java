@@ -10,6 +10,10 @@
  */
 package com.example.a1;
 
+import android.media.Image;
+import android.net.Uri;
+
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -31,9 +35,10 @@ public class Task implements Cloneable{
     private Double latitude;
     private Double longitude;
     private String location;
+    private Uri photo;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> bidders = new ArrayList<>(0);
-    private ArrayList<String> photos = new ArrayList<>(0);
+
 
     /**
      * Constructs a Task object with status REQUESTED, no bid, and no photographs.
@@ -59,13 +64,14 @@ public class Task implements Cloneable{
      * @param status The task's status.
      * @param bids The task's bid.
      */
-    public  Task(String title, String requesterName, String description, String location, Status status, ArrayList<Integer> bids){
+    public  Task(String title, String requesterName, String description, String location, Status status, Uri photo, ArrayList<Integer> bids){
         this.title = title;
         this.requesterName = requesterName;
         this.description = description;
         this.status = status;
         this.location = location;
         this.bids = bids;
+        this.photo = photo;
     }
 
 
@@ -79,8 +85,9 @@ public class Task implements Cloneable{
      * @param location The task's geolocation.
      * @param status The task's status.
      * @param bids The task's bid.
+     *
      */
-    public  Task(String title, String requesterName, String providerName, String description, String location, Status status, ArrayList<Integer> bids){
+    public  Task(String title, String requesterName, String providerName, String description, String location, Status status, Uri photo, ArrayList<Integer> bids){
         this.title = title;
         this.requesterName = requesterName;
         this.providerName = providerName;
@@ -88,6 +95,7 @@ public class Task implements Cloneable{
         this.status = status;
         this.location = location;
         this.bids = bids;
+        this.photo = photo;
     }
 
     /**
@@ -149,20 +157,13 @@ public class Task implements Cloneable{
         return Collections.min(bids);
     }
 
-    /**
-     * Adds a photo to the task.
-     * @param photo The address of the photo.
-     */
-    public void importPhoto(String photo){
-        photos.add(photo);
-    }
 
     /**
      * Gets all photos attached to the task.
      * @return A list of the task's photo's addresses.
      */
-    public ArrayList<String> getPhotos() {
-        return photos;
+    public Uri getPhoto() {
+        return photo;
     }
 
     /**
@@ -202,6 +203,7 @@ public class Task implements Cloneable{
     public void setRequesterName(String username){this.requesterName = username;}
     public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
+    public void setPhoto(Uri photo){this.photo = photo;}
 
     public void setLocation(String location){this.location = location;}
 
