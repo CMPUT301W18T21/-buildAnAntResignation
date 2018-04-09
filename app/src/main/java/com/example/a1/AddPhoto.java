@@ -28,7 +28,7 @@ public class AddPhoto extends AppCompatActivity {
         setContentView(R.layout.activity_add_photo);
 
         imageToUpload = (ImageView)findViewById(R.id.imageView);
-        imageToUpload.setImageURI(task.getPhoto());
+//        imageToUpload.setImageURI(task.getPhoto());
 
         setupSelectImage();
         setSaveButton();
@@ -56,7 +56,7 @@ public class AddPhoto extends AppCompatActivity {
         if (requestCode==RESULT_LOAD_IMAGE && resultCode == RESULT_OK && data!=null){
             Uri selectedImage = data.getData();
             imageToUpload.setImageURI(selectedImage);
-            task.setPhoto(selectedImage);
+//            task.setPhoto(selectedImage);
         }
     }
 

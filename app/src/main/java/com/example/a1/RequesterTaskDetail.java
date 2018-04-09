@@ -138,7 +138,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
             public void onClick(View v) {
                 if(task.getLongitude()!= null){
                     Toast.makeText(RequesterTaskDetail.this, "The location of the task is already added.", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
                 else{
                     Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);

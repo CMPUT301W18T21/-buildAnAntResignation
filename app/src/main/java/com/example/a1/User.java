@@ -29,7 +29,7 @@ public class User {
     private String gender;
     private String phone;
     private String email;
-    private Uri image;
+    private String image;
 
 
     /**
@@ -58,7 +58,7 @@ public class User {
      * @param email The user's email address.
      * @param image The user's profile picture.
      */
-    public User(String name, String username, String gender, String phone, String email, Uri image){
+    public User(String name, String username, String gender, String phone, String email, String image){
         this.name = name;
         if (username.length() <= 8) this.username = username;
         else this.username = username.subSequence(0,8).toString();
@@ -79,7 +79,7 @@ public class User {
      * @param requestedTasks The user's requested tasks.
      * @param providedTasks The user's provided tasks.
      */
-    public User(String name, String username, String gender, String phone, String email, Uri image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks){
+    public User(String name, String username, String gender, String phone, String email, String image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks){
         this.name = name;
         if (username.length() <= 8) this.username = username;
         else this.username = username.subSequence(0,8).toString();
@@ -103,7 +103,7 @@ public class User {
      * @param providedTasks The user's provided tasks.
      * @param biddedTasks The user's tasks on which he bid.
      */
-    public User(String name, String username, String gender, String phone, String email, Uri image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks, ArrayList<Task> biddedTasks){
+    public User(String name, String username, String gender, String phone, String email, String image,ArrayList<Task> requestedTasks,ArrayList<Task> providedTasks, ArrayList<Task> biddedTasks){
         this.name = name;
         if (username.length() <= 8) this.username = username;
         else this.username = username.subSequence(0,8).toString();
@@ -180,7 +180,7 @@ public class User {
      * Gets the profile image address of the user.
      * @return The user's profile image's address.
      */
-    public Uri getImage(){
+    public String getImage(){
         return image;
     }
 
@@ -258,7 +258,7 @@ public class User {
      * Sets the user's profile image.
      * @param image The address of the image to be set.
      */
-    public void setImage(Uri image){
+    public void setImage(String image){
         this.image = image;
     }
 

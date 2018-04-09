@@ -69,7 +69,7 @@ public class ContactInfo extends AppCompatActivity {
         ((EditText) findViewById(R.id.genderEditText)).setText(user.getGender());
         ((EditText) findViewById(R.id.phoneEditText)).setText(user.getPhone());
         ((EditText) findViewById(R.id.emailEditText)).setText(user.getEmail());
-        ((ImageView) findViewById(R.id.userImage)).setImageURI(user.getImage());
+//        ((ImageView) findViewById(R.id.userImage)).setImageURI(user.getImage());
     }
 
     /**
