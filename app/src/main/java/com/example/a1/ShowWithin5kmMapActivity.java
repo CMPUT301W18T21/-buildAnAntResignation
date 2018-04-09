@@ -107,8 +107,8 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
             Log.i("Now testing","seeeeeeeeeeeeeee");
 
             if(tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null){
-                Log.i("This is my lat","dahsdhkajdashkdja");
-                Log.i("This is my lon","lonnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+                Log.i("This is my lat",tasks.get(i).getLatitude().toString());
+                Log.i("This is my lon",tasks.get(i).getLongitude().toString());
 
                 lat = tasks.get(i).getLatitude();
                 lng = tasks.get(i).getLongitude();

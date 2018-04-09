@@ -33,6 +33,9 @@ public class Provider_bid_task extends AppCompatActivity {
     private String taskname;
     private String username;
     private String currentUser;
+    private User requesterUwantToBid;
+    private User user;
+    private Integer index = 0;
     /**private static ArrayList<String> bid = new ArrayList<>(0); **/
     /**
      * a method that execute every time the activity is shown.
@@ -59,15 +62,19 @@ public class Provider_bid_task extends AppCompatActivity {
 //        Log.d("requested task name",taskname);
 //        Log.d("currentUser",currentUser);
 
-        User requesterUwantToBid = Server.UserController.get(username);  // the user that we want to bid
-        User user = Server.UserController.get(currentUser);   //login user himself
+        requesterUwantToBid = Server.UserController.get(username);  // the user that we want to bid
+        user = Server.UserController.get(currentUser);   //login user himself
 
         ArrayList<Task> taskList = requesterUwantToBid.getRequestedTasks();
+
+        Integer tempI = 0;
         for (Task eachTask: taskList){
             if (eachTask.getTitle().equals(taskname)){
                 task = eachTask;
                 Log.i("show me the name:",taskname);
+                index = tempI;
             }
+            tempI++;
         }
 
         Log.i("give me task name ",task.getTitle());
@@ -90,7 +97,8 @@ public class Provider_bid_task extends AppCompatActivity {
         if (task.getLowestBid() == -1){
             viewlowestbid.setText("No bid");
         } else {
-            viewlowestbid.setText(task.getLowestBid());
+            Integer temLowest = task.getLowestBid();
+            viewlowestbid.setText(temLowest.toString());
         }
         viewstatus.setText(task.getStatus().toString());
 
@@ -134,16 +142,15 @@ public class Provider_bid_task extends AppCompatActivity {
         try{
             int Value = Integer.parseInt(num);
 
-            User user = Server.UserController.get(username);
-            if (user == null){
-                Toast.makeText(Provider_bid_task.this, "User not found!", Toast.LENGTH_SHORT).show();
-                return;
-            }
+            requesterUwantToBid.getRequestedTask(index).addBid(Value);
+            requesterUwantToBid.getRequestedTask(index).addBidder(currentUser);
+
+            Server.UserController.edit(requesterUwantToBid);
 
 
-            task.addBid(Value);
-            task.setBidded();
-            task.addBidder(username);
+            user.getBiddedTasks().add(task);
+            Server.UserController.edit(user);
+
 
         }
         catch(NumberFormatException e){
