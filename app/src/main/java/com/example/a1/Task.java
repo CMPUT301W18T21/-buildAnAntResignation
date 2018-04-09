@@ -10,10 +10,8 @@
  */
 package com.example.a1;
 
-import android.media.Image;
 import android.net.Uri;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -173,6 +171,8 @@ public class Task implements Cloneable{
     public ArrayList<Integer> getBids(){
         return bids;
     }
+
+    public String getBidder(Integer index) {return bidders.get(index);}
 
     /**
      * Add a bid to bid arrayList

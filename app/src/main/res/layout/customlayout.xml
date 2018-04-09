@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView4"
-        android:text="Bids:"
+        android:text="Name:"
         android:textColor="@color/cast_expanded_controller_background_color" />
 
     <TextView
@@ -36,12 +36,22 @@
         android:textColor="@color/cast_expanded_controller_background_color" />
 
     <TextView
-        android:id="@+id/textView_bids"
+        android:id="@+id/textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView_task"
         android:layout_below="@+id/textView_task"
-        android:text="0"
+        android:text="name"
         android:textColor="@color/cast_expanded_controller_background_color" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/textView10"
+        android:text="Status :bidded"
+        android:textColor="@color/cast_expanded_controller_background_color"/>
+
 
 </RelativeLayout>

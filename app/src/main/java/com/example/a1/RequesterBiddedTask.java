@@ -3,6 +3,7 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -49,7 +50,7 @@ public class RequesterBiddedTask extends AppCompatActivity {
         biddedTasks = new ArrayList<>(0);
         ArrayList<Task> allTasks = user.getRequestedTasks();
         for(Task task : allTasks){
-            if (task.getStatus() == BIDDED) biddedTasks.add(task);
+            if (task.getBids().size() > 0 ) biddedTasks.add(task);
         }
 
     }
@@ -70,8 +71,11 @@ public class RequesterBiddedTask extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.customlayout,null);
 
-            ((TextView)view.findViewById(R.id.textView_task)).setText(biddedTasks.get(i).getTitle());
-            ((TextView)view.findViewById(R.id.textView_bids)).setText(Integer.toString(biddedTasks.get(i).getBids().size()));
+            for (Integer k = 0; k < biddedTasks.size();k++) {
+                ((TextView) view.findViewById(R.id.textView_task)).setText(biddedTasks.get(i).getTitle());
+                ((TextView) view.findViewById(R.id.textView_name)).setText(biddedTasks.get(i).getBidder(k));
+                // Log.d("give me name",biddedTasks.get(i));
+            }
             return view;
         }
 
