@@ -103,7 +103,13 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         tasks = Server.TaskController.getAll();
 
         for(int i = 0; i < tasks.size();i++) {
+
+            Log.i("Now testing","seeeeeeeeeeeeeee");
+
             if(tasks.get(i).getLatitude() != null && tasks.get(i).getLongitude() != null){
+                Log.i("This is my lat","dahsdhkajdashkdja");
+                Log.i("This is my lon","lonnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+
                 lat = tasks.get(i).getLatitude();
                 lng = tasks.get(i).getLongitude();
                 double temp1 = lat - CurrentLat;
