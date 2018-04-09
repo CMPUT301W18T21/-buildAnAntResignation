@@ -106,7 +106,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterTaskDetail.this, AddPhoto.class);
-                AddPhoto.setTask(task);
+                //AddPhoto.setTask(task);
                 startActivity(intent);
             }
         });

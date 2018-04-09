@@ -152,6 +152,7 @@ public class DialogSelectBid extends AppCompatActivity {
         loginUser.getRequestedTask(taskIndex).getBidders().clear();
         loginUser.getRequestedTask(taskIndex).getBids().clear();
         loginUser.getRequestedTask(taskIndex).addBid(winnerPrice);
+        loginUser.getRequestedTask(taskIndex).setProviderName(winner);
         loginUser.getRequestedTask(taskIndex).setAssigned();
         Server.UserController.edit(loginUser);
 
