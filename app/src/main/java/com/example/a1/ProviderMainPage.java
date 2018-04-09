@@ -55,9 +55,6 @@ public class ProviderMainPage extends AppCompatActivity {
     private ArrayList<User> matchUsers = new ArrayList<>();
 
 
-    //ArrayAdapter<String> adapter;
-
-
     /**
      * a method that execute every time the activity is shown.
      *
@@ -77,27 +74,7 @@ public class ProviderMainPage extends AppCompatActivity {
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
         showContent.setAdapter(customAdapter);
 
-
-
-//        keyWords.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String text) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//
-//
-//                customAdapter.getFilter().filter(newText);
-//
-//
-//                return false;
-//            }
-//        });
-
         /**
-         * miss the itemonlclicked
          */
         /**
          * once the button is clicked, it goes to ProviderBiddedTask to view all the tasks bidded by this provider
@@ -361,16 +338,10 @@ public class ProviderMainPage extends AppCompatActivity {
                                             @Override
                                             public void onItemClick(View view) {
                                                 Intent intent = new Intent(ProviderMainPage.this, ProviderBidTask.class);
-                                             //   Bundle taskPack = new Bundle();
-                                               // taskPack.putString("taskName",providerinfos.get(pos).getTask());
-                                               // taskPack.putString("userName",matchUsers.get(pos).getUsername());
-                                               // intent.putExtra("taskBundle", taskPack);
                                                 intent.putExtra("taskname",providerinfos.get(pos).getTask());
                                                 intent.putExtra("username",matchUsers.get(pos).getUsername());
                                                 intent.putExtra("currentuser",currentUser);
                                                 startActivity(intent);
-
-
 
                                             }
 
@@ -385,66 +356,7 @@ public class ProviderMainPage extends AppCompatActivity {
             providerinfos.addAll(newlist);
             this.notifyDataSetChanged();
         }
-//        @Override
-//        public Filter getFilter() {
-//
-//            if (filter == null)
-//            {
-//                filter = new CustomFilter();
-//            }
-//
-//            return filter;
-//        }
-
-//        class CustomFilter extends Filter {
-//
-//            @Override
-//            protected FilterResults performFiltering(CharSequence constraint) {
-//
-//                FilterResults results = new FilterResults();
-//
-//                if (constraint != null && constraint.length() > 0) {
-//                    constraint = constraint.toString().toLowerCase();
-//
-//                    ArrayList<ProviderAdaptInfo> filters = new ArrayList<>();
-//
-//                    for (int i = 0; i < filterList.size(); i++) {
-//                        if (filterList.get(i).getTask().toLowerCase().contains(constraint)) {
-//                            ProviderAdaptInfo tempinfo = new ProviderAdaptInfo(filterList.get(i).getName(),
-//                                    filterList.get(i).getTask(),
-//                                    filterList.get(i).getStatus(),
-//                                    filterList.get(i).getLowestbid());
-//                            filters.add(tempinfo);
-//                        }
-//                    }
-//
-//                    results.count = filters.size();
-//                    results.values = filters;
-//
-//                } else {
-//
-//                    results.count = filterList.size();
-//                    results.values = filterList;
-//                }
-//
-//
-//                return results;
-//            }
-//
-//            @Override
-//            protected void publishResults(CharSequence constraint, FilterResults results) {
-//
-//                providerinfos = (ArrayList<ProviderAdaptInfo>) results.values;
-//                notifyDataSetChanged();
-//
-//            }
-//        }
-
-
     }
-
-
-
 }
 
 

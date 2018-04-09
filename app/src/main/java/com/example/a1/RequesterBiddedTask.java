@@ -84,7 +84,6 @@ public class RequesterBiddedTask extends AppCompatActivity {
             for (Integer k = 0; k < biddedTasks.size();k++) {
                 ((TextView) view.findViewById(R.id.textView_task)).setText(biddedTasks.get(i).getTitle());
                 ((TextView) view.findViewById(R.id.textView_name)).setText(biddedTasks.get(i).getBidder(k));
-                // Log.d("give me name",biddedTasks.get(i));
             }
             return view;
         }
