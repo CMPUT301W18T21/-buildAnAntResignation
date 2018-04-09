@@ -67,11 +67,8 @@ public class DialogSelectBid extends AppCompatActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DialogSelectBid.this,RequesterTaskDetail.class);
                 AcceptHandler();
-                intent.putExtra("username",username);
-                intent.putExtra("taskIndex",taskIndex);
-                startActivity(intent);
+                finish();
 
             }
         });
@@ -81,12 +78,8 @@ public class DialogSelectBid extends AppCompatActivity {
         decline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(DialogSelectBid.this,RequesterTaskDetail.class);
                 DeclineHandler();
-                intent.putExtra("username",username);
-                intent.putExtra("taskIndex",taskIndex);
-                startActivity(intent);
+                finish();
 
             }
         });

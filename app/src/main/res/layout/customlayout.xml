@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView4"
-        android:text="Name:"
+        android:text="Provider:"
         android:textColor="@color/cast_expanded_controller_background_color" />
 
     <TextView
