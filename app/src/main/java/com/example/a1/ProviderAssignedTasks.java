@@ -90,22 +90,6 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter();
         ListView providerassignedList = findViewById(R.id.p_assigned_list);
         providerassignedList.setAdapter(customAdapter);
-        setupBackButton();
-
-    }
-    private void setupBackButton() {
-        /** when add button is clicked jump back to requester's main page
-         */
-
-        Button BackButton = (Button) findViewById(R.id.viewBack);
-        BackButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(ProviderAssignedTasks.this, RequesterMain.class);
-                startActivityForResult(intent, 1);
-
-            }
-        });
 
     }
 
