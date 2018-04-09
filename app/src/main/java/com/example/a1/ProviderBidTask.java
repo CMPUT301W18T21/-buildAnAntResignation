@@ -135,29 +135,42 @@ public class ProviderBidTask extends AppCompatActivity {
      */
     public void onButtonClick(View view){
         String num = ((EditText) findViewById(R.id.BidValue)).getText().toString();
-        try{
-            int Value = Integer.parseInt(num);
+        if(requesterUwantToBid.getRequestedTask(index).getBidders().size() != 0) {
+            for (int i = 0; i <= requesterUwantToBid.getRequestedTask(index).getBidders().size(); i++) {
+                Log.i("bidders is ", requesterUwantToBid.getRequestedTask(index).getBidder(i));
+                if (requesterUwantToBid.getRequestedTask(index).getBidder(i) == currentUser) {
+                    Toast.makeText(ProviderBidTask.this, "Sorry you already made a bid on this task", Toast.LENGTH_SHORT).show();
 
-            requesterUwantToBid.getRequestedTask(index).addBid(Value);
-            requesterUwantToBid.getRequestedTask(index).addBidder(currentUser);
+                    return;
+                }
+            }
+        }
+        else {
+            try {
+                int Value = Integer.parseInt(num);
 
-            Server.UserController.edit(requesterUwantToBid);
+                requesterUwantToBid.getRequestedTask(index).addBid(Value);
+                requesterUwantToBid.getRequestedTask(index).addBidder(currentUser);
 
-            task.setBidded();
-            user.getBiddedTasks().add(task);
-            Server.UserController.edit(user);
+                Server.UserController.edit(requesterUwantToBid);
 
+                task.setBidded();
+                user.getBiddedTasks().add(task);
+                Server.UserController.edit(user);
+
+
+            }
+
+            catch(NumberFormatException e){
+                e.printStackTrace();
+                Toast.makeText(ProviderBidTask.this, "Sorry. Invalid Input", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e){
+                e.printStackTrace();
+                Toast.makeText(ProviderBidTask.this, "Sorry. Error occur", Toast.LENGTH_SHORT).show();
+            }
 
         }
-        catch(NumberFormatException e){
-            e.printStackTrace();
-            Toast.makeText(ProviderBidTask.this, "Sorry. Invalid Input", Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            Toast.makeText(ProviderBidTask.this, "Sorry. Error occur", Toast.LENGTH_SHORT).show();
-        }
-
     }
 
 
