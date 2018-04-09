@@ -132,7 +132,7 @@ public class ProviderBidTask extends AppCompatActivity {
 
             Server.UserController.edit(requesterUwantToBid);
 
-
+            task.setBidded();
             user.getBiddedTasks().add(task);
             Server.UserController.edit(user);
 
