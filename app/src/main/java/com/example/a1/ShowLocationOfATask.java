@@ -21,9 +21,6 @@ import java.util.ArrayList;
 
 public class ShowLocationOfATask extends AppCompatActivity implements OnMapReadyCallback{
 
-    private String username;
-    private String taskname;
-    public Bundle getBundle = null;
     private static Task task;
     private double lat;
     private double lng;

@@ -43,7 +43,6 @@
         <activity android:name=".RequesterTaskDetail" />
         <activity android:name=".Register" />
         <activity android:name=".RequesterAssignedTasks" />
-        <activity android:name=".ShowWithin5km"/>
         <activity android:name=".ShowWithin5kmMapActivity"/>
         <activity android:name=".ProviderBiddedTask"/>
         <activity android:name=".ShowLocationOfATask"/>

@@ -14,9 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class AddPhoto extends AppCompatActivity {
-    ImageView imageToUpload;
-    Button AddButton;
-    Button SaveButton;
+
     private static Task task;
 
 
@@ -27,7 +25,6 @@ public class AddPhoto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_photo);
 
-        imageToUpload = (ImageView)findViewById(R.id.imageView);
 //        imageToUpload.setImageURI(task.getPhoto());
 
         setupSelectImage();
@@ -37,7 +34,7 @@ public class AddPhoto extends AppCompatActivity {
 
     private void setupSelectImage() {
 
-        AddButton = (Button)findViewById(R.id.viewAdd);
+        Button AddButton = (Button)findViewById(R.id.viewAdd);
         AddButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -55,13 +52,14 @@ public class AddPhoto extends AppCompatActivity {
         super.onActivityResult(requestCode,resultCode,data);
         if (requestCode==RESULT_LOAD_IMAGE && resultCode == RESULT_OK && data!=null){
             Uri selectedImage = data.getData();
+            ImageView imageToUpload = (ImageView)findViewById(R.id.imageView);
             imageToUpload.setImageURI(selectedImage);
 //            task.setPhoto(selectedImage);
         }
     }
 
     private void setSaveButton(){
-        SaveButton =(Button) findViewById(R.id.save_button);
+        Button SaveButton =(Button) findViewById(R.id.save_button);
         SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
