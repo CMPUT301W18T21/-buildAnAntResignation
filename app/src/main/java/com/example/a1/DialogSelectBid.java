@@ -21,9 +21,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * this dialog is for RequesterTaskDetail
+ * This is a dialog for RequesterTaskDetail.
+ * It allows the user to accept or decline a selected bid.
  */
-
 public class DialogSelectBid extends AppCompatActivity {
 
     private Task task;
@@ -31,10 +31,10 @@ public class DialogSelectBid extends AppCompatActivity {
     private Integer BidderPosition;
     private Integer taskIndex;
 
- //   private ArrayList<String> testcase = new ArrayList<String>();
-
-
     @Override
+    /**
+     * Occurs every time the dialog is shown.
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_select_bid);
@@ -92,7 +92,9 @@ public class DialogSelectBid extends AppCompatActivity {
         });
     }
 
-    //public static void setTask2(Task task){DialogSelectBid.task = task;}
+    /**
+     * Handles bid acceptance.
+     */
     private void AcceptHandler(){
 
         User loginUser = Server.UserController.get(username);
@@ -172,7 +174,9 @@ public class DialogSelectBid extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Handles bid declining.
+     */
     private void DeclineHandler (){
         User loginUser = Server.UserController.get(username);
         String requesterTaskTitle = loginUser.getRequestedTask(taskIndex).getTitle();

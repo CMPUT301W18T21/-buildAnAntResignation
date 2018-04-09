@@ -14,9 +14,9 @@ import android.view.View;
 
 
 /**
+ * An interface for the pmpViewHolder.
  * Created by Alex on 2018-03-19.
  */
-
 public interface pmpItemClickListener {
 
     void onItemClick(View v);

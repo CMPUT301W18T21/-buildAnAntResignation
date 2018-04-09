@@ -21,6 +21,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+
+/**
+ * A log in activity for the user.
+ * here a user can log in, or go to the Register activity to create an account.
+ */
 public class Login extends AppCompatActivity {
 
     private String username;

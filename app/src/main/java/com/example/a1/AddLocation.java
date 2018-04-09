@@ -26,13 +26,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/** this is to add location of a task **/
+
 
 /**
  * Created by k-h on 2018-04-05.
  */
 
-
+/** this is to add location of a task **/
 public class AddLocation extends AppCompatActivity{
 
     private TextView txtCoord;

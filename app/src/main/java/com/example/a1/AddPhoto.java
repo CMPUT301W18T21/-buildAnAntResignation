@@ -34,7 +34,6 @@ import java.io.ByteArrayOutputStream;
  * Display the photo of task
  * User can Upload  photo from gallery
  */
-
 public class AddPhoto extends AppCompatActivity {
     ImageView imageToUpload;
     Button AddButton;
