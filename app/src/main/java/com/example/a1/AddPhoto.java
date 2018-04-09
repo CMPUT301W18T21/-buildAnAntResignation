@@ -65,8 +65,8 @@ public class AddPhoto extends AppCompatActivity {
         SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RequesterTaskDetail.setTask(task);
-                finish();
+                Intent intent = new Intent(AddPhoto.this,RequesterTaskDetail.class);
+                startActivity(intent);
             }
         });
     }

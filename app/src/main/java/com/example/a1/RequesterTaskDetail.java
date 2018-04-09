@@ -133,12 +133,20 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
      */
     private void setupAddLocationButton(){
-        Button AddLocation = (Button) findViewById(R.id.AddLocation_B);
-        AddLocation.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.AddLocation_B)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
-                //startActivity(intent);
+                if(task.getLongitude()!= null){
+                    Toast.makeText(RequesterTaskDetail.this, "The location of the task is already added.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else{
+                    Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
+
+                    AddLocation.setTask(task);
+                    intent.putExtra("username",username);
+                    startActivityForResult(intent, 1);
+                }
             }
         });
     }

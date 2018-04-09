@@ -128,6 +128,7 @@ public class Provider_bid_task extends AppCompatActivity {
 
             listView.setAdapter(adapter);
         }
+        setupMapButton();
 
     }
 
@@ -168,13 +169,14 @@ public class Provider_bid_task extends AppCompatActivity {
         Map.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(Provider_bid_task.this,ShowLocationOfATask.class);
-                Bundle taskPackage = new Bundle();
-                taskPackage.putString("taskName",taskname);
-                taskPackage.putString("userName",username);
-                intent.putExtra("taskBundle", taskPackage);
+                Intent intent = new Intent(Provider_bid_task.this,ShowLocationOfATask.class);
+//                taskPackage.putString("taskName",taskname);
+//                taskPackage.putString("userName",username);
+                intent.putExtra("taskname", taskname);
+                intent.putExtra("requesterName",username);
+
                 startActivity(intent);
-                */
+
             }
         });
     }

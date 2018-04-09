@@ -46,6 +46,7 @@
         <activity android:name=".ShowWithin5km"/>
         <activity android:name=".ShowWithin5kmMapActivity"/>
         <activity android:name=".ProviderBiddedTask"/>
+        <activity android:name=".ShowLocationOfATask"/>
         <activity android:name=".Provider_bid_task"/>
         <activity android:name="ProviderAssignedTasks"/>
         <activity android:name=".DialogChangeStatus"
