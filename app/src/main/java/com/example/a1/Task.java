@@ -185,6 +185,10 @@ public class Task implements Cloneable{
         bidders.add(username);
     }
 
+    public void deleteBid(int index) {bids.remove(index);}
+
+    public void deleteBidder(int index) {bidders.remove(index);}
+
     /**
      * the following three methods change task's status
      */

@@ -3,6 +3,7 @@ package com.example.a1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class RequesterTaskDetail extends AppCompatActivity {
 
-    private static Task task;
+    private Task task;
     private static String username;
     private static ArrayAdapter<Integer> adapter;
     private static ArrayList<Integer> bids;
@@ -29,6 +30,14 @@ public class RequesterTaskDetail extends AppCompatActivity {
         Intent intent = new Intent();
         intent = getIntent();
         username = intent.getStringExtra("username");
+        final Integer taskIndex = intent.getIntExtra("taskIndex",999);
+
+        Log.d("Give me taskIndex",taskIndex.toString());
+
+        User user = Server.UserController.get(username);
+        task = user.getRequestedTask(taskIndex);
+
+
 
 
         EditText viewtitle =(EditText)findViewById(R.id.titleEditText);
@@ -63,7 +72,10 @@ public class RequesterTaskDetail extends AppCompatActivity {
 
                 //Bid bid = (Bid)adapter.getItemAtPosition(position);
                 Intent intent = new Intent(getApplicationContext(),DialogSelectBid.class);
-
+           //     DialogSelectBid.setTask2(task);
+                intent.putExtra("position",position);
+                intent.putExtra("username",username);
+                intent.putExtra("taskIndex",taskIndex);
                 startActivity(intent);
             }
         });
@@ -75,9 +87,9 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * Sets the task who's info will be displayed
      * @param task Task to be displayed.
      */
-    public static void setTask(Task task){
-        RequesterTaskDetail.task = task;
-    }
+//    public static void setTask(Task task){
+//        RequesterTaskDetail.task = task;
+//    }
 
 
 
