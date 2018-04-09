@@ -132,7 +132,7 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
                 if (distance <= 5) {
                     LatLng Tasklocation = new LatLng(lat, lng);
                     googleMap.addMarker(new MarkerOptions().position(Tasklocation).title(tasks.get(i).getTitle()));
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(Tasklocation));
+
                 }
             }
 
