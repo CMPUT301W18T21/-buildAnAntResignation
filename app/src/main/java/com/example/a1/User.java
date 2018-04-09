@@ -1,5 +1,5 @@
 /*
- * ContactInfo
+ * User
  *
  * CMPUT301W18T21
  *

@@ -1,5 +1,5 @@
 /*
- * ContactInfo
+ * TaskRequest
  *
  * CMPUT301W18T21
  *

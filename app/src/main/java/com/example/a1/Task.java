@@ -1,9 +1,9 @@
 /*
- * ContactInfo
+ * Task
  *
  * CMPUT301W18T21
  *
- * March 10, 2018
+ * April 9, 2018
  *
  * Copyright (c) CMPUT301W18T21
  *
@@ -205,15 +205,27 @@ public class Task implements Cloneable{
     public void deleteBidder(int index) {bidders.remove(index);}
 
     /**
-     * the following three methods change task's status
+     * Sets teh task's status to BIDDED.
      */
     public void setBidded(){
         this.status = Status.BIDDED;
     }
+
+    /**
+     * Sets teh task's status to ASSIGNED.
+     */
     public void setAssigned(){
         this.status = Status.ASSIGNED;
     }
+
+    /**
+     * Sets teh task's status to REQUESTED.
+     */
     public void setRequested(){this.status = Status.REQUESTED;}
+
+    /**
+     * Sets teh task's status to DONE.
+     */
     public void setDone(){
         this.status =  Status.DONE;
     }

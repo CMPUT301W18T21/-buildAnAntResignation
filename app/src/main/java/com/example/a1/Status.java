@@ -1,5 +1,5 @@
 /*
- * ContactInfo
+ * Status
  *
  * CMPUT301W18T21
  *

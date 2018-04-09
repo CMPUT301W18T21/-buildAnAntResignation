@@ -1,9 +1,9 @@
 /*
- * ContactInfo
+ * MainActivity
  *
  * CMPUT301W18T21
  *
- * March 10, 2018
+ * April 9, 2018
  *
  * Copyright (c) CMPUT301W18T21
  *
