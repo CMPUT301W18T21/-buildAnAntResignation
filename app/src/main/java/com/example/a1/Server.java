@@ -11,11 +11,8 @@
 
 package com.example.a1;
 
-import android.os.AsyncTask;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
-import java.security.Provider;
 import java.util.ArrayList;
 
 /**
@@ -128,7 +125,7 @@ public class Server {
         public static ArrayList<User> getAll(){
             ArrayList<User> users = new ArrayList<>(0);
             String search_query = "{\"query\": { \"match\":{\"_type\":\"user\" }}}";
-            UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
+            UserElasticSearchController.QueryTask queryTaskName = new UserElasticSearchController.QueryTask();
             queryTaskName.execute(search_query);
 
             try {

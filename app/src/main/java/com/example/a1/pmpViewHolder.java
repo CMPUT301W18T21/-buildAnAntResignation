@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 public class pmpViewHolder implements View.OnClickListener {
 
-    TextView textView_task;
-    TextView textView_username;
-    TextView textView_lowestBid;
-    TextView textView_status;
+    public TextView textView_task;
+    public TextView textView_username;
+    public TextView textView_lowestBid;
+    public TextView textView_status;
 
-    pmpItemClickListener itemClickListener;
+    public pmpItemClickListener itemClickListener;
 
 
     public pmpViewHolder(View v) {

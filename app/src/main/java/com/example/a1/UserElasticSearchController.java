@@ -30,6 +30,16 @@ public class UserElasticSearchController {
     private static final String SEARCH_INDEX = "cmput301w18t21";
     private static final String SEARCH_TYPE = "user";
 
+    public static void verifySettings() {
+        if (client == null) {
+            DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");
+            DroidClientConfig config = builder.build();
+
+            JestClientFactory factory = new JestClientFactory();
+            factory.setDroidClientConfig(config);
+            client = (JestDroidClient) factory.getObject();
+        }
+    }
 
     public static class AddNewUserProfileTask extends AsyncTask<User, Void, Void> {
 
@@ -121,18 +131,6 @@ public class UserElasticSearchController {
         }
     }
 
-
-    public static void verifySettings() {
-        if (client == null) {
-            DroidClientConfig.Builder builder = new DroidClientConfig.Builder("http://cmput301.softwareprocess.es:8080");
-            DroidClientConfig config = builder.build();
-
-            JestClientFactory factory = new JestClientFactory();
-            factory.setDroidClientConfig(config);
-            client = (JestDroidClient) factory.getObject();
-        }
-    }
-
     public static class DeleteUserTask extends AsyncTask<User,Void,Void> {
 
         @Override
@@ -163,7 +161,7 @@ public class UserElasticSearchController {
 
     }
 
-    public static class queryTask extends AsyncTask<String,Void,ArrayList<User>> {
+    public static class QueryTask extends AsyncTask<String,Void,ArrayList<User>> {
 
         @Override
         protected ArrayList<User> doInBackground(String... search_parameter) {

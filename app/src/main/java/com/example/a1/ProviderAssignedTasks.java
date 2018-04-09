@@ -34,7 +34,6 @@ import java.util.ArrayList;
  */
 public class ProviderAssignedTasks extends AppCompatActivity {
 
-    private Button BackButton;
     private String username;
     private User user;
 
@@ -85,7 +84,7 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         /** when add button is clicked jump back to requester's main page
          */
 
-        BackButton = (Button) findViewById(R.id.viewBack);
+        Button BackButton = (Button) findViewById(R.id.viewBack);
         BackButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {

@@ -24,9 +24,7 @@ import org.json.JSONObject;
 
 public class AddLocation extends AppCompatActivity{
 
-    Button btnShowCoord;
-    EditText edtAddress;
-    TextView txtCoord;
+    private TextView txtCoord;
 
 
     private static Task task;
@@ -41,13 +39,13 @@ public class AddLocation extends AppCompatActivity{
         intent = getIntent();
         username = intent.getStringExtra("username");
 
-        btnShowCoord = (Button)findViewById(R.id.btnShowCoordinates);
-        edtAddress = (EditText)findViewById(R.id.edtAddress);
+        Button btnShowCoord = (Button)findViewById(R.id.btnShowCoordinates);
         txtCoord = (TextView)findViewById(R.id.txtCoordinates);
 
         btnShowCoord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                EditText edtAddress = (EditText)findViewById(R.id.edtAddress);
                 new GetCoordinates().execute(edtAddress.getText().toString().replace(" ","+"));
             }
         });
@@ -60,7 +58,7 @@ public class AddLocation extends AppCompatActivity{
 
 
     private class GetCoordinates extends AsyncTask<String,Void,String> {
-        ProgressDialog dialog = new ProgressDialog(AddLocation.this);
+        private ProgressDialog dialog = new ProgressDialog(AddLocation.this);
 
         @Override
         protected void onPreExecute() {

@@ -14,7 +14,6 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -24,11 +23,6 @@ import java.util.ArrayList;
 
 public class ProviderMainPage extends AppCompatActivity {
 
-    private ListView showContent;
-    private SearchView keyWords;
-    private Button myTask;
-    private Button viewOnMap;
-    private Button searchButton;
     private EditText searchBox;
     private String keyword;
     private String currentUser;
@@ -42,11 +36,11 @@ public class ProviderMainPage extends AppCompatActivity {
     /*********** added by JiaHong **********/
 
 
-    ArrayList<String> name_test = new ArrayList<>();
-    ArrayList<String> task_test = new ArrayList<>();
-    ArrayList<String> status_test = new ArrayList<>();
-    ArrayList<String> lowest_test = new ArrayList<>();
-    ArrayList<User> matchUsers = new ArrayList<>();
+    private ArrayList<String> name_test = new ArrayList<>();
+    private ArrayList<String> task_test = new ArrayList<>();
+    private ArrayList<String> status_test = new ArrayList<>();
+    private ArrayList<String> lowest_test = new ArrayList<>();
+    private ArrayList<User> matchUsers = new ArrayList<>();
 
 
     //ArrayAdapter<String> adapter;
@@ -60,7 +54,7 @@ public class ProviderMainPage extends AppCompatActivity {
         currentUser = intent.getStringExtra("username");
         final String username = intent.getStringExtra("username");
 
-        showContent = (ListView) findViewById(R.id.p_assigned_list);
+        ListView showContent = (ListView) findViewById(R.id.p_assigned_list);
 
 
         final CustomAdapter customAdapter = new CustomAdapter(this,boundinfo());
@@ -85,11 +79,11 @@ public class ProviderMainPage extends AppCompatActivity {
 //            }
 //        });
 
-/**
- * miss the itemonlclicked
- */
+        /**
+         * miss the itemonlclicked
+         */
 
-        myTask = (Button) findViewById(R.id.myTask);
+        Button myTask = (Button) findViewById(R.id.myTask);
         myTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +107,7 @@ public class ProviderMainPage extends AppCompatActivity {
 //        }
 //        }
 
-        searchButton = (Button) findViewById(R.id.SearchButton);
+        Button searchButton = (Button) findViewById(R.id.SearchButton);
         searchBox = (EditText) findViewById(R.id.SearchBox);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,7 +121,7 @@ public class ProviderMainPage extends AppCompatActivity {
                 matchUsers.clear();
                 String search_query = "{\"query\":{\"match\":{\"requestedTasks.title\":{\"query\":\""+keyword+"\",\"operator\":\""+"and"+"\"}}}}";
 
-                UserElasticSearchController.queryTask queryTaskName = new UserElasticSearchController.queryTask();
+                UserElasticSearchController.QueryTask queryTaskName = new UserElasticSearchController.QueryTask();
                 queryTaskName.execute(search_query);
 
                 try {
@@ -324,7 +318,7 @@ public class ProviderMainPage extends AppCompatActivity {
             holder.setItemClickListener(new pmpItemClickListener() {
                                             @Override
                                             public void onItemClick(View view) {
-                                                Intent intent = new Intent(ProviderMainPage.this, Provider_bid_task.class);
+                                                Intent intent = new Intent(ProviderMainPage.this, ProviderBidTask.class);
                                              //   Bundle taskPack = new Bundle();
                                                // taskPack.putString("taskName",providerinfos.get(pos).getTask());
                                                // taskPack.putString("userName",matchUsers.get(pos).getUsername());

@@ -12,34 +12,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.commons.lang3.ObjectUtils;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ProviderBiddedTask extends AppCompatActivity {
 
     private User user;
-    private Button viewAssigned;
     private String username;
-    /**
-     * @author Yuan
-     */
 
-    /**
-     * Initialize the ProviderBiddedTasks array to store the tasks that the user has bidded
-     * Initialize the ProviderBiddedtasksStatus array to store status of each task that the provider has bidded
-     * Initialize the LowestBids Array to store each task's lowest bid
-     *
-     */
-
-    ArrayList<String> ProviderBiddedTasks = new ArrayList<String>(0);
-    ArrayList<String> ProviderBiddedTasksStatus = new ArrayList<String>(0);
-    ArrayList<Integer>LowestBids=new ArrayList<Integer>(0);
-    ArrayList<String>UserName=new ArrayList<String>(0);
-
-
-
+    private ArrayList<String> providerBiddedTasks = new ArrayList<String>(0);
+    private ArrayList<String> providerBiddedTasksStatus = new ArrayList<String>(0);
+    private ArrayList<Integer> lowestBids =new ArrayList<Integer>(0);
+    private ArrayList<String> usernames =new ArrayList<String>(0);
 
 
     /**
@@ -49,10 +32,10 @@ public class ProviderBiddedTask extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-//        UserName.add("alex");
-//        ProviderBiddedTasks.add("want");
-//        ProviderBiddedTasksStatus.add("bidded");
-//        LowestBids.add(1);
+//        usernames.add("alex");
+//        providerBiddedTasks.add("want");
+//        providerBiddedTasksStatus.add("bidded");
+//        lowestBids.add(1);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bidded_task);
@@ -71,12 +54,11 @@ public class ProviderBiddedTask extends AppCompatActivity {
     }
 
 
-
     private void setupBackButton() {
         /** when back button is clicked jump back to provider main page
          */
 
-        viewAssigned = (Button) findViewById(R.id.back);
+        Button viewAssigned = (Button) findViewById(R.id.back);
         viewAssigned.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -90,12 +72,11 @@ public class ProviderBiddedTask extends AppCompatActivity {
         });
 
     }
+
     /**
      * this method will create an array of staus of tasks that provider has bidded
      * and an array of lowest bids of each task
      */
-
-
     private void getTasksAttri(String username){
 
         user = Server.UserController.get(username);
@@ -114,17 +95,14 @@ public class ProviderBiddedTask extends AppCompatActivity {
                 /**
                  * the status here should be String since it will be set as the content of textView
                  */
-                ProviderBiddedTasks.add(singleTask.getTitle().toString());
-                UserName.add(singleTask.getRequesterName().toString());
-                ProviderBiddedTasksStatus.add(singleTask.getStatus().toString());
-                LowestBids.add(singleTask.getLowestBid());
+                providerBiddedTasks.add(singleTask.getTitle().toString());
+                usernames.add(singleTask.getRequesterName().toString());
+                providerBiddedTasksStatus.add(singleTask.getStatus().toString());
+                lowestBids.add(singleTask.getLowestBid());
 
             }
         }
     }
-
-
-
 
 
     class CustomAdapter extends BaseAdapter {
@@ -132,7 +110,7 @@ public class ProviderBiddedTask extends AppCompatActivity {
         @Override
 
         public int getCount(){
-            return ProviderBiddedTasks.size();
+            return providerBiddedTasks.size();
         }
         @Override
         public Object getItem(int i) {
@@ -153,10 +131,10 @@ public class ProviderBiddedTask extends AppCompatActivity {
             TextView textView_status=(TextView)view.findViewById(R.id.textView_status);
 
             //textView_username.setText(user.getName());
-            textView_username.setText(UserName.get(i));
-            textView_status.setText(ProviderBiddedTasksStatus.get(i));
-            textView_lowestBid.setText(LowestBids.get(i).toString());
-            textView_task.setText(ProviderBiddedTasks.get(i));
+            textView_username.setText(usernames.get(i));
+            textView_status.setText(providerBiddedTasksStatus.get(i));
+            textView_lowestBid.setText(lowestBids.get(i).toString());
+            textView_task.setText(providerBiddedTasks.get(i));
 
 
 
