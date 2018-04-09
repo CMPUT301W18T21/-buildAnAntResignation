@@ -33,7 +33,7 @@ public class Task implements Cloneable{
     private Double latitude;
     private Double longitude;
     private String location;
-    private Uri photo;
+    private String photo;
     private ArrayList<Integer> bids = new ArrayList<>(0);
     private ArrayList<String> bidders = new ArrayList<>(0);
 
@@ -62,7 +62,7 @@ public class Task implements Cloneable{
      * @param status The task's status.
      * @param bids The task's bid.
      */
-    public  Task(String title, String requesterName, String description, String location, Status status, Uri photo, ArrayList<Integer> bids){
+    public  Task(String title, String requesterName, String description, String location, Status status, String photo, ArrayList<Integer> bids){
         this.title = title;
         this.requesterName = requesterName;
         this.description = description;
@@ -85,7 +85,7 @@ public class Task implements Cloneable{
      * @param bids The task's bid.
      *
      */
-    public  Task(String title, String requesterName, String providerName, String description, String location, Status status, Uri photo, ArrayList<Integer> bids){
+    public  Task(String title, String requesterName, String providerName, String description, String location, Status status, String photo, ArrayList<Integer> bids){
         this.title = title;
         this.requesterName = requesterName;
         this.providerName = providerName;
@@ -160,7 +160,7 @@ public class Task implements Cloneable{
      * Gets all photos attached to the task.
      * @return A list of the task's photo's addresses.
      */
-    public Uri getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
@@ -203,7 +203,7 @@ public class Task implements Cloneable{
     public void setRequesterName(String username){this.requesterName = username;}
     public void setProviderName(String username){this.providerName = username;}
     public void setDescription(String description){this.description = description;}
-    public void setPhoto(Uri photo){this.photo = photo;}
+    public void setPhoto(String photo){this.photo = photo;}
 
     public void setLocation(String location){this.location = location;}
 
