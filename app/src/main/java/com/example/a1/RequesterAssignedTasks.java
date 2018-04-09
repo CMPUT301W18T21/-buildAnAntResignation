@@ -123,6 +123,9 @@ public class RequesterAssignedTasks extends AppCompatActivity {
             ((TextView)view.findViewById(R.id.View_Status)).setText(assignedTasksStatus.get(i));
             ((TextView)view.findViewById(R.id.View_Bid)).setText(acceptedBids.get(i).toString());
 
+
+
+
             return view;
         }
 

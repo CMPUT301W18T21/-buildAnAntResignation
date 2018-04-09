@@ -43,7 +43,7 @@ public class ProviderAssignedTasks extends AppCompatActivity {
     private ArrayList<String> titleList = new ArrayList<>(0);
     private ArrayList<String> nameList = new ArrayList<>(0);
     private ArrayList<String> statusList = new ArrayList<>(0);
-    private ArrayList<Integer> acceptBid = new ArrayList<>(0);
+    private ArrayList<String> acceptBid = new ArrayList<>(0);
     private ArrayList<Task>  taskHolder = new ArrayList<>(0);
 
     /**
@@ -69,15 +69,15 @@ public class ProviderAssignedTasks extends AppCompatActivity {
             Integer i = taskHolder.size();
           //  Log.d("show me the length",i.toString());
             for (Task eachtask:taskHolder){
-                titleList.add(eachtask.getTitle());
+                titleList.add("Title is: "+eachtask.getTitle());
                 Log.d("eachtask is ",eachtask.getTitle().toString());
-                nameList.add(eachtask.getRequesterName().toString());
+                nameList.add("Username is: " + eachtask.getRequesterName().toString());
                 Log.d("give me name",eachtask.getRequesterName().toString());
-                statusList.add(eachtask.getStatus().toString());
+                statusList.add("Status is: " + eachtask.getStatus().toString());
                 Log.d("give me status",eachtask.getStatus().toString());
 
                 //----check this part cuz there is no such getter to get proper bid ------------------------------------------
-                acceptBid.add(eachtask.getBids().get(0));
+                acceptBid.add("Accepted bid: $" + eachtask.getBids().get(0));
      //             Log.d("show me the task", );
 
           }
@@ -134,17 +134,21 @@ public class ProviderAssignedTasks extends AppCompatActivity {
          */
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            view = getLayoutInflater().inflate(R.layout.requester_assigned_task_ifo,null);
-            TextView textView_task=(TextView)view.findViewById(R.id.View_Task);
-            TextView textView_username=(TextView)view.findViewById(R.id.View_User_Name);
-            TextView textView_lowestBid=(TextView)view.findViewById(R.id.View_Bid);
-            TextView textView_status=(TextView)view.findViewById(R.id.View_Status);
-
-            //textView_username.setText(user.getName());
-            textView_username.setText(nameList.get(i));
-            textView_status.setText(statusList.get(i));
-            textView_lowestBid.setText(acceptBid.get(i).toString());
-            textView_task.setText(titleList.get(i));
+            view = getLayoutInflater().inflate(R.layout.provider_assigned_task_ifo,null);
+//            TextView textView_task=(TextView)view.findViewById(R.id.View_Task);
+//            TextView textView_username=(TextView)view.findViewById(R.id.View_User_Name);
+//            TextView textView_lowestBid=(TextView)view.findViewById(R.id.View_Bid);
+//            TextView textView_status=(TextView)view.findViewById(R.id.View_Status);
+//
+//            //textView_username.setText(user.getName());
+//            textView_username.setText(nameList.get(i));
+//            textView_status.setText(statusList.get(i));
+//            textView_lowestBid.setText(acceptBid.get(i).toString());
+//            textView_task.setText(titleList.get(i));
+            ((TextView)view.findViewById(R.id.View_Task)).setText(titleList.get(i));
+            ((TextView)view.findViewById(R.id.View_User_Name)).setText(nameList.get(i));
+            ((TextView)view.findViewById(R.id.View_Status)).setText(statusList.get(i));
+            ((TextView)view.findViewById(R.id.View_Bid)).setText(acceptBid.get(i).toString());
 
 
 
