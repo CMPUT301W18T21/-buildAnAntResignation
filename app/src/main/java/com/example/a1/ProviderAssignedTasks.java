@@ -123,16 +123,6 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.provider_assigned_task_ifo,null);
-//            TextView textView_task=(TextView)view.findViewById(R.id.View_Task);
-//            TextView textView_username=(TextView)view.findViewById(R.id.View_User_Name);
-//            TextView textView_lowestBid=(TextView)view.findViewById(R.id.View_Bid);
-//            TextView textView_status=(TextView)view.findViewById(R.id.View_Status);
-//
-//            //textView_username.setText(user.getName());
-//            textView_username.setText(nameList.get(i));
-//            textView_status.setText(statusList.get(i));
-//            textView_lowestBid.setText(acceptBid.get(i).toString());
-//            textView_task.setText(titleList.get(i));
             ((TextView)view.findViewById(R.id.View_Task)).setText(titleList.get(i));
             ((TextView)view.findViewById(R.id.View_User_Name)).setText(nameList.get(i));
             ((TextView)view.findViewById(R.id.View_Status)).setText(statusList.get(i));

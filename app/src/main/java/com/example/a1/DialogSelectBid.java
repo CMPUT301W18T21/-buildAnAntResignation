@@ -41,12 +41,6 @@ public class DialogSelectBid extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-//        testcase.add("a");
-//        testcase.add("b");
-//        testcase.add("c");
-//        testcase.add("d");
-//        testcase.add("e");
-
 
         BidderPosition = intent.getIntExtra("position",999);
         username = intent.getStringExtra("username");
@@ -203,12 +197,6 @@ public class DialogSelectBid extends AppCompatActivity {
         provider.getBiddedTasks().remove(marker);
         Server.UserController.edit(provider);
 
-
-//        Log.d("Before remove",testcase.toString());
-//        Integer removetest = 3;
-//        int re = Integer.parseInt(removetest.toString());
-//        testcase.remove(removetest);
-//        Log.d("After remove",testcase.toString());
 
 
 

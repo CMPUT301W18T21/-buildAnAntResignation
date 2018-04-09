@@ -46,10 +46,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-//        usernames.add("alex");
-//        providerBiddedTasks.add("want");
-//        providerBiddedTasksStatus.add("bidded");
-//        lowestBids.add(1);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bidded_task);
@@ -154,7 +150,6 @@ public class ProviderBiddedTask extends AppCompatActivity {
             TextView textView_lowestBid=(TextView)view.findViewById(R.id.textView_lowestBid);
             TextView textView_status=(TextView)view.findViewById(R.id.textView_status);
 
-            //textView_username.setText(user.getName());
             textView_username.setText(usernames.get(i));
             textView_status.setText(providerBiddedTasksStatus.get(i));
             textView_lowestBid.setText(lowestBids.get(i).toString());
