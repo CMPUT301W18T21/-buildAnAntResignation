@@ -65,14 +65,14 @@ public class AddPhoto extends AppCompatActivity {
         SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddPhoto.this, RequesterTaskDetail.class);
-                startActivity(intent);
+                RequesterTaskDetail.setTask(task);
+                finish();
             }
         });
     }
 
 
-    public static void setTask1(Task task){ AddPhoto.task = task; }
+    public static void setTask(Task task){ AddPhoto.task = task; }
 
 
 
