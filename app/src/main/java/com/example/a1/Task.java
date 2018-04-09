@@ -174,6 +174,8 @@ public class Task implements Cloneable{
 
     public String getBidder(Integer index) {return bidders.get(index);}
 
+    public ArrayList<String> getBidders() {return bidders;}
+
     /**
      * Add a bid to bid arrayList
      */

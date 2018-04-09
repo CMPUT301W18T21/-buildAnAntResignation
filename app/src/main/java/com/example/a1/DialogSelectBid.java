@@ -21,7 +21,7 @@ public class DialogSelectBid extends AppCompatActivity {
     private Integer taskIndex;
 
 
-    private ArrayList<String> testcase = new ArrayList<String>();
+ //   private ArrayList<String> testcase = new ArrayList<String>();
 
 
     @Override
@@ -31,11 +31,11 @@ public class DialogSelectBid extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        testcase.add("a");
-        testcase.add("b");
-        testcase.add("c");
-        testcase.add("d");
-        testcase.add("e");
+//        testcase.add("a");
+//        testcase.add("b");
+//        testcase.add("c");
+//        testcase.add("d");
+//        testcase.add("e");
 
 
         BidderPosition = intent.getIntExtra("position",999);
@@ -79,6 +79,15 @@ public class DialogSelectBid extends AppCompatActivity {
     }
 
     //public static void setTask2(Task task){DialogSelectBid.task = task;}
+    private void AcceptHandler(){
+
+        User loginUser = Server.UserController.get(username);
+        Task acceptedTask = loginUser.getRequestedTask(taskIndex);
+        ArrayList<String> lostBidders = acceptedTask.getBidders();
+
+    }
+
+
     private void DeclineHandler (){
         User loginUser = Server.UserController.get(username);
         String requesterTaskTitle = loginUser.getRequestedTask(taskIndex).getTitle();

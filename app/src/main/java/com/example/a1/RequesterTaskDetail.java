@@ -73,6 +73,7 @@ public class RequesterTaskDetail extends AppCompatActivity {
                 //Bid bid = (Bid)adapter.getItemAtPosition(position);
                 Intent intent = new Intent(getApplicationContext(),DialogSelectBid.class);
            //     DialogSelectBid.setTask2(task);
+                //position of bidder
                 intent.putExtra("position",position);
                 intent.putExtra("username",username);
                 intent.putExtra("taskIndex",taskIndex);
