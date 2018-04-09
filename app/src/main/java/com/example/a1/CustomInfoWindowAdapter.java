@@ -12,6 +12,12 @@ import com.google.android.gms.maps.model.Marker;
  * Created by k-h on 2018-04-03.
  */
 
+/**
+ * REFERENCE:
+ * Github link: https://github.com/mitchtabian/Google-Maps-Google-Places/tree/963be21e8f976c1a261b28f8e95fadb3ec83ce36
+ *
+ */
+
 public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
     private final View mWindow;

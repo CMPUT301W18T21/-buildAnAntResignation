@@ -14,6 +14,11 @@ public class Register extends AppCompatActivity {
 
     private User user;
 
+    /**
+     * a method that execute every time the activity is shown.
+     * this method captures the information entered by the user and then uploads it to the server.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

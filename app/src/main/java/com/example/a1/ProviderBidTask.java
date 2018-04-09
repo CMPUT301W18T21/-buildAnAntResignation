@@ -32,8 +32,13 @@ public class ProviderBidTask extends AppCompatActivity {
     @Override
     /**
      * a method that execute every time the activity is shown.
+     * this method captures the intent which is passed from ProviderMainPage and then displays the selected task information
+     * to the screen
+     * for the bidlist, it is shown using a listview
      * @param savedInstanceState
      */
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_bid_task);
@@ -143,6 +148,11 @@ public class ProviderBidTask extends AppCompatActivity {
         }
 
     }
+
+
+    /**
+     * once the Map button is clicked, it is then go to another screen which shows the location of the task.
+     */
     private void setupMapButton(){
         Button Map = (Button) findViewById(R.id.ViewOnMap);
         Map.setOnClickListener(new View.OnClickListener(){

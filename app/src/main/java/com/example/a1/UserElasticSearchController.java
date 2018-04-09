@@ -41,6 +41,9 @@ public class UserElasticSearchController {
         }
     }
 
+    /**
+     * this method is to add a new user profile to the server.
+     */
     public static class AddNewUserProfileTask extends AsyncTask<User, Void, Void> {
 
         @Override
@@ -74,6 +77,9 @@ public class UserElasticSearchController {
         }
     }
 
+    /**
+     * this method is to check fi the selected user is exist in the server.
+     */
     public static class CheckUserProfileExistTask extends AsyncTask<String, Void, Boolean> {
 
         @Override
@@ -101,6 +107,9 @@ public class UserElasticSearchController {
         }
     }
 
+    /**
+     * this method is to get all the information of this user.
+     */
     public static class GetUserProfileTask extends AsyncTask<String, Void, User> {
 
         @Override
@@ -130,6 +139,10 @@ public class UserElasticSearchController {
             return null;
         }
     }
+
+    /**
+     * this method is to delete the selectd user profile.
+     */
 
     public static class DeleteUserTask extends AsyncTask<User,Void,Void> {
 

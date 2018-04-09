@@ -1,19 +1,9 @@
-/*
- * ContactInfo
- *
- * CMPUT301W18T21
- *
- * March 10, 2018
- *
- * Copyright (c) CMPUT301W18T21
- *
- */
-
 package com.example.a1;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,37 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-/**
- * Represents the requester task detail activity.
- * A list of all imformation of selected task.
- * User can edit the task information like tille, descreption, adding photo ,and addding location.
- */
 
 public class RequesterTaskDetail extends AppCompatActivity {
-    private Button saveButton;
-    private Button backButton;
-    private Button addPhoto;
-    private Button AddLocation;
-    private Button DeleteButton;
 
-    private ListView listView;
-    private EditText viewtitle;
-    private TextView viewstatus;
-    private TextView viewlowsetbid;
-    private  EditText viewdescription;
-
-    private static Task task;
+    private Task task;
     private static String username;
-    private  static String encodedImage;
     private static ArrayAdapter<Integer> adapter;
     private static ArrayList<Integer> bids;
-
-
 
     /**
      * A method that executes every time the activity is shown on screen.
      *
-     * @param savedInstanceState The saved instance state.
+     * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,18 +34,21 @@ public class RequesterTaskDetail extends AppCompatActivity {
         Intent intent = new Intent();
         intent = getIntent();
         username = intent.getStringExtra("username");
+        final Integer taskIndex = intent.getIntExtra("taskIndex",999);
 
-        Intent intent2 = new Intent();
-        intent2 = getIntent();
-        encodedImage = intent2.getStringExtra("encodedImage");
+        Log.d("Give me taskIndex",taskIndex.toString());
+
+        User user = Server.UserController.get(username);
+        task = user.getRequestedTask(taskIndex);
 
 
 
-        viewtitle =(EditText)findViewById(R.id.titleEditText);
-        viewstatus =(TextView)findViewById(R.id.ViewStatus);
-        viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
-        viewdescription =(EditText) findViewById(R.id.descriptionEditText) ;
-        listView =(ListView)findViewById(R.id.bidlist);
+
+        EditText viewtitle =(EditText)findViewById(R.id.titleEditText);
+        TextView viewstatus =(TextView)findViewById(R.id.ViewStatus);
+        TextView viewlowsetbid = (TextView)findViewById(R.id.ViewLowsetBid);
+        EditText viewdescription =(EditText) findViewById(R.id.descriptionEditText) ;
+        ListView listView =(ListView)findViewById(R.id.bidlist);
 
         //put Bids in bidlist
         adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_list_item_1, task.getBids());
@@ -102,7 +76,10 @@ public class RequesterTaskDetail extends AppCompatActivity {
 
                 //Bid bid = (Bid)adapter.getItemAtPosition(position);
                 Intent intent = new Intent(getApplicationContext(),DialogSelectBid.class);
-
+           //     DialogSelectBid.setTask2(task);
+                intent.putExtra("position",position);
+                intent.putExtra("username",username);
+                intent.putExtra("taskIndex",taskIndex);
                 startActivity(intent);
             }
         });
@@ -114,9 +91,9 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * Sets the task who's info will be displayed
      * @param task Task to be displayed.
      */
-    public static void setTask(Task task){
-        RequesterTaskDetail.task = task;
-    }
+//    public static void setTask(Task task){
+//        RequesterTaskDetail.task = task;
+//    }
 
 
 
@@ -124,13 +101,12 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * when Addphoto buton is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
      */
     private void setupAddPhotoButton(){
-        addPhoto = (Button) findViewById(R.id.AddPhoto_B);
+        Button addPhoto = (Button) findViewById(R.id.AddPhoto_B);
         addPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RequesterTaskDetail.this, AddPhoto.class);
-                AddPhoto.setTask1(task);
-                intent.putExtra("username",username);
+                AddPhoto.setTask(task);
                 startActivity(intent);
             }
         });
@@ -143,7 +119,6 @@ public class RequesterTaskDetail extends AppCompatActivity {
     public void onDeleteClick(View view){
 
         Server.TaskController.delete(task);
-        RequesterMain.displayTasks();
         finish();
     }
 
@@ -151,11 +126,11 @@ public class RequesterTaskDetail extends AppCompatActivity {
      * When save button is clicked, save the changes to the task and goes back to Requester Main Screen.
      * @param view The caller view.
      */
+
     public void onSaveClick(View view){
 
         String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString();
         String description = ((EditText) findViewById(R.id.descriptionEditText)).getText().toString();
-
         Task newTask;
         try{
             newTask = (Task) task.clone();
@@ -166,24 +141,31 @@ public class RequesterTaskDetail extends AppCompatActivity {
 
         newTask.setTitle(title);
         newTask.setDescription(description);
-        newTask.setPhoto(encodedImage);
         Server.TaskController.edit(task,newTask);
 
-
-        RequesterMain.displayTasks();
         finish();
     }
 
     /**
      * when AddLocation button is clicked jump from Requester's  Task Detail Screen to AddPhoto screen.
      */
+
+
     private void setupAddLocationButton(){
-        AddLocation = (Button) findViewById(R.id.AddLocation_B);
-        AddLocation.setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.AddLocation_B)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
-                //startActivity(intent);
+                if(task.getLongitude()!= null){
+                    Toast.makeText(RequesterTaskDetail.this, "The location of the task is already added.", Toast.LENGTH_SHORT).show();
+
+                }
+                else{
+                    Intent intent = new Intent(RequesterTaskDetail.this,AddLocation.class);
+
+                    AddLocation.setTask(task);
+                    intent.putExtra("username",username);
+                    startActivityForResult(intent, 1);
+                }
             }
         });
     }

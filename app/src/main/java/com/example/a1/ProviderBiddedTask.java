@@ -29,6 +29,11 @@ public class ProviderBiddedTask extends AppCompatActivity {
      * @author: Yuan
      *
      */
+
+    /**
+     * this method set the contentview to a screen which shows all the bidded tasks bidded by the current provider
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -122,6 +127,13 @@ public class ProviderBiddedTask extends AppCompatActivity {
             return 0;
         }
 
+        /**
+         * this method is for custom listview. in this listview, username,lowestbid,status,and task title will be shown for each task.
+         * @param i
+         * @param view
+         * @param viewGroup
+         * @return
+         */
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.customlayout2,null);

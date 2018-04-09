@@ -107,7 +107,12 @@ public class ContactInfo extends AppCompatActivity {
 
     }
 
-
+    /**
+     * set the selected imnage as the user profile
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);

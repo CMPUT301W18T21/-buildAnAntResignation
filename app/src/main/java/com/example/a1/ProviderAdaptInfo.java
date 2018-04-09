@@ -6,6 +6,11 @@ package com.example.a1;
  * Created by Alex on 2018-03-19.
  */
 
+/**
+ * this class holds the information of every tasks in the listview after searching by a provider.
+ * for more information, please go to ProviderMainPage
+ */
+
 public class ProviderAdaptInfo  {
     private  String name;
     private  String task;

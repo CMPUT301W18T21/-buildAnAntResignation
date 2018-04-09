@@ -78,6 +78,12 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
     }
 
+    /**
+     * setting up the map
+     * after installing the app, the app will ask the user for the permission to get the gps of the device.
+     * once the permission is granted, the camera will then move to the current location.
+     * @param googleMap
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
@@ -178,6 +184,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
 
     }
 
+    /**
+     * initializing all the necessary elements.
+     */
     private void init() {
         Log.d(TAG, "init: initializing");
 
@@ -291,45 +300,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         }
     }
 
-//    private void getDeviceLatandLng() {
-//        if (mLocationPermissionsGranted) {
-//
-//            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//                // TODO: Consider calling
-//                //    ActivityCompat#requestPermissions
-//                // here to request the missing permissions, and then overriding
-//                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-//                //                                          int[] grantResults)
-//                // to handle the case where the user grants the permission. See the documentation
-//                // for ActivityCompat#requestPermissions for more details.
-//                return;
-//            }
-//            Task<Location> location = mFusedLocationProviderClient.getLastLocation();
-//            location.addOnCompleteListener(this,new OnCompleteListener<Location>() {
-//                @Override
-//                public void onComplete(@NonNull Task<Location> task) {
-//                    if(task.isSuccessful()){
-//                        Log.d(TAG, "onComplete: found location!");
-//                        Location currentLocation = task.getResult();
-//
-//                        moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
-//                                DEFAULT_ZOOM,
-//                                "My Location");
-//                        CurrentLat = currentLocation.getLatitude();
-//                        Currentlng = currentLocation.getLongitude();
-//                        Log.i("the detDevice lat is",Double.toString(CurrentLat));
-//                        Log.i("the detDevice lng is",Double.toString(Currentlng));
-//
-//
-//                    }else{
-//                        Log.d(TAG, "onComplete: current location is null");
-//                        Toast.makeText(ShowWithin5kmMapActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            });
-//        }
-//
-//    }
+    /**
+     * this method gets the device location. Then on the map it shows all the tasks within 5km of the current location
+     */
     private void getDeviceLocation(){
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
 
@@ -401,6 +374,12 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         }
     }
 
+    /**
+     * this method is to move the camera to the desired location
+     * @param latLng
+     * @param zoom
+     * @param placeInfo
+     */
     private void MoveCamera(LatLng latLng, float zoom, PlaceInfo placeInfo){
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude );
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
@@ -453,6 +432,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         mapFragment.getMapAsync(ShowWithin5kmMapActivity.this);
     }
 
+    /**
+     * this method is to ask the user's permission of granting the usage of gps.
+     */
     private void getLocationPermission(){
         Log.d(TAG, "getLocationPermission: getting location permissions");
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
@@ -500,6 +482,9 @@ public class ShowWithin5kmMapActivity extends AppCompatActivity implements OnMap
         }
     }
 
+    /**
+     * this is just basically hiding the softkeyboard once the entering is finish.
+     */
     private void hideSoftKeyboard(){
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }

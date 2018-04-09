@@ -1,13 +1,3 @@
-/*
- * ContactInfo
- *
- * CMPUT301W18T21
- *
- * March 10, 2018
- *
- * Copyright (c) CMPUT301W18T21
- *
- */
 package com.example.a1;
 
 import android.content.Intent;
@@ -21,13 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;/**
- * Represents the requester AassignedTask activity.
- * A list of a Requster's Task with status Assignedis displayed here.
- * User can change the status of task from Assigned to Bided and Done
- */
-
-
+import java.util.ArrayList;
 
 public class RequesterAssignedTasks extends AppCompatActivity {
 
@@ -40,11 +24,10 @@ public class RequesterAssignedTasks extends AppCompatActivity {
     private static ArrayList<String> acceptedBids = new ArrayList<>(0);
     private static ArrayList<String> usernames =new ArrayList<>(0);
 
-
     /**
-     * A method that executes every time the activity is shown on screen.
-     *
-     * @param savedInstanceState The saved instance state.
+     * a method that execute every time the activity is shown.
+     * it shows the assigned tasks from the current requester
+     * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,8 +93,10 @@ public class RequesterAssignedTasks extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
     }
+
     /**
-     * A method that executes every time to reload  activity and shown on screen.
+     * when the user click refresh button, the screen will be refreshed to display the newest version.
+     * @param view
      */
     public void onRefreshClick(View view){
         getAssignedTasks();

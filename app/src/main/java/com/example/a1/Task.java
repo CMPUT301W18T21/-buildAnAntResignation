@@ -182,12 +182,25 @@ public class Task implements Cloneable{
     public void addBid(Integer bid){
         bids.add(bid);
     }
+    /**
+     * add the bidder to bidders list.
+     */
 
     public void addBidder(String username){
         bidders.add(username);
     }
 
+    /**
+     * delete a certain bid in the list.
+     * @param index
+     */
+
     public void deleteBid(int index) {bids.remove(index);}
+
+    /**
+     * delete a certain bidder in the list.
+     * @param index
+     */
 
     public void deleteBidder(int index) {bidders.remove(index);}
 
@@ -205,25 +218,72 @@ public class Task implements Cloneable{
         this.status =  Status.DONE;
     }
 
+    /**
+     * setting the title of the task.
+     * @param title
+     */
     public void setTitle(String title){this.title = title;}
+
+    /**
+     * setting the requestername of the task.
+     * @param username
+     */
     public void setRequesterName(String username){this.requesterName = username;}
+
+    /**
+     * setting the providername of the task.
+     * @param username
+     */
     public void setProviderName(String username){this.providerName = username;}
+
+    /**
+     * add the description of the task.
+     * @param description
+     */
     public void setDescription(String description){this.description = description;}
+
+    /**
+     * add the photo to the task.
+     * @param photo
+     */
     public void setPhoto(String photo){this.photo = photo;}
 
+    /**
+     * add the location of the task.
+     * @param location
+     */
+
     public void setLocation(String location){this.location = location;}
+
+    /**
+     * get the longitude of the task.
+     * @return
+     */
 
     public Double getLongitude(){
         return longitude;
     }
+    /**
+     *set the longitude of the task.
+     */
 
     public void setLongitude(Double longitude){
         this.longitude = longitude;
     }
 
+    /**
+     * get the latitude of the task.
+     * @return
+     */
+
     public Double getLatitude(){
         return latitude;
     }
+
+    /**
+     * set the latitude of the task.
+     * @param latitude
+     */
 
     public void setLatitude(Double latitude){
         this.latitude = latitude;

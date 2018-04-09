@@ -24,6 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+/**
+ * this allows the user to see all the assigned tasks as a provider
+ */
 
 /**
  * Represents a view-provider's-assigned-task activity.
@@ -112,6 +115,13 @@ public class ProviderAssignedTasks extends AppCompatActivity {
             return 0;
         }
 
+        /**
+         * this method sets the buttons and then append these buttons information.
+         * @param i
+         * @param view
+         * @param viewGroup
+         * @return
+         */
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.customlayout2,null);

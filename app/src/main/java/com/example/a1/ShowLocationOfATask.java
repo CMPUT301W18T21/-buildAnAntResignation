@@ -27,7 +27,10 @@ public class ShowLocationOfATask extends AppCompatActivity implements OnMapReady
     private String requesterName;
     private String taskName;
 
-
+    /**
+     * this method is to show the location of teh selected task on a map.
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,12 @@ public class ShowLocationOfATask extends AppCompatActivity implements OnMapReady
 
     }
 
+    /**
+     * setting up the map
+     * it gets the latitude and longitude of the task and then add a marker on the map.
+     * then the camera will be moved to that location.
+     * @param googleMap
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
 

@@ -32,6 +32,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * REFERENCE:
+ * Github link: https://github.com/mitchtabian/Google-Maps-Google-Places/tree/963be21e8f976c1a261b28f8e95fadb3ec83ce36
+ *
+ */
 /**
  * Adapter that handles Autocomplete requests from the Places Geo Data API.
  * {@link AutocompletePrediction} results from the API are frozen and stored directly in this

@@ -100,6 +100,9 @@ public class RequesterMain extends AppCompatActivity {
         }
     }
 
+    /**
+     * when the button is clicked, it goes to viewBiddedButton screen, and then it passes the necessary information to that class.
+     */
     private void setupBiddedButton() {
         ((Button) findViewById(R.id.viewBiddedButton)).setOnClickListener(new View.OnClickListener() {
 
@@ -111,7 +114,9 @@ public class RequesterMain extends AppCompatActivity {
         });
 
     }
-
+    /**
+     * when the button is clicked, it goes to viewAssignedButton screen, and then it passes the necessary information to that class.
+     */
     private void setupAssignedButton(){
         ((Button) findViewById(R.id.viewAssignedButton)).setOnClickListener(new View.OnClickListener() {
 
@@ -139,6 +144,10 @@ public class RequesterMain extends AppCompatActivity {
 
     }
 
+    /**
+     * once the refresh button is clicked, it refreshes the screen to display the newest version.
+     * @param view
+     */
 
     public void onRefreshClick(View view){
         displayTasks();

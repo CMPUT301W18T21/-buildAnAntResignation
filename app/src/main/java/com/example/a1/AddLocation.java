@@ -22,6 +22,7 @@ import org.json.JSONObject;
  * Created by k-h on 2018-04-05.
  */
 
+
 public class AddLocation extends AppCompatActivity{
 
     private TextView txtCoord;
@@ -31,6 +32,11 @@ public class AddLocation extends AppCompatActivity{
     private static String username;
     //private String address;
 
+    /**
+     * under onCreate, there is a onclick method which is invoked when the user press the button. This button captures the input address string
+     * and store it.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,11 +58,19 @@ public class AddLocation extends AppCompatActivity{
 
     }
 
+    /**
+     * setTask allows this class to capture the exact task this class is looking for.
+     * @param task
+     */
     public static void setTask(Task task){
         AddLocation.task = task;
     }
 
 
+    /**
+     * once the input address string is captured, it is then converted into lat and long, and then these two double will be stored in
+     * the task.
+     */
     private class GetCoordinates extends AsyncTask<String,Void,String> {
         private ProgressDialog dialog = new ProgressDialog(AddLocation.this);
 

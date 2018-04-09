@@ -21,6 +21,8 @@ import com.google.android.gms.common.GoogleApiAvailability;
 
 import java.util.ArrayList;
 
+
+
 public class ProviderMainPage extends AppCompatActivity {
 
     private EditText searchBox;
@@ -45,6 +47,11 @@ public class ProviderMainPage extends AppCompatActivity {
 
     //ArrayAdapter<String> adapter;
 
+    /**
+     * a method that execute every time the activity is shown.
+     *
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +89,9 @@ public class ProviderMainPage extends AppCompatActivity {
         /**
          * miss the itemonlclicked
          */
-
+        /**
+         * once the button is clicked, it goes to ProviderBiddedTask to view all the tasks bidded by this provider
+         */
         Button myTask = (Button) findViewById(R.id.myTask);
         myTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +115,9 @@ public class ProviderMainPage extends AppCompatActivity {
 //        }
 //        }
 //        }
-
+        /**
+         * this is to handle searching. Once the user click the search button, result will be displayed on the screen.
+         */
         Button searchButton = (Button) findViewById(R.id.SearchButton);
         searchBox = (EditText) findViewById(R.id.SearchBox);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -187,7 +198,9 @@ public class ProviderMainPage extends AppCompatActivity {
     }
 
 
-
+    /**
+     * once the button is clicked, it goes to viewOnMap which shows all the tasks that are within 5km of the current location
+     */
     private void init(){
         Button btnMap = (Button) findViewById(R.id.viewOnMap);
         btnMap.setOnClickListener(new View.OnClickListener() {
@@ -199,6 +212,10 @@ public class ProviderMainPage extends AppCompatActivity {
         });
     }
 
+    /**
+     * this method is to check whether google services is ok, in other words, this method checks status of the google services.
+     * @return
+     */
     public boolean isServicesOK(){
         Log.d(TAG, "isServicesOK: checking google services version");
 
@@ -221,7 +238,10 @@ public class ProviderMainPage extends AppCompatActivity {
     }
         /******************************************* added by JiaHong *************************************************************/
 
-
+    /**
+     * this method is to store the information of each task.
+     * @return
+     */
     private ArrayList<ProviderAdaptInfo> boundinfo()
     {
         ArrayList<ProviderAdaptInfo> providerAdaptInfos = new ArrayList<ProviderAdaptInfo>();
@@ -239,7 +259,13 @@ public class ProviderMainPage extends AppCompatActivity {
 
     }
 
-
+    /**
+     * checking whether the condition is met
+     * @param keyword
+     * @param title
+     * @param status
+     * @return
+     */
     private boolean conditionCheck(String keyword,String title,String status){
         Boolean find = true;
         if (keyword == null){
@@ -270,6 +296,12 @@ public class ProviderMainPage extends AppCompatActivity {
         ArrayList<ProviderAdaptInfo> filterList;
 
         //custom adapter constructor
+
+        /**
+         * this is the custom listview adapter
+         * @param ctx
+         * @param providerinfos
+         */
 
         public CustomAdapter(Context ctx, ArrayList<ProviderAdaptInfo> providerinfos) {
             this.c = ctx;

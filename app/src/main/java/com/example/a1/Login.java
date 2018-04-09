@@ -15,6 +15,10 @@ public class Login extends AppCompatActivity {
 
     private String username;
 
+    /**
+     * this method asks the user to input the required information of sign up
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,9 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        /**
+         * this method saves the information the user input to the server
+         */
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

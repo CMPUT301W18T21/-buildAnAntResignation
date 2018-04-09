@@ -7,6 +7,11 @@ import android.widget.TextView;
  * Created by Alex on 2018-03-19.
  */
 
+/**
+ * this class set the buttons.
+ * then this class gets the information when the user clicks on one of the tasks in the listview after searching.
+ * for more information, please go to ProviderMainPage
+ */
 public class pmpViewHolder implements View.OnClickListener {
 
     public TextView textView_task;
