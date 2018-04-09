@@ -24,6 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+/**
+ * Represents the requester task detail activity.
+ * A list of all imformation of selected task.
+ * User can edit the task information like tille, descreption, adding photo ,and addding location.
+ */
 
 public class RequesterTaskDetail extends AppCompatActivity {
     private Button saveButton;
@@ -45,6 +50,12 @@ public class RequesterTaskDetail extends AppCompatActivity {
     private static ArrayList<Integer> bids;
 
 
+
+    /**
+     * A method that executes every time the activity is shown on screen.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
