@@ -28,6 +28,7 @@ public class Provider_bid_task extends AppCompatActivity {
     private TextView viewdescription;
     private TextView viewlowestbid;
     private TextView viewstatus;
+    private TextView name;
     private Button ADDBid;
     private Button Map;
     private String taskname;
@@ -84,6 +85,9 @@ public class Provider_bid_task extends AppCompatActivity {
         viewdescription = (TextView)findViewById(R.id.textView5);
         viewlowestbid = (TextView)findViewById(R.id.LBidInfo);
         viewstatus = (TextView)findViewById(R.id.StatusInfo);
+        name = (TextView)findViewById(R.id.name);
+        name.setText(currentUser);
+
 
 
         //  Intent intent =getIntent();
