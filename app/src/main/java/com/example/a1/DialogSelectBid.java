@@ -42,6 +42,8 @@ public class DialogSelectBid extends AppCompatActivity {
         username = intent.getStringExtra("username");
         taskIndex = intent.getIntExtra("taskIndex",999);
 
+        setTitle("Accept Bid?");
+
         Log.d("test bidderPos",BidderPosition.toString());
         Log.d("test Username",username);
         Log.d("test taskIndex",taskIndex.toString());

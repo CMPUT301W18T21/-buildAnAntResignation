@@ -44,14 +44,5 @@
         android:text="name"
         android:textColor="@color/cast_expanded_controller_background_color" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView10"
-        android:layout_below="@+id/textView10"
-        android:text="Status :bidded"
-        android:textColor="@color/cast_expanded_controller_background_color"/>
-
 
 </RelativeLayout>
