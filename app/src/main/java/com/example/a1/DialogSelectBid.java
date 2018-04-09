@@ -87,7 +87,9 @@ public class DialogSelectBid extends AppCompatActivity {
         Task acceptedTask = loginUser.getRequestedTask(taskIndex);
         String taskTitle = acceptedTask.getTitle();
         ArrayList<String> lostBidders = acceptedTask.getBidders();
+        Log.d("show me len",String.valueOf(lostBidders.size()));
         String winner = lostBidders.get(BidderPosition);
+        int winnerPrice = acceptedTask.getBids().get(BidderPosition);
         int ix = Integer.parseInt(BidderPosition.toString());
         lostBidders.remove(ix);
 
@@ -118,6 +120,7 @@ public class DialogSelectBid extends AppCompatActivity {
         int marker = 0;
         Task winnerTask = null;
         // find the accepted task
+        int winBid = 0;
         for (Task eachT : winnerBiddedTasks){
 
             if (eachT.getTitle().equals(taskTitle) && eachT.getRequesterName().equals(username)){
@@ -128,24 +131,27 @@ public class DialogSelectBid extends AppCompatActivity {
         }
         winnerTask.getBids().clear();
         winnerTask.getBidders().clear();
+        winnerTask.addBid(winnerPrice); //make sure user still can tarce his accepted price
         winnerTask.setAssigned();
         winnerUer.getBiddedTasks().remove(marker);
+        winnerUer.provideTask(winnerTask);
         //now move task to providedTask
-        if (winnerUer.getProvidedTasks() != null) {
-            ArrayList<Task> tempL = winnerUer.getProvidedTasks();
-            tempL.add(winnerTask);
-            winnerUer.setProvidedTasks(tempL);
-        } else {
-            ArrayList<Task> newL = new ArrayList<Task>();
-            newL.add(winnerTask);
-            winnerUer.setProvidedTasks(newL);
-        }
-        //now update winner
-        Server.UserController.edit(winnerUer);
+//        if (winnerUer.getProvidedTasks() != null) {
+//            ArrayList<Task> tempL = winnerUer.getProvidedTasks();
+//            tempL.add(winnerTask);
+//            winnerUer.provideTask(tempL);
+//        } else {
+//            ArrayList<Task> newL = new ArrayList<Task>();
+//            newL.add(winnerTask);
+//            winnerUer.setProvidedTasks(newL);
+//        }
+//        //now update winner
+//        Server.UserController.edit(winnerUer);
 
         //finally we change status of requester and clear bidder and bids
         loginUser.getRequestedTask(taskIndex).getBidders().clear();
         loginUser.getRequestedTask(taskIndex).getBids().clear();
+        loginUser.getRequestedTask(taskIndex).addBid(winnerPrice);
         loginUser.getRequestedTask(taskIndex).setAssigned();
         Server.UserController.edit(loginUser);
 

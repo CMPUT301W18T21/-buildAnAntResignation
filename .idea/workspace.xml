@@ -10,10 +10,62 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="code documentation finish">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____Users_Alex_Desktop__buildAnAntResignation_app_src_include_jest_droid_2_0_1_SNAPSHOT_jar_unspecified_jar.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+    <list default="true" id="82e046eb-d1ba-40fb-95b4-7cf3db5783a7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_11_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_11_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
@@ -141,28 +193,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_license_11_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/PlaceAutocompleteAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/PlaceAutocompleteAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBidTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBidTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowLocationOfATask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowLocationOfATask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
-    <list id="07e1c2c8-e2e6-47ee-8e9a-1a931c586074" name="Revert: My part is done" comment="" />
+    <list id="07e1c2c8-e2e6-47ee-8e9a-1a931c586074" name="Revert: My part is done" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/app/build/intermediates/assets/" />
@@ -274,65 +312,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="283" column="36" lean-forward="false" selection-start-line="283" selection-start-column="36" selection-end-line="283" selection-end-column="36" />
+            <state relative-caret-position="4905">
+              <caret line="371" column="82" lean-forward="false" selection-start-line="371" selection-start-column="69" selection-end-line="371" selection-end-column="82" />
               <folding>
-                <marker date="1523282986488" expanded="true" signature="4713:4819" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="4855:4865" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="4879:4885" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="4890:4940" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="4984:4994" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="5016:5022" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="5028:5100" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="5139:5160" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="5166:5241" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="5283:5307" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="5313:5380" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="5408:5418" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="5446:5452" ph=" }" />
-                <marker date="1523282986488" expanded="false" signature="5482:5492" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="5522:5528" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="5559:5592" ph="{...}" />
-                <marker date="1523282986488" expanded="false" signature="5618:5628" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="5655:5661" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="5667:5736" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="5775:5796" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="5802:5882" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="5932:5964" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="5970:6049" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="6098:6129" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="6135:6212" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="6263:6296" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="6302:6367" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="6406:6427" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="6433:6504" ph="/**...*/" />
-                <marker date="1523282986488" expanded="true" signature="6550:6577" ph="{...}" />
-                <marker date="1523282986488" expanded="true" signature="6583:6647" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="6681:6691" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="6708:6714" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="6719:6767" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="6815:6825" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="6852:6858" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="6864:6927" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="6960:6970" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="6986:6992" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="6998:7069" ph="/**...*/" />
-                <marker date="1523282986488" expanded="false" signature="7115:7125" ph=" { " />
-                <marker date="1523282986488" expanded="false" signature="7150:7156" ph=" }" />
-                <marker date="1523282986488" expanded="true" signature="7162:7391" ph="/**...*/" />
+                <element signature="e#11027#11028#0" expanded="true" />
+                <element signature="e#11061#11062#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserElasticSearchController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java">
+      <file leaf-file-name="RequesterTaskDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="143" column="57" lean-forward="false" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
+            <state relative-caret-position="1080">
+              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3135">
+              <caret line="220" column="43" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogSelectBid.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2175">
+              <caret line="153" column="65" lean-forward="false" selection-start-line="153" selection-start-column="65" selection-end-line="153" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderBiddedTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1560">
+              <caret line="117" column="38" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+              <folding>
+                <marker date="1523286294401" expanded="true" signature="4087:4975" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderAssignedTasks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="e#3271#3511#0" expanded="true" />
+                <element signature="e#3510#3511#0" expanded="true" />
+                <marker date="1523286295065" expanded="true" signature="4044:4905" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderMainPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3974">
+              <caret line="333" column="38" lean-forward="false" selection-start-line="333" selection-start-column="38" selection-end-line="333" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -343,6 +398,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderAdaptInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customlayout2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/customlayout2.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -361,10 +439,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getSta</find>
-      <find>clear</find>
-      <find>getT</find>
-      <find>getTask</find>
       <find>getName</find>
       <find>getTasksAttri</find>
       <find>start</find>
@@ -390,7 +464,11 @@
       <find>remove</find>
       <find>testcase</find>
       <find>give</find>
-      <find>getItem</find>
+      <find>getbidd</find>
+      <find>setProvider</find>
+      <find>position</find>
+      <find>setProvidedTasks</find>
+      <find>titleList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -540,10 +618,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformNativeLibsWithStripDebugSymbolForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
@@ -963,10 +1037,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformNativeLibsWithStripDebugSymbolForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugNdk" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1296,10 +1366,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="processDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="transformNativeLibsWithStripDebugSymbolForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
@@ -1711,10 +1777,6 @@
                 <option name="description" value="Run unit tests for all variants." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="transformNativeLibsWithStripDebugSymbolForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -2366,63 +2428,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Model/PlaceInfo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/PlaceAutoCompleteAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5km.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/white.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/white_border.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/UpdateController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ServerController.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/a1/UserElasticSearchControllerTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/a1/TestServer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_assigned_tasks.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_task_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_bidded_task.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/customlayout2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/requester_assigned_task_ifo.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_task_request.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_main_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_bidded_task.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_assigned_tasks.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_requester_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_provider_bid_task.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Provider_bid_task.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterBiddedTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/customlayout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/PlaceAutocompleteAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBidTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowLocationOfATask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -2439,6 +2502,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2461,12 +2526,42 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-buildAnAntResignation" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-buildAnAntResignation" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2477,9 +2572,15 @@
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Alex/Desktop/-buildAnAntResignation/app/src/main/java/com/example/a1/RequesterTaskDetail.java&#10;codingwith&#9;null&#9;null" />
     <property name="android.profiler.active" value="true" />
-    <property name="FullScreen" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\School\-buildAnAntResignation\app\src\androidTest\java\com\example\a1" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.example.a1" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\School\-buildAnAntResignation\app\src" />
       <recent name="F:\School\-buildAnAntResignation\app\src\androidTest" />
@@ -2487,263 +2588,6 @@
       <recent name="F:\School\-buildAnAntResignation\app\src\main\res" />
       <recent name="F:\School\-buildAnAntResignation\app\src\main\java\com\example\a1" />
     </key>
-    <key name="android.template.packageName">
-      <recent name="com.example.a1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\School\-buildAnAntResignation\app\src\androidTest\java\com\example\a1" />
-    </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_mediarouter_v7_25_2_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_palette_v7_25_2_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_25_2_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_25_2_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_1_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_appinvite_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_awareness_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_framework_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_cast_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_drive_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fido_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_fitness_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_games_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gcm_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_identity_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_iid_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_instantapps_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_nearby_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_panorama_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_plus_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_safetynet_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_api_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_common_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_vision_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wallet_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_wearable_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_appindexing_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_config_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_crash_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_connection_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_database_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_dynamic_links_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_common_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_storage_license_11_8_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/app.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/a1/AddPhoto.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/local.properties</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/__local_aars____Users_Alex_Desktop__buildAnAntResignation_app_src_include_jest_droid_2_0_1_SNAPSHOT_jar_unspecified_jar.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/kotlinc.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2957,8 +2801,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523283118371" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523286604078" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3005,8 +2848,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523283118371" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523286604078" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3038,27 +2880,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -3188,8 +3009,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523283118372" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523286604081" />
       </method>
     </configuration>
     <list size="6">
@@ -3494,21 +3314,28 @@
       <option name="project" value="LOCAL" />
       <updated>1523255444540</updated>
     </task>
-    <task id="LOCAL-00037" summary="unit test working on it">
-      <created>1523274941666</created>
+    <task id="LOCAL-00037" summary="Finished Decline button in DialogSeleteBid,move on to accept Button">
+      <created>1523271596754</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1523274941666</updated>
+      <updated>1523271596754</updated>
     </task>
-    <task id="LOCAL-00038" summary="unit test working on it">
-      <created>1523274949646</created>
+    <task id="LOCAL-00038" summary="Add getBidders() in Task">
+      <created>1523276646437</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1523274949646</updated>
+      <updated>1523276646437</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="requester accpet button done, requester can do both accept or decline a bid now">
+      <created>1523279509462</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1523279509462</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3553,26 +3380,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="821" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17788461" sideWeight="0.48855507" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62243503" sideWeight="0.48855507" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07725322" sideWeight="0.508046" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3906465" sideWeight="0.5171674" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32647464" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099759616" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599726" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6396149" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3906465" sideWeight="0.4828326" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.49195403" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18870193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.49195403" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3582,6 +3408,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Analyze Dataflow to" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find Sample Code" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3589,6 +3416,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1793" y="709" width="1720" height="1922" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18984094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3680,9 +3508,9 @@
     <MESSAGE value="Provider_bidded_task and mytask page fixed" />
     <MESSAGE value="fixed request bidded task screen" />
     <MESSAGE value="Finished Decline button in DialogSeleteBid,move on to accept Button" />
-    <MESSAGE value="unit test working on it" />
-    <MESSAGE value="code documentation finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="code documentation finish" />
+    <MESSAGE value="Add getBidders() in Task" />
+    <MESSAGE value="requester accpet button done, requester can do both accept or decline a bid now" />
+    <option name="LAST_COMMIT_MESSAGE" value="requester accpet button done, requester can do both accept or decline a bid now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3696,11 +3524,109 @@
           <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="83" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_info_window.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/requester_assigned_task_ifo.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bid.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_photo.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_requester_assigned_tasks.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/view/View.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_request.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_provider_main_page.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddPhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3731,6 +3657,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_provider_assigned_tasks.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3752,16 +3685,44 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5km.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="109" column="51" lean-forward="false" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowLocationOfATask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="114" column="77" lean-forward="false" selection-start-line="114" selection-start-column="77" selection-end-line="114" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Provider_bid_task.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="56" lean-forward="false" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_provider_bid_task.xml">
@@ -3771,7 +3732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2130">
           <caret line="142" column="25" lean-forward="false" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3816,6 +3776,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterBiddedTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dialog_change_status.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3846,6 +3814,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogChangeStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -3854,119 +3829,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/a1/TestUser.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="197" column="33" lean-forward="false" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+        <state relative-caret-position="870">
+          <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/a1/TestTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="2250">
+          <caret line="176" column="59" lean-forward="false" selection-start-line="176" selection-start-column="59" selection-end-line="176" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ContactInfo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="110" column="50" lean-forward="false" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
+        <state relative-caret-position="3135">
+          <caret line="220" column="43" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddLocation.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="1080">
+          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/HttpDataHandler.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="73" column="55" lean-forward="false" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+        <state relative-caret-position="4905">
+          <caret line="371" column="82" lean-forward="false" selection-start-line="371" selection-start-column="69" selection-end-line="371" selection-end-column="82" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#11027#11028#0" expanded="true" />
+            <element signature="e#11061#11062#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/AddPhoto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/PlaceAutocompleteAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/CustomInfoWindowAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpItemClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/pmpViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3981,195 +3883,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/DialogSelectBid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="126" column="61" lean-forward="false" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="69" />
+        <state relative-caret-position="2175">
+          <caret line="153" column="65" lean-forward="false" selection-start-line="153" selection-start-column="65" selection-end-line="153" selection-end-column="65" />
           <folding>
-            <element signature="e#3138#3139#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-            <element signature="e#3227#3228#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3320#3321#0" expanded="true" />
-            <element signature="e#3352#3353#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBiddedTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="130" column="134" lean-forward="false" selection-start-line="130" selection-start-column="134" selection-end-line="130" selection-end-column="134" />
+        <state relative-caret-position="1560">
+          <caret line="117" column="38" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+          <folding>
+            <marker date="1523286294401" expanded="true" signature="4087:4975" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAdaptInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderAssignedTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#3271#3511#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <marker date="1523286295065" expanded="true" signature="4044:4905" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderMainPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1474">
-          <caret line="300" column="46" lean-forward="false" selection-start-line="300" selection-start-column="46" selection-end-line="300" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ProviderBidTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="18" column="98" lean-forward="false" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="98" />
-          <folding>
-            <element signature="e#787#2223#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterAssignedTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="97" column="102" lean-forward="false" selection-start-line="97" selection-start-column="102" selection-end-line="97" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterBiddedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/RequesterTaskDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364">
-          <caret line="220" column="43" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowLocationOfATask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/ShowWithin5kmMapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="485" column="82" lean-forward="false" selection-start-line="485" selection-start-column="82" selection-end-line="485" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/TaskRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="384" column="34" lean-forward="false" selection-start-line="384" selection-start-column="27" selection-end-line="384" selection-end-column="34" />
-          <folding>
-            <element signature="e#11027#11028#0" expanded="true" />
-            <element signature="e#11061#11062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="283" column="36" lean-forward="false" selection-start-line="283" selection-start-column="36" selection-end-line="283" selection-end-column="36" />
-          <folding>
-            <marker date="1523282986488" expanded="true" signature="4713:4819" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="4855:4865" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="4879:4885" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="4890:4940" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="4984:4994" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="5016:5022" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="5028:5100" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="5139:5160" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="5166:5241" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="5283:5307" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="5313:5380" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="5408:5418" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="5446:5452" ph=" }" />
-            <marker date="1523282986488" expanded="false" signature="5482:5492" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="5522:5528" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="5559:5592" ph="{...}" />
-            <marker date="1523282986488" expanded="false" signature="5618:5628" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="5655:5661" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="5667:5736" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="5775:5796" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="5802:5882" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="5932:5964" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="5970:6049" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="6098:6129" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="6135:6212" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="6263:6296" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="6302:6367" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="6406:6427" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="6433:6504" ph="/**...*/" />
-            <marker date="1523282986488" expanded="true" signature="6550:6577" ph="{...}" />
-            <marker date="1523282986488" expanded="true" signature="6583:6647" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="6681:6691" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="6708:6714" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="6719:6767" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="6815:6825" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="6852:6858" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="6864:6927" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="6960:6970" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="6986:6992" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="6998:7069" ph="/**...*/" />
-            <marker date="1523282986488" expanded="false" signature="7115:7125" ph=" { " />
-            <marker date="1523282986488" expanded="false" signature="7150:7156" ph=" }" />
-            <marker date="1523282986488" expanded="true" signature="7162:7391" ph="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/a1/UserElasticSearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="143" column="57" lean-forward="false" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
+        <state relative-caret-position="3974">
+          <caret line="333" column="38" lean-forward="false" selection-start-line="333" selection-start-column="38" selection-end-line="333" selection-end-column="38" />
           <folding />
         </state>
       </provider>

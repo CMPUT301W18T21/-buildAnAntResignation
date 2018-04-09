@@ -40,11 +40,11 @@ public class ProviderAssignedTasks extends AppCompatActivity {
     private String username;
     private User user;
 
-    private ArrayList<String> titleList;
-    private ArrayList<String> nameList;
-    private ArrayList<String> statusList;
-    private ArrayList<Integer> acceptBid;
-    private ArrayList<Task>  taskHolder;
+    private ArrayList<String> titleList = new ArrayList<>(0);
+    private ArrayList<String> nameList = new ArrayList<>(0);
+    private ArrayList<String> statusList = new ArrayList<>(0);
+    private ArrayList<Integer> acceptBid = new ArrayList<>(0);
+    private ArrayList<Task>  taskHolder = new ArrayList<>(0);
 
     /**
      * A method that executes every time the activity is shown on screen.
@@ -66,16 +66,26 @@ public class ProviderAssignedTasks extends AppCompatActivity {
             finish();
         } else {
             taskHolder = user.getProvidedTasks();
+            Integer i = taskHolder.size();
+          //  Log.d("show me the length",i.toString());
             for (Task eachtask:taskHolder){
-                titleList.add(eachtask.getTitle().toString());
-                nameList.add(eachtask.getRequesterName());
+                titleList.add(eachtask.getTitle());
+                Log.d("eachtask is ",eachtask.getTitle().toString());
+                nameList.add(eachtask.getRequesterName().toString());
+                Log.d("give me name",eachtask.getRequesterName().toString());
                 statusList.add(eachtask.getStatus().toString());
+                Log.d("give me status",eachtask.getStatus().toString());
 
                 //----check this part cuz there is no such getter to get proper bid ------------------------------------------
-                acceptBid.add(eachtask.getLowestBid());
+                acceptBid.add(eachtask.getBids().get(0));
+     //             Log.d("show me the task", );
 
-            }
+          }
         }
+
+
+
+
         ((TextView) findViewById(R.id.username)).setText(username);
         CustomAdapter customAdapter = new CustomAdapter();
         ListView providerassignedList = findViewById(R.id.p_assigned_list);
@@ -103,7 +113,7 @@ public class ProviderAssignedTasks extends AppCompatActivity {
         @Override
 
         public int getCount(){
-            return 0;
+            return titleList.size();
         }
         @Override
         public Object getItem(int i) {
