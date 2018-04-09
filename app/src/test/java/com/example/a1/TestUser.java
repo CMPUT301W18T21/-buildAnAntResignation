@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static com.example.a1.Status.BIDDED;
+import static com.example.a1.Status.REQUESTED;
 import static org.junit.Assert.assertTrue;
 
 
@@ -16,15 +17,21 @@ public class TestUser {
 
     @Test
     public void testGetName(){
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
 
-        User user = new User("laoxu","","","","","");
-        assertTrue(user.getName() == "laoxu");
+        assertTrue(user.getName() == "name1");
     }
 
     @Test
     public void testSetUsername(){
 
-        User user = new User("","username","","","","");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setUsername("hahaha");
         assertTrue(user.getUsername().equals("hahaha"));
     }
@@ -32,14 +39,20 @@ public class TestUser {
     @Test
     public void testGetUsername(){
 
-        User user = new User("","Username","","","","");
-        assertTrue(user.getUsername() == "Username");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        assertTrue(user.getUsername() == "uname1");
     }
 
     @Test
     public void testSetName(){
 
-        User user = new User("Name","","","","","");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setName("test");
         assertTrue(user.getName().equals("test"));
     }
@@ -47,14 +60,20 @@ public class TestUser {
     @Test
     public void testGetGender() {
 
-        User user = new User("", "", "male", "", "", "");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","male","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         assertTrue(user.getGender() == "male");
     }
 
     @Test
     public void testSetGender(){
 
-        User user = new User("","","male","","","");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setGender("female");
         assertTrue(user.getGender() == "female");
 
@@ -63,14 +82,20 @@ public class TestUser {
     @Test
     public void testGetPhone() {
 
-        User user = new User("", "", "", "7807801234", "", "");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","7807801234","email1","image1",requestedtasks,providedtasks,biddedtasks);
         assertTrue(user.getPhone() == "7807801234");
     }
 
     @Test
     public void testSetPhone(){
 
-        User user = new User("","","","7807109999","","");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setPhone("7807108888");
         assertTrue(user.getPhone() == "7807108888");
 
@@ -78,13 +103,19 @@ public class TestUser {
 
     @Test
     public void testGetEmail(){
-        User user = new User("", "", "", "", "345678@aaa", "");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","345678@aaa","image1",requestedtasks,providedtasks,biddedtasks);
         assertTrue(user.getEmail()=="345678@aaa");
     }
 
     @Test
     public void testSetEmail(){
-        User user = new User("", "", "", "", "345678@aaa", "");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setEmail("newEmail");
         assertTrue(user.getEmail()=="newEmail");
     }
@@ -92,7 +123,10 @@ public class TestUser {
     @Test
     public void testGetImage(){
 
-        User user = new User("","","","","","img");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","img",requestedtasks,providedtasks,biddedtasks);
 
         assertTrue(user.getImage() == "img");
 
@@ -104,8 +138,12 @@ public class TestUser {
      */
     @Test
     public void testSetImage(){
-        User user = new User("","","","","","img");
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
         user.setImage("IMG");
+
         assertTrue(user.getImage()=="IMG");
 
     }
@@ -116,25 +154,34 @@ public class TestUser {
 
     @Test
     public void testGetRequestedTasks(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        ArrayList<Task> tasks = new ArrayList<>(0);
-        tasks.add( new Task("", "", "", "", BIDDED, bids));
+        ArrayList<Integer> bids = new ArrayList<>(0);
 
-        User user=new User("", "", "", "", "", "",tasks,tasks);
-        ArrayList<Task> tasks2 = user.getRequestedTasks();
-        assertTrue(tasks.equals(tasks2));
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        requestedtasks.add(task);
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        assertTrue(user.getRequestedTasks().equals(requestedtasks));
     }
 
     @Test
     public void testSetRequestedTasks(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        ArrayList<Task> tasks = new ArrayList<>(0);
-        tasks.add( new Task("", "", "", "", BIDDED, bids));
+        ArrayList<Integer> bids = new ArrayList<>(0);
 
-        User user=new User("", "", "", "", "", "");
-        user.setRequestedTasks(tasks);
-        ArrayList<Task> tasks2 = user.getRequestedTasks();
-        assertTrue(tasks.equals(tasks2));
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        requestedtasks.add(task);
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        assertTrue(user.getRequestedTasks().equals(requestedtasks));
     }
 
     @Test
@@ -145,36 +192,51 @@ public class TestUser {
          *         then we check if the array actually contains the task1.
          *
          */
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task1 = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "");
-        user.requestTask(task1);
-        Task task2 = user.getRequestedTasks().get(0);
-        assertTrue(task2 == task1);
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        requestedtasks.add(task);
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        assertTrue(user.getRequestedTask(0).equals(task));
     }
 
     @Test
     public void testGetRequestedTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task1 = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user = new User("", "", "", "", "", "");
-        user.requestTask(task1);
-        Task task2 = user.getRequestedTask(0);
-        assertTrue(task1.equals(task2));
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        requestedtasks.add(task);
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        assertTrue(user.getRequestedTask(0).equals(task));
     }
 
     @Test
     public void testDeleteRequestedTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "");
-        user.requestTask(task);
-        user.deleteRequestedTask(task);
-        ArrayList<Task> tasks2 = user.getRequestedTasks();
-        assertTrue(tasks2.equals(new ArrayList<Task>(0)));
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        requestedtasks.add(task1);
+        requestedtasks.add(task2);
+
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        user.deleteRequestedTask(task1);
+        assertTrue(user.getRequestedTask(0).equals(task2));
     }
 
 
@@ -182,84 +244,134 @@ public class TestUser {
 
     @Test
     public void testGetProvidedTasks(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        ArrayList<Task> tasks = new ArrayList<>(0);
-        tasks.add( new Task("", "", "", "", BIDDED, bids));
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "",tasks,tasks);
-        ArrayList<Task> tasks2 = user.getProvidedTasks();
-        assertTrue(tasks.equals(tasks2));
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        providedtasks.add(task1);
+        providedtasks.add(task2);
+
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        ArrayList<Task> testTask = new ArrayList<>(0);
+        testTask.add(task1);
+        testTask.add(task2);
+        assertTrue(user.getProvidedTasks().equals(testTask));
     }
 
     @Test
     public void testSetProvidedTasks(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        ArrayList<Task> tasks = new ArrayList<>(0);
-        tasks.add( new Task("", "", "", "", BIDDED, bids));
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "");
-        user.setProvidedTasks(tasks);
-        ArrayList<Task> tasks2 = user.getProvidedTasks();
-        assertTrue(tasks.equals(tasks2));
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        providedtasks.add(task1);
+        providedtasks.add(task2);
+
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        user.setProvidedTasks(providedtasks);
+//        ArrayList<Task> testTask = new ArrayList<>(0);
+//        testTask.add(task1);
+//        testTask.add(task2);
+        assertTrue(user.getProvidedTasks().equals(providedtasks));
     }
 
-    @Test
-    public void testProvideTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task1 = new Task("", "", "", "", BIDDED, bids);
-
-        User user=new User("", "", "", "", "", "");
-        user.provideTask(task1);
-        Task task2 = user.getProvidedTasks().get(0);
-        assertTrue(task2 == task1);
-    }
+//    @Test
+//    public void testProvideTask(){
+//        ArrayList<Integer> bids=new ArrayList<>(0);
+//        Task task1 = new Task("", "", "", "", BIDDED, bids);
+//
+//        User user=new User("", "", "", "", "", "");
+//        user.provideTask(task1);
+//        Task task2 = user.getProvidedTasks().get(0);
+//        assertTrue(task2 == task1);
+//    }
 
     @Test
     public void testGetProvidedTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task1 = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "");
-        user.provideTask(task1);
-        Task task2 = user.getProvidedTask(0);
-        assertTrue(task2 == task1);
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        providedtasks.add(task1);
+        providedtasks.add(task2);
+
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        user.setProvidedTasks(providedtasks);
+//        ArrayList<Task> testTask = new ArrayList<>(0);
+//        testTask.add(task1);
+//        testTask.add(task2);
+        assertTrue(user.getProvidedTask(0).equals(task1));
     }
 
 
     @Test
     public void testDeleteProvidedTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        User user=new User("", "", "", "", "", "");
-        user.provideTask(task);
-        user.deleteProvidedTask(task);
-        ArrayList<Task> tasks2 = user.getProvidedTasks();
-        assertTrue(tasks2.equals(new ArrayList<Task>(0)));
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        providedtasks.add(task1);
+        providedtasks.add(task2);
+
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+        user.deleteProvidedTask(task1);
+//        ArrayList<Task> testTask = new ArrayList<>(0);
+//        testTask.add(task1);
+//        testTask.add(task2);
+        assertTrue(user.getProvidedTask(0).equals(task2));
     }
 
 
     @Test
     public void testGetBiddedTasks(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task = new Task("", "", "", "", BIDDED, bids);
+        ArrayList<Integer> bids = new ArrayList<>(0);
+        Task task1 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
+        Task task2 = new Task("title1","Rname","Pname","description1","location1",REQUESTED,"photo1",bids);
 
-        ArrayList<Task> biddedTasks = new ArrayList<>(0);
-        biddedTasks.add(task);
+        ArrayList<Task> requestedtasks = new ArrayList<>(0);
+        ArrayList<Task> providedtasks = new ArrayList<>(0);
+        ArrayList<Task> biddedtasks = new ArrayList<>(0);
+        biddedtasks.add(task1);
+        biddedtasks.add(task2);
 
-        User user=new User("", "", "", "", "", "",biddedTasks,biddedTasks,biddedTasks);
-        ArrayList<Task> tasks2 = user.getBiddedTasks();
-        assertTrue(tasks2.equals(biddedTasks));
+
+        User user = new User("name1","uname1","gender1","phone1","email1","image1",requestedtasks,providedtasks,biddedtasks);
+        //ArrayList<Task> tasks2 = user.getRequestedTasks();
+
+//        ArrayList<Task> testTask = new ArrayList<>(0);
+//        testTask.add(task1);
+//        testTask.add(task2);
+        assertTrue(user.getBiddedTasks().equals(biddedtasks));
     }
 
-    @Test
-    public void testBidTask(){
-        ArrayList<Integer> bids=new ArrayList<>(0);
-        Task task = new Task("", "", "", "", BIDDED, bids);
-        User user=new User("", "", "", "", "", "");
-        user.bidTask(task);
-        Task task2 = user.getBiddedTasks().get(0);
-        assertTrue(task2.equals(task));
-    }
+//    @Test
+//    public void testBidTask(){
+//        ArrayList<Integer> bids=new ArrayList<>(0);
+//        Task task = new Task("", "", "", "", BIDDED, bids);
+//        User user=new User("", "", "", "", "", "");
+//        user.bidTask(task);
+//        Task task2 = user.getBiddedTasks().get(0);
+//        assertTrue(task2.equals(task));
+//    }
 
 }
